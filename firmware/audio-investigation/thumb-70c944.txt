@@ -1,0 +1,118 @@
+0c78c944 raw+70c944: mov.w    ip, #0x10
+0c78c948 raw+70c948: mov.w    r2, #-1
+0c78c94c raw+70c94c: movs     r1, #0
+0c78c94e raw+70c94e: mov      r0, r8
+0c78c950 raw+70c950: ldr      r3, [pc, #0x264] ; literal raw+0x70cbb8 = 0x3c19fee4 'getDeviceLicense'
+0c78c952 raw+70c952: str.w    ip, [sp]
+0c78c956 raw+70c956: bl       #0xc297912
+0c78c95a raw+70c95a: cmp      r0, #0
+0c78c95c raw+70c95c: bne.w    #0xc78cffa
+0c78c960 raw+70c960: cmp      r6, #0
+0c78c962 raw+70c962: beq.w    #0xc78d324
+0c78c966 raw+70c966: ldr      r4, [pc, #0x244] ; literal raw+0x70cbac = 0x3c2d1750
+0c78c968 raw+70c968: ldr      r0, [r4]
+0c78c96a raw+70c96a: cmp      r0, #0
+0c78c96c raw+70c96c: beq.w    #0xc78e16c
+0c78c970 raw+70c970: bl       #0xc76ab24
+0c78c974 raw+70c974: mov      r3, r0
+0c78c976 raw+70c976: movs     r0, #0x20
+0c78c978 raw+70c978: ldr      r6, [r5, #0x14]
+0c78c97a raw+70c97a: ldr.w    r8, [r7, #0xc]
+0c78c97e raw+70c97e: mov      r5, r3
+0c78c980 raw+70c980: bl       #0xc710d50
+0c78c984 raw+70c984: mov      r4, r0
+0c78c986 raw+70c986: cmp      r0, #0
+0c78c988 raw+70c988: beq      #0xc78c938
+0c78c98a raw+70c98a: bl       #0xc764a3c
+0c78c98e raw+70c98e: movs     r2, #0
+0c78c990 raw+70c990: movs     r1, #0x44
+0c78c992 raw+70c992: movs     r3, #1
+0c78c994 raw+70c994: str      r2, [r4, #8]
+0c78c996 raw+70c996: ldr      r0, [pc, #0x218] ; literal raw+0x70cbb0 = 0x3c19cf50
+0c78c998 raw+70c998: ldr      r2, [pc, #0x218] ; literal raw+0x70cbb4 = 0x0c7898d1
+0c78c99a raw+70c99a: str.w    r3, [r7, #0x94]
+0c78c99e raw+70c99e: str.w    r1, [r7, #0x90]
+0c78c9a2 raw+70c9a2: str      r2, [r4, #0x10]
+0c78c9a4 raw+70c9a4: str      r0, [r4]
+0c78c9a6 raw+70c9a6: str      r6, [r4, #0xc]
+0c78c9a8 raw+70c9a8: add.w    r3, r4, #0x14
+0c78c9ac raw+70c9ac: add.w    r2, r7, #0x90
+0c78c9b0 raw+70c9b0: ldm.w    r2, {r0, r1}
+0c78c9b4 raw+70c9b4: stm.w    r3, {r0, r1}
+0c78c9b8 raw+70c9b8: str.w    r8, [r4, #0x1c]
+0c78c9bc raw+70c9bc: b        #0xc78c938
+0c78c9be raw+70c9be: ldr      r4, [pc, #0x1ec] ; literal raw+0x70cbac = 0x3c2d1750
+0c78c9c0 raw+70c9c0: ldr      r0, [r4]
+0c78c9c2 raw+70c9c2: cmp      r0, #0
+0c78c9c4 raw+70c9c4: beq.w    #0xc78de58
+0c78c9c8 raw+70c9c8: bl       #0xc76ab24
+0c78c9cc raw+70c9cc: mov      r3, r0
+0c78c9ce raw+70c9ce: movs     r0, #0x20
+0c78c9d0 raw+70c9d0: ldr      r6, [r5, #0x14]
+0c78c9d2 raw+70c9d2: ldr.w    r8, [r7, #0xc]
+0c78c9d6 raw+70c9d6: mov      r5, r3
+0c78c9d8 raw+70c9d8: bl       #0xc710d50
+0c78c9dc raw+70c9dc: mov      r4, r0
+0c78c9de raw+70c9de: cmp      r0, #0
+0c78c9e0 raw+70c9e0: beq      #0xc78c938
+0c78c9e2 raw+70c9e2: bl       #0xc764a3c
+0c78c9e6 raw+70c9e6: movs     r2, #0
+0c78c9e8 raw+70c9e8: movs     r1, #0x3c
+0c78c9ea raw+70c9ea: movs     r3, #1
+0c78c9ec raw+70c9ec: str      r2, [r4, #8]
+0c78c9ee raw+70c9ee: ldr      r0, [pc, #0x1c0] ; literal raw+0x70cbb0 = 0x3c19cf50
+0c78c9f0 raw+70c9f0: ldr      r2, [pc, #0x1c0] ; literal raw+0x70cbb4 = 0x0c7898d1
+0c78c9f2 raw+70c9f2: str.w    r3, [r7, #0x8c]
+0c78c9f6 raw+70c9f6: str.w    r1, [r7, #0x88]
+0c78c9fa raw+70c9fa: str      r2, [r4, #0x10]
+0c78c9fc raw+70c9fc: str      r0, [r4]
+0c78c9fe raw+70c9fe: str      r6, [r4, #0xc]
+0c78ca00 raw+70ca00: add.w    r3, r4, #0x14
+0c78ca04 raw+70ca04: add.w    r2, r7, #0x88
+0c78ca08 raw+70ca08: ldm.w    r2, {r0, r1}
+0c78ca0c raw+70ca0c: stm.w    r3, {r0, r1}
+0c78ca10 raw+70ca10: str.w    r8, [r4, #0x1c]
+0c78ca14 raw+70ca14: b        #0xc78c938
+0c78ca16 raw+70ca16: mov      r0, r4
+0c78ca18 raw+70ca18: bl       #0xc7044c0
+0c78ca1c raw+70ca1c: cmp      r0, #0xa
+0c78ca1e raw+70ca1e: mov      r6, r0
+0c78ca20 raw+70ca20: bhi.w    #0xc78d102
+0c78ca24 raw+70ca24: lsls     r3, r0, #1
+0c78ca26 raw+70ca26: strb.w   r3, [r7, #0x13c]
+0c78ca2a raw+70ca2a: addw     r8, r7, #0x13d
+0c78ca2e raw+70ca2e: cmp      r0, #0
+0c78ca30 raw+70ca30: bne.w    #0xc78d11e
+0c78ca34 raw+70ca34: movs     r0, #0
+0c78ca36 raw+70ca36: ldr      r3, [r7, #0xc]
+0c78ca38 raw+70ca38: strb.w   r0, [r8, r6]
+0c78ca3c raw+70ca3c: str      r3, [r7, #4]
+0c78ca3e raw+70ca3e: ldr.w    ip, [pc, #0x19c] ; literal raw+0x70cbdc = 0x3c19fdcc 'start record taskid:%d'
+0c78ca42 raw+70ca42: ldr      r6, [r7, #4]
+0c78ca44 raw+70ca44: ldr      r4, [pc, #0x164] ; literal raw+0x70cbac = 0x3c2d1750
+0c78ca46 raw+70ca46: movs     r3, #0x89
+0c78ca48 raw+70ca48: strd     ip, r6, [sp]
+0c78ca4c raw+70ca4c: ldr      r2, [pc, #0x16c] ; literal raw+0x70cbbc = 0x3c19fc0c '/data1/wechat-rtos-service/watch/watch-service/jsbridge_comm/adam_js_native_bridge.cpp'
+0c78ca4e raw+70ca4e: ldr      r1, [pc, #0x170] ; literal raw+0x70cbc0 = 0x3c19fc64 'jsbg'
+0c78ca50 raw+70ca50: bl       #0xc764250
+0c78ca54 raw+70ca54: ldr      r0, [r4]
+0c78ca56 raw+70ca56: cmp      r0, #0
+0c78ca58 raw+70ca58: beq.w    #0xc78d5a0
+0c78ca5c raw+70ca5c: bl       #0xc76ab24
+0c78ca60 raw+70ca60: mov      r3, r0
+0c78ca62 raw+70ca62: add.w    r1, r7, #0x13c
+0c78ca66 raw+70ca66: add.w    r0, r7, #0x150
+0c78ca6a raw+70ca6a: ldr      r6, [r5, #0x1c]
+0c78ca6c raw+70ca6c: ldr.w    r8, [r7, #0xc]
+0c78ca70 raw+70ca70: mov      r5, r3
+0c78ca72 raw+70ca72: bl       #0xc2974d2
+0c78ca76 raw+70ca76: add.w    r1, r7, #0x150
+0c78ca7a raw+70ca7a: add.w    r0, r7, #0x164
+0c78ca7e raw+70ca7e: bl       #0xc2974d2
+0c78ca82 raw+70ca82: movs     r0, #0x2c
+0c78ca84 raw+70ca84: bl       #0xc710d50
+0c78ca88 raw+70ca88: mov      r4, r0
+0c78ca8a raw+70ca8a: cbz      r0, #0xc78cac4
+0c78ca8c raw+70ca8c: bl       #0xc764a3c
+0c78ca90 raw+70ca90: movs     r1, #0
+0c78ca92 raw+70ca92: ldr      r3, [pc, #0x130] ; literal raw+0x70cbc4 = 0x3c1a0210

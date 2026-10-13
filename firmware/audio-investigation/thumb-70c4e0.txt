@@ -1,0 +1,55 @@
+0c78c4e0 raw+70c4e0: ldr      r3, [pc, #0xb4] ; literal raw+0x70c598 = 0x3c19fe30 'foregroundChanged'
+0c78c4e2 raw+70c4e2: str.w    ip, [sp]
+0c78c4e6 raw+70c4e6: bl       #0xc297912
+0c78c4ea raw+70c4ea: cmp      r0, #0
+0c78c4ec raw+70c4ec: beq.w    #0xc78cec0
+0c78c4f0 raw+70c4f0: ldrb.w   r3, [r7, #0x118]
+0c78c4f4 raw+70c4f4: lsls     r2, r3, #0x1f
+0c78c4f6 raw+70c4f6: bmi.w    #0xc78c6fa
+0c78c4fa raw+70c4fa: lsrs     r3, r3, #1
+0c78c4fc raw+70c4fc: mov      r1, r3
+0c78c4fe raw+70c4fe: b        #0xc78c14e
+0c78c500 raw+70c500: lsrs     r3, r3, #1
+0c78c502 raw+70c502: mov      r1, r3
+0c78c504 raw+70c504: b        #0xc78c124
+0c78c506 raw+70c506: mov.w    ip, #0xf
+0c78c50a raw+70c50a: mov.w    r2, #-1
+0c78c50e raw+70c50e: movs     r1, #0
+0c78c510 raw+70c510: mov      r0, r8
+0c78c512 raw+70c512: ldr      r3, [pc, #0x88] ; literal raw+0x70c59c = 0x3c19fe50 'getWatchVersion'
+0c78c514 raw+70c514: str.w    ip, [sp]
+0c78c518 raw+70c518: bl       #0xc297912
+0c78c51c raw+70c51c: cmp      r0, #0
+0c78c51e raw+70c51e: beq.w    #0xc78c72c
+0c78c522 raw+70c522: ldrb.w   r3, [r7, #0x118]
+0c78c526 raw+70c526: lsls     r1, r3, #0x1f
+0c78c528 raw+70c528: bpl.w    #0xc78cfa8
+0c78c52c raw+70c52c: ldr.w    r3, [r7, #0x11c]
+0c78c530 raw+70c530: b        #0xc78bf74
+0c78c532 raw+70c532: lsrs     r3, r3, #1
+0c78c534 raw+70c534: mov      r1, r3
+0c78c536 raw+70c536: b        #0xc78c12a
+0c78c538 raw+70c538: mov.w    ip, #0x14
+0c78c53c raw+70c53c: mov.w    r2, #-1
+0c78c540 raw+70c540: movs     r1, #0
+0c78c542 raw+70c542: mov      r0, r8
+0c78c544 raw+70c544: ldr      r3, [pc, #0x58] ; literal raw+0x70c5a0 = 0x3c19fe74 'getPhysicallinkState'
+0c78c546 raw+70c546: str.w    ip, [sp]
+0c78c54a raw+70c54a: bl       #0xc297912
+0c78c54e raw+70c54e: cmp      r0, #0
+0c78c550 raw+70c550: beq.w    #0xc78c8e4
+0c78c554 raw+70c554: ldrb.w   r3, [r7, #0x118]
+0c78c558 raw+70c558: lsls     r2, r3, #0x1f
+0c78c55a raw+70c55a: bpl.w    #0xc78cff2
+0c78c55e raw+70c55e: ldr.w    r3, [r7, #0x11c]
+0c78c562 raw+70c562: b        #0xc78bf7a
+0c78c564 raw+70c564: lsls     r0, r0, #0xa
+0c78c566 raw+70c566: subs     r4, #0x1a
+0c78c568 raw+70c568: ldc2l    p12, c3, [r8, #-0x64]!
+0c78c56c raw+70c56c: stc2     p12, c3, [r8, #0x64]!
+0c78c570 raw+70c570: ldc2     p12, c3, [r8, #0x64]!
+0c78c574 raw+70c574: b        #0xc78cc40
+0c78c576 raw+70c576: subs     r4, #0x19
+0c78c578 raw+70c578: b        #0xc78c34c
+0c78c57a raw+70c57a: subs     r4, #0x19
+0c78c57c raw+70c57c: stc2     p12, c3, [r0, #0x64]

@@ -1,0 +1,46 @@
+0c5c1120 raw+541120: movs     r3, #0x40
+0c5c1122 raw+541122: mov      r0, r4
+0c5c1124 raw+541124: blx      r1
+0c5c1126 raw+541126: mov      r2, sb
+0c5c1128 raw+541128: mov      r3, sl
+0c5c112a raw+54112a: mov      r0, r5
+0c5c112c raw+54112c: bl       #0xc621aac
+0c5c1130 raw+541130: ldr      r3, [r4]
+0c5c1132 raw+541132: str.w    fp, [sp]
+0c5c1136 raw+541136: movs     r2, #0
+0c5c1138 raw+541138: ldr.w    r1, [r3, #0x90]
+0c5c113c raw+54113c: mov      r0, r4
+0c5c113e raw+54113e: movs     r3, #0x80
+0c5c1140 raw+541140: blx      r1
+0c5c1142 raw+541142: ldr      r3, [r4]
+0c5c1144 raw+541144: ldr      r1, [pc, #0x54] ; literal raw+0x54119c = 0x3c0bd930 'show'
+0c5c1146 raw+541146: ldr.w    r3, [r3, #0xa0]
+0c5c114a raw+54114a: mov      r0, r4
+0c5c114c raw+54114c: blx      r3
+0c5c114e raw+54114e: ldr      r3, [r6]
+0c5c1150 raw+541150: mov      r0, r6
+0c5c1152 raw+541152: ldr      r3, [r3, #0x48]
+0c5c1154 raw+541154: blx      r3
+0c5c1156 raw+541156: bl       #0xc5e52c2
+0c5c115a raw+54115a: add.w    r0, r7, #0x14
+0c5c115e raw+54115e: bl       #0xc292458
+0c5c1162 raw+541162: movs     r0, #1
+0c5c1164 raw+541164: movs     r1, #1
+0c5c1166 raw+541166: b        #0xc5c0f96
+0c5c1168 raw+541168: adcs.w   ip, ip, r7, asr #12
+0c5c116c raw+54116c: add      r5, sp, #0x27c
+0c5c116e raw+54116e: subs     r4, #0x11
+0c5c1170 raw+541170: blt      #0xc5c114c
+0c5c1172 raw+541172: subs     r4, #2
+0c5c1174 raw+541174: add      r5, sp, #0x224
+0c5c1176 raw+541176: subs     r4, #0x11
+0c5c1178 raw+541178: add      r5, sp, #0x2cc
+0c5c117a raw+54117a: subs     r4, #0x11
+0c5c117c raw+54117c: pop      {r0, r1, r3, r6, r7, pc}
+0c5c117e raw+54117e: subs     r4, #0xa
+0c5c1180 raw+541180: add      r6, sp, #0x3c
+0c5c1182 raw+541182: subs     r4, #0x11
+0c5c1184 raw+541184: ldrh     r6, [r6, #0x34]
+0c5c1186 raw+541186: subs     r4, #0x11
+0c5c1188 raw+541188: lsrs     r5, r6, #0xb
+0c5c118a raw+54118a: subs     r4, #5

@@ -1,0 +1,148 @@
+0c78c700 raw+70c700: mov.w    ip, #0xd
+0c78c704 raw+70c704: mov.w    r2, #-1
+0c78c708 raw+70c708: movs     r1, #0
+0c78c70a raw+70c70a: mov      r0, r8
+0c78c70c raw+70c70c: ldr      r3, [pc, #0x1c4] ; literal raw+0x70c8d4 = 0x3c19fea0 'encodePcmData'
+0c78c70e raw+70c70e: str.w    ip, [sp]
+0c78c712 raw+70c712: bl       #0xc297912
+0c78c716 raw+70c716: cmp      r0, #0
+0c78c718 raw+70c718: beq.w    #0xc78d0b0
+0c78c71c raw+70c71c: ldrb.w   r3, [r7, #0x118]
+0c78c720 raw+70c720: lsls     r1, r3, #0x1f
+0c78c722 raw+70c722: bpl.w    #0xc78d0a8
+0c78c726 raw+70c726: ldr.w    r3, [r7, #0x11c]
+0c78c72a raw+70c72a: b        #0xc78bf86
+0c78c72c raw+70c72c: bl       #0xc2d606c
+0c78c730 raw+70c730: ldr      r1, [r5, #0x14]
+0c78c732 raw+70c732: add.w    sb, r7, #0x164
+0c78c736 raw+70c736: ldr      r3, [r1]
+0c78c738 raw+70c738: mov      r4, r0
+0c78c73a raw+70c73a: ldr      r3, [r3, #0x34]
+0c78c73c raw+70c73c: mov      r0, sb
+0c78c73e raw+70c73e: blx      r3
+0c78c740 raw+70c740: ldrb.w   r3, [r7, #0x164]
+0c78c744 raw+70c744: lsls     r6, r3, #0x1f
+0c78c746 raw+70c746: ite      mi
+0c78c748 raw+70c748: ldrmi.w  r0, [r7, #0x16c]
+0c78c74c raw+70c74c: addwpl   r0, r7, #0x165
+0c78c750 raw+70c750: bl       #0xc2d5fc0
+0c78c754 raw+70c754: ldr      r1, [pc, #0x180] ; literal raw+0x70c8d8 = 0x3c19fe60 'version'
+0c78c756 raw+70c756: mov      r2, r0
+0c78c758 raw+70c758: mov      r0, r4
+0c78c75a raw+70c75a: bl       #0xc2d5f08
+0c78c75e raw+70c75e: ldrb.w   r3, [r7, #0x164]
+0c78c762 raw+70c762: lsls     r0, r3, #0x1f
+0c78c764 raw+70c764: bmi.w    #0xc78d684
+0c78c768 raw+70c768: ldr      r0, [r5, #0x14]
+0c78c76a raw+70c76a: ldr      r2, [r0]
+0c78c76c raw+70c76c: ldr      r3, [r2, #0x70]
+0c78c76e raw+70c76e: blx      r3
+0c78c770 raw+70c770: bl       #0xc7060e4
+0c78c774 raw+70c774: vmov     d0, r0, r1
+0c78c778 raw+70c778: bl       #0xc2d5f64
+0c78c77c raw+70c77c: ldr      r1, [pc, #0x15c] ; literal raw+0x70c8dc = 0x3c19fe68 'version_int'
+0c78c77e raw+70c77e: mov      r2, r0
+0c78c780 raw+70c780: mov      r0, r4
+0c78c782 raw+70c782: bl       #0xc2d5f08
+0c78c786 raw+70c786: mov      r0, r4
+0c78c788 raw+70c788: bl       #0xc2d5e9e
+0c78c78c raw+70c78c: mov      r8, r0
+0c78c78e raw+70c78e: mov      r0, r4
+0c78c790 raw+70c790: bl       #0xc2d5dd4
+0c78c794 raw+70c794: mov      r0, r8
+0c78c796 raw+70c796: bl       #0xc7044c0
+0c78c79a raw+70c79a: cmp      r0, #0xa
+0c78c79c raw+70c79c: mov      r6, r0
+0c78c79e raw+70c79e: bhi.w    #0xc78d698
+0c78c7a2 raw+70c7a2: lsls     r3, r0, #1
+0c78c7a4 raw+70c7a4: strb.w   r3, [r7, #0x13c]
+0c78c7a8 raw+70c7a8: addw     r4, r7, #0x13d
+0c78c7ac raw+70c7ac: cmp      r0, #0
+0c78c7ae raw+70c7ae: bne.w    #0xc78d6b4
+0c78c7b2 raw+70c7b2: movs     r3, #0
+0c78c7b4 raw+70c7b4: strb     r3, [r4, r6]
+0c78c7b6 raw+70c7b6: ldr      r4, [pc, #0x108] ; literal raw+0x70c8c0 = 0x3c2d1750
+0c78c7b8 raw+70c7b8: mov      r0, r8
+0c78c7ba raw+70c7ba: bl       #0xc2d61b0
+0c78c7be raw+70c7be: ldr      r0, [r4]
+0c78c7c0 raw+70c7c0: cmp      r0, #0
+0c78c7c2 raw+70c7c2: beq.w    #0xc78dbb2
+0c78c7c6 raw+70c7c6: bl       #0xc76ab24
+0c78c7ca raw+70c7ca: add.w    r1, r7, #0x13c
+0c78c7ce raw+70c7ce: mov      r6, r0
+0c78c7d0 raw+70c7d0: add.w    r0, r7, #0x150
+0c78c7d4 raw+70c7d4: ldr.w    r8, [r7, #0xc]
+0c78c7d8 raw+70c7d8: bl       #0xc2974d2
+0c78c7dc raw+70c7dc: add.w    r1, r7, #0x150
+0c78c7e0 raw+70c7e0: mov      r0, sb
+0c78c7e2 raw+70c7e2: bl       #0xc2974d2
+0c78c7e6 raw+70c7e6: movs     r0, #0x30
+0c78c7e8 raw+70c7e8: bl       #0xc710d50
+0c78c7ec raw+70c7ec: mov      r4, r0
+0c78c7ee raw+70c7ee: cbz      r0, #0xc78c82c
+0c78c7f0 raw+70c7f0: bl       #0xc764a3c
+0c78c7f4 raw+70c7f4: ldr      r3, [pc, #0xd0] ; literal raw+0x70c8c8 = 0x3c19e5ac
+0c78c7f6 raw+70c7f6: movs     r2, #1
+0c78c7f8 raw+70c7f8: str      r3, [r4]
+0c78c7fa raw+70c7fa: movs     r3, #0x1c
+0c78c7fc raw+70c7fc: mov.w    ip, #0
+0c78c800 raw+70c800: str      r3, [r7, #0x78]
+0c78c802 raw+70c802: ldr      r3, [pc, #0xc8] ; literal raw+0x70c8cc = 0x0c789f8d
+0c78c804 raw+70c804: str      r2, [r7, #0x7c]
+0c78c806 raw+70c806: str      r3, [r4, #0x10]
+0c78c808 raw+70c808: add.w    r2, r7, #0x78
+0c78c80c raw+70c80c: add.w    r3, r4, #0x14
+0c78c810 raw+70c810: ldm.w    r2, {r0, r1}
+0c78c814 raw+70c814: str      r5, [r4, #0xc]
+0c78c816 raw+70c816: str.w    ip, [r4, #8]
+0c78c81a raw+70c81a: stm.w    r3, {r0, r1}
+0c78c81e raw+70c81e: mov      r1, sb
+0c78c820 raw+70c820: strd     r8, ip, [r4, #0x1c]
+0c78c824 raw+70c824: add.w    r0, r4, #0x24
+0c78c828 raw+70c828: bl       #0xc2974d2
+0c78c82c raw+70c82c: ldrb.w   r3, [r7, #0x164]
+0c78c830 raw+70c830: lsls     r3, r3, #0x1f
+0c78c832 raw+70c832: bmi.w    #0xc78d2fc
+0c78c836 raw+70c836: mov      r1, r4
+0c78c838 raw+70c838: mov      r0, r6
+0c78c83a raw+70c83a: str      r5, [r4, #4]
+0c78c83c raw+70c83c: bl       #0xc766240
+0c78c840 raw+70c840: ldrb.w   r3, [r7, #0x150]
+0c78c844 raw+70c844: lsls     r0, r3, #0x1f
+0c78c846 raw+70c846: bmi.w    #0xc78cae0
+0c78c84a raw+70c84a: ldrb.w   r3, [r7, #0x13c]
+0c78c84e raw+70c84e: lsls     r1, r3, #0x1f
+0c78c850 raw+70c850: bpl.w    #0xc78c2ea
+0c78c854 raw+70c854: ldr.w    r1, [r7, #0x13c]
+0c78c858 raw+70c858: ldr.w    r0, [r7, #0x144]
+0c78c85c raw+70c85c: bic      r1, r1, #1
+0c78c860 raw+70c860: bl       #0xc70ff4c
+0c78c864 raw+70c864: b        #0xc78c2ea
+0c78c866 raw+70c866: add.w    sb, r0, #0x10
+0c78c86a raw+70c86a: bic      sb, sb, #0xf
+0c78c86e raw+70c86e: mov      r0, sb
+0c78c870 raw+70c870: bl       #0xc710d50
+0c78c874 raw+70c874: mov      sl, r0
+0c78c876 raw+70c876: orr      r3, sb, #1
+0c78c87a raw+70c87a: strd     r3, r4, [r7, #0x164]
+0c78c87e raw+70c87e: str.w    r0, [r7, #0x16c]
+0c78c882 raw+70c882: mov      r1, r8
+0c78c884 raw+70c884: mov      r2, r4
+0c78c886 raw+70c886: mov      r0, sl
+0c78c888 raw+70c888: bl       #0xc704110
+0c78c88c raw+70c88c: b        #0xc78c36a
+0c78c88e raw+70c88e: mov.w    ip, #0xe
+0c78c892 raw+70c892: mov.w    r2, #-1
+0c78c896 raw+70c896: movs     r1, #0
+0c78c898 raw+70c898: mov      r0, r8
+0c78c89a raw+70c89a: ldr      r3, [pc, #0x44] ; literal raw+0x70c8e0 = 0x3c19fed4 'decodeSilkFile'
+0c78c89c raw+70c89c: str.w    ip, [sp]
+0c78c8a0 raw+70c8a0: bl       #0xc297912
+0c78c8a4 raw+70c8a4: cmp      r0, #0
+0c78c8a6 raw+70c8a6: beq.w    #0xc78d132
+0c78c8aa raw+70c8aa: ldrb.w   r3, [r7, #0x118]
+0c78c8ae raw+70c8ae: lsls     r2, r3, #0x1f
+0c78c8b0 raw+70c8b0: bpl.w    #0xc78d12a
+0c78c8b4 raw+70c8b4: ldr.w    r3, [r7, #0x11c]
+0c78c8b8 raw+70c8b8: b.w      #0xc78bf8c
+0c78c8bc raw+70c8bc: stc2     p12, c3, [r0, #0x64]

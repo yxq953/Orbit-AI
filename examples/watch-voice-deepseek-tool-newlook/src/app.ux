@@ -1,0 +1,5 @@
+<script>
+export default {
+  onCreate() { console.log('[native-recorder] created') }
+}
+</script>

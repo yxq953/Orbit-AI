@@ -1,0 +1,50 @@
+0c534b80 raw+4b4b80: mov      r0, sb
+0c534b82 raw+4b4b82: bl       #0xc5344a0
+0c534b86 raw+4b4b86: ldrb     r3, [r4]
+0c534b88 raw+4b4b88: adds     r3, #1
+0c534b8a raw+4b4b8a: uxtb     r3, r3
+0c534b8c raw+4b4b8c: cmp      r3, #3
+0c534b8e raw+4b4b8e: beq      #0xc534bd2
+0c534b90 raw+4b4b90: strb     r3, [r4]
+0c534b92 raw+4b4b92: adds     r7, #0x14
+0c534b94 raw+4b4b94: mov      sp, r7
+0c534b96 raw+4b4b96: pop.w    {r4, r5, r6, r7, r8, sb, pc}
+0c534b9a raw+4b4b9a: cmp.w    r8, #2
+0c534b9e raw+4b4b9e: bne      #0xc534b86
+0c534ba0 raw+4b4ba0: ldr      r3, [pc, #0x48] ; literal raw+0x4b4bec = 0x3c278b4c
+0c534ba2 raw+4b4ba2: ldr      r0, [r3]
+0c534ba4 raw+4b4ba4: cbnz     r0, #0xc534bb4
+0c534ba6 raw+4b4ba6: movs     r0, #3
+0c534ba8 raw+4b4ba8: ldr      r3, [pc, #0x44] ; literal raw+0x4b4bf0 = 0x3c0e463e 'app_wechat_handle_login_status'
+0c534baa raw+4b4baa: ldr      r2, [pc, #0x34] ; literal raw+0x4b4be0 = 0x3c0e2ab0 'wechat'
+0c534bac raw+4b4bac: ldr      r1, [pc, #0x44] ; literal raw+0x4b4bf4 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c534bae raw+4b4bae: bl       #0xc27e19c
+0c534bb2 raw+4b4bb2: b        #0xc534b86
+0c534bb4 raw+4b4bb4: ldr      r3, [r0]
+0c534bb6 raw+4b4bb6: ldr      r3, [r3, #0x14]
+0c534bb8 raw+4b4bb8: blx      r3
+0c534bba raw+4b4bba: movs     r3, #0
+0c534bbc raw+4b4bbc: strd     r3, r3, [r7, #8]
+0c534bc0 raw+4b4bc0: subs     r3, r0, #7
+0c534bc2 raw+4b4bc2: rsbs     r0, r3, #0
+0c534bc4 raw+4b4bc4: adcs     r0, r3
+0c534bc6 raw+4b4bc6: str      r0, [r7, #4]
+0c534bc8 raw+4b4bc8: adds     r1, r7, #4
+0c534bca raw+4b4bca: mov      r0, r8
+0c534bcc raw+4b4bcc: bl       #0xc534a68
+0c534bd0 raw+4b4bd0: b        #0xc534b86
+0c534bd2 raw+4b4bd2: movs     r3, #1
+0c534bd4 raw+4b4bd4: strb     r3, [r4]
+0c534bd6 raw+4b4bd6: b        #0xc534b76
+0c534bd8 raw+4b4bd8: b        #0xc5347d0
+0c534bda raw+4b4bda: subs     r4, #0x1b
+0c534bdc raw+4b4bdc: ldr      r6, [r3, r0]
+0c534bde raw+4b4bde: subs     r4, #0xe
+0c534be0 raw+4b4be0: cmp      r2, #0xb0
+0c534be2 raw+4b4be2: subs     r4, #0xe
+0c534be4 raw+4b4be4: cmp      sp, lr
+0c534be6 raw+4b4be6: subs     r4, #0xe
+0c534be8 raw+4b4be8: mov      r3, r3
+0c534bea raw+4b4bea: subs     r4, #0xe
+0c534bec raw+4b4bec: ldrh     r4, [r1, #0x1a]
+0c534bee raw+4b4bee: subs     r4, #0x27

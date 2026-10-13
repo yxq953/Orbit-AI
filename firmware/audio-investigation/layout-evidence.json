@@ -1,0 +1,128 @@
+{
+  "ota_members": [
+    {
+      "name": "vela_audio.bin",
+      "header_offset": 891963,
+      "payload_offset": 892035,
+      "compressed_size": 1948534,
+      "raw_size": 3035400,
+      "crc_ok": true,
+      "size_ok": true,
+      "sha256": "d41a0e0cdbe5f623b6e43400ac24f309ac58b600ab74177e60421014ae65b067",
+      "matches_existing": true
+    },
+    {
+      "name": "vela_ap.bin",
+      "header_offset": 5039571,
+      "payload_offset": 5039640,
+      "compressed_size": 4689361,
+      "raw_size": 7821144,
+      "crc_ok": true,
+      "size_ok": true,
+      "sha256": "1e510ba5d1cfa5ff49e58aeb89ffcc39fe9742ac1331929c314ad69ee21f3174",
+      "matches_existing": true
+    }
+  ],
+  "candidate_pointer_refs": [
+    {
+      "string": "wechat_init",
+      "string_offset": "0x121e71",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x5295e0"
+      ]
+    },
+    {
+      "string": "wechat_js_invoke_function",
+      "string_offset": "0x121f94",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x5297e4"
+      ]
+    },
+    {
+      "string": "system.record",
+      "string_offset": "0x1389c7",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x139294"
+      ]
+    },
+    {
+      "string": "js_invoke_function",
+      "string_offset": "0x121f9b",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x12f6c0"
+      ]
+    },
+    {
+      "string": "js_invoke_function",
+      "string_offset": "0x1ae420",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x70e574"
+      ]
+    },
+    {
+      "string": "js_regist_task_callback",
+      "string_offset": "0x12f11d",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x12f6d0"
+      ]
+    },
+    {
+      "string": "js_regist_task_callback",
+      "string_offset": "0x1adfec",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x70b858"
+      ]
+    },
+    {
+      "string": "startRecord",
+      "string_offset": "0x1ac6ac",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x6fe468",
+        "0x70c574"
+      ]
+    },
+    {
+      "string": "verifyAuth",
+      "string_offset": "0x12f05c",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0x12ffc0"
+      ]
+    },
+    {
+      "string": "com.tencent.wechatrtos",
+      "string_offset": "0x9f76c",
+      "candidate_base": "0x3bff1cb8",
+      "pointer_locations": [
+        "0xba2e8",
+        "0x3e16a0",
+        "0x3e626c",
+        "0x404b50",
+        "0x4ad380",
+        "0x4ae820",
+        "0x4ae88c",
+        "0x4ae95c",
+        "0x4ae9b0",
+        "0x4ae9e0",
+        "0x4af974",
+        "0x4afa00",
+        "0x4afe74",
+        "0x4aff44",
+        "0x4b0398",
+        "0x4b043c",
+        "0x537204",
+        "0x62b6f8",
+        "0x66ad8c"
+      ]
+    }
+  ],
+  "caveat": "Pointer matches are data evidence, not verified executable xrefs or authorization gates."
+}

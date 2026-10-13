@@ -1,0 +1,425 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: xiaomi-band-development\firmware\audio-investigation\wechat-bridge-derived.elf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x0c5a9501
+    Flags: None (0x05000000)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Base float procedure-call standard
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 0 bytes (0x0)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 0
+    Section header entries: 5
+
+    Program header offset: 0 (0x00000000)
+    Section header offset: 1224 (0x000004c8)
+
+    Section header string table index: 2
+
+========================================================================
+
+** Section #1 '.text' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 896 bytes (alignment 2)
+    Address: 0x0c5a9500
+
+    $t
+        0x0c5a9500:    2020                MOVS     r0,#0x20
+        0x0c5a9502:    f4dcf9e9    ....    BL       0xc2858d8 ; 0xc2858d8
+        0x0c5a9506:    b140        @.      CBZ      r0,0xc5a951a ; 0xc5a951a
+        0x0c5a9508:    2200        ."      MOVS     r2,#0
+        0x0c5a950a:    2303        .#      MOVS     r3,#3
+        0x0c5a950c:    e9c02300    ...#    STRD     r2,r3,[r0,#0]
+        0x0c5a9510:    e9c02302    ...#    STRD     r2,r3,[r0,#8]
+        0x0c5a9514:    e9c02304    ...#    STRD     r2,r3,[r0,#0x10]
+        0x0c5a9518:    6186        .a      STR      r6,[r0,#0x18]
+        0x0c5a951a:    6028        (`      STR      r0,[r5,#0]
+        0x0c5a951c:    687b        {h      LDR      r3,[r7,#4]
+        0x0c5a951e:    2001        .       MOVS     r0,#1
+        0x0c5a9520:    9300        ..      STR      r3,[sp,#0]
+        0x0c5a9522:    4a07        .J      LDR      r2,[pc,#28] ; [0xc5a9540] = 0x3c113a39
+        0x0c5a9524:    f2401329    @.).    MOV      r3,#0x129
+        0x0c5a9528:    490a        .I      LDR      r1,[pc,#40] ; [0xc5a9554] = 0x3c113aea
+        0x0c5a952a:    f023fdef    #...    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a952e:    f8d8304c    ..L0    LDR      r3,[r8,#0x4c]
+        0x0c5a9532:    6818        .h      LDR      r0,[r3,#0]
+        0x0c5a9534:    f023f87a    #.z.    BL       0xc5cc62c ; 0xc5cc62c
+        0x0c5a9538:    e76c        l.      B        0xc5a9414 ; 0xc5a9414
+        0x0c5a953a:    bf00        ..      NOP      
+        0x0c5a953c:    ea2c3c27    ,.'<    BIC      r12,r12,r7,ASR #12
+        0x0c5a9540:    3a39        9:      SUBS     r2,r2,#0x39
+        0x0c5a9542:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9544:    3a47        G:      SUBS     r2,r2,#0x47
+        0x0c5a9546:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9548:    3a8d        .:      SUBS     r2,r2,#0x8d
+        0x0c5a954a:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a954c:    9301        ..      STR      r3,[sp,#4]
+        0x0c5a954e:    0c5a        Z.      LSRS     r2,r3,#17
+        0x0c5a9550:    3abd        .:      SUBS     r2,r2,#0xbd
+        0x0c5a9552:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9554:    3aea        .:      SUBS     r2,r2,#0xea
+        0x0c5a9556:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9558:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x0c5a955c:    b084        ..      SUB      sp,sp,#0x10
+        0x0c5a955e:    4605        .F      MOV      r5,r0
+        0x0c5a9560:    af04        ..      ADD      r7,sp,#0x10
+        0x0c5a9562:    f44f70b8    O..p    MOV      r0,#0x170
+        0x0c5a9566:    4616        .F      MOV      r6,r2
+        0x0c5a9568:    4698        .F      MOV      r8,r3
+        0x0c5a956a:    f4dcf9b5    ....    BL       0xc2858d8 ; 0xc2858d8
+        0x0c5a956e:    4604        .F      MOV      r4,r0
+        0x0c5a9570:    b990        ..      CBNZ     r0,0xc5a9598 ; 0xc5a9598
+        0x0c5a9572:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a95d8] = 0x3c113b35
+        0x0c5a9574:    2003        .       MOVS     r0,#3
+        0x0c5a9576:    9303        ..      STR      r3,[sp,#0xc]
+        0x0c5a9578:    4b18        .K      LDR      r3,[pc,#96] ; [0xc5a95dc] = 0x3c02dbec
+        0x0c5a957a:    4a19        .J      LDR      r2,[pc,#100] ; [0xc5a95e0] = 0x3c113b29
+        0x0c5a957c:    9302        ..      STR      r3,[sp,#8]
+        0x0c5a957e:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a95e4] = 0x3c113b45
+        0x0c5a9580:    4919        .I      LDR      r1,[pc,#100] ; [0xc5a95e8] = 0x3c0abdcb
+        0x0c5a9582:    9301        ..      STR      r3,[sp,#4]
+        0x0c5a9584:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a95ec] = 0x3c113b97
+        0x0c5a9586:    9300        ..      STR      r3,[sp,#0]
+        0x0c5a9588:    2333        3#      MOVS     r3,#0x33
+        0x0c5a958a:    f023fdbf    #...    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a958e:    4622        "F      MOV      r2,r4
+        0x0c5a9590:    2133        3!      MOVS     r1,#0x33
+        0x0c5a9592:    4817        .H      LDR      r0,[pc,#92] ; [0xc5a95f0] = 0x3c113ba9
+        0x0c5a9594:    f15bf818    [...    BL       0xc7045c8 ; 0xc7045c8
+        0x0c5a9598:    6005        .`      STR      r5,[r0,#0]
+        0x0c5a959a:    f8c000a4    ....    STR      r0,[r0,#0xa4]
+        0x0c5a959e:    f8c00150    ..P.    STR      r0,[r0,#0x150]
+        0x0c5a95a2:    4628        (F      MOV      r0,r5
+        0x0c5a95a4:    f024fac8    $...    BL       0xc5cdb38 ; 0xc5cdb38
+        0x0c5a95a8:    1d21        !.      ADDS     r1,r4,#4
+        0x0c5a95aa:    4a12        .J      LDR      r2,[pc,#72] ; [0xc5a95f4] = 0xc5a9a25
+        0x0c5a95ac:    f5a8f850    ..P.    BL       0xc351650 ; 0xc351650
+        0x0c5a95b0:    4628        (F      MOV      r0,r5
+        0x0c5a95b2:    f024fac1    $...    BL       0xc5cdb38 ; 0xc5cdb38
+        0x0c5a95b6:    f10401b0    ....    ADD      r1,r4,#0xb0
+        0x0c5a95ba:    4a0f        .J      LDR      r2,[pc,#60] ; [0xc5a95f8] = 0xc5a9909
+        0x0c5a95bc:    f5a8f848    ..H.    BL       0xc351650 ; 0xc351650
+        0x0c5a95c0:    2001        .       MOVS     r0,#1
+        0x0c5a95c2:    2101        .!      MOVS     r1,#1
+        0x0c5a95c4:    4b0d        .K      LDR      r3,[pc,#52] ; [0xc5a95fc] = 0x3c27ea1c
+        0x0c5a95c6:    f1b83fff    ...?    CMP      r8,#0xffffffff
+        0x0c5a95ca:    601c        .`      STR      r4,[r3,#0]
+        0x0c5a95cc:    bf08        ..      IT       EQ
+        0x0c5a95ce:    62b4        .b      STREQ    r4,[r6,#0x28]
+        0x0c5a95d0:    46bd        .F      MOV      sp,r7
+        0x0c5a95d2:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x0c5a95d6:    bf00        ..      NOP      
+        0x0c5a95d8:    3b35        5;      SUBS     r3,r3,#0x35
+        0x0c5a95da:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a95dc:    dbec        ..      BLT      0xc5a95b8 ; 0xc5a95b8
+        0x0c5a95de:    3c02        .<      SUBS     r4,#2
+        0x0c5a95e0:    3b29        );      SUBS     r3,r3,#0x29
+        0x0c5a95e2:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a95e4:    3b45        E;      SUBS     r3,r3,#0x45
+        0x0c5a95e6:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a95e8:    bdcb        ..      POP      {r0,r1,r3,r6,r7,pc}
+        0x0c5a95ea:    3c0a        .<      SUBS     r4,r4,#0xa
+        0x0c5a95ec:    3b97        .;      SUBS     r3,r3,#0x97
+        0x0c5a95ee:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a95f0:    3ba9        .;      SUBS     r3,r3,#0xa9
+        0x0c5a95f2:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a95f4:    9a25        %.      LDR      r2,[sp,#0x94]
+        0x0c5a95f6:    0c5a        Z.      LSRS     r2,r3,#17
+        0x0c5a95f8:    9909        ..      LDR      r1,[sp,#0x24]
+        0x0c5a95fa:    0c5a        Z.      LSRS     r2,r3,#17
+        0x0c5a95fc:    ea1c3c27    ..'<    ANDS     r12,r12,r7,ASR #12
+        0x0c5a9600:    b5b0        ..      PUSH     {r4,r5,r7,lr}
+        0x0c5a9602:    b084        ..      SUB      sp,sp,#0x10
+        0x0c5a9604:    4619        .F      MOV      r1,r3
+        0x0c5a9606:    4b1d        .K      LDR      r3,[pc,#116] ; [0xc5a967c] = 0x3c27ea20
+        0x0c5a9608:    4605        .F      MOV      r5,r0
+        0x0c5a960a:    af04        ..      ADD      r7,sp,#0x10
+        0x0c5a960c:    4610        .F      MOV      r0,r2
+        0x0c5a960e:    681a        .h      LDR      r2,[r3,#0]
+        0x0c5a9610:    f572fe7e    r.~.    BL       0xc31c310 ; 0xc31c310
+        0x0c5a9614:    4604        .F      MOV      r4,r0
+        0x0c5a9616:    b990        ..      CBNZ     r0,0xc5a963e ; 0xc5a963e
+        0x0c5a9618:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a9680] = 0x3c113b35
+        0x0c5a961a:    2003        .       MOVS     r0,#3
+        0x0c5a961c:    9303        ..      STR      r3,[sp,#0xc]
+        0x0c5a961e:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a9684] = 0x3c02dbec
+        0x0c5a9620:    4a19        .J      LDR      r2,[pc,#100] ; [0xc5a9688] = 0x3c113bb8
+        0x0c5a9622:    9302        ..      STR      r3,[sp,#8]
+        0x0c5a9624:    4b19        .K      LDR      r3,[pc,#100] ; [0xc5a968c] = 0x3c113bc6
+        0x0c5a9626:    491a        .I      LDR      r1,[pc,#104] ; [0xc5a9690] = 0x3c0abdcb
+        0x0c5a9628:    9301        ..      STR      r3,[sp,#4]
+        0x0c5a962a:    4b1a        .K      LDR      r3,[pc,#104] ; [0xc5a9694] = 0x3c113c1a
+        0x0c5a962c:    9300        ..      STR      r3,[sp,#0]
+        0x0c5a962e:    2341        A#      MOVS     r3,#0x41
+        0x0c5a9630:    f023fd6c    #.l.    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a9634:    4622        "F      MOV      r2,r4
+        0x0c5a9636:    2141        A!      MOVS     r1,#0x41
+        0x0c5a9638:    4817        .H      LDR      r0,[pc,#92] ; [0xc5a9698] = 0x3c113ba9
+        0x0c5a963a:    f15affc5    Z...    BL       0xc7045c8 ; 0xc7045c8
+        0x0c5a963e:    4917        .I      LDR      r1,[pc,#92] ; [0xc5a969c] = 0x3c113c2c
+        0x0c5a9640:    2342        B#      MOVS     r3,#0x42
+        0x0c5a9642:    2001        .       MOVS     r0,#1
+        0x0c5a9644:    4a10        .J      LDR      r2,[pc,#64] ; [0xc5a9688] = 0x3c113bb8
+        0x0c5a9646:    f023fd61    #.a.    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a964a:    e9d4235a    ..Z#    LDRD     r2,r3,[r4,#0x168]
+        0x0c5a964e:    4628        (F      MOV      r0,r5
+        0x0c5a9650:    f078fa2c    x.,.    BL       0xc621aac ; 0xc621aac
+        0x0c5a9654:    e9d42358    ..X#    LDRD     r2,r3,[r4,#0x160]
+        0x0c5a9658:    4628        (F      MOV      r0,r5
+        0x0c5a965a:    f078fa27    x.'.    BL       0xc621aac ; 0xc621aac
+        0x0c5a965e:    1d20         .      ADDS     r0,r4,#4
+        0x0c5a9660:    f12efbb8    ....    BL       0xc6d7dd4 ; 0xc6d7dd4
+        0x0c5a9664:    f10400b0    ....    ADD      r0,r4,#0xb0
+        0x0c5a9668:    f12efbb4    ....    BL       0xc6d7dd4 ; 0xc6d7dd4
+        0x0c5a966c:    2200        ."      MOVS     r2,#0
+        0x0c5a966e:    2001        .       MOVS     r0,#1
+        0x0c5a9670:    2101        .!      MOVS     r1,#1
+        0x0c5a9672:    4b0b        .K      LDR      r3,[pc,#44] ; [0xc5a96a0] = 0x3c27ea1c
+        0x0c5a9674:    601a        .`      STR      r2,[r3,#0]
+        0x0c5a9676:    46bd        .F      MOV      sp,r7
+        0x0c5a9678:    bdb0        ..      POP      {r4,r5,r7,pc}
+        0x0c5a967a:    bf00        ..      NOP      
+        0x0c5a967c:    ea203c27     .'<    BIC      r12,r0,r7,ASR #12
+        0x0c5a9680:    3b35        5;      SUBS     r3,r3,#0x35
+        0x0c5a9682:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9684:    dbec        ..      BLT      0xc5a9660 ; 0xc5a9660
+        0x0c5a9686:    3c02        .<      SUBS     r4,#2
+        0x0c5a9688:    3bb8        .;      SUBS     r3,r3,#0xb8
+        0x0c5a968a:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a968c:    3bc6        .;      SUBS     r3,r3,#0xc6
+        0x0c5a968e:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9690:    bdcb        ..      POP      {r0,r1,r3,r6,r7,pc}
+        0x0c5a9692:    3c0a        .<      SUBS     r4,r4,#0xa
+        0x0c5a9694:    3c1a        .<      SUBS     r4,r4,#0x1a
+        0x0c5a9696:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9698:    3ba9        .;      SUBS     r3,r3,#0xa9
+        0x0c5a969a:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a969c:    3c2c        ,<      SUBS     r4,r4,#0x2c
+        0x0c5a969e:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a96a0:    ea1c3c27    ..'<    ANDS     r12,r12,r7,ASR #12
+        0x0c5a96a4:    e92d4ff0    -..O    PUSH     {r4-r11,lr}
+        0x0c5a96a8:    b089        ..      SUB      sp,sp,#0x24
+        0x0c5a96aa:    4619        .F      MOV      r1,r3
+        0x0c5a96ac:    4b4a        JK      LDR      r3,[pc,#296] ; [0xc5a97d8] = 0x3c27ea20
+        0x0c5a96ae:    af04        ..      ADD      r7,sp,#0x10
+        0x0c5a96b0:    4604        .F      MOV      r4,r0
+        0x0c5a96b2:    4610        .F      MOV      r0,r2
+        0x0c5a96b4:    681a        .h      LDR      r2,[r3,#0]
+        0x0c5a96b6:    f572fe2b    r.+.    BL       0xc31c310 ; 0xc31c310
+        0x0c5a96ba:    6bfe        .k      LDR      r6,[r7,#0x3c]
+        0x0c5a96bc:    4605        .F      MOV      r5,r0
+        0x0c5a96be:    b990        ..      CBNZ     r0,0xc5a96e6 ; 0xc5a96e6
+        0x0c5a96c0:    4b46        FK      LDR      r3,[pc,#280] ; [0xc5a97dc] = 0x3c113b35
+        0x0c5a96c2:    2003        .       MOVS     r0,#3
+        0x0c5a96c4:    9303        ..      STR      r3,[sp,#0xc]
+        0x0c5a96c6:    4b46        FK      LDR      r3,[pc,#280] ; [0xc5a97e0] = 0x3c02dbec
+        0x0c5a96c8:    4a46        FJ      LDR      r2,[pc,#280] ; [0xc5a97e4] = 0x3c113c4c
+        0x0c5a96ca:    9302        ..      STR      r3,[sp,#8]
+        0x0c5a96cc:    4b46        FK      LDR      r3,[pc,#280] ; [0xc5a97e8] = 0x3c113c66
+        0x0c5a96ce:    4947        GI      LDR      r1,[pc,#284] ; [0xc5a97ec] = 0x3c0abdcb
+        0x0c5a96d0:    9301        ..      STR      r3,[sp,#4]
+        0x0c5a96d2:    4b47        GK      LDR      r3,[pc,#284] ; [0xc5a97f0] = 0x3c113cc6
+        0x0c5a96d4:    9300        ..      STR      r3,[sp,#0]
+        0x0c5a96d6:    2351        Q#      MOVS     r3,#0x51
+        0x0c5a96d8:    f023fd18    #...    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a96dc:    462a        *F      MOV      r2,r5
+        0x0c5a96de:    2151        Q!      MOVS     r1,#0x51
+        0x0c5a96e0:    4844        DH      LDR      r0,[pc,#272] ; [0xc5a97f4] = 0x3c113ba9
+        0x0c5a96e2:    f15aff71    Z.q.    BL       0xc7045c8 ; 0xc7045c8
+        0x0c5a96e6:    6bbb        .k      LDR      r3,[r7,#0x38]
+        0x0c5a96e8:    2b01        .+      CMP      r3,#1
+        0x0c5a96ea:    d103        ..      BNE      0xc5a96f4 ; 0xc5a96f4
+        0x0c5a96ec:    e9d62300    ...#    LDRD     r2,r3,[r6,#0]
+        0x0c5a96f0:    1c59        Y.      ADDS     r1,r3,#1
+        0x0c5a96f2:    d004        ..      BEQ      0xc5a96fe ; 0xc5a96fe
+        0x0c5a96f4:    4940        @I      LDR      r1,[pc,#256] ; [0xc5a97f8] = 0x3c113cd8
+        0x0c5a96f6:    4620         F      MOV      r0,r4
+        0x0c5a96f8:    f56cfd76    l.v.    BL       0xc3161e8 ; 0xc3161e8
+        0x0c5a96fc:    e057        W.      B        0xc5a97ae ; 0xc5a97ae
+        0x0c5a96fe:    493f        ?I      LDR      r1,[pc,#252] ; [0xc5a97fc] = 0x3c113cf9
+        0x0c5a9700:    4620         F      MOV      r0,r4
+        0x0c5a9702:    9100        ..      STR      r1,[sp,#0]
+        0x0c5a9704:    e9c72300    ...#    STRD     r2,r3,[r7,#0]
+        0x0c5a9708:    f570fbfa    p...    BL       0xc319f00 ; 0xc319f00
+        0x0c5a970c:    e9d72300    ...#    LDRD     r2,r3,[r7,#0]
+        0x0c5a9710:    460e        .F      MOV      r6,r1
+        0x0c5a9712:    493b        ;I      LDR      r1,[pc,#236] ; [0xc5a9800] = 0x3c113d01
+        0x0c5a9714:    4680        .F      MOV      r8,r0
+        0x0c5a9716:    9100        ..      STR      r1,[sp,#0]
+        0x0c5a9718:    4620         F      MOV      r0,r4
+        0x0c5a971a:    f570fbf1    p...    BL       0xc319f00 ; 0xc319f00
+        0x0c5a971e:    e9d72300    ...#    LDRD     r2,r3,[r7,#0]
+        0x0c5a9722:    468b        .F      MOV      r11,r1
+        0x0c5a9724:    4937        7I      LDR      r1,[pc,#220] ; [0xc5a9804] = 0x3c113d0b
+        0x0c5a9726:    4682        .F      MOV      r10,r0
+        0x0c5a9728:    9100        ..      STR      r1,[sp,#0]
+        0x0c5a972a:    4620         F      MOV      r0,r4
+        0x0c5a972c:    f570fbe8    p...    BL       0xc319f00 ; 0xc319f00
+        0x0c5a9730:    4681        .F      MOV      r9,r0
+        0x0c5a9732:    460d        .F      MOV      r5,r1
+        0x0c5a9734:    4640        @F      MOV      r0,r8
+        0x0c5a9736:    4631        1F      MOV      r1,r6
+        0x0c5a9738:    f078fa09    x...    BL       0xc621b4e ; 0xc621b4e
+        0x0c5a973c:    b3d8        ..      CBZ      r0,0xc5a97b6 ; 0xc5a97b6
+        0x0c5a973e:    f11b0f07    ....    CMN      r11,#7
+        0x0c5a9742:    d138        8.      BNE      0xc5a97b6 ; 0xc5a97b6
+        0x0c5a9744:    1deb        ..      ADDS     r3,r5,#7
+        0x0c5a9746:    d136        6.      BNE      0xc5a97b6 ; 0xc5a97b6
+        0x0c5a9748:    f1070108    ....    ADD      r1,r7,#8
+        0x0c5a974c:    4642        BF      MOV      r2,r8
+        0x0c5a974e:    4633        3F      MOV      r3,r6
+        0x0c5a9750:    4620         F      MOV      r0,r4
+        0x0c5a9752:    f573ffa3    s...    BL       0xc31d69c ; 0xc31d69c
+        0x0c5a9756:    4652        RF      MOV      r2,r10
+        0x0c5a9758:    462b        +F      MOV      r3,r5
+        0x0c5a975a:    4620         F      MOV      r0,r4
+        0x0c5a975c:    f078f9be    x...    BL       0xc621adc ; 0xc621adc
+        0x0c5a9760:    464a        JF      MOV      r2,r9
+        0x0c5a9762:    462b        +F      MOV      r3,r5
+        0x0c5a9764:    4683        .F      MOV      r11,r0
+        0x0c5a9766:    4620         F      MOV      r0,r4
+        0x0c5a9768:    f078f9b8    x...    BL       0xc621adc ; 0xc621adc
+        0x0c5a976c:    ed970b02    ....    VLDR     d0,[r7,#8]
+        0x0c5a9770:    4601        .F      MOV      r1,r0
+        0x0c5a9772:    6078        x`      STR      r0,[r7,#4]
+        0x0c5a9774:    4658        XF      MOV      r0,r11
+        0x0c5a9776:    f1e4fed1    ....    BL       0xc78e51c ; 0xc78e51c
+        0x0c5a977a:    4659        YF      MOV      r1,r11
+        0x0c5a977c:    4620         F      MOV      r0,r4
+        0x0c5a977e:    f56bfd2f    k./.    BL       0xc3151e0 ; 0xc3151e0
+        0x0c5a9782:    687b        {h      LDR      r3,[r7,#4]
+        0x0c5a9784:    4620         F      MOV      r0,r4
+        0x0c5a9786:    4619        .F      MOV      r1,r3
+        0x0c5a9788:    f56bfd2a    k.*.    BL       0xc3151e0 ; 0xc3151e0
+        0x0c5a978c:    4642        BF      MOV      r2,r8
+        0x0c5a978e:    4633        3F      MOV      r3,r6
+        0x0c5a9790:    4620         F      MOV      r0,r4
+        0x0c5a9792:    f078f98b    x...    BL       0xc621aac ; 0xc621aac
+        0x0c5a9796:    4652        RF      MOV      r2,r10
+        0x0c5a9798:    462b        +F      MOV      r3,r5
+        0x0c5a979a:    4620         F      MOV      r0,r4
+        0x0c5a979c:    f078f986    x...    BL       0xc621aac ; 0xc621aac
+        0x0c5a97a0:    4620         F      MOV      r0,r4
+        0x0c5a97a2:    464a        JF      MOV      r2,r9
+        0x0c5a97a4:    462b        +F      MOV      r3,r5
+        0x0c5a97a6:    f078f981    x...    BL       0xc621aac ; 0xc621aac
+        0x0c5a97aa:    2001        .       MOVS     r0,#1
+        0x0c5a97ac:    4601        .F      MOV      r1,r0
+        0x0c5a97ae:    3714        .7      ADDS     r7,r7,#0x14
+        0x0c5a97b0:    46bd        .F      MOV      sp,r7
+        0x0c5a97b2:    e8bd8ff0    ....    POP      {r4-r11,pc}
+        0x0c5a97b6:    4642        BF      MOV      r2,r8
+        0x0c5a97b8:    4633        3F      MOV      r3,r6
+        0x0c5a97ba:    4620         F      MOV      r0,r4
+        0x0c5a97bc:    f078f976    x.v.    BL       0xc621aac ; 0xc621aac
+        0x0c5a97c0:    4652        RF      MOV      r2,r10
+        0x0c5a97c2:    465b        [F      MOV      r3,r11
+        0x0c5a97c4:    4620         F      MOV      r0,r4
+        0x0c5a97c6:    f078f971    x.q.    BL       0xc621aac ; 0xc621aac
+        0x0c5a97ca:    464a        JF      MOV      r2,r9
+        0x0c5a97cc:    462b        +F      MOV      r3,r5
+        0x0c5a97ce:    4620         F      MOV      r0,r4
+        0x0c5a97d0:    f078f96c    x.l.    BL       0xc621aac ; 0xc621aac
+        0x0c5a97d4:    490c        .I      LDR      r1,[pc,#48] ; [0xc5a9808] = 0x3c113d18
+        0x0c5a97d6:    e78e        ..      B        0xc5a96f6 ; 0xc5a96f6
+        0x0c5a97d8:    ea203c27     .'<    BIC      r12,r0,r7,ASR #12
+        0x0c5a97dc:    3b35        5;      SUBS     r3,r3,#0x35
+        0x0c5a97de:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97e0:    dbec        ..      BLT      0xc5a97bc ; 0xc5a97bc
+        0x0c5a97e2:    3c02        .<      SUBS     r4,#2
+        0x0c5a97e4:    3c4c        L<      SUBS     r4,r4,#0x4c
+        0x0c5a97e6:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97e8:    3c66        f<      SUBS     r4,r4,#0x66
+        0x0c5a97ea:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97ec:    bdcb        ..      POP      {r0,r1,r3,r6,r7,pc}
+        0x0c5a97ee:    3c0a        .<      SUBS     r4,r4,#0xa
+        0x0c5a97f0:    3cc6        .<      SUBS     r4,r4,#0xc6
+        0x0c5a97f2:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97f4:    3ba9        .;      SUBS     r3,r3,#0xa9
+        0x0c5a97f6:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97f8:    3cd8        .<      SUBS     r4,r4,#0xd8
+        0x0c5a97fa:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a97fc:    3cf9        .<      SUBS     r4,r4,#0xf9
+        0x0c5a97fe:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9800:    3d01        .=      SUBS     r5,#1
+        0x0c5a9802:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9804:    3d0b        .=      SUBS     r5,r5,#0xb
+        0x0c5a9806:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9808:    3d18        .=      SUBS     r5,r5,#0x18
+        0x0c5a980a:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a980c:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x0c5a9810:    f8df8070    ..p.    LDR      r8,[pc,#112] ; [0xc5a9884]
+        0x0c5a9814:    4605        .F      MOV      r5,r0
+        0x0c5a9816:    f8d83000    ...0    LDR      r3,[r8,#0]
+        0x0c5a981a:    460c        .F      MOV      r4,r1
+        0x0c5a981c:    af00        ..      ADD      r7,sp,#0
+        0x0c5a981e:    b93b        ;.      CBNZ     r3,0xc5a9830 ; 0xc5a9830
+        0x0c5a9820:    2375        u#      MOVS     r3,#0x75
+        0x0c5a9822:    2002        .       MOVS     r0,#2
+        0x0c5a9824:    4a13        .J      LDR      r2,[pc,#76] ; [0xc5a9874] = 0x3c113d40
+        0x0c5a9826:    4914        .I      LDR      r1,[pc,#80] ; [0xc5a9878] = 0x3c113d4a
+        0x0c5a9828:    f023fc70    #.p.    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a982c:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x0c5a9830:    b9e0        ..      CBNZ     r0,0xc5a986c ; 0xc5a986c
+        0x0c5a9832:    4d12        .M      LDR      r5,[pc,#72] ; [0xc5a987c] = 0x3c01f31d
+        0x0c5a9834:    b1c1        ..      CBZ      r1,0xc5a9868 ; 0xc5a9868
+        0x0c5a9836:    237c        |#      MOVS     r3,#0x7c
+        0x0c5a9838:    2002        .       MOVS     r0,#2
+        0x0c5a983a:    4a0e        .J      LDR      r2,[pc,#56] ; [0xc5a9874] = 0x3c113d40
+        0x0c5a983c:    4910        .I      LDR      r1,[pc,#64] ; [0xc5a9880]
+        0x0c5a983e:    f023fc65    #.e.    BL       0xc5cd10c ; 0xc5cd10c
+        0x0c5a9842:    2008        .       MOVS     r0,#8
+        0x0c5a9844:    f4dcf848    ..H.    BL       0xc2858d8 ; 0xc2858d8
+        0x0c5a9848:    4606        .F      MOV      r6,r0
+        0x0c5a984a:    4628        (F      MOV      r0,r5
+        0x0c5a984c:    f4cefb6e    ..n.    BL       0xc277f2c ; 0xc277f2c
+        0x0c5a9850:    6030        0`      STR      r0,[r6,#0]
+        0x0c5a9852:    4620         F      MOV      r0,r4
+        0x0c5a9854:    f4cefb6a    ..j.    BL       0xc277f2c ; 0xc277f2c
+        0x0c5a9858:    6070        p`      STR      r0,[r6,#4]
+        0x0c5a985a:    f8d80000    ....    LDR      r0,[r8,#0]
+        0x0c5a985e:    4631        1F      MOV      r1,r6
+        0x0c5a9860:    30b0        .0      ADDS     r0,r0,#0xb0
+        0x0c5a9862:    f5a7ff1d    ....    BL       0xc3516a0 ; 0xc3516a0
+        0x0c5a9866:    e7e1        ..      B        0xc5a982c ; 0xc5a982c
+        0x0c5a9868:    462c        ,F      MOV      r4,r5
+        0x0c5a986a:    e7e4        ..      B        0xc5a9836 ; 0xc5a9836
+        0x0c5a986c:    2900        .)      CMP      r1,#0
+        0x0c5a986e:    d1e8        ..      BNE      0xc5a9842 ; 0xc5a9842
+        0x0c5a9870:    4c02        .L      LDR      r4,[pc,#8] ; [0xc5a987c] = 0x3c01f31d
+        0x0c5a9872:    e7e0        ..      B        0xc5a9836 ; 0xc5a9836
+        0x0c5a9874:    3d40        @=      SUBS     r5,r5,#0x40
+        0x0c5a9876:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a9878:    3d4a        J=      SUBS     r5,r5,#0x4a
+        0x0c5a987a:    3c11        .<      SUBS     r4,r4,#0x11
+        0x0c5a987c:    f31d3c01    ...<    DCI.W    0xf31d3c01 ; ? Undefined
+
+** Section #2 '.shstrtab' (SHT_STRTAB)
+    Size   : 33 bytes
+
+
+** Section #3 '.symtab' (SHT_SYMTAB)
+    Size   : 32 bytes (alignment 4)
+    String table #4 '.strtab'
+    Last local symbol no. 1
+
+
+** Section #4 '.strtab' (SHT_STRTAB)
+    Size   : 4 bytes
+
+

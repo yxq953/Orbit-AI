@@ -1,0 +1,236 @@
+0c77e498 raw+6fe498: push.w   {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+0c77e49c raw+6fe49c: mov      r4, r0
+0c77e49e raw+6fe49e: sub      sp, #0x84
+0c77e4a0 raw+6fe4a0: ldr      r3, [pc, #0x28c] ; literal raw+0x6fe730 = 0x3c19e294 'stopRecord'
+0c77e4a2 raw+6fe4a2: add      r7, sp, #0x10
+0c77e4a4 raw+6fe4a4: str      r3, [sp, #4]
+0c77e4a6 raw+6fe4a6: mov      r5, r1
+0c77e4a8 raw+6fe4a8: mov      r6, r2
+0c77e4aa raw+6fe4aa: movs     r1, #0
+0c77e4ac raw+6fe4ac: ldr      r3, [pc, #0x284] ; literal raw+0x6fe734 = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77e4ae raw+6fe4ae: ldr      r2, [pc, #0x288] ; literal raw+0x6fe738 = 0x3c19b6a8 'adam'
+0c77e4b0 raw+6fe4b0: add.w    r0, r7, #0x38
+0c77e4b4 raw+6fe4b4: str.w    ip, [sp]
+0c77e4b8 raw+6fe4b8: bl       #0xc7644b4
+0c77e4bc raw+6fe4bc: ldrb.w   r8, [r4, #0x14]
+0c77e4c0 raw+6fe4c0: cmp.w    r8, #1
+0c77e4c4 raw+6fe4c4: bne      #0xc77e5a0
+0c77e4c6 raw+6fe4c6: cbnz     r5, #0xc77e4e6
+0c77e4c8 raw+6fe4c8: movs     r3, #2
+0c77e4ca raw+6fe4ca: ldr      r0, [r4, #4]
+0c77e4cc raw+6fe4cc: str      r5, [r4, #0x10]
+0c77e4ce raw+6fe4ce: strh     r3, [r4, #0x14]
+0c77e4d0 raw+6fe4d0: ldr      r3, [r0]
+0c77e4d2 raw+6fe4d2: ldr      r3, [r3, #0x28]
+0c77e4d4 raw+6fe4d4: blx      r3
+0c77e4d6 raw+6fe4d6: add.w    r0, r7, #0x38
+0c77e4da raw+6fe4da: bl       #0xc76454c
+0c77e4de raw+6fe4de: adds     r7, #0x74
+0c77e4e0 raw+6fe4e0: mov      sp, r7
+0c77e4e2 raw+6fe4e2: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c77e4e6 raw+6fe4e6: ldr.w    sl, [pc, #0x280] ; literal raw+0x6fe768 = 0x3c2d1750
+0c77e4ea raw+6fe4ea: ldr.w    r0, [sl]
+0c77e4ee raw+6fe4ee: cmp      r0, #0
+0c77e4f0 raw+6fe4f0: beq.w    #0xc77e6b0
+0c77e4f4 raw+6fe4f4: bl       #0xc76ab24
+0c77e4f8 raw+6fe4f8: movs     r3, #0
+0c77e4fa raw+6fe4fa: mov      r2, r0
+0c77e4fc raw+6fe4fc: str      r3, [r7, #0x20]
+0c77e4fe raw+6fe4fe: ldr      r3, [pc, #0x23c] ; literal raw+0x6fe73c = 0x0c77d92d
+0c77e500 raw+6fe500: ldr.w    fp, [pc, #0x268] ; literal raw+0x6fe76c = 0x0c77d365
+0c77e504 raw+6fe504: str      r3, [r7, #0x1c]
+0c77e506 raw+6fe506: add.w    sb, r7, #0x30
+0c77e50a raw+6fe50a: add.w    r3, r7, #0x1c
+0c77e50e raw+6fe50e: ldm.w    r3, {r0, r1}
+0c77e512 raw+6fe512: str      r4, [r7, #0x28]
+0c77e514 raw+6fe514: str.w    fp, [r7, #0x2c]
+0c77e518 raw+6fe518: stm.w    sb, {r0, r1}
+0c77e51c raw+6fe51c: mov      r0, r2
+0c77e51e raw+6fe51e: add.w    r1, r7, #0x28
+0c77e522 raw+6fe522: bl       #0xc766b54
+0c77e526 raw+6fe526: ldr.w    r0, [sl]
+0c77e52a raw+6fe52a: cmp      r0, #0
+0c77e52c raw+6fe52c: beq.w    #0xc77e6ce
+0c77e530 raw+6fe530: bl       #0xc76ab24
+0c77e534 raw+6fe534: movs     r3, #0
+0c77e536 raw+6fe536: mov      r2, r0
+0c77e538 raw+6fe538: str      r3, [r7, #0x18]
+0c77e53a raw+6fe53a: ldr      r3, [pc, #0x204] ; literal raw+0x6fe740 = 0x0c77d5ad
+0c77e53c raw+6fe53c: strd     r4, fp, [r7, #0x28]
+0c77e540 raw+6fe540: str      r3, [r7, #0x14]
+0c77e542 raw+6fe542: add.w    r3, r7, #0x14
+0c77e546 raw+6fe546: ldm.w    r3, {r0, r1}
+0c77e54a raw+6fe54a: stm.w    sb, {r0, r1}
+0c77e54e raw+6fe54e: mov      r0, r2
+0c77e550 raw+6fe550: add.w    r1, r7, #0x28
+0c77e554 raw+6fe554: bl       #0xc766b54
+0c77e558 raw+6fe558: ldrb     r1, [r6]
+0c77e55a raw+6fe55a: lsls     r2, r1, #0x1f
+0c77e55c raw+6fe55c: bmi      #0xc77e658
+0c77e55e raw+6fe55e: lsrs     r1, r1, #1
+0c77e560 raw+6fe560: cmp      r1, #4
+0c77e562 raw+6fe562: beq      #0xc77e65e
+0c77e564 raw+6fe564: cmp      r1, #5
+0c77e566 raw+6fe566: beq.w    #0xc77e684
+0c77e56a raw+6fe56a: ldr      r1, [pc, #0x1d8] ; literal raw+0x6fe744 = 0x3c19e3a8 'cancel send voice'
+0c77e56c raw+6fe56c: movs     r3, #0xf6
+0c77e56e raw+6fe56e: str      r1, [sp]
+0c77e570 raw+6fe570: movs     r0, #1
+0c77e572 raw+6fe572: ldr      r2, [pc, #0x1c0] ; literal raw+0x6fe734 = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77e574 raw+6fe574: ldr      r1, [pc, #0x1c0] ; literal raw+0x6fe738 = 0x3c19b6a8 'adam'
+0c77e576 raw+6fe576: bl       #0xc764250
+0c77e57a raw+6fe57a: mov.w    r8, #0
+0c77e57e raw+6fe57e: movs     r3, #2
+0c77e580 raw+6fe580: ldr      r0, [r4, #4]
+0c77e582 raw+6fe582: strb.w   r8, [r4, #0x15]
+0c77e586 raw+6fe586: str      r5, [r4, #0x10]
+0c77e588 raw+6fe588: strb     r3, [r4, #0x14]
+0c77e58a raw+6fe58a: ldr      r3, [r0]
+0c77e58c raw+6fe58c: ldr      r3, [r3, #0x28]
+0c77e58e raw+6fe58e: blx      r3
+0c77e590 raw+6fe590: add.w    r0, r7, #0x38
+0c77e594 raw+6fe594: bl       #0xc76454c
+0c77e598 raw+6fe598: adds     r7, #0x74
+0c77e59a raw+6fe59a: mov      sp, r7
+0c77e59c raw+6fe59c: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c77e5a0 raw+6fe5a0: ldr      r2, [pc, #0x1a4] ; literal raw+0x6fe748 = 0x3c19e2a0 'Not in kAudioRecording state taskid:%d, %d'
+0c77e5a2 raw+6fe5a2: movs     r3, #0xd8
+0c77e5a4 raw+6fe5a4: str      r2, [sp]
+0c77e5a6 raw+6fe5a6: movs     r0, #4
+0c77e5a8 raw+6fe5a8: strd     r5, r8, [sp, #4]
+0c77e5ac raw+6fe5ac: ldr      r2, [pc, #0x184] ; literal raw+0x6fe734 = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77e5ae raw+6fe5ae: ldr      r1, [pc, #0x188] ; literal raw+0x6fe738 = 0x3c19b6a8 'adam'
+0c77e5b0 raw+6fe5b0: bl       #0xc764250
+0c77e5b4 raw+6fe5b4: cmp      r5, #0
+0c77e5b6 raw+6fe5b6: beq      #0xc77e4d6
+0c77e5b8 raw+6fe5b8: ldr.w    sl, [pc, #0x1ac] ; literal raw+0x6fe768 = 0x3c2d1750
+0c77e5bc raw+6fe5bc: ldr.w    r0, [sl]
+0c77e5c0 raw+6fe5c0: cmp      r0, #0
+0c77e5c2 raw+6fe5c2: beq.w    #0xc77e710
+0c77e5c6 raw+6fe5c6: bl       #0xc76ab24
+0c77e5ca raw+6fe5ca: mov.w    sb, #0
+0c77e5ce raw+6fe5ce: add.w    r1, r7, #0x1c
+0c77e5d2 raw+6fe5d2: mov      r6, r0
+0c77e5d4 raw+6fe5d4: add.w    r0, r7, #0x28
+0c77e5d8 raw+6fe5d8: ldr.w    r8, [r4, #8]
+0c77e5dc raw+6fe5dc: strh.w   sb, [r7, #0x1c]
+0c77e5e0 raw+6fe5e0: bl       #0xc2974d2
+0c77e5e4 raw+6fe5e4: movs     r0, #0x30
+0c77e5e6 raw+6fe5e6: bl       #0xc710d50
+0c77e5ea raw+6fe5ea: mov      r4, r0
+0c77e5ec raw+6fe5ec: cbz      r0, #0xc77e62e
+0c77e5ee raw+6fe5ee: bl       #0xc764a3c
+0c77e5f2 raw+6fe5f2: mov.w    ip, #8
+0c77e5f6 raw+6fe5f6: movs     r3, #1
+0c77e5f8 raw+6fe5f8: strd     ip, r3, [r7, #0xc]
+0c77e5fc raw+6fe5fc: mov.w    ip, #2
+0c77e600 raw+6fe600: ldr      r3, [pc, #0x148] ; literal raw+0x6fe74c = 0x3c19e5ac
+0c77e602 raw+6fe602: add.w    r2, r7, #0xc
+0c77e606 raw+6fe606: str      r3, [r4]
+0c77e608 raw+6fe608: ldr      r3, [pc, #0x144] ; literal raw+0x6fe750 = 0x0c77d3b1
+0c77e60a raw+6fe60a: ldm.w    r2, {r0, r1}
+0c77e60e raw+6fe60e: str      r3, [r4, #0x10]
+0c77e610 raw+6fe610: add.w    r3, r4, #0x14
+0c77e614 raw+6fe614: strd     sb, r8, [r4, #8]
+0c77e618 raw+6fe618: stm.w    r3, {r0, r1}
+0c77e61c raw+6fe61c: str      r5, [r4, #0x1c]
+0c77e61e raw+6fe61e: add.w    r1, r7, #0x28
+0c77e622 raw+6fe622: str.w    ip, [r4, #0x20]
+0c77e626 raw+6fe626: add.w    r0, r4, #0x24
+0c77e62a raw+6fe62a: bl       #0xc2974d2
+0c77e62e raw+6fe62e: ldrb.w   r3, [r7, #0x28]
+0c77e632 raw+6fe632: lsls     r0, r3, #0x1f
+0c77e634 raw+6fe634: bmi      #0xc77e6f0
+0c77e636 raw+6fe636: mov      r1, r4
+0c77e638 raw+6fe638: mov      r0, r6
+0c77e63a raw+6fe63a: str.w    r8, [r4, #4]
+0c77e63e raw+6fe63e: bl       #0xc766240
+0c77e642 raw+6fe642: ldrb     r3, [r7, #0x1c]
+0c77e644 raw+6fe644: lsls     r1, r3, #0x1f
+0c77e646 raw+6fe646: bpl.w    #0xc77e4d6
+0c77e64a raw+6fe64a: ldr      r1, [r7, #0x1c]
+0c77e64c raw+6fe64c: ldr      r0, [r7, #0x24]
+0c77e64e raw+6fe64e: bic      r1, r1, #1
+0c77e652 raw+6fe652: bl       #0xc70ff4c
+0c77e656 raw+6fe656: b        #0xc77e4d6
+0c77e658 raw+6fe658: ldr      r1, [r6, #4]
+0c77e65a raw+6fe65a: cmp      r1, #4
+0c77e65c raw+6fe65c: bne      #0xc77e564
+0c77e65e raw+6fe65e: mov.w    ip, #4
+0c77e662 raw+6fe662: mov.w    r2, #-1
+0c77e666 raw+6fe666: movs     r1, #0
+0c77e668 raw+6fe668: mov      r0, r6
+0c77e66a raw+6fe66a: ldr      r3, [pc, #0xe8] ; literal raw+0x6fe754 = 0x3c193a18 'send'
+0c77e66c raw+6fe66c: str.w    ip, [sp]
+0c77e670 raw+6fe670: bl       #0xc297912
+0c77e674 raw+6fe674: cmp      r0, #0
+0c77e676 raw+6fe676: beq      #0xc77e6fe
+0c77e678 raw+6fe678: ldrb     r1, [r6]
+0c77e67a raw+6fe67a: lsls     r3, r1, #0x1f
+0c77e67c raw+6fe67c: ite      mi
+0c77e67e raw+6fe67e: ldrmi    r1, [r6, #4]
+0c77e680 raw+6fe680: lsrpl    r1, r1, #1
+0c77e682 raw+6fe682: b        #0xc77e564
+0c77e684 raw+6fe684: str      r1, [sp]
+0c77e686 raw+6fe686: mov.w    r2, #-1
+0c77e68a raw+6fe68a: mov      r0, r6
+0c77e68c raw+6fe68c: movs     r1, #0
+0c77e68e raw+6fe68e: ldr      r3, [pc, #0xc8] ; literal raw+0x6fe758 = 0x3c18be1c 'trans'
+0c77e690 raw+6fe690: bl       #0xc297912
+0c77e694 raw+6fe694: cmp      r0, #0
+0c77e696 raw+6fe696: bne.w    #0xc77e56a
+0c77e69a raw+6fe69a: ldr      r1, [pc, #0xc0] ; literal raw+0x6fe75c = 0x3c19e39c 'trans voice'
+0c77e69c raw+6fe69c: movs     r3, #0xf3
+0c77e69e raw+6fe69e: str      r1, [sp]
+0c77e6a0 raw+6fe6a0: movs     r0, #1
+0c77e6a2 raw+6fe6a2: ldr      r2, [pc, #0x90] ; literal raw+0x6fe734 = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77e6a4 raw+6fe6a4: ldr      r1, [pc, #0x90] ; literal raw+0x6fe738 = 0x3c19b6a8 'adam'
+0c77e6a6 raw+6fe6a6: bl       #0xc764250
+0c77e6aa raw+6fe6aa: mov.w    r8, #2
+0c77e6ae raw+6fe6ae: b        #0xc77e57e
+0c77e6b0 raw+6fe6b0: movs     r0, #0x38
+0c77e6b2 raw+6fe6b2: bl       #0xc710d50
+0c77e6b6 raw+6fe6b6: mov      sb, r0
+0c77e6b8 raw+6fe6b8: cbz      r0, #0xc77e6be
+0c77e6ba raw+6fe6ba: bl       #0xc76aa38
+0c77e6be raw+6fe6be: ldr      r0, [pc, #0xa0] ; literal raw+0x6fe760 = 0x0c76c03d
+0c77e6c0 raw+6fe6c0: str.w    sb, [sl]
+0c77e6c4 raw+6fe6c4: bl       #0xc27a55c
+0c77e6c8 raw+6fe6c8: ldr.w    r0, [sl]
+0c77e6cc raw+6fe6cc: b        #0xc77e4f4
+0c77e6ce raw+6fe6ce: movs     r0, #0x38
+0c77e6d0 raw+6fe6d0: bl       #0xc710d50
+0c77e6d4 raw+6fe6d4: mov      r3, r0
+0c77e6d6 raw+6fe6d6: cbz      r0, #0xc77e6e0
+0c77e6d8 raw+6fe6d8: str      r0, [r7, #4]
+0c77e6da raw+6fe6da: bl       #0xc76aa38
+0c77e6de raw+6fe6de: ldr      r3, [r7, #4]
+0c77e6e0 raw+6fe6e0: ldr      r0, [pc, #0x7c] ; literal raw+0x6fe760 = 0x0c76c03d
+0c77e6e2 raw+6fe6e2: str.w    r3, [sl]
+0c77e6e6 raw+6fe6e6: bl       #0xc27a55c
+0c77e6ea raw+6fe6ea: ldr.w    r0, [sl]
+0c77e6ee raw+6fe6ee: b        #0xc77e530
+0c77e6f0 raw+6fe6f0: ldr      r1, [r7, #0x28]
+0c77e6f2 raw+6fe6f2: ldr      r0, [r7, #0x30]
+0c77e6f4 raw+6fe6f4: bic      r1, r1, #1
+0c77e6f8 raw+6fe6f8: bl       #0xc70ff4c
+0c77e6fc raw+6fe6fc: b        #0xc77e636
+0c77e6fe raw+6fe6fe: ldr      r2, [pc, #0x64] ; literal raw+0x6fe764 = 0x3c19e390 'send voice'
+0c77e700 raw+6fe700: movs     r3, #0xf0
+0c77e702 raw+6fe702: str      r2, [sp]
+0c77e704 raw+6fe704: movs     r0, #1
+0c77e706 raw+6fe706: ldr      r2, [pc, #0x2c] ; literal raw+0x6fe734 = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77e708 raw+6fe708: ldr      r1, [pc, #0x2c] ; literal raw+0x6fe738 = 0x3c19b6a8 'adam'
+0c77e70a raw+6fe70a: bl       #0xc764250
+0c77e70e raw+6fe70e: b        #0xc77e57e
+0c77e710 raw+6fe710: movs     r0, #0x38
+0c77e712 raw+6fe712: bl       #0xc710d50
+0c77e716 raw+6fe716: mov      r6, r0
+0c77e718 raw+6fe718: cbz      r0, #0xc77e71e
+0c77e71a raw+6fe71a: bl       #0xc76aa38
+0c77e71e raw+6fe71e: ldr      r0, [pc, #0x40] ; literal raw+0x6fe760 = 0x0c76c03d
+0c77e720 raw+6fe720: str.w    r6, [sl]
+0c77e724 raw+6fe724: bl       #0xc27a55c
+0c77e728 raw+6fe728: ldr.w    r0, [sl]
+0c77e72c raw+6fe72c: b        #0xc77e5c6
+0c77e72e raw+6fe72e: nop      

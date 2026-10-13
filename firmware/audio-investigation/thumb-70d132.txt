@@ -1,0 +1,99 @@
+0c78d132 raw+70d132: movs     r3, #0xca
+0c78d134 raw+70d134: ldr      r4, [pc, #0x12c] ; literal raw+0x70d264 = 0x3c19feb0 'not supported for this platform!'
+0c78d136 raw+70d136: b        #0xc78d0b4
+0c78d138 raw+70d138: mov.w    ip, #0x12
+0c78d13c raw+70d13c: mov.w    r2, #-1
+0c78d140 raw+70d140: movs     r1, #0
+0c78d142 raw+70d142: mov      r0, r8
+0c78d144 raw+70d144: ldr      r3, [pc, #0x12c] ; literal raw+0x70d274 = 0x3c19ffa8 'configJsAppVersion'
+0c78d146 raw+70d146: str.w    ip, [sp]
+0c78d14a raw+70d14a: bl       #0xc297912
+0c78d14e raw+70d14e: cmp      r0, #0
+0c78d150 raw+70d150: beq.w    #0xc78d9f0
+0c78d154 raw+70d154: ldrb.w   r3, [r7, #0x118]
+0c78d158 raw+70d158: lsls     r2, r3, #0x1f
+0c78d15a raw+70d15a: bpl.w    #0xc78d9e8
+0c78d15e raw+70d15e: ldr.w    r3, [r7, #0x11c]
+0c78d162 raw+70d162: b.w      #0xc78bfb6
+0c78d166 raw+70d166: mov.w    ip, #0x11
+0c78d16a raw+70d16a: mov.w    r2, #-1
+0c78d16e raw+70d16e: movs     r1, #0
+0c78d170 raw+70d170: mov      r0, r8
+0c78d172 raw+70d172: ldr      r3, [pc, #0x104] ; literal raw+0x70d278 = 0x3c19ffec 'getWxPayBindToken'
+0c78d174 raw+70d174: str.w    ip, [sp]
+0c78d178 raw+70d178: bl       #0xc297912
+0c78d17c raw+70d17c: cmp      r0, #0
+0c78d17e raw+70d17e: beq.w    #0xc78dc1c
+0c78d182 raw+70d182: ldrb.w   r3, [r7, #0x118]
+0c78d186 raw+70d186: lsls     r2, r3, #0x1f
+0c78d188 raw+70d188: bpl.w    #0xc78db9e
+0c78d18c raw+70d18c: ldr.w    r3, [r7, #0x11c]
+0c78d190 raw+70d190: cmp      r3, #0x10
+0c78d192 raw+70d192: beq      #0xc78d28c
+0c78d194 raw+70d194: cmp      r3, #0x11
+0c78d196 raw+70d196: bne.w    #0xc78bfc2
+0c78d19a raw+70d19a: mov.w    ip, #0x11
+0c78d19e raw+70d19e: mov.w    r2, #-1
+0c78d1a2 raw+70d1a2: movs     r1, #0
+0c78d1a4 raw+70d1a4: mov      r0, r8
+0c78d1a6 raw+70d1a6: ldr      r3, [pc, #0xd4] ; literal raw+0x70d27c = 0x3c1a0014 'wxPayGetBindState'
+0c78d1a8 raw+70d1a8: str.w    ip, [sp]
+0c78d1ac raw+70d1ac: bl       #0xc297912
+0c78d1b0 raw+70d1b0: cmp      r0, #0
+0c78d1b2 raw+70d1b2: bne.w    #0xc78d92e
+0c78d1b6 raw+70d1b6: cbnz     r6, #0xc78d1ba
+0c78d1b8 raw+70d1b8: str      r6, [r7, #0xc]
+0c78d1ba raw+70d1ba: ldr      r4, [pc, #0x84] ; literal raw+0x70d240 = 0x3c2d1750
+0c78d1bc raw+70d1bc: ldr      r0, [r4]
+0c78d1be raw+70d1be: cmp      r0, #0
+0c78d1c0 raw+70d1c0: beq.w    #0xc78e2c4
+0c78d1c4 raw+70d1c4: bl       #0xc76ab24
+0c78d1c8 raw+70d1c8: mov      r3, r0
+0c78d1ca raw+70d1ca: movs     r0, #0x20
+0c78d1cc raw+70d1cc: ldr      r6, [r5, #0x74]
+0c78d1ce raw+70d1ce: ldr.w    r8, [r7, #0xc]
+0c78d1d2 raw+70d1d2: mov      r5, r3
+0c78d1d4 raw+70d1d4: bl       #0xc710d50
+0c78d1d8 raw+70d1d8: mov      r4, r0
+0c78d1da raw+70d1da: cmp      r0, #0
+0c78d1dc raw+70d1dc: beq.w    #0xc78c938
+0c78d1e0 raw+70d1e0: bl       #0xc764a3c
+0c78d1e4 raw+70d1e4: movs     r1, #0
+0c78d1e6 raw+70d1e6: ldr      r3, [pc, #0x98] ; literal raw+0x70d280 = 0x3c19cf50
+0c78d1e8 raw+70d1e8: str.w    r1, [r7, #0x104]
+0c78d1ec raw+70d1ec: str      r3, [r4]
+0c78d1ee raw+70d1ee: ldr      r3, [pc, #0x94] ; literal raw+0x70d284 = 0x0c789945
+0c78d1f0 raw+70d1f0: str      r6, [r4, #0xc]
+0c78d1f2 raw+70d1f2: str      r3, [r4, #0x10]
+0c78d1f4 raw+70d1f4: ldr      r3, [pc, #0x90] ; literal raw+0x70d288 = 0x0c7887e1
+0c78d1f6 raw+70d1f6: add.w    r2, r7, #0x100
+0c78d1fa raw+70d1fa: str.w    r3, [r7, #0x100]
+0c78d1fe raw+70d1fe: str      r1, [r4, #8]
+0c78d200 raw+70d200: add.w    r3, r4, #0x14
+0c78d204 raw+70d204: ldm.w    r2, {r0, r1}
+0c78d208 raw+70d208: stm.w    r3, {r0, r1}
+0c78d20c raw+70d20c: str.w    r8, [r4, #0x1c]
+0c78d210 raw+70d210: b.w      #0xc78c938
+0c78d214 raw+70d214: add.w    r8, r0, #0x10
+0c78d218 raw+70d218: bic      r8, r8, #0xf
+0c78d21c raw+70d21c: mov      r0, r8
+0c78d21e raw+70d21e: bl       #0xc710d50
+0c78d222 raw+70d222: orr      r3, r8, #1
+0c78d226 raw+70d226: mov      r8, r0
+0c78d228 raw+70d228: strd     r3, r6, [r7, #0x13c]
+0c78d22c raw+70d22c: str.w    r0, [r7, #0x144]
+0c78d230 raw+70d230: mov      r2, r6
+0c78d232 raw+70d232: mov      r1, r4
+0c78d234 raw+70d234: mov      r0, r8
+0c78d236 raw+70d236: bl       #0xc704110
+0c78d23a raw+70d23a: b        #0xc78cb48
+0c78d23c raw+70d23c: adds     r0, r7, r0
+0c78d23e raw+70d23e: subs     r4, #0x2d
+0c78d240 raw+70d240: asrs     r0, r2, #0x1d
+0c78d242 raw+70d242: subs     r4, #0x2d
+0c78d244 raw+70d244: b        #0xc78cd52
+0c78d246 raw+70d246: lsrs     r0, r7, #0x11
+0c78d248 raw+70d248: b        #0xc78cda4
+0c78d24a raw+70d24a: subs     r4, #0x19
+0c78d24c raw+70d24c: ldr      r7, [sp, #0x234]
+0c78d24e raw+70d24e: lsrs     r0, r7, #0x11

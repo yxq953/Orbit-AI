@@ -1,0 +1,72 @@
+0c78c30e raw+70c30e: mov.w    ip, #0xb
+0c78c312 raw+70c312: mov.w    r2, #-1
+0c78c316 raw+70c316: movs     r1, #0
+0c78c318 raw+70c318: mov      r0, r8
+0c78c31a raw+70c31a: ldr      r3, [pc, #0x258] ; literal raw+0x70c574 = 0x3c19e364 'startRecord'
+0c78c31c raw+70c31c: str.w    ip, [sp]
+0c78c320 raw+70c320: bl       #0xc297912
+0c78c324 raw+70c324: cmp      r0, #0
+0c78c326 raw+70c326: beq.w    #0xc78ca16
+0c78c32a raw+70c32a: ldrb.w   r3, [r7, #0x118]
+0c78c32e raw+70c32e: lsls     r1, r3, #0x1f
+0c78c330 raw+70c330: bpl.w    #0xc78c6dc
+0c78c334 raw+70c334: ldr.w    r3, [r7, #0x11c]
+0c78c338 raw+70c338: b        #0xc78bf56
+0c78c33a raw+70c33a: mov      r0, r4
+0c78c33c raw+70c33c: bl       #0xc2d5e6e
+0c78c340 raw+70c340: ldr      r1, [pc, #0x234] ; literal raw+0x70c578 = 0x3c19e6e8 'file_id'
+0c78c342 raw+70c342: mov      r6, r0
+0c78c344 raw+70c344: bl       #0xc2d6e20
+0c78c348 raw+70c348: ldr.w    r8, [r0, #0x10]
+0c78c34c raw+70c34c: mov      r0, r8
+0c78c34e raw+70c34e: bl       #0xc7044c0
+0c78c352 raw+70c352: cmp      r0, #0xa
+0c78c354 raw+70c354: mov      r4, r0
+0c78c356 raw+70c356: bhi.w    #0xc78c866
+0c78c35a raw+70c35a: lsls     r3, r0, #1
+0c78c35c raw+70c35c: strb.w   r3, [r7, #0x164]
+0c78c360 raw+70c360: addw     sl, r7, #0x165
+0c78c364 raw+70c364: cmp      r0, #0
+0c78c366 raw+70c366: bne.w    #0xc78c882
+0c78c36a raw+70c36a: mov.w    r8, #0
+0c78c36e raw+70c36e: mov      r0, r6
+0c78c370 raw+70c370: ldr      r1, [pc, #0x208] ; literal raw+0x70c57c = 0x3c19fd80 'getfile_taskid'
+0c78c372 raw+70c372: strb.w   r8, [sl, r4]
+0c78c376 raw+70c376: bl       #0xc2d6e20
+0c78c37a raw+70c37a: ldrd     r0, r1, [r0, #0x20]
+0c78c37e raw+70c37e: bl       #0xc706788
+0c78c382 raw+70c382: mov      r3, r0
+0c78c384 raw+70c384: mov      r0, r6
+0c78c386 raw+70c386: mov      r6, r3
+0c78c388 raw+70c388: add.w    sb, r5, #0x44
+0c78c38c raw+70c38c: bl       #0xc2d5dd4
+0c78c390 raw+70c390: mov      r0, sb
+0c78c392 raw+70c392: bl       #0xc27f598
+0c78c396 raw+70c396: add.w    r3, r7, #0x130
+0c78c39a raw+70c39a: str      r3, [sp, #4]
+0c78c39c raw+70c39c: add.w    r3, r7, #0x13c
+0c78c3a0 raw+70c3a0: add.w    r2, r7, #0xc
+0c78c3a4 raw+70c3a4: str      r3, [sp]
+0c78c3a6 raw+70c3a6: add.w    r1, r5, #0x38
+0c78c3aa raw+70c3aa: ldr      r3, [pc, #0x1b8] ; literal raw+0x70c564 = 0x3c1a0280
+0c78c3ac raw+70c3ac: add.w    r0, r7, #0x150
+0c78c3b0 raw+70c3b0: str.w    r2, [r7, #0x13c]
+0c78c3b4 raw+70c3b4: bl       #0xc77bc90
+0c78c3b8 raw+70c3b8: ldr.w    r4, [r7, #0x150]
+0c78c3bc raw+70c3bc: ldr.w    ip, [pc, #0x1e4] ; literal raw+0x70c5a4 = 0x3c19fd90 'file task map size:%d'
+0c78c3c0 raw+70c3c0: strd     r6, r8, [r4, #0x18]
+0c78c3c4 raw+70c3c4: str.w    ip, [sp]
+0c78c3c8 raw+70c3c8: ldr      r4, [r5, #0x40]
+0c78c3ca raw+70c3ca: movs     r3, #0x6b
+0c78c3cc raw+70c3cc: ldr      r2, [pc, #0x1b0] ; literal raw+0x70c580 = 0x3c19fc0c '/data1/wechat-rtos-service/watch/watch-service/jsbridge_comm/adam_js_native_bridge.cpp'
+0c78c3ce raw+70c3ce: ldr      r1, [pc, #0x1b4] ; literal raw+0x70c584 = 0x3c19fc64 'jsbg'
+0c78c3d0 raw+70c3d0: mov      r0, r8
+0c78c3d2 raw+70c3d2: str      r4, [sp, #4]
+0c78c3d4 raw+70c3d4: bl       #0xc764250
+0c78c3d8 raw+70c3d8: mov      r0, sb
+0c78c3da raw+70c3da: bl       #0xc259b60
+0c78c3de raw+70c3de: movs     r3, #2
+0c78c3e0 raw+70c3e0: ldr      r1, [r7, #0xc]
+0c78c3e2 raw+70c3e2: ldr      r0, [r5, #0x18]
+0c78c3e4 raw+70c3e4: add.w    r2, r7, #0x164
+0c78c3e8 raw+70c3e8: bl       #0xc780664

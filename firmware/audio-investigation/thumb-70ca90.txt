@@ -1,0 +1,34 @@
+0c78ca90 raw+70ca90: movs     r1, #0
+0c78ca92 raw+70ca92: ldr      r3, [pc, #0x130] ; literal raw+0x70cbc4 = 0x3c1a0210
+0c78ca94 raw+70ca94: str      r6, [r4, #0xc]
+0c78ca96 raw+70ca96: str      r3, [r4]
+0c78ca98 raw+70ca98: ldr      r3, [pc, #0x12c] ; literal raw+0x70cbc8 = 0x0c77e291
+0c78ca9a raw+70ca9a: add.w    r2, r7, #0x50
+0c78ca9e raw+70ca9e: str      r3, [r7, #0x50]
+0c78caa0 raw+70caa0: ldr      r3, [pc, #0x128] ; literal raw+0x70cbcc = 0x0c789f31
+0c78caa2 raw+70caa2: str      r1, [r7, #0x54]
+0c78caa4 raw+70caa4: str      r3, [r4, #0x10]
+0c78caa6 raw+70caa6: add.w    r3, r4, #0x14
+0c78caaa raw+70caaa: str      r1, [r4, #8]
+0c78caac raw+70caac: ldm.w    r2, {r0, r1}
+0c78cab0 raw+70cab0: stm.w    r3, {r0, r1}
+0c78cab4 raw+70cab4: add.w    r1, r7, #0x164
+0c78cab8 raw+70cab8: str.w    r8, [r4, #0x1c]
+0c78cabc raw+70cabc: add.w    r0, r4, #0x20
+0c78cac0 raw+70cac0: bl       #0xc2974d2
+0c78cac4 raw+70cac4: ldrb.w   r3, [r7, #0x164]
+0c78cac8 raw+70cac8: lsls     r3, r3, #0x1f
+0c78caca raw+70caca: bmi      #0xc78caf2
+0c78cacc raw+70cacc: mov      r0, r5
+0c78cace raw+70cace: mov      r1, r4
+0c78cad0 raw+70cad0: str      r6, [r4, #4]
+0c78cad2 raw+70cad2: bl       #0xc766240
+0c78cad6 raw+70cad6: ldrb.w   r3, [r7, #0x150]
+0c78cada raw+70cada: lsls     r0, r3, #0x1f
+0c78cadc raw+70cadc: bpl.w    #0xc78c84a
+0c78cae0 raw+70cae0: ldr.w    r1, [r7, #0x150]
+0c78cae4 raw+70cae4: ldr.w    r0, [r7, #0x158]
+0c78cae8 raw+70cae8: bic      r1, r1, #1
+0c78caec raw+70caec: bl       #0xc70ff4c
+0c78caf0 raw+70caf0: b        #0xc78c84a
+0c78caf2 raw+70caf2: ldr.w    r1, [r7, #0x164]

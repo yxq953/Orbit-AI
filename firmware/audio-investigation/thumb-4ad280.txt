@@ -1,0 +1,47 @@
+0c52d280 raw+4ad280: b        #0xc52d266
+0c52d282 raw+4ad282: strd     r0, r4, [sp]
+0c52d286 raw+4ad286: ldr      r1, [pc, #0x14] ; literal raw+0x4ad29c = 0x3c0e156a 'wechat sdk [%s] [%s] [%d]:%s\n'
+0c52d288 raw+4ad288: movs     r0, #3
+0c52d28a raw+4ad28a: b        #0xc52d266
+0c52d28c raw+4ad28c: str      r1, [sp]
+0c52d28e raw+4ad28e: movs     r0, #4
+0c52d290 raw+4ad290: ldr      r3, [pc, #0xc] ; literal raw+0x4ad2a0 = 0x3c0e1588 'wechat_log_cb'
+0c52d292 raw+4ad292: ldr      r2, [pc, #0x10] ; literal raw+0x4ad2a4 = 0x3c0e2ab0 'wechat'
+0c52d294 raw+4ad294: ldr      r1, [pc, #0x10] ; literal raw+0x4ad2a8 = 0x3c0e1596 '[%s] %s: unsupported level %d\n'
+0c52d296 raw+4ad296: bl       #0xc27e19c
+0c52d29a raw+4ad29a: b        #0xc52d26a
+0c52d29c raw+4ad29c: asrs     r2, r5, #0x15
+0c52d29e raw+4ad29e: subs     r4, #0xe
+0c52d2a0 raw+4ad2a0: asrs     r0, r1, #0x16
+0c52d2a2 raw+4ad2a2: subs     r4, #0xe
+0c52d2a4 raw+4ad2a4: cmp      r2, #0xb0
+0c52d2a6 raw+4ad2a6: subs     r4, #0xe
+0c52d2a8 raw+4ad2a8: asrs     r6, r2, #0x16
+0c52d2aa raw+4ad2aa: subs     r4, #0xe
+0c52d2ac raw+4ad2ac: push     {r3, r4, r7, lr}
+0c52d2ae raw+4ad2ae: ldr      r3, [pc, #0x24] ; literal raw+0x4ad2d4 = 0x3c278b4c
+0c52d2b0 raw+4ad2b0: mov      r2, r1
+0c52d2b2 raw+4ad2b2: ldr      r3, [r3]
+0c52d2b4 raw+4ad2b4: add      r7, sp, #0
+0c52d2b6 raw+4ad2b6: cbnz     r3, #0xc52d2c6
+0c52d2b8 raw+4ad2b8: movs     r0, #3
+0c52d2ba raw+4ad2ba: ldr      r3, [pc, #0x1c] ; literal raw+0x4ad2d8 = 0x3c0e15b5 'wechat_notify_play_state'
+0c52d2bc raw+4ad2bc: ldr      r2, [pc, #0x1c] ; literal raw+0x4ad2dc = 0x3c0e2ab0 'wechat'
+0c52d2be raw+4ad2be: ldr      r1, [pc, #0x20] ; literal raw+0x4ad2e0 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c52d2c0 raw+4ad2c0: bl       #0xc27e19c
+0c52d2c4 raw+4ad2c4: pop      {r3, r4, r7, pc}
+0c52d2c6 raw+4ad2c6: ldr      r1, [r3]
+0c52d2c8 raw+4ad2c8: ldr      r4, [r1, #0x28]
+0c52d2ca raw+4ad2ca: mov      r1, r0
+0c52d2cc raw+4ad2cc: mov      r0, r3
+0c52d2ce raw+4ad2ce: blx      r4
+0c52d2d0 raw+4ad2d0: b        #0xc52d2c4
+0c52d2d2 raw+4ad2d2: nop      
+0c52d2d4 raw+4ad2d4: ldrh     r4, [r1, #0x1a]
+0c52d2d6 raw+4ad2d6: subs     r4, #0x27
+0c52d2d8 raw+4ad2d8: asrs     r5, r6, #0x16
+0c52d2da raw+4ad2da: subs     r4, #0xe
+0c52d2dc raw+4ad2dc: cmp      r2, #0xb0
+0c52d2de raw+4ad2de: subs     r4, #0xe
+0c52d2e0 raw+4ad2e0: asrs     r6, r1, #0x17
+0c52d2e2 raw+4ad2e2: subs     r4, #0xe

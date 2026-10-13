@@ -1,0 +1,160 @@
+0c5cd8e0 raw+54d8e0: sxtab16  r8, sl, fp, ror #8
+0c5cd8e4 raw+54d8e4: asrs     r0, r0, #0x20
+0c5cd8e6 raw+54d8e6: mov      r0, r4
+0c5cd8e8 raw+54d8e8: bl       #0xc316c34
+0c5cd8ec raw+54d8ec: ldr.w    fp, [pc, #0x22c] ; literal raw+0x54db1c = 0x3c27eb68
+0c5cd8f0 raw+54d8f0: strd     r0, r1, [sp]
+0c5cd8f4 raw+54d8f4: ldr      r2, [pc, #0x1d8] ; literal raw+0x54dad0 = 0x3c0b0862 'settings'
+0c5cd8f6 raw+54d8f6: mov      r1, r5
+0c5cd8f8 raw+54d8f8: mov      r0, r4
+0c5cd8fa raw+54d8fa: bl       #0xc6e7840
+0c5cd8fe raw+54d8fe: mov      r0, fp
+0c5cd900 raw+54d900: bl       #0xc6f8500
+0c5cd904 raw+54d904: str      r6, [sp]
+0c5cd906 raw+54d906: mov      r3, r6
+0c5cd908 raw+54d908: ldr      r2, [pc, #0x1c8] ; literal raw+0x54dad4 = 0x3c1bf40c
+0c5cd90a raw+54d90a: ldr.w    r1, [fp]
+0c5cd90e raw+54d90e: mov      r0, r4
+0c5cd910 raw+54d910: bl       #0xc621d36
+0c5cd914 raw+54d914: ldr.w    r1, [fp]
+0c5cd918 raw+54d918: mov      r0, r4
+0c5cd91a raw+54d91a: bl       #0xc316c34
+0c5cd91e raw+54d91e: movs     r3, #8
+0c5cd920 raw+54d920: mov      fp, r1
+0c5cd922 raw+54d922: str      r3, [sp, #4]
+0c5cd924 raw+54d924: ldr      r3, [pc, #0x1b0] ; literal raw+0x54dad8 = 0x3c121bf8
+0c5cd926 raw+54d926: mov      r2, r0
+0c5cd928 raw+54d928: str      r3, [sp]
+0c5cd92a raw+54d92a: str      r0, [r7, #4]
+0c5cd92c raw+54d92c: mov      r3, r1
+0c5cd92e raw+54d92e: mov      r0, r4
+0c5cd930 raw+54d930: bl       #0xc334c7c
+0c5cd934 raw+54d934: ldr      r2, [r7, #4]
+0c5cd936 raw+54d936: mov      r1, r5
+0c5cd938 raw+54d938: strd     r2, fp, [sp]
+0c5cd93c raw+54d93c: ldr.w    fp, [pc, #0x1e0] ; literal raw+0x54db20 = 0x3c27eb5c
+0c5cd940 raw+54d940: ldr      r2, [pc, #0x198] ; literal raw+0x54dadc = 0x3c120bd0 'storage'
+0c5cd942 raw+54d942: mov      r0, r4
+0c5cd944 raw+54d944: bl       #0xc6e7840
+0c5cd948 raw+54d948: mov      r0, fp
+0c5cd94a raw+54d94a: bl       #0xc6f8500
+0c5cd94e raw+54d94e: str      r6, [sp]
+0c5cd950 raw+54d950: mov      r3, r6
+0c5cd952 raw+54d952: ldr      r2, [pc, #0x18c] ; literal raw+0x54dae0 = 0x3c1bf3bc
+0c5cd954 raw+54d954: ldr.w    r1, [fp]
+0c5cd958 raw+54d958: mov      r0, r4
+0c5cd95a raw+54d95a: bl       #0xc621d36
+0c5cd95e raw+54d95e: ldr.w    r1, [fp]
+0c5cd962 raw+54d962: mov      r0, r4
+0c5cd964 raw+54d964: bl       #0xc316c34
+0c5cd968 raw+54d968: movs     r3, #3
+0c5cd96a raw+54d96a: mov      fp, r1
+0c5cd96c raw+54d96c: str      r3, [sp, #4]
+0c5cd96e raw+54d96e: ldr      r3, [pc, #0x174] ; literal raw+0x54dae4 = 0x3c121bc8
+0c5cd970 raw+54d970: mov      r2, r0
+0c5cd972 raw+54d972: str      r3, [sp]
+0c5cd974 raw+54d974: str      r0, [r7, #4]
+0c5cd976 raw+54d976: mov      r3, r1
+0c5cd978 raw+54d978: mov      r0, r4
+0c5cd97a raw+54d97a: bl       #0xc334c7c
+0c5cd97e raw+54d97e: ldr      r2, [r7, #4]
+0c5cd980 raw+54d980: mov      r1, r5
+0c5cd982 raw+54d982: strd     r2, fp, [sp]
+0c5cd986 raw+54d986: ldr.w    fp, [pc, #0x19c] ; literal raw+0x54db24 = 0x3c27eb58
+0c5cd98a raw+54d98a: ldr      r2, [pc, #0x15c] ; literal raw+0x54dae8 = 0x3c11d9d0 'vMedia'
+0c5cd98c raw+54d98c: mov      r0, r4
+0c5cd98e raw+54d98e: bl       #0xc6e7840
+0c5cd992 raw+54d992: mov      r0, fp
+0c5cd994 raw+54d994: bl       #0xc6f8500
+0c5cd998 raw+54d998: str      r6, [sp]
+0c5cd99a raw+54d99a: mov      r3, r6
+0c5cd99c raw+54d99c: ldr      r2, [pc, #0x14c] ; literal raw+0x54daec = 0x3c1bf3a8
+0c5cd99e raw+54d99e: ldr.w    r1, [fp]
+0c5cd9a2 raw+54d9a2: mov      r0, r4
+0c5cd9a4 raw+54d9a4: bl       #0xc621d36
+0c5cd9a8 raw+54d9a8: ldr.w    r1, [fp]
+0c5cd9ac raw+54d9ac: mov      r0, r4
+0c5cd9ae raw+54d9ae: bl       #0xc316c34
+0c5cd9b2 raw+54d9b2: mov      fp, r1
+0c5cd9b4 raw+54d9b4: ldr      r3, [pc, #0x138] ; literal raw+0x54daf0 = 0x3c121b78
+0c5cd9b6 raw+54d9b6: mov      r2, r0
+0c5cd9b8 raw+54d9b8: str.w    sl, [sp, #4]
+0c5cd9bc raw+54d9bc: str      r3, [sp]
+0c5cd9be raw+54d9be: str      r0, [r7, #4]
+0c5cd9c0 raw+54d9c0: mov      r3, r1
+0c5cd9c2 raw+54d9c2: mov      r0, r4
+0c5cd9c4 raw+54d9c4: bl       #0xc334c7c
+0c5cd9c8 raw+54d9c8: ldr      r2, [r7, #4]
+0c5cd9ca raw+54d9ca: ldr.w    sl, [pc, #0x15c] ; literal raw+0x54db28 = 0x3c27ea20
+0c5cd9ce raw+54d9ce: mov      r1, r5
+0c5cd9d0 raw+54d9d0: strd     r2, fp, [sp]
+0c5cd9d4 raw+54d9d4: mov      r0, r4
+0c5cd9d6 raw+54d9d6: ldr      r2, [pc, #0x11c] ; literal raw+0x54daf4 = 0x3c11d9d7 'vPrompt'
+0c5cd9d8 raw+54d9d8: bl       #0xc6e7840
+0c5cd9dc raw+54d9dc: mov      r0, sl
+0c5cd9de raw+54d9de: bl       #0xc6f8500
+0c5cd9e2 raw+54d9e2: str      r6, [sp]
+0c5cd9e4 raw+54d9e4: mov      r3, r6
+0c5cd9e6 raw+54d9e6: ldr      r2, [pc, #0x110] ; literal raw+0x54daf8 = 0x3c1bf330
+0c5cd9e8 raw+54d9e8: ldr.w    r1, [sl]
+0c5cd9ec raw+54d9ec: mov      r0, r4
+0c5cd9ee raw+54d9ee: bl       #0xc621d36
+0c5cd9f2 raw+54d9f2: ldr.w    r1, [sl]
+0c5cd9f6 raw+54d9f6: mov      r0, r4
+0c5cd9f8 raw+54d9f8: bl       #0xc316c34
+0c5cd9fc raw+54d9fc: mov      r6, r1
+0c5cd9fe raw+54d9fe: mov      sl, r0
+0c5cda00 raw+54da00: ldr      r3, [pc, #0xf8] ; literal raw+0x54dafc = 0x3c121358
+0c5cda02 raw+54da02: mov      r2, r0
+0c5cda04 raw+54da04: str.w    sb, [sp, #4]
+0c5cda08 raw+54da08: mov      r0, r4
+0c5cda0a raw+54da0a: str      r3, [sp]
+0c5cda0c raw+54da0c: mov      r3, r1
+0c5cda0e raw+54da0e: bl       #0xc334c7c
+0c5cda12 raw+54da12: strd     sl, r6, [sp]
+0c5cda16 raw+54da16: ldr      r2, [pc, #0xe8] ; literal raw+0x54db00 = 0x3c0e2ab0 'wechat'
+0c5cda18 raw+54da18: mov      r1, r5
+0c5cda1a raw+54da1a: mov      r0, r4
+0c5cda1c raw+54da1c: bl       #0xc6e7840
+0c5cda20 raw+54da20: mov      r0, r4
+0c5cda22 raw+54da22: bl       #0xc316c6c
+0c5cda26 raw+54da26: mov      r6, r1
+0c5cda28 raw+54da28: mov      sb, r0
+0c5cda2a raw+54da2a: ldr      r3, [pc, #0xd8] ; literal raw+0x54db04 = 0x3c121348
+0c5cda2c raw+54da2c: mov      r2, r0
+0c5cda2e raw+54da2e: str.w    r8, [sp, #4]
+0c5cda32 raw+54da32: mov      r0, r4
+0c5cda34 raw+54da34: str      r3, [sp]
+0c5cda36 raw+54da36: mov      r3, r1
+0c5cda38 raw+54da38: bl       #0xc334c7c
+0c5cda3c raw+54da3c: strd     sb, r6, [sp]
+0c5cda40 raw+54da40: ldr.w    sb, [pc, #0xe8] ; literal raw+0x54db2c = 0x3c1bf4dc
+0c5cda44 raw+54da44: mov      r1, r5
+0c5cda46 raw+54da46: mov      r0, r4
+0c5cda48 raw+54da48: ldr      r2, [pc, #0xbc] ; literal raw+0x54db08 = 0x3c012bc6 'zlib'
+0c5cda4a raw+54da4a: bl       #0xc6e7840
+0c5cda4e raw+54da4e: ldr.w    r6, [sb, #4]
+0c5cda52 raw+54da52: ldr.w    sl, [pc, #0xdc] ; literal raw+0x54db30 = 0x3c11d9df 'ajs_ext_modules_init'
+0c5cda56 raw+54da56: ldr.w    r8, [r6, #4]
+0c5cda5a raw+54da5a: ldr.w    fp, [pc, #0xd8] ; literal raw+0x54db34 = 0x3c11d9f4 '[AIOTJS] [%s:%d] ajs_ext_modules_init() name=%s\n'
+0c5cda5e raw+54da5e: cmp      r6, sb
+0c5cda60 raw+54da60: bne      #0xc5cda6c
+0c5cda62 raw+54da62: movs     r0, #0
+0c5cda64 raw+54da64: adds     r7, #0xc
+0c5cda66 raw+54da66: mov      sp, r7
+0c5cda68 raw+54da68: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c5cda6c raw+54da6c: add.w    r3, r6, #0x10
+0c5cda70 raw+54da70: mov      r2, sl
+0c5cda72 raw+54da72: mov      r1, fp
+0c5cda74 raw+54da74: movs     r0, #3
+0c5cda76 raw+54da76: str      r3, [sp]
+0c5cda78 raw+54da78: movs     r3, #0x5a
+0c5cda7a raw+54da7a: bl       #0xc5cd10c
+0c5cda7e raw+54da7e: ldr      r3, [r6, #8]
+0c5cda80 raw+54da80: mov      r1, r5
+0c5cda82 raw+54da82: mov      r0, r4
+0c5cda84 raw+54da84: blx      r3
+0c5cda86 raw+54da86: mov      r6, r8
+0c5cda88 raw+54da88: ldr.w    r8, [r8, #4]
+0c5cda8c raw+54da8c: b        #0xc5cda5e
+0c5cda8e raw+54da8e: nop      

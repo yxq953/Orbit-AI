@@ -1,0 +1,199 @@
+0c77d640 raw+6fd640: beq      #0xc77d6fa
+0c77d642 raw+6fd642: ldr      r6, [r5]
+0c77d644 raw+6fd644: cbz      r6, #0xc77d69a
+0c77d646 raw+6fd646: ldr.w    r8, [r6]
+0c77d64a raw+6fd64a: cmp.w    r8, #0
+0c77d64e raw+6fd64e: beq      #0xc77d66c
+0c77d650 raw+6fd650: ldr.w    r0, [r8]
+0c77d654 raw+6fd654: cbz      r0, #0xc77d65a
+0c77d656 raw+6fd656: bl       #0xc77d634
+0c77d65a raw+6fd65a: ldr.w    r0, [r8, #4]
+0c77d65e raw+6fd65e: cbz      r0, #0xc77d664
+0c77d660 raw+6fd660: bl       #0xc77d634
+0c77d664 raw+6fd664: movs     r1, #0x20
+0c77d666 raw+6fd666: mov      r0, r8
+0c77d668 raw+6fd668: bl       #0xc70ff4c
+0c77d66c raw+6fd66c: ldr.w    r8, [r6, #4]
+0c77d670 raw+6fd670: cmp.w    r8, #0
+0c77d674 raw+6fd674: beq      #0xc77d692
+0c77d676 raw+6fd676: ldr.w    r0, [r8]
+0c77d67a raw+6fd67a: cbz      r0, #0xc77d680
+0c77d67c raw+6fd67c: bl       #0xc77d634
+0c77d680 raw+6fd680: ldr.w    r0, [r8, #4]
+0c77d684 raw+6fd684: cbz      r0, #0xc77d68a
+0c77d686 raw+6fd686: bl       #0xc77d634
+0c77d68a raw+6fd68a: movs     r1, #0x20
+0c77d68c raw+6fd68c: mov      r0, r8
+0c77d68e raw+6fd68e: bl       #0xc70ff4c
+0c77d692 raw+6fd692: movs     r1, #0x20
+0c77d694 raw+6fd694: mov      r0, r6
+0c77d696 raw+6fd696: bl       #0xc70ff4c
+0c77d69a raw+6fd69a: ldr      r6, [r5, #4]
+0c77d69c raw+6fd69c: cbz      r6, #0xc77d6f2
+0c77d69e raw+6fd69e: ldr.w    r8, [r6]
+0c77d6a2 raw+6fd6a2: cmp.w    r8, #0
+0c77d6a6 raw+6fd6a6: beq      #0xc77d6c4
+0c77d6a8 raw+6fd6a8: ldr.w    r0, [r8]
+0c77d6ac raw+6fd6ac: cbz      r0, #0xc77d6b2
+0c77d6ae raw+6fd6ae: bl       #0xc77d634
+0c77d6b2 raw+6fd6b2: ldr.w    r0, [r8, #4]
+0c77d6b6 raw+6fd6b6: cbz      r0, #0xc77d6bc
+0c77d6b8 raw+6fd6b8: bl       #0xc77d634
+0c77d6bc raw+6fd6bc: movs     r1, #0x20
+0c77d6be raw+6fd6be: mov      r0, r8
+0c77d6c0 raw+6fd6c0: bl       #0xc70ff4c
+0c77d6c4 raw+6fd6c4: ldr.w    r8, [r6, #4]
+0c77d6c8 raw+6fd6c8: cmp.w    r8, #0
+0c77d6cc raw+6fd6cc: beq      #0xc77d6ea
+0c77d6ce raw+6fd6ce: ldr.w    r0, [r8]
+0c77d6d2 raw+6fd6d2: cbz      r0, #0xc77d6d8
+0c77d6d4 raw+6fd6d4: bl       #0xc77d634
+0c77d6d8 raw+6fd6d8: ldr.w    r0, [r8, #4]
+0c77d6dc raw+6fd6dc: cbz      r0, #0xc77d6e2
+0c77d6de raw+6fd6de: bl       #0xc77d634
+0c77d6e2 raw+6fd6e2: movs     r1, #0x20
+0c77d6e4 raw+6fd6e4: mov      r0, r8
+0c77d6e6 raw+6fd6e6: bl       #0xc70ff4c
+0c77d6ea raw+6fd6ea: movs     r1, #0x20
+0c77d6ec raw+6fd6ec: mov      r0, r6
+0c77d6ee raw+6fd6ee: bl       #0xc70ff4c
+0c77d6f2 raw+6fd6f2: movs     r1, #0x20
+0c77d6f4 raw+6fd6f4: mov      r0, r5
+0c77d6f6 raw+6fd6f6: bl       #0xc70ff4c
+0c77d6fa raw+6fd6fa: ldr      r5, [r4, #4]
+0c77d6fc raw+6fd6fc: cmp      r5, #0
+0c77d6fe raw+6fd6fe: beq      #0xc77d7b8
+0c77d700 raw+6fd700: ldr      r6, [r5]
+0c77d702 raw+6fd702: cbz      r6, #0xc77d758
+0c77d704 raw+6fd704: ldr.w    r8, [r6]
+0c77d708 raw+6fd708: cmp.w    r8, #0
+0c77d70c raw+6fd70c: beq      #0xc77d72a
+0c77d70e raw+6fd70e: ldr.w    r0, [r8]
+0c77d712 raw+6fd712: cbz      r0, #0xc77d718
+0c77d714 raw+6fd714: bl       #0xc77d634
+0c77d718 raw+6fd718: ldr.w    r0, [r8, #4]
+0c77d71c raw+6fd71c: cbz      r0, #0xc77d722
+0c77d71e raw+6fd71e: bl       #0xc77d634
+0c77d722 raw+6fd722: movs     r1, #0x20
+0c77d724 raw+6fd724: mov      r0, r8
+0c77d726 raw+6fd726: bl       #0xc70ff4c
+0c77d72a raw+6fd72a: ldr.w    r8, [r6, #4]
+0c77d72e raw+6fd72e: cmp.w    r8, #0
+0c77d732 raw+6fd732: beq      #0xc77d750
+0c77d734 raw+6fd734: ldr.w    r0, [r8]
+0c77d738 raw+6fd738: cbz      r0, #0xc77d73e
+0c77d73a raw+6fd73a: bl       #0xc77d634
+0c77d73e raw+6fd73e: ldr.w    r0, [r8, #4]
+0c77d742 raw+6fd742: cbz      r0, #0xc77d748
+0c77d744 raw+6fd744: bl       #0xc77d634
+0c77d748 raw+6fd748: movs     r1, #0x20
+0c77d74a raw+6fd74a: mov      r0, r8
+0c77d74c raw+6fd74c: bl       #0xc70ff4c
+0c77d750 raw+6fd750: movs     r1, #0x20
+0c77d752 raw+6fd752: mov      r0, r6
+0c77d754 raw+6fd754: bl       #0xc70ff4c
+0c77d758 raw+6fd758: ldr      r6, [r5, #4]
+0c77d75a raw+6fd75a: cbz      r6, #0xc77d7b0
+0c77d75c raw+6fd75c: ldr.w    r8, [r6]
+0c77d760 raw+6fd760: cmp.w    r8, #0
+0c77d764 raw+6fd764: beq      #0xc77d782
+0c77d766 raw+6fd766: ldr.w    r0, [r8]
+0c77d76a raw+6fd76a: cbz      r0, #0xc77d770
+0c77d76c raw+6fd76c: bl       #0xc77d634
+0c77d770 raw+6fd770: ldr.w    r0, [r8, #4]
+0c77d774 raw+6fd774: cbz      r0, #0xc77d77a
+0c77d776 raw+6fd776: bl       #0xc77d634
+0c77d77a raw+6fd77a: movs     r1, #0x20
+0c77d77c raw+6fd77c: mov      r0, r8
+0c77d77e raw+6fd77e: bl       #0xc70ff4c
+0c77d782 raw+6fd782: ldr.w    r8, [r6, #4]
+0c77d786 raw+6fd786: cmp.w    r8, #0
+0c77d78a raw+6fd78a: beq      #0xc77d7a8
+0c77d78c raw+6fd78c: ldr.w    r0, [r8]
+0c77d790 raw+6fd790: cbz      r0, #0xc77d796
+0c77d792 raw+6fd792: bl       #0xc77d634
+0c77d796 raw+6fd796: ldr.w    r0, [r8, #4]
+0c77d79a raw+6fd79a: cbz      r0, #0xc77d7a0
+0c77d79c raw+6fd79c: bl       #0xc77d634
+0c77d7a0 raw+6fd7a0: movs     r1, #0x20
+0c77d7a2 raw+6fd7a2: mov      r0, r8
+0c77d7a4 raw+6fd7a4: bl       #0xc70ff4c
+0c77d7a8 raw+6fd7a8: movs     r1, #0x20
+0c77d7aa raw+6fd7aa: mov      r0, r6
+0c77d7ac raw+6fd7ac: bl       #0xc70ff4c
+0c77d7b0 raw+6fd7b0: movs     r1, #0x20
+0c77d7b2 raw+6fd7b2: mov      r0, r5
+0c77d7b4 raw+6fd7b4: bl       #0xc70ff4c
+0c77d7b8 raw+6fd7b8: movs     r1, #0x20
+0c77d7ba raw+6fd7ba: mov      r0, r4
+0c77d7bc raw+6fd7bc: bl       #0xc70ff4c
+0c77d7c0 raw+6fd7c0: pop.w    {r4, r5, r6, r7, r8, pc}
+0c77d7c4 raw+6fd7c4: push.w   {r4, r5, r6, r7, r8, lr}
+0c77d7c8 raw+6fd7c8: mov      r4, r0
+0c77d7ca raw+6fd7ca: movs     r6, #0x44
+0c77d7cc raw+6fd7cc: sub      sp, #0x40
+0c77d7ce raw+6fd7ce: ldr      r5, [pc, #0x134] ; literal raw+0x6fd904 = 0x3c19e5c4
+0c77d7d0 raw+6fd7d0: ldr      r2, [pc, #0x134] ; literal raw+0x6fd908 = 0x3c19e2cc '~WatchAudioManager'
+0c77d7d2 raw+6fd7d2: add      r7, sp, #8
+0c77d7d4 raw+6fd7d4: str      r2, [sp, #4]
+0c77d7d6 raw+6fd7d6: str      r6, [sp]
+0c77d7d8 raw+6fd7d8: movs     r1, #0
+0c77d7da raw+6fd7da: str      r5, [r4]
+0c77d7dc raw+6fd7dc: mov      r0, r7
+0c77d7de raw+6fd7de: ldr      r3, [pc, #0x12c] ; literal raw+0x6fd90c = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77d7e0 raw+6fd7e0: ldr      r2, [pc, #0x12c] ; literal raw+0x6fd910 = 0x3c19b6a8 'adam'
+0c77d7e2 raw+6fd7e2: bl       #0xc7644b4
+0c77d7e6 raw+6fd7e6: ldr      r5, [r4, #0x40]
+0c77d7e8 raw+6fd7e8: cbz      r5, #0xc77d848
+0c77d7ea raw+6fd7ea: ldr      r6, [r5]
+0c77d7ec raw+6fd7ec: cbz      r6, #0xc77d806
+0c77d7ee raw+6fd7ee: ldr      r0, [r6]
+0c77d7f0 raw+6fd7f0: cbz      r0, #0xc77d7f6
+0c77d7f2 raw+6fd7f2: bl       #0xc77d634
+0c77d7f6 raw+6fd7f6: ldr      r0, [r6, #4]
+0c77d7f8 raw+6fd7f8: cbz      r0, #0xc77d7fe
+0c77d7fa raw+6fd7fa: bl       #0xc77d634
+0c77d7fe raw+6fd7fe: movs     r1, #0x20
+0c77d800 raw+6fd800: mov      r0, r6
+0c77d802 raw+6fd802: bl       #0xc70ff4c
+0c77d806 raw+6fd806: ldr      r6, [r5, #4]
+0c77d808 raw+6fd808: cbz      r6, #0xc77d840
+0c77d80a raw+6fd80a: ldr.w    r8, [r6]
+0c77d80e raw+6fd80e: cmp.w    r8, #0
+0c77d812 raw+6fd812: beq      #0xc77d830
+0c77d814 raw+6fd814: ldr.w    r0, [r8]
+0c77d818 raw+6fd818: cbz      r0, #0xc77d81e
+0c77d81a raw+6fd81a: bl       #0xc77d634
+0c77d81e raw+6fd81e: ldr.w    r0, [r8, #4]
+0c77d822 raw+6fd822: cbz      r0, #0xc77d828
+0c77d824 raw+6fd824: bl       #0xc77d634
+0c77d828 raw+6fd828: movs     r1, #0x20
+0c77d82a raw+6fd82a: mov      r0, r8
+0c77d82c raw+6fd82c: bl       #0xc70ff4c
+0c77d830 raw+6fd830: ldr      r0, [r6, #4]
+0c77d832 raw+6fd832: cbz      r0, #0xc77d838
+0c77d834 raw+6fd834: bl       #0xc77d634
+0c77d838 raw+6fd838: movs     r1, #0x20
+0c77d83a raw+6fd83a: mov      r0, r6
+0c77d83c raw+6fd83c: bl       #0xc70ff4c
+0c77d840 raw+6fd840: movs     r1, #0x20
+0c77d842 raw+6fd842: mov      r0, r5
+0c77d844 raw+6fd844: bl       #0xc70ff4c
+0c77d848 raw+6fd848: movs     r3, #0
+0c77d84a raw+6fd84a: add.w    r2, r4, #0x40
+0c77d84e raw+6fd84e: strd     r3, r3, [r4, #0x40]
+0c77d852 raw+6fd852: str      r2, [r4, #0x3c]
+0c77d854 raw+6fd854: mov      r0, r7
+0c77d856 raw+6fd856: bl       #0xc76454c
+0c77d85a raw+6fd85a: add.w    r0, r4, #0x48
+0c77d85e raw+6fd85e: bl       #0xc764b40
+0c77d862 raw+6fd862: ldr      r5, [r4, #0x40]
+0c77d864 raw+6fd864: cbz      r5, #0xc77d8c4
+0c77d866 raw+6fd866: ldr      r6, [r5]
+0c77d868 raw+6fd868: cbz      r6, #0xc77d8a0
+0c77d86a raw+6fd86a: ldr.w    r8, [r6]
+0c77d86e raw+6fd86e: cmp.w    r8, #0
+0c77d872 raw+6fd872: beq      #0xc77d890
+0c77d874 raw+6fd874: ldr.w    r0, [r8]
+0c77d878 raw+6fd878: cbz      r0, #0xc77d87e
+0c77d87a raw+6fd87a: bl       #0xc77d634

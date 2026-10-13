@@ -1,0 +1,64 @@
+0c6c7db0 raw+647db0: ldr.w    r3, [r7, #0x84]
+0c6c7db4 raw+647db4: mov      r0, r3
+0c6c7db6 raw+647db6: str      r3, [r7]
+0c6c7db8 raw+647db8: bl       #0xc3524b8
+0c6c7dbc raw+647dbc: ldr      r3, [r7]
+0c6c7dbe raw+647dbe: ldr      r2, [pc, #0x54] ; literal raw+0x647e14 = 0x3c1319df 'bt'
+0c6c7dc0 raw+647dc0: strd     r6, r3, [sp]
+0c6c7dc4 raw+647dc4: ldr      r1, [pc, #0x90] ; literal raw+0x647e58 = 0x3c050fe0 "[%s] %s: ## file path(%s) don't exit, access result is %d --- %s, ready to mkdir\n"
+0c6c7dc6 raw+647dc6: ldr      r3, [pc, #0x7c] ; literal raw+0x647e44 = 0x3c16a565 'mass_rename_file_by_type'
+0c6c7dc8 raw+647dc8: str      r0, [sp, #8]
+0c6c7dca raw+647dca: mov      r0, sb
+0c6c7dcc raw+647dcc: bl       #0xc27e19c
+0c6c7dd0 raw+647dd0: movw     r3, #0x1ed
+0c6c7dd4 raw+647dd4: mov      r2, r6
+0c6c7dd6 raw+647dd6: mov      r0, fp
+0c6c7dd8 raw+647dd8: add.w    r1, r7, #0x58
+0c6c7ddc raw+647ddc: bl       #0xc6cc948
+0c6c7de0 raw+647de0: cmp      r0, #0
+0c6c7de2 raw+647de2: bge.w    #0xc6c7cd4
+0c6c7de6 raw+647de6: add.w    r0, r7, #0x58
+0c6c7dea raw+647dea: bl       #0xc349448
+0c6c7dee raw+647dee: ldr.w    fp, [r7, #0x84]
+0c6c7df2 raw+647df2: mov      r0, fp
+0c6c7df4 raw+647df4: bl       #0xc3524b8
+0c6c7df8 raw+647df8: ldr      r3, [pc, #0x48] ; literal raw+0x647e44 = 0x3c16a565 'mass_rename_file_by_type'
+0c6c7dfa raw+647dfa: strd     fp, r0, [sp, #4]
+0c6c7dfe raw+647dfe: ldr      r2, [pc, #0x14] ; literal raw+0x647e14 = 0x3c1319df 'bt'
+0c6c7e00 raw+647e00: mov      r0, sb
+0c6c7e02 raw+647e02: ldr      r1, [pc, #0x58] ; literal raw+0x647e5c = 0x3c167c91 '[%s] %s: mkdir fail(%s), mkdir result is %d --- %s\n'
+0c6c7e04 raw+647e04: str      r6, [sp]
+0c6c7e06 raw+647e06: bl       #0xc27e19c
+0c6c7e0a raw+647e0a: b        #0xc6c7cd6
+0c6c7e0c raw+647e0c: ldr      r6, [pc, #0x50] ; literal raw+0x647e60 = 0x3c050cbe '/data/mass'
+0c6c7e0e raw+647e0e: b        #0xc6c7cd6
+0c6c7e10 raw+647e10: adr      r4, #0x3b4
+0c6c7e12 raw+647e12: subs     r4, #0x16
+0c6c7e14 raw+647e14: adds     r7, r3, r7
+0c6c7e16 raw+647e16: subs     r4, #0x13
+0c6c7e18 raw+647e18: ldrb     r6, [r7, #0xc]
+0c6c7e1a raw+647e1a: subs     r4, #0x16
+0c6c7e1c raw+647e1c: ldrb     r4, [r4, #0xd]
+0c6c7e1e raw+647e1e: subs     r4, #0x16
+0c6c7e20 raw+647e20: ldrb     r0, [r4, #0xe]
+0c6c7e22 raw+647e22: subs     r4, #0x16
+0c6c7e24 raw+647e24: lsrs     r2, r5, #8
+0c6c7e26 raw+647e26: subs     r4, #5
+0c6c7e28 raw+647e28: ldm      r5!, {r0, r2, r4, r6}
+0c6c7e2a raw+647e2a: lsrs     r7, r6, #0x10
+0c6c7e2c raw+647e2c: add      r0, sp, #0x340
+0c6c7e2e raw+647e2e: subs     r4, #0x16
+0c6c7e30 raw+647e30: ldrb     r2, [r3, #0xf]
+0c6c7e32 raw+647e32: subs     r4, #0x16
+0c6c7e34 raw+647e34: ldrb     r4, [r1, #0x10]
+0c6c7e36 raw+647e36: subs     r4, #0x16
+0c6c7e38 raw+647e38: adr      r2, #0x160
+0c6c7e3a raw+647e3a: subs     r4, #0x25
+0c6c7e3c raw+647e3c: ldrb     r6, [r0, #0x11]
+0c6c7e3e raw+647e3e: subs     r4, #0x16
+0c6c7e40 raw+647e40: asrs     r5, r5, #3
+0c6c7e42 raw+647e42: subs     r4, #5
+0c6c7e44 raw+647e44: adr      r5, #0x194
+0c6c7e46 raw+647e46: subs     r4, #0x16
+0c6c7e48 raw+647e48: ldrb     r5, [r0, #0x13]
+0c6c7e4a raw+647e4a: subs     r4, #0x16

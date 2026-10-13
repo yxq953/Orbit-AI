@@ -1,0 +1,67 @@
+0c78c408 raw+70c408: mov.w    ip, #0xa
+0c78c40c raw+70c40c: mov.w    r2, #-1
+0c78c410 raw+70c410: movs     r1, #0
+0c78c412 raw+70c412: mov      r0, r8
+0c78c414 raw+70c414: ldr      r3, [pc, #0x170] ; literal raw+0x70c588 = 0x3c19fdec 'recordNoop'
+0c78c416 raw+70c416: str.w    ip, [sp]
+0c78c41a raw+70c41a: bl       #0xc297912
+0c78c41e raw+70c41e: cmp      r0, #0
+0c78c420 raw+70c420: beq.w    #0xc78cb04
+0c78c424 raw+70c424: ldrb.w   r3, [r7, #0x118]
+0c78c428 raw+70c428: lsls     r2, r3, #0x1f
+0c78c42a raw+70c42a: bmi      #0xc78c462
+0c78c42c raw+70c42c: lsrs     r3, r3, #1
+0c78c42e raw+70c42e: cmp      r3, #0xa
+0c78c430 raw+70c430: mov      r1, r3
+0c78c432 raw+70c432: bne.w    #0xc78c13c
+0c78c436 raw+70c436: mov.w    ip, #0xa
+0c78c43a raw+70c43a: mov.w    r2, #-1
+0c78c43e raw+70c43e: movs     r1, #0
+0c78c440 raw+70c440: mov      r0, r8
+0c78c442 raw+70c442: ldr      r3, [pc, #0x148] ; literal raw+0x70c58c = 0x3c19e294 'stopRecord'
+0c78c444 raw+70c444: str.w    ip, [sp]
+0c78c448 raw+70c448: bl       #0xc297912
+0c78c44c raw+70c44c: cmp      r0, #0
+0c78c44e raw+70c44e: beq.w    #0xc78cb18
+0c78c452 raw+70c452: ldrb.w   r3, [r7, #0x118]
+0c78c456 raw+70c456: lsls     r0, r3, #0x1f
+0c78c458 raw+70c458: bpl.w    #0xc78c6e8
+0c78c45c raw+70c45c: ldr.w    r3, [r7, #0x11c]
+0c78c460 raw+70c460: b        #0xc78bf5c
+0c78c462 raw+70c462: ldr.w    r3, [r7, #0x11c]
+0c78c466 raw+70c466: cmp      r3, #0xa
+0c78c468 raw+70c468: beq      #0xc78c436
+0c78c46a raw+70c46a: b        #0xc78bf5c
+0c78c46c raw+70c46c: mov.w    ip, #0xe
+0c78c470 raw+70c470: mov.w    r2, #-1
+0c78c474 raw+70c474: movs     r1, #0
+0c78c476 raw+70c476: mov      r0, r8
+0c78c478 raw+70c478: ldr      r3, [pc, #0x114] ; literal raw+0x70c590 = 0x3c19fe10 'startPlayAudio'
+0c78c47a raw+70c47a: str.w    ip, [sp]
+0c78c47e raw+70c47e: bl       #0xc297912
+0c78c482 raw+70c482: cmp      r0, #0
+0c78c484 raw+70c484: beq.w    #0xc78cc5c
+0c78c488 raw+70c488: ldrb.w   r3, [r7, #0x118]
+0c78c48c raw+70c48c: lsls     r1, r3, #0x1f
+0c78c48e raw+70c48e: bmi.w    #0xc78c6ee
+0c78c492 raw+70c492: lsrs     r3, r3, #1
+0c78c494 raw+70c494: mov      r1, r3
+0c78c496 raw+70c496: b        #0xc78c142
+0c78c498 raw+70c498: mov.w    ip, #0xd
+0c78c49c raw+70c49c: mov.w    r2, #-1
+0c78c4a0 raw+70c4a0: movs     r1, #0
+0c78c4a2 raw+70c4a2: mov      r0, r8
+0c78c4a4 raw+70c4a4: ldr      r3, [pc, #0xec] ; literal raw+0x70c594 = 0x3c19fe20 'stopPlayAudio'
+0c78c4a6 raw+70c4a6: str.w    ip, [sp]
+0c78c4aa raw+70c4aa: bl       #0xc297912
+0c78c4ae raw+70c4ae: cmp      r0, #0
+0c78c4b0 raw+70c4b0: beq.w    #0xc78ce0a
+0c78c4b4 raw+70c4b4: ldrb.w   r3, [r7, #0x118]
+0c78c4b8 raw+70c4b8: lsls     r2, r3, #0x1f
+0c78c4ba raw+70c4ba: bmi.w    #0xc78c6f4
+0c78c4be raw+70c4be: lsrs     r3, r3, #1
+0c78c4c0 raw+70c4c0: mov      r1, r3
+0c78c4c2 raw+70c4c2: b        #0xc78c148
+0c78c4c4 raw+70c4c4: ldrb.w   r3, [r7, #0x118]
+0c78c4c8 raw+70c4c8: lsls     r0, r3, #0x1f
+0c78c4ca raw+70c4ca: bpl.w    #0xc78c6e2

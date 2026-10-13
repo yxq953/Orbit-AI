@@ -1,0 +1,46 @@
+0c78d0b0 raw+70d0b0: movs     r3, #0xc2
+0c78d0b2 raw+70d0b2: ldr      r4, [pc, #0x1b0] ; literal raw+0x70d264 = 0x3c19feb0 'not supported for this platform!'
+0c78d0b4 raw+70d0b4: movs     r0, #4
+0c78d0b6 raw+70d0b6: ldr      r2, [pc, #0x1b0] ; literal raw+0x70d268 = 0x3c19fc0c '/data1/wechat-rtos-service/watch/watch-service/jsbridge_comm/adam_js_native_bridge.cpp'
+0c78d0b8 raw+70d0b8: ldr      r1, [pc, #0x1b0] ; literal raw+0x70d26c = 0x3c19fc64 'jsbg'
+0c78d0ba raw+70d0ba: str      r4, [sp]
+0c78d0bc raw+70d0bc: bl       #0xc764250
+0c78d0c0 raw+70d0c0: b.w      #0xc78c2ea
+0c78d0c4 raw+70d0c4: ldrb.w   r3, [r7, #0x118]
+0c78d0c8 raw+70d0c8: lsls     r1, r3, #0x1f
+0c78d0ca raw+70d0ca: bpl.w    #0xc78d59a
+0c78d0ce raw+70d0ce: ldr.w    r3, [r7, #0x11c]
+0c78d0d2 raw+70d0d2: b        #0xc78d00e
+0c78d0d4 raw+70d0d4: mov.w    ip, #0xb
+0c78d0d8 raw+70d0d8: mov.w    r2, #-1
+0c78d0dc raw+70d0dc: movs     r1, #0
+0c78d0de raw+70d0de: mov      r0, r8
+0c78d0e0 raw+70d0e0: ldr      r3, [pc, #0x18c] ; literal raw+0x70d270 = 0x3c19ff9c 'cancelLogin'
+0c78d0e2 raw+70d0e2: str.w    ip, [sp]
+0c78d0e6 raw+70d0e6: bl       #0xc297912
+0c78d0ea raw+70d0ea: cmp      r0, #0
+0c78d0ec raw+70d0ec: beq.w    #0xc78d970
+0c78d0f0 raw+70d0f0: ldrb.w   r3, [r7, #0x118]
+0c78d0f4 raw+70d0f4: lsls     r2, r3, #0x1f
+0c78d0f6 raw+70d0f6: bpl.w    #0xc78d926
+0c78d0fa raw+70d0fa: ldr.w    r3, [r7, #0x11c]
+0c78d0fe raw+70d0fe: b.w      #0xc78bfb0
+0c78d102 raw+70d102: add.w    sb, r0, #0x10
+0c78d106 raw+70d106: bic      sb, sb, #0xf
+0c78d10a raw+70d10a: mov      r0, sb
+0c78d10c raw+70d10c: bl       #0xc710d50
+0c78d110 raw+70d110: mov      r8, r0
+0c78d112 raw+70d112: orr      r3, sb, #1
+0c78d116 raw+70d116: strd     r3, r6, [r7, #0x13c]
+0c78d11a raw+70d11a: str.w    r0, [r7, #0x144]
+0c78d11e raw+70d11e: mov      r2, r6
+0c78d120 raw+70d120: mov      r1, r4
+0c78d122 raw+70d122: mov      r0, r8
+0c78d124 raw+70d124: bl       #0xc704110
+0c78d128 raw+70d128: b        #0xc78ca34
+0c78d12a raw+70d12a: lsrs     r3, r3, #1
+0c78d12c raw+70d12c: mov      r1, r3
+0c78d12e raw+70d12e: b.w      #0xc78c16c
+0c78d132 raw+70d132: movs     r3, #0xca
+0c78d134 raw+70d134: ldr      r4, [pc, #0x12c] ; literal raw+0x70d264 = 0x3c19feb0 'not supported for this platform!'
+0c78d136 raw+70d136: b        #0xc78d0b4

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小米穿戴固件档案馆 · Firmware Archive</title>
+  <meta name="description" content="小米手环 / 小米手表 / Redmi 手环与手表官方固件归档与下载。全量包与增量包，支持搜索、筛选与刷机引导。数据每日自动同步，新设备自动归类待确认。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%23b25000' d='M501-540Zm-30 380H110q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32Q97.25-220 110-220h361q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5ZM180-280q-24 0-42-18t-18-42v-400q0-24 18-42t42-18h630q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180v400h291q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5Zm640 60v-400H621v400h199Zm-214 60q-18 0-31.5-13.5T561-205v-430q0-18 13.5-31.5T606-680h229q18 0 31.5 13.5T880-635v430q0 18-13.5 31.5T835-160H606Zm115-360q12 0 21-9t9-21q0-12-9-21t-21.48-9Q709-580 700-571t-9 21.48q0 11.52 9 20.52t21 9Zm0 100Z'/%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('fw-archive-theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="fonts/misans/MiSans-Regular.min.css">
+  <link rel="stylesheet" href="fonts/misans/MiSans-Medium.min.css">
+  <link rel="stylesheet" href="fonts/misans/MiSans-Bold.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 顶部应用栏 -->
+  <header class="appbar">
+    <div class="appbar__inner">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg class="icon"><use href="assets/icons.svg#i-devices"></use></svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">小米穿戴固件档案馆</span>
+          <span class="brand-sub">Firmware Archive · 官方固件镜像</span>
+        </span>
+      </div>
+      <div class="appbar__actions">
+        <span class="sync-chip" id="syncChip" hidden>
+          <svg class="icon"><use href="assets/icons.svg#i-schedule"></use></svg>
+          <span id="syncChipText">同步于</span>
+        </span>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="切换深色模式"></button>
+        <button class="icon-button" id="refreshBtn" type="button" aria-label="刷新数据" title="刷新数据">
+          <svg class="icon"><use href="assets/icons.svg#i-refresh"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero">
+      <h1 class="hero__title">小米穿戴固件状态与下载</h1>
+      <p class="hero__sub">手环 / 手表 / Redmi 穿戴设备官方固件归档。全量包与增量包，数据每日自动同步，新设备自动归类到「其他设备」待确认。</p>
+    </section>
+
+    <section class="stats" id="stats" aria-label="数据统计"></section>
+
+    <div class="toolbar">
+      <div class="chips" id="statusChips" role="group" aria-label="按状态筛选"></div>
+      <label class="search">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-search"></use></svg>
+        <input id="searchInput" type="search" placeholder="搜索设备名称 / 代号 / 固件版本" autocomplete="off">
+      </label>
+    </div>
+    <div class="chips chips--category" id="categoryChips" role="group" aria-label="按类型筛选"></div>
+
+    <div id="content" class="content"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__line" id="footerLine"></p>
+    <p class="footer__line">数据源 data.json · 由 GitHub Actions 每日自动同步 · 固件仅归档官方发布版本</p>
+  </footer>
+
+  <!-- 详情抽屉 -->
+  <button class="drawer-scrim" id="scrim" type="button" aria-label="关闭详情" hidden></button>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer__head">
+      <span class="drawer__title" id="drawerTitle">
+        <svg class="icon"><use href="assets/icons.svg#i-devices"></use></svg>
+        <span>设备详情</span>
+      </span>
+      <button class="icon-button" id="drawerClose" type="button" aria-label="关闭">
+        <svg class="icon"><use href="assets/icons.svg#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="drawer__body" id="drawerBody"></div>
+  </aside>
+
+
+  <noscript>
+    <p style="padding:24px;text-align:center">本页面需要启用 JavaScript 才能展示数据。</p>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>

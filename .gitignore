@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+.DS_Store
+*.rpk
+/tmp/
+.claude/
+/deepseekapi.txt
+/qwen.txt
+__pycache__/
+*.pyc

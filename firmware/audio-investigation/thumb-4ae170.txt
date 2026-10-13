@@ -1,0 +1,44 @@
+0c52e170 raw+4ae170: bl       #0xc6ab718
+0c52e174 raw+4ae174: adds     r7, #4
+0c52e176 raw+4ae176: mov      sp, r7
+0c52e178 raw+4ae178: pop      {r4, r5, r6, r7, pc}
+0c52e17a raw+4ae17a: beq      #0xc52e174
+0c52e17c raw+4ae17c: ldr      r6, [pc, #0x3c] ; literal raw+0x4ae1bc = 0x3c278b4c
+0c52e17e raw+4ae17e: ldr      r3, [r6]
+0c52e180 raw+4ae180: cbnz     r3, #0xc52e190
+0c52e182 raw+4ae182: movs     r0, #3
+0c52e184 raw+4ae184: ldr      r3, [pc, #0x38] ; literal raw+0x4ae1c0 = 0x3c0e1ed1 'app_wechat_receive_data'
+0c52e186 raw+4ae186: ldr      r2, [pc, #0x2c] ; literal raw+0x4ae1b4 = 0x3c0e2ab0 'wechat'
+0c52e188 raw+4ae188: ldr      r1, [pc, #0x38] ; literal raw+0x4ae1c4 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c52e18a raw+4ae18a: bl       #0xc27e19c
+0c52e18e raw+4ae18e: b        #0xc52e174
+0c52e190 raw+4ae190: movs     r0, #4
+0c52e192 raw+4ae192: strd     r5, r4, [sp]
+0c52e196 raw+4ae196: ldr      r3, [pc, #0x28] ; literal raw+0x4ae1c0 = 0x3c0e1ed1 'app_wechat_receive_data'
+0c52e198 raw+4ae198: ldr      r2, [pc, #0x18] ; literal raw+0x4ae1b4 = 0x3c0e2ab0 'wechat'
+0c52e19a raw+4ae19a: ldr      r1, [pc, #0x2c] ; literal raw+0x4ae1c8 = 0x3c0e1ee9 '[%s] %s: received data %p len %u\n'
+0c52e19c raw+4ae19c: bl       #0xc27e19c
+0c52e1a0 raw+4ae1a0: ldr      r0, [r6]
+0c52e1a2 raw+4ae1a2: mov      r1, r5
+0c52e1a4 raw+4ae1a4: ldr      r3, [r0]
+0c52e1a6 raw+4ae1a6: uxth     r2, r4
+0c52e1a8 raw+4ae1a8: ldr      r3, [r3, #0x34]
+0c52e1aa raw+4ae1aa: blx      r3
+0c52e1ac raw+4ae1ac: b        #0xc52e174
+0c52e1ae raw+4ae1ae: nop      
+0c52e1b0 raw+4ae1b0: ldr      r6, [r1, r6]
+0c52e1b2 raw+4ae1b2: subs     r4, #0xe
+0c52e1b4 raw+4ae1b4: cmp      r2, #0xb0
+0c52e1b6 raw+4ae1b6: subs     r4, #0xe
+0c52e1b8 raw+4ae1b8: subs     r3, r7, #2
+0c52e1ba raw+4ae1ba: subs     r4, #0xe
+0c52e1bc raw+4ae1bc: ldrh     r4, [r1, #0x1a]
+0c52e1be raw+4ae1be: subs     r4, #0x27
+0c52e1c0 raw+4ae1c0: subs     r1, r2, #3
+0c52e1c2 raw+4ae1c2: subs     r4, #0xe
+0c52e1c4 raw+4ae1c4: asrs     r6, r1, #0x17
+0c52e1c6 raw+4ae1c6: subs     r4, #0xe
+0c52e1c8 raw+4ae1c8: subs     r1, r5, #3
+0c52e1ca raw+4ae1ca: subs     r4, #0xe
+0c52e1cc raw+4ae1cc: push     {r4, r5, r6, r7, lr}
+0c52e1ce raw+4ae1ce: sub      sp, #0x2c

@@ -1,0 +1,56 @@
+0c4a20d0 raw+4220d0: movs     r2, #1
+0c4a20d2 raw+4220d2: movs     r1, #9
+0c4a20d4 raw+4220d4: ldr      r0, [pc, #0xb8] ; literal raw+0x422190 = 0x00290001
+0c4a20d6 raw+4220d6: bl       #0xc637d4c
+0c4a20da raw+4220da: movs     r0, #4
+0c4a20dc raw+4220dc: bl       #0xc4a21a0
+0c4a20e0 raw+4220e0: strb     r5, [r4]
+0c4a20e2 raw+4220e2: strb     r5, [r4, #1]
+0c4a20e4 raw+4220e4: strb     r5, [r4, #2]
+0c4a20e6 raw+4220e6: ldr      r4, [pc, #0xac] ; literal raw+0x422194 = 0x3c26826c
+0c4a20e8 raw+4220e8: ldr      r0, [r4]
+0c4a20ea raw+4220ea: cmp      r0, #0
+0c4a20ec raw+4220ec: beq      #0xc4a205a
+0c4a20ee raw+4220ee: bl       #0xc637d10
+0c4a20f2 raw+4220f2: str      r5, [r4]
+0c4a20f4 raw+4220f4: b        #0xc4a205a
+0c4a20f6 raw+4220f6: movs     r3, #0
+0c4a20f8 raw+4220f8: ldr      r2, [pc, #0x14] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a20fa raw+4220fa: strb     r3, [r4, #2]
+0c4a20fc raw+4220fc: ldr      r1, [pc, #0x98] ; literal raw+0x422198 = 0x3c0ada74 '[%s] %s: usless cmd close.\n'
+0c4a20fe raw+4220fe: ldr      r3, [pc, #0x14] ; literal raw+0x422114 = 0x3c0afb1e 'recorder_sync_mode'
+0c4a2100 raw+422100: b        #0xc4a20ae
+0c4a2102 raw+422102: str      r2, [sp]
+0c4a2104 raw+422104: ldr      r3, [pc, #0xc] ; literal raw+0x422114 = 0x3c0afb1e 'recorder_sync_mode'
+0c4a2106 raw+422106: ldr      r2, [pc, #8] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a2108 raw+422108: ldr      r1, [pc, #0x90] ; literal raw+0x42219c = 0x3c0ada90 '[%s] %s: unknow mode. %d;\n'
+0c4a210a raw+42210a: b        #0xc4a1ebc
+0c4a210c raw+42210c: ldrb     r7, [r0, #0x1d]
+0c4a210e raw+42210e: subs     r4, #0x26
+0c4a2110 raw+422110: blt      #0xc4a208e
+0c4a2112 raw+422112: subs     r4, #0xa
+0c4a2114 raw+422114: smlabb   ip, lr, sl, r3
+0c4a2118 raw+422118: bls      #0xc4a21b2
+0c4a211a raw+42211a: subs     r4, #0xa
+0c4a211c raw+42211c: bls      #0xc4a21ee
+0c4a211e raw+42211e: subs     r4, #0xa
+0c4a2120 raw+422120: cdp      p12, #0xf, c3, c9, c7, #0
+0c4a2124 raw+422124: strh     r4, [r2, #2]
+0c4a2126 raw+422126: subs     r4, #0x26
+0c4a2128 raw+422128: bls      #0xc4a202c
+0c4a212a raw+42212a: subs     r4, #0xa
+0c4a212c raw+42212c: ldc2     p12, c3, [r5], #0x28
+0c4a2130 raw+422130: bls      #0xc4a206c
+0c4a2132 raw+422132: subs     r4, #0xa
+0c4a2134 raw+422134: ldc2     p12, c3, [fp], {0xa}
+0c4a2138 raw+422138: movs     r0, #0xf4
+0c4a213a raw+42213a: subs     r4, #0xb
+0c4a213c raw+42213c: strb     r6, [r0, #9]
+0c4a213e raw+42213e: subs     r4, #0xa
+0c4a2140 raw+422140: strh     r0, [r5, #4]
+0c4a2142 raw+422142: subs     r4, #0x26
+0c4a2144 raw+422144: mla      ip, ip, sl, r3
+0c4a2148 raw+422148: bls      #0xc4a20ac
+0c4a214a raw+42214a: subs     r4, #0xa
+0c4a214c raw+42214c: ldrb     r4, [r6, #9]
+0c4a214e raw+42214e: subs     r4, #0x26

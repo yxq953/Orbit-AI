@@ -1,0 +1,39 @@
+0c52f0ec raw+4af0ec: push     {r4, r5, r6, r7, lr}
+0c52f0ee raw+4af0ee: subw     sp, sp, #0x4ac
+0c52f0f2 raw+4af0f2: ldr      r5, [pc, #0x14c] ; literal raw+0x4af240 = 0x3c2787b0
+0c52f0f4 raw+4af0f4: mov      r4, r0
+0c52f0f6 raw+4af0f6: ldr      r3, [r5]
+0c52f0f8 raw+4af0f8: add      r7, sp, #8
+0c52f0fa raw+4af0fa: cbnz     r3, #0xc52f11a
+0c52f0fc raw+4af0fc: ldrb     r2, [r0, #8]
+0c52f0fe raw+4af0fe: cmp      r2, #0x3e
+0c52f100 raw+4af100: beq      #0xc52f11a
+0c52f102 raw+4af102: strd     r3, r2, [sp]
+0c52f106 raw+4af106: movs     r0, #4
+0c52f108 raw+4af108: ldr      r3, [pc, #0x138] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f10a raw+4af10a: ldr      r2, [pc, #0x13c] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f10c raw+4af10c: ldr      r1, [pc, #0x13c] ; literal raw+0x4af24c = 0x3c0e231c '[%s] %s: handle null should wait begin event %p %u\n'
+0c52f10e raw+4af10e: bl       #0xc27e19c
+0c52f112 raw+4af112: addw     r7, r7, #0x4a4
+0c52f116 raw+4af116: mov      sp, r7
+0c52f118 raw+4af118: pop      {r4, r5, r6, r7, pc}
+0c52f11a raw+4af11a: ldr      r6, [pc, #0x134] ; literal raw+0x4af250 = 0x3c2787b4
+0c52f11c raw+4af11c: ldrb     r3, [r6]
+0c52f11e raw+4af11e: cbz      r3, #0xc52f13a
+0c52f120 raw+4af120: ldr      r3, [r4, #4]
+0c52f122 raw+4af122: movs     r0, #4
+0c52f124 raw+4af124: ldr      r2, [pc, #0x120] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f126 raw+4af126: ldr      r1, [pc, #0x12c] ; literal raw+0x4af254 = 0x3c0e2350 '[%s] %s: record cb and record is stop\n'
+0c52f128 raw+4af128: str      r3, [r5]
+0c52f12a raw+4af12a: ldr      r3, [pc, #0x118] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f12c raw+4af12c: bl       #0xc27e19c
+0c52f130 raw+4af130: bl       #0xc52f030
+0c52f134 raw+4af134: movs     r3, #0
+0c52f136 raw+4af136: strb     r3, [r6]
+0c52f138 raw+4af138: b        #0xc52f112
+0c52f13a raw+4af13a: ldrb     r3, [r4, #8]
+0c52f13c raw+4af13c: subs     r3, #0x33
+0c52f13e raw+4af13e: cmp      r3, #0xc
+0c52f140 raw+4af140: bhi      #0xc52f112
+0c52f142 raw+4af142: adr      r2, #4
+0c52f144 raw+4af144: ldr.w    pc, [r2, r3, lsl #2]

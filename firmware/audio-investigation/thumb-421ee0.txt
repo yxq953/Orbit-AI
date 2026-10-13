@@ -1,0 +1,164 @@
+0c4a1ee0 raw+421ee0: tbh      [pc, r1, lsl #1] ; literal raw+0x421ee4 = 0x00cd0004
+0c4a1ee4 raw+421ee4: movs     r4, r0
+0c4a1ee6 raw+421ee6: lsls     r5, r1, #3
+0c4a1ee8 raw+421ee8: lsls     r5, r2, #3
+0c4a1eea raw+421eea: lsls     r1, r5, #3
+0c4a1eec raw+421eec: ldr      r3, [pc, #0x224] ; literal raw+0x422114 = 0x3c0afb1e 'recorder_sync_mode'
+0c4a1eee raw+421eee: movs     r0, #6
+0c4a1ef0 raw+421ef0: ldr      r2, [pc, #0x21c] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a1ef2 raw+421ef2: ldr      r1, [pc, #0x22c] ; literal raw+0x422120 = 0x3c07eef9 '[%s] %s: opt mode init.\n'
+0c4a1ef4 raw+421ef4: bl       #0xc27e19c
+0c4a1ef8 raw+421ef8: movs     r2, #0x40
+0c4a1efa raw+421efa: movs     r1, #0
+0c4a1efc raw+421efc: add.w    r0, r7, #0x18
+0c4a1f00 raw+421f00: bl       #0xc70421c
+0c4a1f04 raw+421f04: movs     r0, #0
+0c4a1f06 raw+421f06: strd     r0, r0, [r7, #0x10]
+0c4a1f0a raw+421f0a: bl       #0xc27f2a6
+0c4a1f0e raw+421f0e: strd     r0, r1, [r7, #8]
+0c4a1f12 raw+421f12: add.w    r0, r7, #8
+0c4a1f16 raw+421f16: bl       #0xc283d40
+0c4a1f1a raw+421f1a: ldr      r4, [pc, #0x208] ; literal raw+0x422124 = 0x3c268054
+0c4a1f1c raw+421f1c: ldr      r2, [r0, #0x14]
+0c4a1f1e raw+421f1e: ldr      r3, [r4, #0x14]
+0c4a1f20 raw+421f20: mov      r1, r0
+0c4a1f22 raw+421f22: cmp      r2, r3
+0c4a1f24 raw+421f24: bne.w    #0xc4a2060
+0c4a1f28 raw+421f28: ldr      r2, [r0, #0x1c]
+0c4a1f2a raw+421f2a: ldr      r3, [r4, #0x1c]
+0c4a1f2c raw+421f2c: cmp      r2, r3
+0c4a1f2e raw+421f2e: bne.w    #0xc4a2060
+0c4a1f32 raw+421f32: ldr      r2, [r0, #8]
+0c4a1f34 raw+421f34: ldr      r3, [r4, #8]
+0c4a1f36 raw+421f36: cmp      r2, r3
+0c4a1f38 raw+421f38: bne.w    #0xc4a2060
+0c4a1f3c raw+421f3c: ldr      r2, [r0, #4]
+0c4a1f3e raw+421f3e: ldr      r3, [r4, #4]
+0c4a1f40 raw+421f40: cmp      r2, r3
+0c4a1f42 raw+421f42: bne.w    #0xc4a2060
+0c4a1f46 raw+421f46: ldrb.w   r3, [r4, #0x2c]
+0c4a1f4a raw+421f4a: adds     r3, #1
+0c4a1f4c raw+421f4c: strb.w   r3, [r4, #0x2c]
+0c4a1f50 raw+421f50: ldrb.w   r3, [r4, #0x2c]
+0c4a1f54 raw+421f54: movs     r0, #6
+0c4a1f56 raw+421f56: ldr      r2, [pc, #0x1b8] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a1f58 raw+421f58: ldr      r1, [pc, #0x1cc] ; literal raw+0x422128 = 0x3c0ad980 '[%s] %s: times in min: %d;\n'
+0c4a1f5a raw+421f5a: str      r3, [sp]
+0c4a1f5c raw+421f5c: ldr      r3, [pc, #0x1cc] ; literal raw+0x42212c = 0x3c0afcb5 'update_least_time_info'
+0c4a1f5e raw+421f5e: bl       #0xc27e19c
+0c4a1f62 raw+421f62: ldrb.w   r3, [r4, #0x2c]
+0c4a1f66 raw+421f66: movs     r0, #6
+0c4a1f68 raw+421f68: ldr      r2, [pc, #0x1a4] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a1f6a raw+421f6a: ldr      r1, [pc, #0x1c4] ; literal raw+0x422130 = 0x3c0ad99c '[%s] %s: times:%d;\n'
+0c4a1f6c raw+421f6c: str      r3, [sp]
+0c4a1f6e raw+421f6e: ldr      r3, [pc, #0x1c4] ; literal raw+0x422134 = 0x3c0afc9b 'get_least_time_info_times'
+0c4a1f70 raw+421f70: bl       #0xc27e19c
+0c4a1f74 raw+421f74: ldrd     r0, r1, [r7, #8]
+0c4a1f78 raw+421f78: ldrb.w   r3, [r4, #0x2c]
+0c4a1f7c raw+421f7c: ldr      r2, [pc, #0x1b8] ; literal raw+0x422138 = 0x3c0b20f4 '%lld'
+0c4a1f7e raw+421f7e: strd     r0, r1, [sp]
+0c4a1f82 raw+421f82: movs     r1, #0x3a
+0c4a1f84 raw+421f84: add.w    r0, r7, #0x18
+0c4a1f88 raw+421f88: str      r3, [r7, #4]
+0c4a1f8a raw+421f8a: bl       #0xc27c3a8
+0c4a1f8e raw+421f8e: ldr      r3, [r7, #4]
+0c4a1f90 raw+421f90: movs     r1, #8
+0c4a1f92 raw+421f92: ldr      r2, [pc, #0x1a8] ; literal raw+0x42213c = 0x3c0a7246 '-%02d'
+0c4a1f94 raw+421f94: add.w    r0, r7, #0x10
+0c4a1f98 raw+421f98: bl       #0xc27c3a8
+0c4a1f9c raw+421f9c: movs     r2, #5
+0c4a1f9e raw+421f9e: add.w    r1, r7, #0x10
+0c4a1fa2 raw+421fa2: add.w    r0, r7, #0x18
+0c4a1fa6 raw+421fa6: bl       #0xc6f9dbc
+0c4a1faa raw+421faa: ldr      r5, [pc, #0x194] ; literal raw+0x422140 = 0x3c2680a8
+0c4a1fac raw+421fac: add.w    r3, r7, #0x18
+0c4a1fb0 raw+421fb0: movs     r0, #6
+0c4a1fb2 raw+421fb2: str      r3, [sp]
+0c4a1fb4 raw+421fb4: ldr      r2, [pc, #0x158] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a1fb6 raw+421fb6: ldr      r3, [pc, #0x18c] ; literal raw+0x422144 = 0x3c0afb0c 'get_a_format_name'
+0c4a1fb8 raw+421fb8: ldr      r1, [pc, #0x18c] ; literal raw+0x422148 = 0x3c0ad9b0 '[%s] %s: name: %s;\n'
+0c4a1fba raw+421fba: bl       #0xc27e19c
+0c4a1fbe raw+421fbe: ldr      r0, [r5]
+0c4a1fc0 raw+421fc0: cbz      r0, #0xc4a1fc6
+0c4a1fc2 raw+421fc2: bl       #0xc419fcc
+0c4a1fc6 raw+421fc6: movs     r0, #0xa0
+0c4a1fc8 raw+421fc8: bl       #0xc2858d8
+0c4a1fcc raw+421fcc: mov      r4, r0
+0c4a1fce raw+421fce: cmp      r0, #0
+0c4a1fd0 raw+421fd0: beq      #0xc4a2070
+0c4a1fd2 raw+421fd2: movs     r2, #0xa0
+0c4a1fd4 raw+421fd4: movs     r1, #0
+0c4a1fd6 raw+421fd6: bl       #0xc70421c
+0c4a1fda raw+421fda: movs     r2, #0x40
+0c4a1fdc raw+421fdc: mov      r0, r4
+0c4a1fde raw+421fde: add.w    r1, r7, #0x18
+0c4a1fe2 raw+421fe2: bl       #0xc27ab44
+0c4a1fe6 raw+421fe6: str      r4, [r5]
+0c4a1fe8 raw+421fe8: ldr      r4, [pc, #0x160] ; literal raw+0x42214c = 0x3c267a74
+0c4a1fea raw+421fea: add.w    r3, r7, #0x18
+0c4a1fee raw+421fee: movs     r0, #6
+0c4a1ff0 raw+421ff0: ldr      r2, [pc, #0x11c] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a1ff2 raw+421ff2: ldr      r1, [pc, #0x15c] ; literal raw+0x422150 = 0x3c07ef26 '[%s] %s: name = %s ;\n'
+0c4a1ff4 raw+421ff4: str      r3, [sp]
+0c4a1ff6 raw+421ff6: ldr      r3, [pc, #0x15c] ; literal raw+0x422154 = 0x3c0afaf1 'init_recorder'
+0c4a1ff8 raw+421ff8: bl       #0xc27e19c
+0c4a1ffc raw+421ffc: mov.w    r2, #0x4a0
+0c4a2000 raw+422000: movs     r1, #0
+0c4a2002 raw+422002: mov      r0, r4
+0c4a2004 raw+422004: bl       #0xc70421c
+0c4a2008 raw+422008: movs     r3, #0
+0c4a200a raw+42200a: movs     r5, #0x26
+0c4a200c raw+42200c: ldr      r2, [pc, #0x148] ; literal raw+0x422158 = 0x3c07ef3c 'Record'
+0c4a200e raw+42200e: str      r3, [r4, #4]
+0c4a2010 raw+422010: strb     r3, [r4, #0x14]
+0c4a2012 raw+422012: ldr      r3, [pc, #0x148] ; literal raw+0x42215c = 0x3c07ef43 'Capture'
+0c4a2014 raw+422014: str      r2, [r4, #0x10]
+0c4a2016 raw+422016: ldr      r2, [pc, #0x148] ; literal raw+0x422160 = 0x0c4a3be5
+0c4a2018 raw+422018: str      r3, [r4, #0xc]
+0c4a201a raw+42201a: add.w    r6, r4, #0x15
+0c4a201e raw+42201e: add.w    r3, r7, #0x18
+0c4a2022 raw+422022: str.w    r2, [r4, #0xd8]
+0c4a2026 raw+422026: strb     r5, [r4, #8]
+0c4a2028 raw+422028: movs     r1, #0x3f
+0c4a202a raw+42202a: ldr      r2, [pc, #0x138] ; literal raw+0x422164 = 0x3c16b698 '%s%s'
+0c4a202c raw+42202c: str      r3, [sp]
+0c4a202e raw+42202e: adds     r4, #0x55
+0c4a2030 raw+422030: ldr      r3, [pc, #0x134] ; literal raw+0x422168 = 0x3c07ef12 '/data/app/recorder/'
+0c4a2032 raw+422032: mov      r0, r6
+0c4a2034 raw+422034: bl       #0xc27c3a8
+0c4a2038 raw+422038: movs     r1, #0x7f
+0c4a203a raw+42203a: ldr      r3, [pc, #0x130] ; literal raw+0x42216c = 0x3c0ad9dd 'format=opus:sample_rate=16000:ch_layout=mono'
+0c4a203c raw+42203c: ldr      r2, [pc, #0x130] ; literal raw+0x422170 = 0x3c044800 '%s'
+0c4a203e raw+42203e: mov      r0, r4
+0c4a2040 raw+422040: bl       #0xc27c3a8
+0c4a2044 raw+422044: movs     r0, #6
+0c4a2046 raw+422046: strd     r6, r4, [sp]
+0c4a204a raw+42204a: ldr      r3, [pc, #0x108] ; literal raw+0x422154 = 0x3c0afaf1 'init_recorder'
+0c4a204c raw+42204c: ldr      r2, [pc, #0xc0] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a204e raw+42204e: ldr      r1, [pc, #0x124] ; literal raw+0x422174 = 0x3c07ef77 '[%s] %s: media session test, recorder, url is %s, options %s\n'
+0c4a2050 raw+422050: bl       #0xc27e19c
+0c4a2054 raw+422054: mov      r0, r5
+0c4a2056 raw+422056: bl       #0xc49e8d0
+0c4a205a raw+42205a: adds     r7, #0x5c
+0c4a205c raw+42205c: mov      sp, r7
+0c4a205e raw+42205e: pop      {r4, r5, r6, r7, pc}
+0c4a2060 raw+422060: movs     r3, #1
+0c4a2062 raw+422062: movs     r2, #0x2c
+0c4a2064 raw+422064: ldr      r0, [pc, #0xbc] ; literal raw+0x422124 = 0x3c268054
+0c4a2066 raw+422066: strb.w   r3, [r4, #0x2c]
+0c4a206a raw+42206a: bl       #0xc704110
+0c4a206e raw+42206e: b        #0xc4a1f50
+0c4a2070 raw+422070: movs     r0, #3
+0c4a2072 raw+422072: ldr      r3, [pc, #0x104] ; literal raw+0x422178 = 0x3c0afaff 'new_a_record'
+0c4a2074 raw+422074: ldr      r2, [pc, #0x98] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a2076 raw+422076: ldr      r1, [pc, #0x104] ; literal raw+0x42217c = 0x3c0ad9c4 '[%s] %s: malloc failed;\n'
+0c4a2078 raw+422078: bl       #0xc27e19c
+0c4a207c raw+42207c: b        #0xc4a1fe8
+0c4a207e raw+42207e: movs     r0, #6
+0c4a2080 raw+422080: ldr      r3, [pc, #0x90] ; literal raw+0x422114 = 0x3c0afb1e 'recorder_sync_mode'
+0c4a2082 raw+422082: ldr      r2, [pc, #0x8c] ; literal raw+0x422110 = 0x3c0adbbd 'recorder'
+0c4a2084 raw+422084: ldr      r1, [pc, #0xf8] ; literal raw+0x422180 = 0x3c0ada0a '[%s] %s: opt mode start.\n'
+0c4a2086 raw+422086: bl       #0xc27e19c
+0c4a208a raw+42208a: movs     r0, #0x22
+0c4a208c raw+42208c: b        #0xc4a2056
+0c4a208e raw+42208e: subs     r3, #1

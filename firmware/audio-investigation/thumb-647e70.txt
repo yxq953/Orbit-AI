@@ -1,0 +1,59 @@
+0c6c7e70 raw+647e70: push.w   {r4, r5, r6, r7, r8, lr}
+0c6c7e74 raw+647e74: ldr      r5, [pc, #0x84] ; literal raw+0x647efc = 0x3c167cd6 '/data/app/recorder'
+0c6c7e76 raw+647e76: sub      sp, #0x110
+0c6c7e78 raw+647e78: mov      r0, r5
+0c6c7e7a raw+647e7a: add      r7, sp, #8
+0c6c7e7c raw+647e7c: bl       #0xc2781e0
+0c6c7e80 raw+647e80: mov      r4, r0
+0c6c7e82 raw+647e82: cbz      r0, #0xc6c7ea8
+0c6c7e84 raw+647e84: ldr      r6, [pc, #0x78] ; literal raw+0x647f00 = 0x3c07eed7 'retest'
+0c6c7e86 raw+647e86: ldr.w    r8, [pc, #0x94] ; literal raw+0x647f1c = 0x3c116640 '%s/%s'
+0c6c7e8a raw+647e8a: mov      r0, r4
+0c6c7e8c raw+647e8c: bl       #0xc278240
+0c6c7e90 raw+647e90: cbnz     r0, #0xc6c7ec2
+0c6c7e92 raw+647e92: mov      r0, r4
+0c6c7e94 raw+647e94: bl       #0xc278218
+0c6c7e98 raw+647e98: movs     r0, #6
+0c6c7e9a raw+647e9a: ldr      r3, [pc, #0x68] ; literal raw+0x647f04 = 0x3c16a275 'mic_rm_file'
+0c6c7e9c raw+647e9c: ldr      r2, [pc, #0x68] ; literal raw+0x647f08 = 0x3c07f2fd 'check_tool'
+0c6c7e9e raw+647e9e: ldr      r1, [pc, #0x6c] ; literal raw+0x647f0c = 0x3c07df91 '[%s] %s: OK\n'
+0c6c7ea0 raw+647ea0: bl       #0xc27e19c
+0c6c7ea4 raw+647ea4: movs     r0, #1
+0c6c7ea6 raw+647ea6: b        #0xc6c7eb8
+0c6c7ea8 raw+647ea8: movs     r0, #6
+0c6c7eaa raw+647eaa: ldr      r3, [pc, #0x58] ; literal raw+0x647f04 = 0x3c16a275 'mic_rm_file'
+0c6c7eac raw+647eac: ldr      r2, [pc, #0x58] ; literal raw+0x647f08 = 0x3c07f2fd 'check_tool'
+0c6c7eae raw+647eae: ldr      r1, [pc, #0x60] ; literal raw+0x647f10 = 0x3c167ce9 '[%s] %s: %s no file\n'
+0c6c7eb0 raw+647eb0: str      r5, [sp]
+0c6c7eb2 raw+647eb2: bl       #0xc27e19c
+0c6c7eb6 raw+647eb6: mov      r0, r4
+0c6c7eb8 raw+647eb8: add.w    r7, r7, #0x108
+0c6c7ebc raw+647ebc: mov      sp, r7
+0c6c7ebe raw+647ebe: pop.w    {r4, r5, r6, r7, r8, pc}
+0c6c7ec2 raw+647ec2: adds     r3, r0, #1
+0c6c7ec4 raw+647ec4: mov      r0, r3
+0c6c7ec6 raw+647ec6: mov      r1, r6
+0c6c7ec8 raw+647ec8: str      r3, [r7, #4]
+0c6c7eca raw+647eca: bl       #0xc27a924
+0c6c7ece raw+647ece: ldr      r3, [r7, #4]
+0c6c7ed0 raw+647ed0: cmp      r0, #0
+0c6c7ed2 raw+647ed2: beq      #0xc6c7e8a
+0c6c7ed4 raw+647ed4: mov      r2, r5
+0c6c7ed6 raw+647ed6: mov      r1, r8
+0c6c7ed8 raw+647ed8: add.w    r0, r7, #8
+0c6c7edc raw+647edc: bl       #0xc27c358
+0c6c7ee0 raw+647ee0: add.w    r0, r7, #8
+0c6c7ee4 raw+647ee4: bl       #0xc27f5fa
+0c6c7ee8 raw+647ee8: add.w    r3, r7, #8
+0c6c7eec raw+647eec: str      r3, [sp]
+0c6c7eee raw+647eee: movs     r0, #6
+0c6c7ef0 raw+647ef0: ldr      r3, [pc, #0x10] ; literal raw+0x647f04 = 0x3c16a275 'mic_rm_file'
+0c6c7ef2 raw+647ef2: ldr      r2, [pc, #0x20] ; literal raw+0x647f14 = 0x3c07d06f 'checktool'
+0c6c7ef4 raw+647ef4: ldr      r1, [pc, #0x20] ; literal raw+0x647f18 = 0x3c167cfe '[%s] %s: rm file, url is %s\n'
+0c6c7ef6 raw+647ef6: bl       #0xc27e19c
+0c6c7efa raw+647efa: b        #0xc6c7e8a
+0c6c7efc raw+647efc: ldrb     r6, [r2, #0x13]
+0c6c7efe raw+647efe: subs     r4, #0x16
+0c6c7f00 raw+647f00: cdp      p12, #0xd, c3, c7, c7, #0
+0c6c7f04 raw+647f04: adr      r2, #0x1d4
+0c6c7f06 raw+647f06: subs     r4, #0x16

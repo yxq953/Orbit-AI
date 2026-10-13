@@ -1,0 +1,99 @@
+0c5acdb0 raw+52cdb0: push.w   {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+0c5acdb4 raw+52cdb4: sub      sp, #0x14
+0c5acdb6 raw+52cdb6: add      r7, sp, #8
+0c5acdb8 raw+52cdb8: mov      r5, r0
+0c5acdba raw+52cdba: ldrd     r0, r6, [r7, #0x30]
+0c5acdbe raw+52cdbe: cmp      r0, #1
+0c5acdc0 raw+52cdc0: mov      r8, r2
+0c5acdc2 raw+52cdc2: mov      sb, r3
+0c5acdc4 raw+52cdc4: bne      #0xc5acdcc
+0c5acdc6 raw+52cdc6: ldr      r3, [r6, #4]
+0c5acdc8 raw+52cdc8: adds     r3, #1
+0c5acdca raw+52cdca: beq      #0xc5acddc
+0c5acdcc raw+52cdcc: movw     r3, #0x25f
+0c5acdd0 raw+52cdd0: ldr      r2, [pc, #0x1c0] ; literal raw+0x52cf94 = 0x3c0794d7 'audio'
+0c5acdd2 raw+52cdd2: ldr      r1, [pc, #0x1c4] ; literal raw+0x52cf98 = 0x3c1143cf '[%s %d] Invalid parameter'
+0c5acdd4 raw+52cdd4: mov      r0, r5
+0c5acdd6 raw+52cdd6: bl       #0xc3161e8
+0c5acdda raw+52cdda: b        #0xc5ace30
+0c5acddc raw+52cddc: mov.w    r1, #0x668
+0c5acde0 raw+52cde0: bl       #0xc2847ac
+0c5acde4 raw+52cde4: mov      r4, r0
+0c5acde6 raw+52cde6: cbnz     r0, #0xc5acdf2
+0c5acde8 raw+52cde8: mov.w    r3, #0x264
+0c5acdec raw+52cdec: ldr      r2, [pc, #0x1a4] ; literal raw+0x52cf94 = 0x3c0794d7 'audio'
+0c5acdee raw+52cdee: ldr      r1, [pc, #0x1ac] ; literal raw+0x52cf9c = 0x3c1143e9 '[%s %d] Not enough RAM'
+0c5acdf0 raw+52cdf0: b        #0xc5acdd4
+0c5acdf2 raw+52cdf2: ldr      r3, [pc, #0x1ac] ; literal raw+0x52cfa0 = 0x3c0aa793 'package'
+0c5acdf4 raw+52cdf4: mov      r0, r5
+0c5acdf6 raw+52cdf6: str      r3, [sp]
+0c5acdf8 raw+52cdf8: ldrd     r2, r3, [r6]
+0c5acdfc raw+52cdfc: bl       #0xc319f00
+0c5ace00 raw+52ce00: cmp      r1, #3
+0c5ace02 raw+52ce02: mov      r2, r0
+0c5ace04 raw+52ce04: mov      r3, r1
+0c5ace06 raw+52ce06: beq      #0xc5ace1a
+0c5ace08 raw+52ce08: strd     r0, r1, [r7]
+0c5ace0c raw+52ce0c: mov      r0, r5
+0c5ace0e raw+52ce0e: bl       #0xc621adc
+0c5ace12 raw+52ce12: ldrd     r2, r3, [r7]
+0c5ace16 raw+52ce16: str.w    r0, [r4, #0x5e0]
+0c5ace1a raw+52ce1a: mov      r0, r5
+0c5ace1c raw+52ce1c: bl       #0xc621aac
+0c5ace20 raw+52ce20: ldr.w    r3, [r4, #0x5e0]
+0c5ace24 raw+52ce24: cbnz     r3, #0xc5ace38
+0c5ace26 raw+52ce26: mov      r0, r4
+0c5ace28 raw+52ce28: bl       #0xc286310
+0c5ace2c raw+52ce2c: movs     r0, #0
+0c5ace2e raw+52ce2e: movs     r1, #6
+0c5ace30 raw+52ce30: adds     r7, #0xc
+0c5ace32 raw+52ce32: mov      sp, r7
+0c5ace34 raw+52ce34: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c5ace38 raw+52ce38: movs     r3, #0
+0c5ace3a raw+52ce3a: movs     r0, #0
+0c5ace3c raw+52ce3c: movs     r1, #3
+0c5ace3e raw+52ce3e: strh.w   r3, [r4, #0xb0]
+0c5ace42 raw+52ce42: strb.w   r3, [r4, #0xb2]
+0c5ace46 raw+52ce46: strb.w   r3, [r4, #0xc4]
+0c5ace4a raw+52ce4a: strb     r3, [r4, #4]
+0c5ace4c raw+52ce4c: add.w    r2, r4, #0x600
+0c5ace50 raw+52ce50: add.w    r3, r4, #0x610
+0c5ace54 raw+52ce54: add.w    r6, r4, #0x630
+0c5ace58 raw+52ce58: str      r5, [r4]
+0c5ace5a raw+52ce5a: strd     r0, r1, [r3]
+0c5ace5e raw+52ce5e: strd     r0, r1, [r2]
+0c5ace62 raw+52ce62: strd     r0, r1, [r6, #-0x8]
+0c5ace66 raw+52ce66: add.w    r6, r4, #0x5f0
+0c5ace6a raw+52ce6a: strd     r0, r1, [r6, #-0x8]
+0c5ace6e raw+52ce6e: strd     r0, r1, [r6]
+0c5ace72 raw+52ce72: strd     r0, r1, [r2, #-0x8]
+0c5ace76 raw+52ce76: strd     r0, r1, [r3, #-0x8]
+0c5ace7a raw+52ce7a: add.w    r3, r4, #0x620
+0c5ace7e raw+52ce7e: strd     r0, r1, [r3, #-0x8]
+0c5ace82 raw+52ce82: strd     r0, r1, [r3]
+0c5ace86 raw+52ce86: add.w    r2, r4, #0x660
+0c5ace8a raw+52ce8a: add.w    r3, r4, #0x628
+0c5ace8e raw+52ce8e: strd     r0, r1, [r3, #8]!
+0c5ace92 raw+52ce92: cmp      r2, r3
+0c5ace94 raw+52ce94: bne      #0xc5ace8e
+0c5ace96 raw+52ce96: movs     r2, #0
+0c5ace98 raw+52ce98: add.w    sl, r4, #8
+0c5ace9c raw+52ce9c: mov      r1, r2
+0c5ace9e raw+52ce9e: mov      r0, sl
+0c5acea0 raw+52cea0: str      r4, [r4, #0x18]
+0c5acea2 raw+52cea2: bl       #0xc278a5c
+0c5acea6 raw+52cea6: cmp      r0, #0
+0c5acea8 raw+52cea8: bge      #0xc5acec4
+0c5aceaa raw+52ceaa: ldr.w    r1, [r4, #0x5e0]
+0c5aceae raw+52ceae: mov      r0, r5
+0c5aceb0 raw+52ceb0: bl       #0xc3151e0
+0c5aceb4 raw+52ceb4: mov      r0, r4
+0c5aceb6 raw+52ceb6: bl       #0xc286310
+0c5aceba raw+52ceba: movw     r3, #0x28b
+0c5acebe raw+52cebe: ldr      r2, [pc, #0xd4] ; literal raw+0x52cf94 = 0x3c0794d7 'audio'
+0c5acec0 raw+52cec0: ldr      r1, [pc, #0xe0] ; literal raw+0x52cfa4 = 0x3c114400 '[%s %d] sem init fail'
+0c5acec2 raw+52cec2: b        #0xc5acdd4
+0c5acec4 raw+52cec4: mov      r0, r5
+0c5acec6 raw+52cec6: bl       #0xc5cdb38
+0c5aceca raw+52ceca: mov      fp, r0
+0c5acecc raw+52cecc: movs     r0, #0xc

@@ -1,0 +1,64 @@
+0c763188 raw+6e3188: push.w   {r4, r5, r6, r7, r8, sb, sl, lr}
+0c76318c raw+6e318c: sub      sp, #0x18
+0c76318e raw+6e318e: ldr      r3, [pc, #0x94] ; literal raw+0x6e3224 = 0xaaaaaaab
+0c763190 raw+6e3190: adds     r4, r1, #2
+0c763192 raw+6e3192: umull    r3, r4, r3, r4
+0c763196 raw+6e3196: lsrs     r4, r4, #1
+0c763198 raw+6e3198: ldr.w    r8, [pc, #0x9c] ; literal raw+0x6e3238 = 0x3c1c66e8
+0c76319c raw+6e319c: lsls     r4, r4, #2
+0c76319e raw+6e319e: adds     r4, #1
+0c7631a0 raw+6e31a0: mov      sb, r0
+0c7631a2 raw+6e31a2: ldr.w    r3, [r8]
+0c7631a6 raw+6e31a6: mov      r0, r4
+0c7631a8 raw+6e31a8: add      r7, sp, #0x10
+0c7631aa raw+6e31aa: mov      r5, r1
+0c7631ac raw+6e31ac: mov      r6, r2
+0c7631ae raw+6e31ae: blx      r3
+0c7631b0 raw+6e31b0: mov      sl, r0
+0c7631b2 raw+6e31b2: cbz      r0, #0xc763206
+0c7631b4 raw+6e31b4: mov      r3, sb
+0c7631b6 raw+6e31b6: mov      r1, r4
+0c7631b8 raw+6e31b8: str      r5, [sp]
+0c7631ba raw+6e31ba: adds     r2, r7, #4
+0c7631bc raw+6e31bc: bl       #0xc2e1b3c
+0c7631c0 raw+6e31c0: cbnz     r0, #0xc7631de
+0c7631c2 raw+6e31c2: ldr      r2, [r7, #4]
+0c7631c4 raw+6e31c4: mov      r1, sl
+0c7631c6 raw+6e31c6: mov      r0, r6
+0c7631c8 raw+6e31c8: bl       #0xc764b68
+0c7631cc raw+6e31cc: mov      r0, sl
+0c7631ce raw+6e31ce: ldr.w    r3, [r8, #0xc]
+0c7631d2 raw+6e31d2: blx      r3
+0c7631d4 raw+6e31d4: movs     r0, #1
+0c7631d6 raw+6e31d6: adds     r7, #8
+0c7631d8 raw+6e31d8: mov      sp, r7
+0c7631da raw+6e31da: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c7631de raw+6e31de: ldr      r1, [pc, #0x48] ; literal raw+0x6e3228 = 0x3c19b880 'mbedtls_base64_encode err:%d, inlen:%d, enclen:%d'
+0c7631e0 raw+6e31e0: ldr      r2, [pc, #0x48] ; literal raw+0x6e322c = 0x3c19b668 '/data1/wechat-rtos-service/adam-rpc/comm/adam_crypto_utils.cpp'
+0c7631e2 raw+6e31e2: strd     r1, r0, [sp]
+0c7631e6 raw+6e31e6: movs     r3, #0xd2
+0c7631e8 raw+6e31e8: ldr      r1, [pc, #0x44] ; literal raw+0x6e3230 = 0x3c19b6a8 'adam'
+0c7631ea raw+6e31ea: movs     r0, #4
+0c7631ec raw+6e31ec: strd     r5, r4, [sp, #8]
+0c7631f0 raw+6e31f0: bl       #0xc764250
+0c7631f4 raw+6e31f4: mov      r0, sl
+0c7631f6 raw+6e31f6: ldr.w    r3, [r8, #0xc]
+0c7631fa raw+6e31fa: blx      r3
+0c7631fc raw+6e31fc: movs     r0, #0
+0c7631fe raw+6e31fe: adds     r7, #8
+0c763200 raw+6e3200: mov      sp, r7
+0c763202 raw+6e3202: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c763206 raw+6e3206: ldr      r0, [pc, #0x2c] ; literal raw+0x6e3234 = 0x3c19b6c4 'mem not enough:%d'
+0c763208 raw+6e3208: movs     r3, #0xcd
+0c76320a raw+6e320a: strd     r0, r4, [sp]
+0c76320e raw+6e320e: ldr      r2, [pc, #0x1c] ; literal raw+0x6e322c = 0x3c19b668 '/data1/wechat-rtos-service/adam-rpc/comm/adam_crypto_utils.cpp'
+0c763210 raw+6e3210: movs     r0, #4
+0c763212 raw+6e3212: ldr      r1, [pc, #0x1c] ; literal raw+0x6e3230 = 0x3c19b6a8 'adam'
+0c763214 raw+6e3214: bl       #0xc764250
+0c763218 raw+6e3218: mov      r0, sl
+0c76321a raw+6e321a: adds     r7, #8
+0c76321c raw+6e321c: mov      sp, r7
+0c76321e raw+6e321e: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c763222 raw+6e3222: nop      
+0c763224 raw+6e3224: add      r2, sp, #0x2ac
+0c763226 raw+6e3226: add      r2, sp, #0x2a8

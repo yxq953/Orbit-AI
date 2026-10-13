@@ -1,0 +1,79 @@
+0c52f17c raw+4af17c: ldr      r3, [r4, #4]
+0c52f17e raw+4af17e: str      r3, [r5]
+0c52f180 raw+4af180: cbnz     r3, #0xc52f194
+0c52f182 raw+4af182: movs     r0, #3
+0c52f184 raw+4af184: ldr      r3, [pc, #0xbc] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f186 raw+4af186: ldr      r2, [pc, #0xc0] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f188 raw+4af188: ldr      r1, [pc, #0xcc] ; literal raw+0x4af258 = 0x3c0e2377 '[%s] %s: record begin, handle is NULL\n'
+0c52f18a raw+4af18a: bl       #0xc27e19c
+0c52f18e raw+4af18e: bl       #0xc6ab5d8
+0c52f192 raw+4af192: b        #0xc52f112
+0c52f194 raw+4af194: ldr      r3, [pc, #0xac] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f196 raw+4af196: movs     r0, #4
+0c52f198 raw+4af198: ldr      r2, [pc, #0xac] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f19a raw+4af19a: ldr      r1, [pc, #0xc0] ; literal raw+0x4af25c = 0x3c0e239e '[%s] %s: record begin notify silk data\n'
+0c52f19c raw+4af19c: bl       #0xc27e19c
+0c52f1a0 raw+4af1a0: movs     r2, #0
+0c52f1a2 raw+4af1a2: ldr      r4, [pc, #0xbc] ; literal raw+0x4af260 = 0x3c2786a8
+0c52f1a4 raw+4af1a4: mov      r1, r2
+0c52f1a6 raw+4af1a6: mov      r0, r4
+0c52f1a8 raw+4af1a8: bl       #0xc52d2e4
+0c52f1ac raw+4af1ac: ldr      r3, [pc, #0x94] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f1ae raw+4af1ae: movs     r0, #4
+0c52f1b0 raw+4af1b0: ldr      r2, [pc, #0x94] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f1b2 raw+4af1b2: ldr      r1, [pc, #0xb0] ; literal raw+0x4af264 = 0x3c0e23c6 '[%s] %s: record start and send read command\n'
+0c52f1b4 raw+4af1b4: bl       #0xc27e19c
+0c52f1b8 raw+4af1b8: mov.w    r2, #0x100
+0c52f1bc raw+4af1bc: movs     r1, #0
+0c52f1be raw+4af1be: mov      r0, r4
+0c52f1c0 raw+4af1c0: bl       #0xc70421c
+0c52f1c4 raw+4af1c4: movs     r1, #0
+0c52f1c6 raw+4af1c6: ldr      r3, [pc, #0xa0] ; literal raw+0x4af268 = 0x3c278848
+0c52f1c8 raw+4af1c8: mov.w    r2, #0x4a0
+0c52f1cc raw+4af1cc: mov      r0, r7
+0c52f1ce raw+4af1ce: str      r1, [r3]
+0c52f1d0 raw+4af1d0: bl       #0xc70421c
+0c52f1d4 raw+4af1d4: ldr      r3, [r5]
+0c52f1d6 raw+4af1d6: mov.w    r0, #0x4a0
+0c52f1da raw+4af1da: str      r3, [r7, #4]
+0c52f1dc raw+4af1dc: movs     r3, #0x25
+0c52f1de raw+4af1de: strb     r3, [r7, #8]
+0c52f1e0 raw+4af1e0: mov.w    r3, #0x100
+0c52f1e4 raw+4af1e4: str      r4, [r7, #0xc]
+0c52f1e6 raw+4af1e6: str      r3, [r7, #0x10]
+0c52f1e8 raw+4af1e8: bl       #0xc2858d8
+0c52f1ec raw+4af1ec: ldr      r4, [pc, #0x7c] ; literal raw+0x4af26c = 0x3c2787c8
+0c52f1ee raw+4af1ee: mov.w    r2, #0x4a0
+0c52f1f2 raw+4af1f2: mov      r1, r7
+0c52f1f4 raw+4af1f4: str      r0, [r4]
+0c52f1f6 raw+4af1f6: bl       #0xc41b538
+0c52f1fa raw+4af1fa: mov      r0, r4
+0c52f1fc raw+4af1fc: bl       #0xc34ab88
+0c52f200 raw+4af200: b        #0xc52f112
+0c52f202 raw+4af202: movs     r2, #1
+0c52f204 raw+4af204: ldrd     r0, r1, [r4, #0x10]
+0c52f208 raw+4af208: bl       #0xc52d2e4
+0c52f20c raw+4af20c: ldr      r2, [pc, #0x58] ; literal raw+0x4af268 = 0x3c278848
+0c52f20e raw+4af20e: ldr      r3, [r4, #0x14]
+0c52f210 raw+4af210: ldr      r1, [r2]
+0c52f212 raw+4af212: add      r3, r1
+0c52f214 raw+4af214: str      r3, [r2]
+0c52f216 raw+4af216: b        #0xc52f112
+0c52f218 raw+4af218: ldr      r3, [r4, #0xc]
+0c52f21a raw+4af21a: cmp      r3, #0
+0c52f21c raw+4af21c: bge.w    #0xc52f112
+0c52f220 raw+4af220: movs     r0, #4
+0c52f222 raw+4af222: ldr      r3, [pc, #0x20] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f224 raw+4af224: ldr      r2, [pc, #0x20] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f226 raw+4af226: ldr      r1, [pc, #0x48] ; literal raw+0x4af270 = 0x3c0e23f3 '[%s] %s: record prepare and status is -1\n'
+0c52f228 raw+4af228: b        #0xc52f18a
+0c52f22a raw+4af22a: ldr      r3, [pc, #0x18] ; literal raw+0x4af244 = 0x3c0e2310 'recorder_cb'
+0c52f22c raw+4af22c: movs     r0, #4
+0c52f22e raw+4af22e: ldr      r2, [pc, #0x18] ; literal raw+0x4af248 = 0x3c0e2ab0 'wechat'
+0c52f230 raw+4af230: ldr      r1, [pc, #0x40] ; literal raw+0x4af274 = 0x3c0e241d '[%s] %s: record pause/stop\n'
+0c52f232 raw+4af232: bl       #0xc27e19c
+0c52f236 raw+4af236: ldr      r3, [r5]
+0c52f238 raw+4af238: cmp      r3, #0
+0c52f23a raw+4af23a: bne      #0xc52f18e
+0c52f23c raw+4af23c: b        #0xc52f112
+0c52f23e raw+4af23e: nop      

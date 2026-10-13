@@ -1,0 +1,105 @@
+0c52e820 raw+4ae820: asrs     r4, r4, #0x10
+0c52e822 raw+4ae822: subs     r4, #9
+0c52e824 raw+4ae824: str      r2, [sp, #0x240]
+0c52e826 raw+4ae826: subs     r4, #0x27
+0c52e828 raw+4ae828: strh     r2, [r5, r2]
+0c52e82a raw+4ae82a: subs     r4, #0xe
+0c52e82c raw+4ae82c: cmp      r2, #0xb0
+0c52e82e raw+4ae82e: subs     r4, #0xe
+0c52e830 raw+4ae830: subs     r2, r3, #7
+0c52e832 raw+4ae832: subs     r4, #0xe
+0c52e834 raw+4ae834: push     {r4, r5, r7, lr}
+0c52e836 raw+4ae836: sub      sp, #8
+0c52e838 raw+4ae838: ldr      r5, [pc, #0x4c] ; literal raw+0x4ae888 = 0x3c1b18f8
+0c52e83a raw+4ae83a: add      r7, sp, #8
+0c52e83c raw+4ae83c: ldr      r3, [r5, #0x18]
+0c52e83e raw+4ae83e: ldr      r0, [pc, #0x4c] ; literal raw+0x4ae88c = 0x3c091424 'com.tencent.wechatrtos'
+0c52e840 raw+4ae840: ldr      r3, [r3, #0xc]
+0c52e842 raw+4ae842: mov.w    r4, #0
+0c52e846 raw+4ae846: blx      r3
+0c52e848 raw+4ae848: cbz      r0, #0xc52e856
+0c52e84a raw+4ae84a: ldr      r3, [r5, #0x40]
+0c52e84c raw+4ae84c: ldrh     r0, [r0, #0x10]
+0c52e84e raw+4ae84e: blx      r3
+0c52e850 raw+4ae850: cbnz     r0, #0xc52e856
+0c52e852 raw+4ae852: mov.w    r4, #1
+0c52e856 raw+4ae856: lsls     r2, r4, #0x1f
+0c52e858 raw+4ae858: bpl      #0xc52e870
+0c52e85a raw+4ae85a: ldr      r3, [pc, #0x34] ; literal raw+0x4ae890 = 0x3c278b4c
+0c52e85c raw+4ae85c: ldr      r0, [r3]
+0c52e85e raw+4ae85e: cbz      r0, #0xc52e870
+0c52e860 raw+4ae860: ldr      r3, [r0]
+0c52e862 raw+4ae862: ldr      r3, [r3, #0x14]
+0c52e864 raw+4ae864: blx      r3
+0c52e866 raw+4ae866: subs     r3, r0, #7
+0c52e868 raw+4ae868: rsbs     r0, r3, #0
+0c52e86a raw+4ae86a: adcs     r0, r3
+0c52e86c raw+4ae86c: bfi      r4, r0, #1, #1
+0c52e870 raw+4ae870: uxtb     r3, r4
+0c52e872 raw+4ae872: str      r3, [sp]
+0c52e874 raw+4ae874: movs     r0, #4
+0c52e876 raw+4ae876: ldr      r3, [pc, #0x1c] ; literal raw+0x4ae894 = 0x3c0e200c 'app_wechat_state_get'
+0c52e878 raw+4ae878: ldr      r2, [pc, #0x1c] ; literal raw+0x4ae898 = 0x3c0e2ab0 'wechat'
+0c52e87a raw+4ae87a: ldr      r1, [pc, #0x20] ; literal raw+0x4ae89c = 0x3c0e2021 '[%s] %s: wechat state 0x%x\n'
+0c52e87c raw+4ae87c: bl       #0xc27e19c
+0c52e880 raw+4ae880: mov      r0, r4
+0c52e882 raw+4ae882: mov      sp, r7
+0c52e884 raw+4ae884: pop      {r4, r5, r7, pc}
+0c52e886 raw+4ae886: nop      
+0c52e888 raw+4ae888: adds     r0, r7, r3
+0c52e88a raw+4ae88a: subs     r4, #0x1b
+0c52e88c raw+4ae88c: asrs     r4, r4, #0x10
+0c52e88e raw+4ae88e: subs     r4, #9
+0c52e890 raw+4ae890: ldrh     r4, [r1, #0x1a]
+0c52e892 raw+4ae892: subs     r4, #0x27
+0c52e894 raw+4ae894: movs     r0, #0xc
+0c52e896 raw+4ae896: subs     r4, #0xe
+0c52e898 raw+4ae898: cmp      r2, #0xb0
+0c52e89a raw+4ae89a: subs     r4, #0xe
+0c52e89c raw+4ae89c: movs     r0, #0x21
+0c52e89e raw+4ae89e: subs     r4, #0xe
+0c52e8a0 raw+4ae8a0: push     {r3, r4, r7, lr}
+0c52e8a2 raw+4ae8a2: ldr      r4, [pc, #0x40] ; literal raw+0x4ae8e4 = 0x3c278b4c
+0c52e8a4 raw+4ae8a4: add      r7, sp, #0
+0c52e8a6 raw+4ae8a6: ldr      r3, [r4]
+0c52e8a8 raw+4ae8a8: cbnz     r3, #0xc52e8b8
+0c52e8aa raw+4ae8aa: movs     r0, #3
+0c52e8ac raw+4ae8ac: ldr      r3, [pc, #0x38] ; literal raw+0x4ae8e8 = 0x3c0e203d 'wxpay_ble_disconnected'
+0c52e8ae raw+4ae8ae: ldr      r2, [pc, #0x3c] ; literal raw+0x4ae8ec = 0x3c0e2ab0 'wechat'
+0c52e8b0 raw+4ae8b0: ldr      r1, [pc, #0x3c] ; literal raw+0x4ae8f0 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c52e8b2 raw+4ae8b2: bl       #0xc27e19c
+0c52e8b6 raw+4ae8b6: pop      {r3, r4, r7, pc}
+0c52e8b8 raw+4ae8b8: ldr      r2, [pc, #0x30] ; literal raw+0x4ae8ec = 0x3c0e2ab0 'wechat'
+0c52e8ba raw+4ae8ba: movs     r0, #4
+0c52e8bc raw+4ae8bc: ldr      r3, [pc, #0x28] ; literal raw+0x4ae8e8 = 0x3c0e203d 'wxpay_ble_disconnected'
+0c52e8be raw+4ae8be: ldr      r1, [pc, #0x34] ; literal raw+0x4ae8f4 = 0x3c0e2054 '[%s] %s: wxpay BLE disconnected\n'
+0c52e8c0 raw+4ae8c0: bl       #0xc27e19c
+0c52e8c4 raw+4ae8c4: ldr      r0, [r4]
+0c52e8c6 raw+4ae8c6: movs     r1, #0
+0c52e8c8 raw+4ae8c8: ldr      r3, [r0]
+0c52e8ca raw+4ae8ca: ldr      r3, [r3, #0x44]
+0c52e8cc raw+4ae8cc: blx      r3
+0c52e8ce raw+4ae8ce: bl       #0xc54178c
+0c52e8d2 raw+4ae8d2: cmp      r0, #2
+0c52e8d4 raw+4ae8d4: bne      #0xc52e8b6
+0c52e8d6 raw+4ae8d6: ldr      r3, [pc, #0x20] ; literal raw+0x4ae8f8 = 0x3c2786a0
+0c52e8d8 raw+4ae8d8: ldrb     r2, [r3]
+0c52e8da raw+4ae8da: cmp      r2, #0
+0c52e8dc raw+4ae8dc: beq      #0xc52e8b6
+0c52e8de raw+4ae8de: movs     r2, #0
+0c52e8e0 raw+4ae8e0: strb     r2, [r3]
+0c52e8e2 raw+4ae8e2: b        #0xc52e8b6
+0c52e8e4 raw+4ae8e4: ldrh     r4, [r1, #0x1a]
+0c52e8e6 raw+4ae8e6: subs     r4, #0x27
+0c52e8e8 raw+4ae8e8: movs     r0, #0x3d
+0c52e8ea raw+4ae8ea: subs     r4, #0xe
+0c52e8ec raw+4ae8ec: cmp      r2, #0xb0
+0c52e8ee raw+4ae8ee: subs     r4, #0xe
+0c52e8f0 raw+4ae8f0: asrs     r6, r1, #0x17
+0c52e8f2 raw+4ae8f2: subs     r4, #0xe
+0c52e8f4 raw+4ae8f4: movs     r0, #0x54
+0c52e8f6 raw+4ae8f6: subs     r4, #0xe
+0c52e8f8 raw+4ae8f8: strh     r0, [r4, #0x34]
+0c52e8fa raw+4ae8fa: subs     r4, #0x27
+0c52e8fc raw+4ae8fc: push     {r3, r4, r7, lr}
+0c52e8fe raw+4ae8fe: ldr      r3, [pc, #0x58] ; literal raw+0x4ae958 = 0x3c1b18f8

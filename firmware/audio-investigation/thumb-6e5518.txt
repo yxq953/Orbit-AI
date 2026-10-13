@@ -1,0 +1,101 @@
+0c765518 raw+6e5518: push     {r7, lr}
+0c76551a raw+6e551a: add      r7, sp, #0
+0c76551c raw+6e551c: bl       #0xc763188
+0c765520 raw+6e5520: pop      {r7, pc}
+0c765522 raw+6e5522: nop      
+0c765524 raw+6e5524: push.w   {r4, r5, r6, r7, r8, lr}
+0c765528 raw+6e5528: sub      sp, #0x70
+0c76552a raw+6e552a: movs     r1, #0
+0c76552c raw+6e552c: add      r7, sp, #8
+0c76552e raw+6e552e: mov      r5, r0
+0c765530 raw+6e5530: bl       #0xc285614
+0c765534 raw+6e5534: cbz      r0, #0xc76553e
+0c765536 raw+6e5536: adds     r7, #0x68
+0c765538 raw+6e5538: mov      sp, r7
+0c76553a raw+6e553a: pop.w    {r4, r5, r6, r7, r8, pc}
+0c76553e raw+6e553e: movs     r2, #0x2e
+0c765540 raw+6e5540: ldr      r3, [pc, #0xc8] ; literal raw+0x6e560c = 0x3c19bf04 '..'
+0c765542 raw+6e5542: mov      r0, r5
+0c765544 raw+6e5544: ldr      r3, [r3]
+0c765546 raw+6e5546: add.w    r1, r7, #8
+0c76554a raw+6e554a: lsrs     r4, r3, #0x10
+0c76554c raw+6e554c: strh     r3, [r7, #4]
+0c76554e raw+6e554e: strb     r4, [r7, #6]
+0c765550 raw+6e5550: strh     r2, [r7]
+0c765552 raw+6e5552: bl       #0xc558b56
+0c765556 raw+6e5556: cmp      r0, #0
+0c765558 raw+6e5558: blt      #0xc765602
+0c76555a raw+6e555a: ldr      r3, [r7, #0x10]
+0c76555c raw+6e555c: and      r3, r3, #0xf000
+0c765560 raw+6e5560: cmp.w    r3, #0x8000
+0c765564 raw+6e5564: beq      #0xc7655fa
+0c765566 raw+6e5566: cmp.w    r3, #0x4000
+0c76556a raw+6e556a: beq      #0xc765586
+0c76556c raw+6e556c: movw     r3, #0x18d
+0c765570 raw+6e5570: ldr      r4, [pc, #0x9c] ; literal raw+0x6e5610 = 0x3c19bef0 'unknow file type!'
+0c765572 raw+6e5572: movs     r0, #4
+0c765574 raw+6e5574: ldr      r2, [pc, #0x9c] ; literal raw+0x6e5614 = 0x3c19be70 '/data1/wechat-rtos-service/adam-rpc/comm/common_utils.cpp'
+0c765576 raw+6e5576: ldr      r1, [pc, #0xa0] ; literal raw+0x6e5618 = 0x3c19b6a8 'adam'
+0c765578 raw+6e5578: str      r4, [sp]
+0c76557a raw+6e557a: bl       #0xc764250
+0c76557e raw+6e557e: adds     r7, #0x68
+0c765580 raw+6e5580: mov      sp, r7
+0c765582 raw+6e5582: pop.w    {r4, r5, r6, r7, r8, pc}
+0c765586 raw+6e5586: mov      r0, r5
+0c765588 raw+6e5588: bl       #0xc2781e0
+0c76558c raw+6e558c: mov      r6, r0
+0c76558e raw+6e558e: ldr.w    r8, [pc, #0x94] ; literal raw+0x6e5624 = 0x3c1c66e8
+0c765592 raw+6e5592: mov      r0, r6
+0c765594 raw+6e5594: bl       #0xc278240
+0c765598 raw+6e5598: mov      r3, r0
+0c76559a raw+6e559a: cbz      r0, #0xc7655e6
+0c76559c raw+6e559c: adds     r4, r3, #1
+0c76559e raw+6e559e: mov      r0, r7
+0c7655a0 raw+6e55a0: mov      r1, r4
+0c7655a2 raw+6e55a2: bl       #0xc704304
+0c7655a6 raw+6e55a6: cmp      r0, #0
+0c7655a8 raw+6e55a8: beq      #0xc765592
+0c7655aa raw+6e55aa: mov      r1, r4
+0c7655ac raw+6e55ac: adds     r0, r7, #4
+0c7655ae raw+6e55ae: bl       #0xc704304
+0c7655b2 raw+6e55b2: cmp      r0, #0
+0c7655b4 raw+6e55b4: beq      #0xc765592
+0c7655b6 raw+6e55b6: movs     r1, #0x80
+0c7655b8 raw+6e55b8: ldr.w    r3, [r8, #4]
+0c7655bc raw+6e55bc: movs     r0, #1
+0c7655be raw+6e55be: blx      r3
+0c7655c0 raw+6e55c0: mov      r3, r4
+0c7655c2 raw+6e55c2: mov      r4, r0
+0c7655c4 raw+6e55c4: mov      r2, r5
+0c7655c6 raw+6e55c6: ldr      r1, [pc, #0x54] ; literal raw+0x6e561c = 0x3c19bee8 '%s/%s'
+0c7655c8 raw+6e55c8: bl       #0xc27c358
+0c7655cc raw+6e55cc: mov      r0, r4
+0c7655ce raw+6e55ce: bl       #0xc765524
+0c7655d2 raw+6e55d2: ldr.w    r3, [r8, #0xc]
+0c7655d6 raw+6e55d6: mov      r0, r4
+0c7655d8 raw+6e55d8: blx      r3
+0c7655da raw+6e55da: mov      r0, r6
+0c7655dc raw+6e55dc: bl       #0xc278240
+0c7655e0 raw+6e55e0: mov      r3, r0
+0c7655e2 raw+6e55e2: cmp      r0, #0
+0c7655e4 raw+6e55e4: bne      #0xc76559c
+0c7655e6 raw+6e55e6: mov      r0, r6
+0c7655e8 raw+6e55e8: bl       #0xc278218
+0c7655ec raw+6e55ec: mov      r0, r5
+0c7655ee raw+6e55ee: bl       #0xc559544
+0c7655f2 raw+6e55f2: adds     r7, #0x68
+0c7655f4 raw+6e55f4: mov      sp, r7
+0c7655f6 raw+6e55f6: pop.w    {r4, r5, r6, r7, r8, pc}
+0c7655fa raw+6e55fa: mov      r0, r5
+0c7655fc raw+6e55fc: bl       #0xc27f5fa
+0c765600 raw+6e5600: b        #0xc765536
+0c765602 raw+6e5602: mov.w    r3, #0x17a
+0c765606 raw+6e5606: ldr      r4, [pc, #0x18] ; literal raw+0x6e5620 = 0x3c19bed8 'get stat error'
+0c765608 raw+6e5608: b        #0xc765572
+0c76560a raw+6e560a: nop      
+0c76560c raw+6e560c: itt      eq
+0c76560e raw+6e560e: subeq    r4, #0x19
+0c765610 raw+6e5610: bkpt     #0xf0
+0c765612 raw+6e5612: subs     r4, #0x19
+0c765614 raw+6e5614: bkpt     #0x70
+0c765616 raw+6e5616: subs     r4, #0x19

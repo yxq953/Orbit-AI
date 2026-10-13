@@ -1,0 +1,95 @@
+0c7785d0 raw+6f85d0: str      r0, [r1, #0x70]
+0c7785d2 raw+6f85d2: subs     r4, #0x1c
+0c7785d4 raw+6f85d4: bhi      #0xc778578
+0c7785d6 raw+6f85d6: subs     r4, #0x19
+0c7785d8 raw+6f85d8: bls      #0xc7785ec
+0c7785da raw+6f85da: subs     r4, #0x19
+0c7785dc raw+6f85dc: str      r0, [r5, #0x6c]
+0c7785de raw+6f85de: subs     r4, #0x1c
+0c7785e0 raw+6f85e0: push.w   {r4, r5, r6, r7, r8, sb, sl, lr}
+0c7785e4 raw+6f85e4: sub      sp, #0x38
+0c7785e6 raw+6f85e6: mov      r4, r0
+0c7785e8 raw+6f85e8: ldrb.w   r0, [r0, #0x32]
+0c7785ec raw+6f85ec: add      r7, sp, #0
+0c7785ee raw+6f85ee: cbnz     r0, #0xc7785f8
+0c7785f0 raw+6f85f0: adds     r7, #0x38
+0c7785f2 raw+6f85f2: mov      sp, r7
+0c7785f4 raw+6f85f4: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c7785f8 raw+6f85f8: ldr.w    sb, [pc, #0xd0] ; literal raw+0x6f86cc = 0x3c2d1750
+0c7785fc raw+6f85fc: mov      r6, r1
+0c7785fe raw+6f85fe: adds     r0, r7, #4
+0c778600 raw+6f8600: movs     r1, #0
+0c778602 raw+6f8602: mov      r5, r2
+0c778604 raw+6f8604: mov      r8, r3
+0c778606 raw+6f8606: bl       #0xc7657c8
+0c77860a raw+6f860a: ldr.w    r0, [sb]
+0c77860e raw+6f860e: cmp      r0, #0
+0c778610 raw+6f8610: beq      #0xc77869e
+0c778612 raw+6f8612: bl       #0xc76ab24
+0c778616 raw+6f8616: mov      r3, r0
+0c778618 raw+6f8618: mov      r2, r5
+0c77861a raw+6f861a: mov      r1, r6
+0c77861c raw+6f861c: add.w    r0, r7, #0x10
+0c778620 raw+6f8620: mov      r5, r3
+0c778622 raw+6f8622: ldr      r6, [r4, #0x28]
+0c778624 raw+6f8624: bl       #0xc764a6c
+0c778628 raw+6f8628: add.w    r1, r7, #0x10
+0c77862c raw+6f862c: add.w    r0, r7, #0x24
+0c778630 raw+6f8630: bl       #0xc764ad4
+0c778634 raw+6f8634: movs     r0, #0x34
+0c778636 raw+6f8636: bl       #0xc710d50
+0c77863a raw+6f863a: mov      r4, r0
+0c77863c raw+6f863c: cbz      r0, #0xc778676
+0c77863e raw+6f863e: bl       #0xc764a3c
+0c778642 raw+6f8642: movs     r1, #0
+0c778644 raw+6f8644: ldr      r3, [pc, #0x74] ; literal raw+0x6f86bc = 0x0c77e771
+0c778646 raw+6f8646: add.w    r2, r7, #8
+0c77864a raw+6f864a: str      r3, [r7, #8]
+0c77864c raw+6f864c: ldr      r3, [pc, #0x70] ; literal raw+0x6f86c0 = 0x3c19e148
+0c77864e raw+6f864e: str      r1, [r7, #0xc]
+0c778650 raw+6f8650: str      r3, [r4]
+0c778652 raw+6f8652: ldr      r3, [pc, #0x70] ; literal raw+0x6f86c4 = 0x0c775519
+0c778654 raw+6f8654: str      r1, [r4, #8]
+0c778656 raw+6f8656: str      r3, [r4, #0x10]
+0c778658 raw+6f8658: add.w    r3, r4, #0x14
+0c77865c raw+6f865c: ldm.w    r2, {r0, r1}
+0c778660 raw+6f8660: str      r6, [r4, #0xc]
+0c778662 raw+6f8662: stm.w    r3, {r0, r1}
+0c778666 raw+6f8666: add.w    r1, r7, #0x24
+0c77866a raw+6f866a: add.w    r0, r4, #0x1c
+0c77866e raw+6f866e: bl       #0xc764ad4
+0c778672 raw+6f8672: strb.w   r8, [r4, #0x30]
+0c778676 raw+6f8676: add.w    r0, r7, #0x24
+0c77867a raw+6f867a: bl       #0xc764b40
+0c77867e raw+6f867e: mov      r1, r4
+0c778680 raw+6f8680: mov      r0, r5
+0c778682 raw+6f8682: str      r6, [r4, #4]
+0c778684 raw+6f8684: bl       #0xc766240
+0c778688 raw+6f8688: add.w    r0, r7, #0x10
+0c77868c raw+6f868c: bl       #0xc764b40
+0c778690 raw+6f8690: adds     r0, r7, #4
+0c778692 raw+6f8692: bl       #0xc7657e4
+0c778696 raw+6f8696: adds     r7, #0x38
+0c778698 raw+6f8698: mov      sp, r7
+0c77869a raw+6f869a: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c77869e raw+6f869e: movs     r0, #0x38
+0c7786a0 raw+6f86a0: bl       #0xc710d50
+0c7786a4 raw+6f86a4: mov      sl, r0
+0c7786a6 raw+6f86a6: cbz      r0, #0xc7786ac
+0c7786a8 raw+6f86a8: bl       #0xc76aa38
+0c7786ac raw+6f86ac: ldr      r0, [pc, #0x18] ; literal raw+0x6f86c8 = 0x0c76c03d
+0c7786ae raw+6f86ae: str.w    sl, [sb]
+0c7786b2 raw+6f86b2: bl       #0xc27a55c
+0c7786b6 raw+6f86b6: ldr.w    r0, [sb]
+0c7786ba raw+6f86ba: b        #0xc778612
+0c7786bc raw+6f86bc: b        #0xc7785a2
+0c7786be raw+6f86be: lsrs     r7, r6, #0x11
+0c7786c0 raw+6f86c0: b        #0xc778954
+0c7786c2 raw+6f86c2: subs     r4, #0x19
+0c7786c4 raw+6f86c4: strb     r1, [r3, r4]
+0c7786c6 raw+6f86c6: lsrs     r7, r6, #0x11
+0c7786c8 raw+6f86c8: stm      r0!, {r0, r2, r3, r4, r5}
+0c7786ca raw+6f86ca: lsrs     r6, r6, #0x11
+0c7786cc raw+6f86cc: asrs     r0, r2, #0x1d
+0c7786ce raw+6f86ce: subs     r4, #0x2d
+0c7786d0 raw+6f86d0: push.w   {r4, r5, r6, r7, r8, sb, lr}

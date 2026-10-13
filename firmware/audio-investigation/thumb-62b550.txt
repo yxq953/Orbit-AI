@@ -1,0 +1,74 @@
+0c6ab550 raw+62b550: bl       #0xc6c2210
+0c6ab554 raw+62b554: pop      {r3, r4, r5, r6, r7, pc}
+0c6ab556 raw+62b556: nop      
+0c6ab558 raw+62b558: cmp      r2, #0xc6
+0c6ab55a raw+62b55a: subs     r4, #0x2b
+0c6ab55c raw+62b55c: cmp      r2, #0x68
+0c6ab55e raw+62b55e: subs     r4, #0x2b
+0c6ab560 raw+62b560: mcr2     p15, #0, pc, c12, c15, #7
+0c6ab564 raw+62b564: b        #0xc6abca2
+0c6ab566 raw+62b566: lsrs     r2, r2, #0x11
+0c6ab568 raw+62b568: lsls     r1, r2, #0x1f
+0c6ab56a raw+62b56a: movs     r0, #0
+0c6ab56c raw+62b56c: push     {r4, r5, r7, lr}
+0c6ab56e raw+62b56e: mov      r4, r0
+0c6ab570 raw+62b570: mov      r5, r3
+0c6ab572 raw+62b572: add      r7, sp, #0
+0c6ab574 raw+62b574: bl       #0xc3b2124
+0c6ab578 raw+62b578: mov      r1, r5
+0c6ab57a raw+62b57a: mov      r0, r4
+0c6ab57c raw+62b57c: bl       #0xc44cc6c
+0c6ab580 raw+62b580: mov      r0, r4
+0c6ab582 raw+62b582: movs     r1, #0
+0c6ab584 raw+62b584: bl       #0xc6c2240
+0c6ab588 raw+62b588: mov      r0, r4
+0c6ab58a raw+62b58a: movs     r2, #0
+0c6ab58c raw+62b58c: ldr      r1, [r7, #0x10]
+0c6ab58e raw+62b58e: bl       #0xc3bc7e0
+0c6ab592 raw+62b592: mov      r0, r4
+0c6ab594 raw+62b594: bl       #0xc6c0508
+0c6ab598 raw+62b598: pop      {r4, r5, r7, pc}
+0c6ab59a raw+62b59a: push     {r4, r5, r7, lr}
+0c6ab59c raw+62b59c: sub.w    sp, sp, #0x268
+0c6ab5a0 raw+62b5a0: mov      r5, r2
+0c6ab5a2 raw+62b5a2: mov      r4, r0
+0c6ab5a4 raw+62b5a4: add      r7, sp, #0
+0c6ab5a6 raw+62b5a6: cbz      r0, #0xc6ab5d2
+0c6ab5a8 raw+62b5a8: movs     r2, #6
+0c6ab5aa raw+62b5aa: add.w    r0, r7, #0x34
+0c6ab5ae raw+62b5ae: bl       #0xc704110
+0c6ab5b2 raw+62b5b2: movs     r2, #0xde
+0c6ab5b4 raw+62b5b4: mov      r0, r4
+0c6ab5b6 raw+62b5b6: adds     r1, r7, #4
+0c6ab5b8 raw+62b5b8: strh     r5, [r7, #0x3a]
+0c6ab5ba raw+62b5ba: bl       #0xc680cb0
+0c6ab5be raw+62b5be: ldrb     r3, [r7, #8]
+0c6ab5c0 raw+62b5c0: orrs     r0, r3
+0c6ab5c2 raw+62b5c2: ands     r0, r0, #0xff
+0c6ab5c6 raw+62b5c6: it       ne
+0c6ab5c8 raw+62b5c8: movne    r0, r3
+0c6ab5ca raw+62b5ca: add.w    r7, r7, #0x268
+0c6ab5ce raw+62b5ce: mov      sp, r7
+0c6ab5d0 raw+62b5d0: pop      {r4, r5, r7, pc}
+0c6ab5d2 raw+62b5d2: movs     r0, #5
+0c6ab5d4 raw+62b5d4: b        #0xc6ab5ca
+0c6ab5d6 raw+62b5d6: movs     r0, r0
+0c6ab5d8 raw+62b5d8: push     {r7, lr}
+0c6ab5da raw+62b5da: ldr      r3, [pc, #0x20] ; literal raw+0x62b5fc = 0x3c278b4c
+0c6ab5dc raw+62b5dc: add      r7, sp, #0
+0c6ab5de raw+62b5de: ldr      r0, [r3]
+0c6ab5e0 raw+62b5e0: cbnz     r0, #0xc6ab5f0
+0c6ab5e2 raw+62b5e2: movs     r0, #3
+0c6ab5e4 raw+62b5e4: ldr      r3, [pc, #0x18] ; literal raw+0x62b600 = 0x3c16295d 'wechat_notify_record_state'
+0c6ab5e6 raw+62b5e6: ldr      r2, [pc, #0x1c] ; literal raw+0x62b604 = 0x3c0e2ab0 'wechat'
+0c6ab5e8 raw+62b5e8: ldr      r1, [pc, #0x1c] ; literal raw+0x62b608 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c6ab5ea raw+62b5ea: bl       #0xc27e19c
+0c6ab5ee raw+62b5ee: pop      {r7, pc}
+0c6ab5f0 raw+62b5f0: ldr      r3, [r0]
+0c6ab5f2 raw+62b5f2: movs     r1, #0
+0c6ab5f4 raw+62b5f4: ldr      r3, [r3, #0x24]
+0c6ab5f6 raw+62b5f6: blx      r3
+0c6ab5f8 raw+62b5f8: b        #0xc6ab5ee
+0c6ab5fa raw+62b5fa: nop      
+0c6ab5fc raw+62b5fc: ldrh     r4, [r1, #0x1a]
+0c6ab5fe raw+62b5fe: subs     r4, #0x27

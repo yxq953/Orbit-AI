@@ -1,0 +1,21 @@
+0c5cd700 raw+54d700: movs     r1, #0x88
+0c5cd702 raw+54d702: subs     r4, #0x12
+0c5cd704 raw+54d704: bls      #0xc5cd7f2
+0c5cd706 raw+54d706: subs     r4, #0x11
+0c5cd708 raw+54d708: sbfx     ip, r4, #0xc, #0x1c
+0c5cd70c raw+54d70c: adds     r0, r5, #2
+0c5cd70e raw+54d70e: subs     r4, #0x12
+0c5cd710 raw+54d710: adds     r0, r1, #2
+0c5cd712 raw+54d712: subs     r4, #0x12
+0c5cd714 raw+54d714: str      r4, [sp, #0x35c]
+0c5cd716 raw+54d716: subs     r4, #7
+0c5cd718 raw+54d718: bics     ip, r4, #0x26c00
+0c5cd71c raw+54d71c: movs     r1, #0xf8
+0c5cd71e raw+54d71e: subs     r4, #0x12
+0c5cd720 raw+54d720: stm      r1!, {r1, r2, r6, r7}
+0c5cd722 raw+54d722: subs     r4, #7
+0c5cd724 raw+54d724: movs     r3, #8
+0c5cd726 raw+54d726: subs     r4, #0x12
+0c5cd728 raw+54d728: eor      ip, r4, #0x26c00
+0c5cd72c raw+54d72c: movs     r3, #0x38
+0c5cd72e raw+54d72e: subs     r4, #0x12

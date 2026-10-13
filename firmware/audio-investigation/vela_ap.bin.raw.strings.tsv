@@ -1,0 +1,1438 @@
+0x13f37	%s: force panic audio ...
+0x1486c	[FS1818]Audio: fs1818_check_id failed!
+0x14894	[FS1818]Audio: id=0x[%08x] vs. 0x%08x[fs1818] vs. 0x%08x[fs1896]
+0x148d6	[FS1818]Audio: fs1818_check_id Matched: %s
+0x14b8e	bes_audio_initialize
+0x170b6	[FS1818]fs1818_update_bst_ctl [SCO]:audioType = %d
+0x170ea	[FS1818]fs1818_update_bst_ctl [NETTALK]:audioType = %d
+0x17122	[FS1818]fs1818_update_bst_ctl [music]:audioType = %d
+0x17228	%s: AUDIOIOC_SETPARAMTER sco
+0x1725a	[FS1818]%s: AUDIOIOC_SETPARAMTER netTalk
+0x17297	[FS1818]%s: AUDIOIOC_SETPARAMTER music
+0x172bf	[FS1818]%s: AUDIOIOC_SETPARAMTER none
+0x19bfb	[FS1818]Audio: fs1818_write_fw enter
+0x19c21	[FS1818]Audio:  wait amp off fail
+0x19c44	[FS1818]Audio: FS1818 write voice len = %d
+0x19c70	[FS1818]Audio: FS1818 write fw_voice failed.
+0x19c9e	[FS1818]Audio: FS1818 write voice reg len = %d
+0x19cce	[FS1818]Audio: FS1818 write reg_voice failed.
+0x19cfd	[FS1818]Audio: FS1818 write music len = %d
+0x19d29	[FS1818]Audio: FS1818 write fw_music failed.
+0x19d57	[FS1818]Audio: FS1818 write music reg len = %d
+0x19d87	[FS1818]Audio: FS1818 write reg_music failed.
+0x19db6	[FS1818]Audio: FS1818 write spk model len = %d
+0x19de6	[FS1818]Audio: FS1818 write write spk model failed.
+0x19e1b	[FS1818]Audio: fs1818_write_fw exit
+0x19e40	[FS1818]Audio: fs1818_start enter
+0x19e63	[FS1818]Audio: fs1818_parse_otp otpVal = %u
+0x19e90	[FS1818]Audio: fs1818_parse_otp Chip Not Calibrated
+0x19efa	[FS1818]Audio: fs1818_parse_otp calResult out of range(%d ~ %d): %lu
+0x19f40	[FS1818]Audio: OTPPG1W2_REG unexpected! Set default value.
+0x19f7c	[FS1818]Audio: fs1818_update_threshold spkErr:0x%04X,spkMtf:0x%04X,spkMsix:0x%04X,spkRec:0x%04X,otp zm = 0x%04x 
+0x19fee	[FS1818]Audio: fs1818_start_up enter
+0x1a179	[FS1818]Audio: fs1818_dsp_bypass unbypass dsp
+0x1a1a8	[FS1818]Audio: fs1818_start_up exit 0xA1: 0x%04x
+0x1a1da	[FS1818]Audio: fs1818_start exit
+0x1a1fc	[FS1818]######gAudio_fw_Type:%d
+0x1a21d	[FS1818]Audio: FS1818 smartpa  already start
+0x1a26c	[FS1818]Audio: fs1818_reg_init enter
+0x1a292	[FS1818]Audio: fs1818_cold_start exit
+0x1a2b9	[FS1818]Audio: fs1818_stop enter 
+0x1a2de	[FS1818]Audio: FS1818 smartpa already stop 
+0x1a30d	[FS1818]Audio: fs1818_shut_down enter
+0x1beb3	audio/lib_buffer.c
+0x1c4b8	%s: ERROR: Missing address in %s record
+0x1c813	miwear_capture_service
+0x1d389	chip/bes_audio.c
+0x1d39a	chip/bes_rpmsg_audio_svr.c
+0x1d532	%s: AUDIOIOC_SETPARAMTER use aec
+0x1d57a	%s: AUDIOIOC_SETPARAMTER none
+0x1e6ef	is_media_audio_process
+0x2096c	Record size limit reached
+0x20de8	Journal record limit reached, commit your changes
+0x21bbd	invalid signature
+0x21d7a	out-of-date sRGB profile with no signature
+0x2a20c	c-ares library initialization not yet performed
+0x2ab12	  -t type   : Query records of the specified type. Possible values for
+0x2ae4b	ares_library_init: %s
+0x2b162	  -t type   : If type is "a", print the A record.
+0x2b195	              If type is "aaaa", print the AAAA record.
+0x2b1cd	              If type is "u" (default), print both A and AAAA records.
+0x2e840	mbedtls/library/ssl_msg.c
+0x2ea94	mbedtls/library/ssl_tls.c
+0x2ebd0	=> write record
+0x2ec14	bad record structure provided to encrypt_buf
+0x2ec60	Record content %zu too large, maximum %zu
+0x2ec8a	Buffer provided for encrypted record not large enough
+0x2ed96	No PRNG provided to encrypt_record routine
+0x2ee85	output record: msgtype = %u, version = [%u:%u], msglen = %zu
+0x2eec2	output record sent to network
+0x2ef70	<= write record
+0x2f00b	mbedtls_ssl_write_record
+0x2f09d	next record in same datagram, offset: %zu
+0x2f1d1	Record too large: size %zu, maximum %zu
+0x2f580	mbedtls/library/ssl_client.c
+0x2f7a1	got signature scheme [%x] %s
+0x2f7be	sent signature scheme [%x] %s
+0x2f7dc	No signature algorithms defined.
+0x2f7fd	mbedtls/library/ssl_tls12_client.c
+0x2fada	adding signature_algorithms extension
+0x2fb57	=> read record
+0x2fb66	remaining content in record
+0x2fcc6	=> ssl_load_buffered_record
+0x2fce2	Buffered record not from current epoch.
+0x2fd0a	Found buffered record from current epoch - load
+0x2fd3a	<= ssl_load_buffered_record
+0x2fd6e	datagram of length %u too small to hold DTLS record header of length %u
+0x2fdb6	datagram of length %u too small to hold DTLS record header including CID, length %u
+0x2fe0a	unknown record type %u
+0x2fe4f	input record header
+0x2fe63	input record: msgtype = %u, version = [0x%x], msglen = %zu
+0x2fe9e	Datagram of length %u too small to contain record of advertised length %u.
+0x2fee9	record from another epoch: expected %u, received %lu
+0x2ff1e	Consider record for buffering
+0x2ff3c	replayed record
+0x2ff4c	Buffering of future epoch record of size %zu would exceed the compile-time limit %zu (already %zu bytes buffered) -- ignore
+0x2ffc9	Buffer record from epoch %u
+0x2ffe5	Buffered record
+0x30075	check cookie: record too short
+0x301e9	discarding unexpected record (header)
+0x3020f	discarding invalid record (header)
+0x30232	more than one record within datagram
+0x30257	input record from network
+0x30280	bad record structure provided to decrypt_buf
+0x30411	record type after decrypt (before %d): %d
+0x30457	unknown record type
+0x30505	too many records with bad MAC
+0x30523	discarding invalid record (mac)
+0x30543	ssl_get_next_record
+0x30a57	Enough space available after freeing future epoch record
+0x30ca2	<= read record
+0x30ccd	mbedtls_ssl_read_record
+0x311c5	mbedtls/library/ssl_tls12_server.c
+0x3128e	replayed record, discarding
+0x312aa	record contents
+0x31525	found signature_algorithms extension
+0x31821	no hash algorithm for signature algorithm %u - should not happen
+0x31862	client hello v3, signature_algorithm ext: %u
+0x319c5	my signature
+0x31dcf	record counter limit reached: renegotiate
+0x321fa	received signature algorithm: 0x%x %s
+0x32220	valid signature algorithm: %s
+0x3223e	Signature algorithms extension length misaligned
+0x3226f	no signature algorithm in common
+0x32461	ciphersuite mismatch: no suitable hash algorithm for signature algorithm %u
+0x332e9	Supported Signature Algorithm found: %02x %02x
+0x3364e	%sDigital Signature
+0x34f5c	FFmpegCommand = pcm0c,set_parameter,set_scenario=mic_fadeout;
+0x34fb8	FFmpegCommand = pcm0c,set_parameter,set_scenario=none;
+0x34ff0	domain: CaptureSelDomain
+0x3500a	conf: sco-capture
+0x350ab	FFmpegCommand = SelCap,map,1;
+0x350ca	conf: capture
+0x350f9	FFmpegCommand = SelCap,map,0;
+0x359d5	AudioMode        Is       phone
+0x359f7	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=hfp_aec;SelMic,map,-1 0;
+0x35af6	AudioMode        Is       phone
+0x35b18	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;
+0x35b97	AudioMode        IsNot    phone
+0x35bff	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=netTalk_aec;SelMic,map,0 -1;
+0x35c99	AudioMode        IsNot    phone
+0x35d01	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;
+0x35d45	conf: capture
+0x35d74	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=none;SelMic,map,0 -1;
+0x35ddd	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;SelMic,map,-1 -1;
+0x35e5f	AudioMode Is phone
+0x35ee4	AudioMode Is phone
+0x35f6d	AudioMode Is phone
+0x35ff6	AudioMode Is phone
+0x3607f	AudioMode Is phone
+0x36108	AudioMode Is phone
+0x36191	AudioMode Is phone
+0x3621a	AudioMode Is phone
+0x362a3	AudioMode Is phone
+0x3632c	AudioMode Is phone
+0x363b6	AudioMode Is phone
+0x36441	AudioMode Is phone
+0x364d6	AudioMode Is phone
+0x3656a	AudioMode Is phone
+0x36600	AudioMode Is phone
+0x36692	AudioMode Is phone
+0x36731	AudioMode Is normal
+0x3679c	AudioMode Is normal
+0x3680b	AudioMode Is normal
+0x3687a	AudioMode Is normal
+0x368e9	AudioMode Is normal
+0x36958	AudioMode Is normal
+0x369c7	AudioMode Is normal
+0x36a36	AudioMode Is normal
+0x36aa5	AudioMode Is normal
+0x36b13	AudioMode Is normal
+0x36b82	AudioMode Is normal
+0x37afc	[speaker]adevsink@pcm2p=format=nuttx:sample_rate=48000:ch_layout=mono:devname=/dev/audio/pcm2p,
+0x37b5c	adevsrc@SCOrx=format=nuttx:devname=/dev/audio/pcm1c,afade=d=0.5[pcm1c],
+0x37c18	adevsrc@pcm0c=format=nuttx:devname=/dev/audio/pcm0c[pcm0c],
+0x37c54	[pcm0c]astreamselect@SelMic=inputs=1:map=0 -1[mic0][mic1],
+0x37c8f	[mic0][scorx1]astreamselect@SelCap=inputs=2:map=0[cap],
+0x37cc7	[cap]amoviesink_async@Capture,
+0x37d38	[pcm1p]adevsink@SCOtx=format=nuttx:ch_layout=mono:devname=/dev/audio/pcm1p
+0x37f87	Stream,          SCO, Ring, Alarm, Communication, Enforced, Notify, Record, TTS, Health, Sport, Info, Music, Metronome
+0x382a4	Record,          1:6, 1:6,  1:6,   1:6,           1:6,      1:6,    0:1,    0:1, 0:1,    0:1,   0:1,  0:1,   0:1
+0x38613	ExclusiveCriterion AudioMode        : normal phone
+0x38818	ExclusiveCriterion Music Record            : amovie_async@InMusic
+0x389b3	ExclusiveCriterion Capture cap             : amoviesink_async
+0x38b36	NumericalCriterion persist.media.MediaVolume RecordVolume TTSVolume MusicVolume IntercomVolume : [0,10] = 4
+0x38e06	            "font-name": "Emoji_WeChat",
+0x38e2f	            "path": "/system/wechat/emoji24/",
+0x38f58	            "font-name": "Emoji_WeChat",
+0x38f81	            "path": "/system/wechat/emoji30/",
+0x390aa	            "font-name": "Emoji_WeChat",
+0x390d3	            "path": "/system/wechat/emoji32/",
+0x391fc	            "font-name": "Emoji_WeChat",
+0x39225	            "path": "/system/wechat/emoji34/",
+0x3934e	            "font-name": "Emoji_WeChat",
+0x39377	            "path": "/system/wechat/emoji38/",
+0x394a0	            "font-name": "Emoji_WeChat",
+0x394c9	            "path": "/system/wechat/emoji42/",
+0x3968b	                "Emoji_WeChat"
+0x39730	                "Emoji_WeChat"
+0x397d6	                "Emoji_WeChat"
+0x3a0f5	rptun start /dev/rptun/audio
+0x3c243	Capture device
+0x3c84e	too many captures
+0x3fa13	__JS_FreeValue: unknown tag=%d
+0x495dd	[js_context]
+0x4c8d0	read(fd, &app_block.signature_block.length, 4) > 0
+0x4c903	(app_block.signature_block.data = malloc(app_block.signature_block.length)) != NULL
+0x4c957	(read(fd, app_block.signature_block.data, app_block.signature_block.length)) > 0
+0x4cd39	(res = mbedtls_pk_verify(&pk, mbedtls_md_get_type(mdinfo), md, mbedtls_md_get_size(mdinfo), signature->data, signature->length)) == 0
+0x4e36c	permission denied
+0x4fb72	ro.factory.audio_par
+0x51945	A required function in the library was not found
+0x525de	at_voice_test end
+0x528fd	at_voice_test start
+0x53eb2	[%s] %s: AtSport,audio,para:%d,%d
+0x54adf	voice_onoff
+0x55773	Authorization: %s4-HMAC-SHA256 Credential=%s/%s, SignedHeaders=%s, Signature=%s
+0x56e97	[%s] %s: whitelist[%d] addr[%s] type: %d
+0x578e2	ble_remove_whitelist_except_this
+0x57a48	bind_whitelist_is_active
+0x5993e	[%s] %s: record %s delete failed
+0x59960	[%s] %s: record %s not found
+0x5997e	[%s] %s: record %s write failed
+0x5bcf4	miwear_record_delete_legacy
+0x5bde5	miwear_record_read_legacy
+0x5bebe	miwear_record_init
+0x5bfb8	miwear_record_write
+0x5c08c	miwear_record_read
+0x5c121	miwear_record_delete
+0x5e5d3	[%s] %s: swim_record,path:%s,ret:%d,info:%p
+0x5e7be	[%s] %s: Dont need to parse record data
+0x60c28	analyze_hr_abnormal_record
+0x60d87	record_file_read_parse
+0x60d9e	record_file_read_parse
+0x60db5	record_file_read_parse
+0x60dcc	record_file_read_parse
+0x60de3	record_file_read_parse
+0x60dfa	record_file_read_parse
+0x60e11	record_file_read_parse
+0x60e28	record_file_read_parse
+0x60e3f	record_file_read_parse
+0x60e56	record_file_read_parse
+0x60e6d	record_file_read_parse
+0x6194a	MTU too low for record expansion
+0x6196b	mbedtls_ssl_get_max_out_record_payload
+0x636ea	You don't have permission to create %s.
+0x65108	error retrieving curl library information
+0x65133	error initializing curl library
+0x68614	capture_service/sensors/CaptureExtra.cxx
+0x6863d	[%s %s]: CaptureExtra uninit
+0x68665	capture_service/sensors/CaptureNMEA.cxx
+0x686a0	capture_start_param_reset
+0x686ba	capture_service/core/CaptureService.cxx
+0x686e2	[%s %s]: CaptureService work param reset
+0x6871a	capture_service/core/CaptureWorker.cxx
+0x68741	[%s %s]: Not support offline capture in sensor %hhu
+0x68776	capture_service/core/CaptureCompress.cxx
+0x68800	capture_service/core/CaptureWorkerFactory.cxx
+0x68b6a	capture_service/event/CaptureSendEvent.cxx
+0x68c07	capture_fail_all_reset
+0x68c1e	[%s %s]: CaptureService fail all reset
+0x68d2a	CaptureManager
+0x68d39	capture_service/core/CaptureManager.cxx
+0x68d61	[%s %s]: capture manager adv fd:%d
+0x68d93	CaptureBTMsgClient
+0x68da6	CaptureService
+0x68db5	CaptureEventProcessor
+0x68e06	capture_service/core/CaptureBTMsgClient.cxx
+0x68e8d	capture_service/event/CaptureConfirmAckEvent.cxx
+0x68ed5	capture_service/event/CaptureControlAckEvent.cxx
+0x68f20	capture_service/event/CaptureBlankEvent.cxx
+0x68f6f	capture_service/event/CaptureRecvEvent.cxx
+0x69028	capture_service/event/CaptureSetEvent.cxx
+0x69112	capture_service/event/CaptureStopEvent.cxx
+0x6914e	capture_stop
+0x6915b	[%s %s]: Not in capture
+0x694ab	capture_service/sensors/CaptureBaseSensor.cxx
+0x69512	capture_service/sensors/CaptureAlgoDump.cxx
+0x69643	capture_support_list:%zu 
+0x6979c	[%s %s]: CaptureAlgoDump init
+0x699f7	CaptureCompress
+0x69a68	[%s %s]: Offline select capture mode error:%d
+0x69acb	capture_start
+0x69ad9	[%s %s]: Not support capture mode:%d
+0x69aff	/data/fitness/capture
+0x69b20	make_capture_dir
+0x69b44	[%s %s]: make capture dir failed:%d, dir:%s
+0x69ca2	capture_service/event/CaptureStartEvent.cxx
+0x69cce	[%s %s]: Capture parameter incomplete
+0x69cf5	[%s %s]: capture_start: %d
+0x69d11	[%s %s]: CaptureExtra init
+0x6a8ab	[%s %s]: Capture status is wait , send_file_queue len:%d
+0x6a8f8	[%s %s]: capture_service will sent a data that data_len is 0.
+0x6a9c6	capture_sync
+0x6a9d3	[%s %s]: capture sync req
+0x6aa0b	capture_service/event/CaptureSyncEvent.cxx
+0x6ab20	[%s %s]: CaptureAlgoDump uninit
+0x6abd2	capture_confirm_id
+0x6ac64	[%s %s]: Capture confirm id inconsistent with data id
+0x6acb5	[%s %s]: CAPTURE_WAIT send_event_queue is empty
+0x6ad22	algo_capture
+0x6ad2f	capture_nagivate_event
+0x6b54b	CAPTURE_EVENT_FILE_SEND
+0x6b563	CAPTURE_EVENT_MSG_SEND
+0x6b57a	CAPTURE_EVENT_RECV
+0x6b58d	CAPTURE_EVENT_START
+0x6b5a1	CAPTURE_EVENT_STOP
+0x6b5b4	CAPTURE_EVENT_SYNC
+0x6b5c7	CAPTURE_EVENT_CONFIG
+0x6b5dc	CAPTURE_EVENT_CONTROL_ACK
+0x6b5f6	CAPTURE_EVENT_CONFIRM
+0x6b60c	CAPTURE_EVENT_CONFIRM_ACK
+0x6b626	CAPTURE_EVENT_UNKNOWN
+0x6b63c	capture_notify
+0x6e705	current record buf[0] =0x%02X
+0x6e764	current record update to buf[0] =0x%02X
+0x78fb8	invalid signature
+0x79918	file: %s signature len = %lu error
+0x79948	file: %s signature = 0X%lX error
+0x7b622	Wrong JPEG library version: library is %d, caller expects %d
+0x7b773	Improper call to JPEG library in state %d
+0x7b79d	JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
+0x7b805	Buffer passed to JPEG library is too small
+0x7e717	[%s] %s: new reminder the type is %d, the reminded record is %d
+0x8781a	snap-audio
+0x88923	[%s] %s: view snap audio destroyed
+0x88d60	[%s] %s: shared_data->snap_audio_sw %d
+0x891bf	[%s] %s: now turn on audio sw
+0x89232	[%s] %s: view_snap_audio_destroy
+0x895ff	[%s] %s: audio sw:%d
+0x89c16	[%s] %s: snap_audio_sw %d
+0x89cbd	[%s] %s: cur_snap_audio_name %s
+0x89cde	[%s] %s: audio name[%d] %s
+0x8a12b	snap_audio_sw.car_control
+0x8a145	snap_audio.car_control
+0x8a69e	view_snap_audio_destroy
+0x8af89	view_snap_audio_create
+0x8b0bb	view_snap_audio_name_list_update
+0x8b0dc	update_snap_audio_sw
+0x8b160	check_update_audio_sw
+0x8b1e1	view_snap_setting_current_audio_state_update
+0x8b741	[%s] %s: jump record test page.
+0x8b89b	[%s] %s: page record test on destroy.
+0x8c29f	[%s] %s: record test timeout.
+0x8c31d	[%s] %s: [mic] remove record file error1!
+0x8caa4	[%s] %s: media session, recorder, handle: %d, stream: %s, url: %s, options: %s
+0x8d20d	data/app/recorder/retest
+0x8d25a	/data/app/recorder/
+0x8d284	Record
+0x8d28b	Capture
+0x8d2bf	[%s] %s: media session test, recorder, url is %s, options %s
+0x8d700	/data/app/sale/record.wav
+0x8d98b	record_test.check_tool
+0x8d9a9	S:/system/image/check_tool/record.bin
+0x8d9f6	record_btn.check_tool
+0x8da23	record_sign.check_tool
+0x8da3a	record_start.check_tool
+0x8da52	record_stop.check_tool
+0x8dc66	record_test
+0x8e3be	record_test_fail_btn_event_cb
+0x8e484	send_recorder_cmd
+0x8e4db	record_test_timer_cb
+0x8e828	recorder_notify_cb
+0x8e8a4	recorder_notify_cb
+0x8e8cd	init_recorder
+0x8e9b8	record_test_stop_btn_event_cb
+0x8e9f9	record_test_pass_btn_event_cb
+0x916f9	[%s] %s: has_audio_info:%d has_ringStatus:%d ringStatus:%lu
+0x91952	[%s] %s: record_volume:%d
+0x92ba2	[%s] %s: support_mode:%d voice_mode:%d volume:%d
+0x93c4d	heartrate_record
+0x9657c	record_today_total_time
+0x9d036	sleep.record_disorder_data_cnt
+0x9d09a	sleep.record_disorder_data
+0x9e51e	record_in_app_msg.sleep
+0x9e536	record_delay_msg.sleep
+0x9e5a6	record_now.sleep
+0x9e5b7	record_delay.sleep
+0x9e5ca	record_ignore.sleep
+0x9eac6	save_record_notice_data
+0x9ecbc	view_create_record_in_app
+0x9ef4a	load_record_notice_data
+0x9f560	S:/system/image/launcher/wechatpay.bin
+0x9f76c	com.tencent.wechatrtos
+0x9f783	[%s] %s: wxpay_widget:wechat is uninstalled
+0xa09ec	[%s] %s: No wechat app
+0xa3953	permission_tip.media
+0xa6d96	no_permission.media
+0xb0f8b	[%s] %s: toast WECHAT
+0xb11b4	[%s] %s: oobe_record_language:%d
+0xb19fc	S:/system/image/notifications/wechat_icon.bin
+0xb1b6e	[%s] %s: reminder WECHAT
+0xb2973	wechat_notify_data_handler
+0xb38ab	[%s] %s: cannot abandon audio focus.
+0xb3a04	[%s] %s: Audio mode is %d.
+0xb48dc	[%s] %s: connect audio channel, calling--%s.
+0xb490a	audio_disconnected
+0xb5dcf	audio_focus_request
+0xb5f0f	audio_focus_abandon
+0xb5fa1	on_hfp_audio_connected
+0xb70dd	S:/system/image/phone/icon/icon_voice_disable.bin
+0xb710f	S:/system/image/phone/icon/icon_voice.bin
+0xb7b7b	audio_output.phone
+0xb87f5	app_swtich_audio
+0xb9074	voice_value.phone
+0xb962b	[%s] %s: Phone incoming wait audio connect 3s.
+0xba476	media_session_audio_app_state_monit_get
+0xbb013	recorder.appname
+0xbb289	[%s] %s: precorder is null.
+0xbb94d	del_text.recorder
+0xbbe57	[%s] %s: list page check recorder on.
+0xbbe9a	[%s] %s: recorder get postion %d
+0xbbebc	recorder end recording
+0xbbed3	wbat1.recorder
+0xbbee2	wbat2.recorder
+0xbbef1	wsave.recorder
+0xbbf00	wmm1.recorder
+0xbbf0e	wmm2.recorder
+0xbbf1c	timelimit.recorder
+0xbbf2f	net_talking.recorder
+0xbbf7f	recorder_ing
+0xbbfab	[%s] %s: recorder main page can't click quickly.
+0xbbff4	recorder_start
+0xbc003	[%s] %s: talking true not start recorder;
+0xbc02e	[%s] %s: phone calling not start recorder;
+0xbc0f1	[%s] %s: recorder incoming call
+0xbc128	[%s] %s: recorder_is_end.
+0xbc295	[%s] %s: recorder play page can't click quickly.
+0xbc2c7	[%s] %s: phone calling not start recorder player;
+0xbc2fa	[%s] %s: WALKIE_TALKIE working not start recorder player;
+0xbc386	[%s] %s: jump to recorder delete;
+0xbc503	S:/system/image/recorder/mute.bin
+0xbc525	S:/system/image/recorder/sound.bin
+0xbc5f8	/data/app/recorder/flag.bin
+0xbc8a6	/data/app/recorder/flagtmp.bin
+0xbc9b3	listhead.recorder
+0xbc9c5	S:/system/image/recorder/warning.bin
+0xbc9ea	tip.recorder
+0xbccfa	[%s] %s:  recorder malloc error, no memory.
+0xbcd27	[%s] %s: recorder_global_volume getting !!!
+0xbcd64	S:/system/image/recorder/main.bin
+0xbcd86	S:/system/image/recorder/menu.bin
+0xbcda8	S:/system/image/recorder/mark.bin
+0xbcdca	flagtext.recorder
+0xbce1a	playhead.recorder
+0xbce2c	S:/system/image/recorder/back3.bin
+0xbce4f	S:/system/image/recorder/ahead3.bin
+0xbce73	S:/system/image/recorder/last.bin
+0xbce95	S:/system/image/recorder/next.bin
+0xbceb7	S:/system/image/recorder/trash.bin
+0xbcf17	S:/system/image/recorder/minus.bin
+0xbcf3a	S:/system/image/recorder/plus.bin
+0xbd7be	com.xiaomi.miwear.recorder
+0xbd7d9	S:/system/image/launcher/recorder.bin
+0xbd9bf	recorder_global_volume
+0xbd9d6	read_recorder_flag_file
+0xbdae4	recorder_button_cb
+0xbdaf7	recorder_volume_opt_timer_reset
+0xbdcbb	recorder_volume_opt_time_pause
+0xbdd01	del_a_record_file
+0xbdd13	add_recorder_file_to_list
+0xbdd2d	write_record
+0xbddfe	recorder_realize_mode
+0xbde14	send_recorder_cmd
+0xbde26	recorder_notify_cb
+0xbde39	init_recorder
+0xbde47	new_a_record
+0xbde66	recorder_sync_mode
+0xbde79	recorder_set_expect_mode
+0xbdead	get_recorder_file_by_index
+0xbdec8	find_record
+0xbdeef	recorder_opt_stop
+0xbdf01	recorder_volume_opt_time_cb
+0xbdf8c	search_recorder_file_by_name
+0xbdfb4	remove_recorder_file_in_list
+0xbdfd1	get_recorder_time
+0xbe014	get_recorder_file_list_nums
+0xbe030	delete_recorder_flag_byName
+0xbe056	recorder_opt_pause
+0xbe0c6	read_record
+0xbe126	heartrate_record
+0xbe137	init_recorder_file_list
+0xbe14f	list_recorder_flag_file
+0xbe220	recorder_opt_start
+0xc0592	open_wechat_payment.setting
+0xc05ca	open_voice_assistant.setting
+0xc3306	headset_ag_audio_state_callback
+0xc48f0	[%s] %s: voice_mode: %d -> %d
+0xc51c5	[%s] %s: update_audio_info: %d %d %s %s
+0xc5ce0	share_devices_update_audio_info
+0xc658f	<S:/system/image/sport_record/widgets/sprd_widget_record.bin
+0xc65cc	S:/system/image/sport_record/widgets/sprd_widget_report.bin
+0xc66c7	sport record
+0xc6786	[%s] %s: share control cmd send, only_audio is %d, deviceid %s
+0xc68d3	[%s] %s: no record
+0xc68e6	[%s] %s: goto record details sport type is %d,tick:%lu.
+0xc6bed	[%s] %s: not refresh audio list extra
+0xc6c14	[%s] %s: not refresh audio list sub
+0xc6d75	S:/system/image/sport_record/widgets/sprd_widget_bg.bin
+0xc7b26	[%s] %s: choose voice_mode %d
+0xc7c71	S:/system/image/sport_record/widgets/sprd_widget_bg_go.bin
+0xc7cac	S:/system/image/sport_record/widgets/sprd_widget_bg_go_rtl.bin
+0xc7d24	S:/system/image/sport_record/widgets/48/%s.bin
+0xc7d72	S:/system/image/sport_record/widgets/sprd_record_bg.bin
+0xc7e60	/system/misc/sport/audio/
+0xc7e7a	[%s] %s: audio,ctrl,cmd:%u,type:%lu,course_index:%u.
+0xc8344	/system/misc/sport/audio.csv
+0xc897c	[%s] %s: unsync,no sport record.
+0xc90c1	sport_record_widget_update
+0xc91e8	update_audio_sub_text
+0xc91fe	sport_record_widget_init
+0xc922d	sport_audio_play
+0xc9400	goto_sp_record_details
+0xc95d6	sport_audio_category_make
+0xc9797	render_sp_record_widget_list_item
+0xc990e	render_sp_record_widget_list
+0xc9944	sport_audio_cfg_init
+0xc9b21	render_sp_record_widget_detail_cont
+0xc9bc8	sport_record_timer_reset
+0xc9c63	sport_ctrl_audio_play
+0xc9d10	render_sp_record_data_widget_detail
+0xca305	recording_remind.sport
+0xca31c	recording_failed_remind.sport
+0xca3c6	[%s] %s: sport_audio,playing or next
+0xca403	CONFIRM click: recording_btn=%d
+0xcad75	[%s] %s: montion_recording_btn create failed!
+0xcada3	[%s] %s: recording_btn create failed!
+0xcb6bc	training_load_record.sport
+0xcb6d7	recovertime_record.sport
+0xcbb3a	anaerobic_record.sport
+0xcbb51	maxoxygen_record.sport
+0xcbb6d	vitality_record.sport
+0xcca78	volume_audio_close
+0xcce1e	control_view_have_record_btn
+0xccf99	change_sport_img_recording_position
+0xccff1	change_sport_itme_position_recording
+0xcd7f7	<S:/system/image/sport_record/target.bin
+0xcd9d0	[%s] %s: sports record list destroy!
+0xcdd6e	[%s] %s: sports record destroy!
+0xcdfca	[%s] %s: sport record data | info is null,so rtn
+0xce204	[%s] %s: root is dead, record data NULL
+0xce2fe	[%s] %s: record,i:%d,first:%d,stamp:%lu,zone:%d,type:%u,sport:%d,course:%d,show:%d.
+0xce375	[%s] %s: get record info failed!
+0xce404	motion_recording.sport
+0xce447	recording_loading.sport
+0xce45f	S:/system/image/sports/realtime/recording.bin
+0xce5fb	S:/system/image/sport_record/min_value.bin
+0xce626	S:/system/image/sport_record/max_value.bin
+0xce651	[%s] %s: audio_info-:%p
+0xce66a	[%s] %s: next_songs,audio_playing:%d,media:%p,active_stop:%d,audio_info:%p,single_release:%d.
+0xce70a	[%s] %s: audio_type:%d - %d
+0xce771	[%s] %s: close,-,media:%p,audio_info:%p,single_release:%d.
+0xce7cb	[%s] %s: audio command 0x%x data %p
+0xce80f	[%s] %s: something wrong status %d sport_audio_info %p
+0xcef70	[%s] %s: sport record create!
+0xcefe2	[%s] %s: record data NULL!
+0xcf1d5	S:/system/image/sport_record/%s.bin
+0xcf1f9	S:/system/image/sport_record/miwear_logo.bin
+0xcf655	S:/system/image/sport_record/occupy_bitmap.bin
+0xcf6e6	S:/system/image/sport_record/widgets/sprd_loc_start.bin
+0xcf757	S:/system/image/sport_record/widgets/sprd_loc_end.bin
+0xcfc03	%drecords_no_sync.sport
+0xcfc1b	%drecord_no_sync.sport
+0xcfc32	more_records_to_app.sport
+0xcfc4c	sprecordvalue
+0xcfc8e	S:/system/image/sport_record/course/basic.bin
+0xcfcbc	S:/system/image/sport_record/course/advanced.bin
+0xcfced	S:/system/image/sport_record/course/relax.bin
+0xcfd1b	S:/system/image/sport_record/course/high.bin
+0xcfe0e	sprecordvaluemax
+0xcfe1f	sprecordvaluemin
+0xcfe30	recordlistview
+0xcfffd	sport_record_index_get_content
+0xd0026	sport_record_txt_size
+0xd003c	view_sport_record_snapshot_create
+0xd01ea	sport_record_list_data_release
+0xd02a8	audio_info_release
+0xd02da	sport_bell_audio_stop
+0xd031b	render_sport_record_datails_view
+0xd035d	goto_sport_record_details_cb
+0xd03d3	sport_record_update_unsync_cnt
+0xd0613	record_view_create
+0xd0626	audio_close_cb
+0xd06cd	sport_record_notify_handler
+0xd06e9	sport_record_timer_release
+0xd0722	audio_files_play_cb
+0xd078d	sport_record_timer_cb
+0xd07c3	sport_audio_queue_data_play
+0xd0822	audio_play_next_songs
+0xd0838	sport_audio_data_clear_next
+0xd0886	sport_audio_data_clear_now
+0xd090f	sport_bell_audio_cb
+0xd2774	S:/system/image/sport_reminder/new_record_mile.bin
+0xd27a7	S:/system/image/sport_reminder/new_record_time.bin
+0xd27da	new_record.sport
+0xd2a17	/system/misc/run_course/audio/
+0xd37a5	new_record_get_category_third
+0xd38e6	new_record_audio_play
+0xd394e	render_new_record_value
+0xd3a19	remind_distance_audio_play
+0xd3ad5	target_audio_play
+0xd3b31	sport_remind_audio_handle
+0xd3dc0	sport_record.appname
+0xd5e02	sports_page_montion_recording
+0xd6306	com.xiaomi.miwear.sports.record
+0xd6326	S:/system/image/launcher/sport_record.bin
+0xddcea	S:/system/image/voice/aivs/widget_dark22.bin
+0xddd47	[VAS] register voice_assistant app
+0xddd6a	[VAS] voice_assistant page on pause
+0xddd8f	[VAS] Recorder::close
+0xdde37	[VAS] ---------->[%s] stopCapture
+0xddee3	[VAS] ---------->[%s] replyTTSAudio 
+0xddf54	[VAS] ---------->Restart Session Stop Capture
+0xde306	[VAS] voice_assistant page on destory 
+0xde36c	[VAS] Recorder::~Recorder 
+0xde3b6	[VAS] aivs_audio_focus_request 
+0xde452	[VAS] voice_screen_release
+0xde528	[VAS] open_app_timer_cb  g_is_tts_audio_over =%d timeout_count =%d
+0xde75b	[VAS] g_is_tts_audio_over =%d timeout_count =%d
+0xde89c	[VAS] RECORDER_BEGIN STATUS = %d
+0xde8be	[VAS] RECORDER_BEGIN_CLOSE = %d
+0xde8df	[VAS] RECORDER_stop 
+0xde913	[VAS] Recorder::Recorder 
+0xdec52	S:/system/image/voice/aivs/connect/
+0xdecc9	S:/system/image/voice/aivs/bg.bin
+0xdeceb	[VAS] voice_assistant page on create 
+0xded60	S:/system/image/voice/aivs/start_listening.bin
+0xdee10	S:/system/image/voice/aivs/bottom.bin
+0xdee46	S:/system/image/voice/aivs/bg1.bin
+0xdee69	S:/system/image/voice/aivs/bg2.bin
+0xdf4a4	S:/system/image/voice/aivs/err3.bin
+0xdf4f6	S:/system/image/voice/aivs/err4.bin
+0xdf575	S:/system/image/voice/aivs/err1.bin
+0xdf727	[VAS] Recorder::open
+0xdfb0f	[%s] %s: voice snapshot failed!
+0xdfc0e	[VAS] audio_focus_abandon
+0xdfc34	AudioMode
+0xdfc3e	audio_focus_notify_cb
+0xdfc6d	[VAS] audio_focus_notify_cb, focus handle is %p, evt is 0x%02x, ret is %d, suggest_action is %d
+0xdfd0e	[VAS] TTS Audio connect.
+0xdfd28	[VAS] TTS Audio disconnect.
+0xdfeac	S:/system/image/voice/aivs/select_todo.bin
+0xe0563	[bt_wt] rcv host audio status: %d
+0xe09cc	watch_sport_record
+0xe0b48	OPEN_ACTIVITY_RECORD
+0xe0b5d	OPEN_EXERCISE_RECORD
+0xe0cf5	watch.sportrecord
+0xe0e6e	watch.wechatpay
+0xe120d	com.xiaomi.miwear.voice
+0xe2ff4	historicalvoices.wt
+0xe3138	[%s] %s: poc_record_end
+0xe31bc	walkie_talkie_poc_records
+0xe3216	[%s] %s: recorder[%d] media is NULL
+0xe323b	[%s] %s: recorder[%d] media unlink fail
+0xe3264	[%s] %s: recorder[%d] media file removed
+0xe4216	[%s] %s: poc_history run, record:%p, p_record_played:%p
+0xe43b2	[%s] %s: play record->media:%s
+0xe452a	[%s] %s: no poc record, to init
+0xe4c59	poc_record_get_state
+0xe4e37	poc_record_list_clean
+0xe4e92	poc_record_list_get_len
+0xe4f12	poc_record_end
+0xe4f35	cur_poc_record_get
+0xe4f5b	poc_record_set_duration
+0xe4faa	poc_record_set_media_from_time
+0xe4fdd	poc_record_set_user
+0xe50c9	record_file_copy
+0xe50da	poc_record_list_init
+0xe51e2	poc_record_focus_play_suggest_cb
+0xe5299	poc_record_play_event_cb
+0xe539e	poc_record_file_delete
+0xe5401	poc_record_file_close
+0xe5457	poc_record_file_write
+0xe54ab	poc_record_file_open
+0xe5de4	AUDIO_IDLE
+0xe5dfc	others_audio_ev
+0xe5e88	[%s] %s: #### poc_audio_state_notify
+0xe62cc	[%s] %s: poc_history no recordes
+0xe62ed	[%s] %s: recorde num:%d
+0xe6306	[%s] %s: p_record malloc failed
+0xe84c9	poc_audio_state_notify
+0xe85e9	audio_idle_status
+0xe8856	cb_audio
+0xe8a09	poc_recorder_file_player
+0xe8cfc	[%s] %s: record event %p %s, event %d, ret %d
+0xe9c6d	[%s] %s: #### close recorder %p %p
+0xe9c91	[%s] %s: #### close recorder ok
+0xeb6e1	hw_close_recorder
+0xebc83	focus_recorder_suggest_cb
+0xebd7c	poc_recorder_event_callback
+0xed9d0	data_record.watchface
+0xedacb	wechatPayment.watchface
+0xef8b2	wechat sdk [%s] [%s] [%d]:%s
+0xef8d0	wechat_log_cb
+0xef8fd	wechat_notify_play_state
+0xef931	wechat_notify_silk_data
+0xef95d	[%s] %s: close wechat app.
+0xef9a9	[wechat cb debug] %s: handshake successfully!
+0xef9d8	wechat_pay
+0xeff0b	wechat.appname
+0xeff33	[wechat cb debug] %s: disable service discover.
+0xf00bd	[wechat cb debug] %s: enable service discover.
+0xf015a	[wechat cb debug] %s: disconnected scene %d!
+0xf0219	app_wechat_receive_data
+0xf0280	app_wechat_connection_lost
+0xf02e2	app_wechat_connection_established
+0xf0322	[%s] %s: record_android_app_icon_url app is null
+0xf0354	app_wechat_state_get
+0xf0369	[%s] %s: wechat state 0x%x
+0xf03bd	[%s] %s: There is no wechat in watch!
+0xf03e4	[%s] %s: There is no page in wechat app!
+0xf040e	[%s] %s: reset wechat page.
+0xf05ce	stop_record
+0xf05da	[%s] %s: stop record and send close command
+0xf0607	[%s] %s: stop record but handle is invalid
+0xf0633	[%s] %s: stop record, total len %lu
+0xf0658	recorder_cb
+0xf0698	[%s] %s: record cb and record is stop
+0xf06bf	[%s] %s: record begin, handle is NULL
+0xf06e6	[%s] %s: record begin notify silk data
+0xf070e	[%s] %s: record start and send read command
+0xf073b	[%s] %s: record prepare and status is -1
+0xf0765	[%s] %s: record pause/stop
+0xf0781	OnStartPlayAudioEvent
+0xf07c6	/data/app/wechat/license
+0xf0860	[%s] %s: create device signature failed!
+0xf088a	device_signature
+0xf0994	[%s] %s: product id %lu key version %lu sn %s signature %s
+0xf09d0	/data/app/wechat/
+0xf0a67	[wechat cb debug] %s: On WxPay Secure Write
+0xf0a94	/data/app/wechat/pay%u
+0xf0b14	[wechat cb debug] %s: On WxPay Secure Exist key %d
+0xf0bc7	[%s] %s: wechat is uninstalled
+0xf0dec	img_content.wechat
+0xf0e86	[wechat cb debug] %s: get service info!
+0xf0f22	[wechat cb debug] %s: send data %p %u!
+0xf0ff0	[wechat cb debug] %s: On WxPay Secure Delete key %d
+0xf106a	app_wechat_stop
+0xf107a	[%s] %s: wechat service not running now!
+0xf10ce	wechat_proxy_queue
+0xf10e1	[%s] %s: clear wechat cache.
+0xf10ff	/data/files/com.tencent.wechatrtos/
+0xf1123	[%s] %s: delete wechat_pay tee data.
+0xf1149	delete_wechat_pay_tee_data
+0xf1164	[%s] %s: wechatpay_tee_data_delete(%d)
+0xf118c	[%s] %s: wechat stop.
+0xf11a3	[%s] %s: wechat_pay wechat_rpk_monitor_cb
+0xf11ce	[%s] %s: %s not wechat
+0xf1287	[%s] %s: wechat is unsupported!
+0xf1365	[wechat cb debug] %s: get license
+0xf140b	[wechat cb debug] %s: On WxPay Secure Read
+0xf148d	[%s] %s: objs_tv->index_max = %d.
+0xf239d	[%s] %s: hourly_create objs_tv->index_max = %d.
+0xf25b5	app_wechat_start
+0xf25c6	[%s] %s: wechat service has already been initialized!
+0xf25fd	[%s] %s: failed to creat path for wechat file %s.
+0xf2630	[%s] %s: wechat cache %s created!
+0xf2653	[%s] %s: create wechat service failed!
+0xf2723	[%s] %s: wechat proxy async init done.
+0xf2792	wechat_start_config_init
+0xf27d1	[%s] %s: wechat start done
+0xf2804	prompt.wechat
+0xf2908	[wechat cb debug] %s: login state %d, show_wxpay %d
+0xf293d	[%s] %s: wechat start async step:%d.
+0xf2963	[%s] %s: wechat not be installed.
+0xf2986	app_wechat_handle_login_status
+0xf29d8	[wechat cb debug] %s: wxpay get token errcode %ld data %p %s %u
+0xf2a32	[wechat cb debug] %s: OnWxPayBLEStartBroadcast: broadcast_data = %s, len:%d
+0xf2aa9	[wechat cb debug] %s: OnWxPayBLEStopBroadcast
+0xf2aeb	[wechat cb debug] %s: OnWxPayBLESendData buf %p %s data_len %u
+0xf2b2b	[%s] %s: wechat_proxy_async_send error.
+0xf2b91	[wechat cb debug] %s: trigger xiaomi to get license
+0xf2c0f	OnStartRecordEvent
+0xf2c22	[wechat cb debug] %s: start record event
+0xf2c4c	format=silk:sample_rate=16000:ch_layout=mono:b=23900
+0xf2c81	OnStopRecordEvent
+0xf2c93	[wechat cb debug] %s: stop record event
+0xf2cbc	[%s] %s: wechat on stop record event
+0xf2ce1	[wechat cb debug] %s: start play audio, task id %lu
+0xf2d30	OnStopPlayAudioEvent
+0xf2d45	[wechat cb debug] %s: stop play audio, task id %lu
+0xf351a	app_wechat_unregistered
+0xf3549	app_wechat_launch_page
+0xf3560	wechat_read_file_data
+0xf3576	app_wechat_launch_supported
+0xf35f2	record_android_app_icon_url
+0xf363a	wechat_license_get
+0xf367f	handle_wechat_trigger_license
+0xf37ee	wechat_data_send
+0xf381a	wechat_proxy_uninit
+0xf3841	wechat_proxy_poll_cb
+0xf3856	wechat_proxy_init
+0xf387f	wechat_proxy_async_init
+0xf38bb	wechat_handle_based_bind_status
+0xf38ee	app_wechat_registered
+0xf3904	wechat_license_check_and_get
+0xf3921	wechat_pay_stop_broadcast_handle
+0xf399e	wechat_msg_clear_all
+0xf3a43	finish_wechat
+0xf3a51	wechat_proxy_async_send
+0xf3a69	wechat_pay_ble_send_data
+0xf3ad9	wechat_rpk_monitor_cb
+0xf3b05	wechat_pay_sync_timedone_handle
+0xf3b66	wechat_start_async_cb
+0xf3bac	wechat_pay_ble_service_received_handle
+0xf3c09	handle_wechat_new_msg
+0xf3c1f	wechat_pay_start_broadcast_handle
+0xf3c64	wechat_license_respose_cb
+0xf3c7e	handle_wechat_update_msg
+0xf3c97	wechat_handle_command_msg
+0xf3d17	handle_wechat_msg
+0xf4606	no_record_today.wm
+0xf5300	no_record.wm
+0xfa034	[%s] %s: open_voice_assistant.
+0xfb761	miwear_capture_service &
+0xfc823	wechat_navigate_async
+0xfccc6	AT^SET_RECORDER_MEM_LIMIT
+0xfcd4e	AT^VOICE_OPEN
+0xfcd5c	AT^VOICE_DESTORY
+0xfd47e	headset_audio_state_callback
+0xfdc17	app_wechat_init
+0xfdd03	open_voice_assistant
+0x10e23c	/dev/audio
+0x11087a	/system/sensorhub/vela_audio.bin
+0x1108c3	Failed to read audio binary 
+0x110920	%s install audio binary finish %lu
+0x12088a	__audio_media_player_close_cb
+0x1208a8	[AIOTJS] [%s:%d] [audio] player:%p closed
+0x1208d3	__audio_media_session_unregister_cb
+0x1208f7	[AIOTJS] [%s:%d] [audio] session:%p unregistered
+0x12092a	__audio_finalizer
+0x12093c	[AIOTJS] [%s:%d] [audio] __audio_finalizer
+0x120b11	__audio_media_enqueue_job
+0x120b2b	(jse_enqueue_job(th->ctx, __audio_event, 1, (jse_value_t*)&func)) == (0)
+0x120b74	void AIOTJS::__audio_media_enqueue_job(AIOTJS::Audio*, jse_value_t)
+0x120bb8	jse_audio.cpp:237
+0x120bca	jse_audio.cpp
+0x120bd8	__audio_media_player_query_cb
+0x120bf6	[AIOTJS] [%s:%d] [audio] player:%p volume:%d position:%u duration:%d
+0x120c3c	__audio_media_player_event_cb
+0x120c5a	(uv_timer_start(&th->timerhandle, __audio_timer_cb, 0, (250))) == (0)
+0x120ca0	void AIOTJS::__audio_media_player_event_cb(void*, int, int, const char*)
+0x120ce9	jse_audio.cpp:313
+0x120cfb	__audio_media_close
+0x120d0f	[AIOTJS] [%s:%d] [audio] player:%p close, ret:%d
+0x120d42	[AIOTJS] [%s:%d] [audio] session:%p unregister, ret:%d
+0x120d7b	__audio_media_play
+0x120d8e	[AIOTJS] [%s:%d] [audio] player:%p prepare, ret:%d
+0x120dc2	[AIOTJS] [%s:%d] [audio] player:%p start, ret:%d
+0x120df4	__audio_event
+0x120e10	jse_value_t AIOTJS::__audio_event(jse_context_ref, int, jse_value_ref)
+0x120e57	jse_audio.cpp:570
+0x120e69	__audio_timer_cb
+0x120e8a	void AIOTJS::__audio_timer_cb(uv_timer_t*)
+0x120eb5	jse_audio.cpp:586
+0x120edd	jse_audio.cpp:587
+0x120eef	__audio_media_query
+0x120f03	[AIOTJS] [%s:%d] [audio] player:%p query, ret:%d
+0x120f35	__audio_play
+0x120f69	audio exception
+0x120f79	audio play src error
+0x120f8e	[AIOTJS] [%s:%d] [audio] play
+0x121303	__audio_pause
+0x121311	[AIOTJS] [%s:%d] [audio] pause
+0x121331	__audio_media_pause
+0x121345	[AIOTJS] [%s:%d] [audio] player:%p pause, ret:%d
+0x121377	__audio_stop
+0x121384	[AIOTJS] [%s:%d] [audio] stop
+0x1213a3	__audio_media_stop
+0x1213b6	[AIOTJS] [%s:%d] [audio] player:%p stop, ret:%d
+0x121e71	wechat_init
+0x121e7d	(wechat) != (0)
+0x121e8d	jse_value_t AIOTJS::wechat_init(jse_context_ref, jse_value_t, int, jse_value_ref)
+0x121edf	jse_wechat.cpp:51
+0x121ef1	jse_wechat.cpp
+0x121f00	wechat_uninit
+0x121f0e	jse_value_t AIOTJS::wechat_uninit(jse_context_ref, jse_value_t, int, jse_value_ref)
+0x121f62	jse_wechat.cpp:65
+0x121f74	[AIOTJS] [%s:%d] wechat uninit
+0x121f94	wechat_js_invoke_function
+0x121fae	jse_value_t AIOTJS::wechat_js_invoke_function(jse_context_ref, jse_value_t, int, jse_value_ref)
+0x12200e	jse_wechat.cpp:81
+0x122041	task_id
+0x122049	func_name
+0x122053	request_body
+0x122092	[AIOTJS] [%s:%d] wechat_ctx is null, OnJsEvent ignored
+0x122128	[AIOTJS] [%s:%d] wechat_ctx is null, OnJsTask ignored
+0x1221a9	async_js_event_callback
+0x1221c1	(wechat_event) != (0)
+0x1221d7	void AIOTJS::async_js_event_callback(uv_async_queue_t*, void*)
+0x122216	jse_wechat.cpp:136
+0x122234	async_js_task_callback
+0x12224b	(wechat_task) != (0)
+0x122260	void AIOTJS::async_js_task_callback(uv_async_queue_t*, void*)
+0x12229e	jse_wechat.cpp:181
+0x1222e8	wechat_js_regist_callback
+0x122302	jse_value_t AIOTJS::wechat_js_regist_callback(jse_context_ref, jse_value_t, int, jse_value_ref, int)
+0x122367	jse_wechat.cpp:209
+0x12237a	wechat_js_unregist_callback
+0x122396	jse_value_t AIOTJS::wechat_js_unregist_callback(jse_context_ref, jse_value_t, int, jse_value_ref, int)
+0x1223fd	jse_wechat.cpp:227
+0x122790	__audio_init
+0x12279d	[AIOTJS] [%s:%d] [audio] init
+0x1227bc	quickapp_audio
+0x1227cb	__audio_uninit
+0x1227da	[AIOTJS] [%s:%d] jse_audio [%s %d]
+0x122876	__audio_getplaystate
+0x1228b8	__audio_get_attribute
+0x1228ed	[AIOTJS] [%s:%d] audio get attribute: %s
+0x12291f	__audio_set_attribute
+0x122935	[AIOTJS] [%s:%d] audio set attribute: attr = %d:%s
+0x12296a	[AIOTJS] [%s:%d] [audio] strlen(insrc): %d, insrc: %s is too long !
+0x1229bb	[AIOTJS] [%s:%d] [audio] absolute path length %d is too long !
+0x1229fb	[AIOTJS] [%s:%d] [audio] strlen(appsrc): %d, appsrc: %s is too long !
+0x122a42	[AIOTJS] [%s:%d] audio set src:%s
+0x123809	crypto.sign invalid parameter signature
+0x1239b7	permissions
+0x12412f	[%s][%d] Recorder write to file Failed: %s
+0x124207	media_recorder_open error
+0x124222	recorder ID %ld
+0x1242eb	media_recorder_start_picture error
+0x1244f8	[%s][%d] Recorder read error %s
+0x124aa8	[AIOTJS] [%s:%d] permission denied
+0x12521c	Create recorder channel return ID (copen [SOURCE/FILTER])
+0x125288	Destroy player/recorder/session channel (close ID [pending_stop(1/0)])
+0x1253d4	Reset player/recorder channel (reset ID)
+0x1253fd	Set player/recorder prepare (prepare ID url/buffer/direct url [options])
+0x125446	Set player/recorder/session start (start ID [SCENARIO])
+0x12547e	Set player/recorder/session stop (stop ID)
+0x1254a9	Set player/recorder/session pause (pause ID)
+0x125a4b	Create an async recorder return ID (uv_copen [SOURCE/FILTER])
+0x12611c	media_uv_recorder_take_picture_on_event
+0x1261ab	media_uv_recorder_suggest_cb
+0x1261e6	mediatool_uv_recorder_write_cb
+0x126205	mediatool_uv_recorder_read_cb
+0x126223	mediatool_uv_recorder_connection_cb
+0x126345	media_uv_recorder_start_auto
+0x126539	mediatool_cmd_uv_recorder_open_exec
+0x126809	mediatool_uv_recorder_reset_cb
+0x1274c3	js_dom_create_element
+0x12753f	js_dom_create_for_fragment
+0x12755a	js_dom_create_if_fragment
+0x127574	js_dom_create_block_fragment
+0x127591	js_dom_create_component
+0x127625	js_dom_create_dynamic_component
+0x128f47	js_nativeproxy_delete_property
+0x128f66	[AIOTJS] [%s:%d] add js_ui_trigger_schedule to jsqueue error
+0x128fa4	js_nativeproxy_set
+0x12a528	src/ajs_compile.cpp
+0x12bd27	ajs_ext_modules_init
+0x12bd3c	[AIOTJS] [%s:%d] ajs_ext_modules_init() name=%s
+0x12bdac	src/ajs_utils.cpp:25
+0x12bdc1	src/ajs_utils.cpp
+0x12be28	src/ajs_utils.cpp:132
+0x12bee7	src/ajs_vm.cpp:187
+0x12befa	src/ajs_vm.cpp
+0x12bf37	src/ajs_vm.cpp:204
+0x12bfce	src/ajs_vm.cpp:682
+0x12c008	src/ajs_vm.cpp:684
+0x12c057	src/ajs_vm.cpp:696
+0x12c0a0	src/ajs_vm.cpp:735
+0x12ca0f	src/ajs_modules.cpp:407
+0x12ca27	src/ajs_modules.cpp
+0x12cd16	src/ajs_modules.cpp:177
+0x12cea9	src/ajs_vm.cpp:125
+0x12cef4	src/ajs_vm.cpp:132
+0x12cf42	src/ajs_vm.cpp:135
+0x12cf55	src/ajs_vm.cpp:152
+0x12d0d3	src/ajs_vm.cpp:419
+0x12d119	src/ajs_vm.cpp:442
+0x12d15f	src/ajs_vm.cpp:453
+0x12d172	initialize_runtime_js_internal
+0x12d1a6	void AIOTJS::initialize_runtime_js_internal(AIOTJS::RuntimeContext*, AIOTJS::RunOptions*)
+0x12d200	src/ajs_vm.cpp:474
+0x12d229	src/ajs_vm.cpp:475
+0x12d283	ajs_ext_modules_export
+0x12d29a	[AIOTJS] [%s:%d] ajs_ext_modules_export() name=%s
+0x12d6e9	src/ajs_vm.cpp:376
+0x12d742	src/ajs_vm.cpp:379
+0x12e24f	src/ajs_vm.cpp:631
+0x12f11d	js_regist_task_callback
+0x12f135	js_regist_event_callback
+0x12f14e	js_unregist_task_callback
+0x12f168	js_unregist_event_callback
+0x130921	AIOTJS_PATH
+0x132bbf	[AIOTJS] [%s:%d] add js_watch_trigger_schedule to jsqueue error
+0x1379c7	(res = verify_block_signature(&signature_info.public_key, &signature_info.signed_data, &signature_info.signatures_content)) == 0
+0x137a48	signature_info.digests_signatures_algorithm_id == signature_info.signatures_algorithm_id
+0x137aca	app_block_digest_verification(app_verify_info, &signature_info.one_digest) == 0
+0x1389a7	system.audio
+0x1389c7	system.record
+0x14233e	cornsilk
+0x148b9d	audio parser
+0x149204	[%s] %s: update local device audio
+0x14a4b6	miwear_model_get data/misc/bt/miwear_record.db
+0x14dfc3	[%s] %s: only audio share cmd 0x%02x(0:play/resume, 1:pause, 3:volume, 4:prev, 5:next, ff:sync)
+0x14f029	/mnt/audio/irqs
+0x14f039	/mnt/audio/pm/state0
+0x14f04e	/mnt/audio/pm/wakelock0
+0x14fd06	media_session_control_cmd_recorder_begin
+0x14fd55	media_session_control_cmd_recorder_close
+0x14fd94	media_session_control_cmd_recorder_read
+0x14feff	reminder_audio_play_cb
+0x15028e	fusion_center_request_only_audio
+0x1502ed	media_session_control_cmd_set_audio_mode
+0x150547	media_recorder_open_cb
+0x1505e5	media_session_control_cmd_recorder_open
+0x150623	media_recorder_prepare_connect_cb
+0x150659	media_session_control_cmd_recorder_prepare
+0x15069e	media_recorder_with_focus
+0x1506d5	media_session_control_cmd_recorder_start
+0x150717	media_session_control_cmd_recorder_stop
+0x15074f	media_session_control_cmd_recorder_pause
+0x15078c	media_recorder_get_prop_cb
+0x1507bc	media_session_control_cmd_recorder_get_prop
+0x150f59	[%s] %s: hfp_ag receive audio_conn_state = %d
+0x151b9d	[%s] %s: audio_state = %d
+0x151bca	[%s] %s: Incoming ring disconnect audio --In-Band Ringing.
+0x151c67	[%s] %s: Ignore disconnect audio by --In-Band Ringing
+0x151c9e	[%s] %s: Audio disconnect, continue with other devices.
+0x151d29	[%s] %s: [%s] media_session_handle = %p, audio_focus_call_type = %d
+0x151d6e	[%s] %s: No call info, abandon audio.
+0x151da5	[%s] %s: call_type = %d, audio_focus_call_type = %d
+0x151dda	[%s] %s: No call info, cannot request audio.
+0x151e08	[%s] %s: audio_focus_notify_cb, focus handle is %p, evt is 0x%02x, ret is %d, suggest_action is %d
+0x151e97	[%s] %s: media_session_handle = %p, audio_mode = %d, request_mode = %d
+0x152404	[%s] %s: dial: %s, hungup_by: %s, audio_disconn: %d, audio_conn: %d, call_type: %d.
+0x152478	[%s] %s: answer: %s, hungup_by: %s, audio_disconn: %d, audio_conn: %d, call_type: %d.
+0x152f20	hfc_audio_state_callback
+0x152f58	tele_audio_focus_abandon
+0x1530c3	on_audio_state_cb
+0x1530eb	audio_focus_request_internal
+0x1533be	audio_focus_notify_cb
+0x1533ef	on_hfp_call_audio_changed
+0x153514	tele_audio_focus_request
+0x156e1f	A[%s] %s: records_table or address is null
+0x156e4b	[%s] %s: get_encoded_record_by_uid failed
+0x156f87	[%s] %s: records_table is null
+0x157177	[%s] %s: Record %d count %lu too large!
+0x1571c1	[%s] %s: Read record encoded list data failed
+0x15746b	[%s] %s: Malloc for record_list failed
+0x1577d3	[%s] %s: the length of slot_record_data_t is wrong
+0x157807	[%s] %s: the length of widget_record_data_t is wrong
+0x15783d	[%s] %s: the length of condition_record_data_t is wrong
+0x157876	[%s] %s: the length of anim_record_data_t is wrong
+0x157955	[%s] %s: Don't support this data record style %u
+0x157986	[%s] %s: Malloc for data_record failed
+0x1579ae	[%s] %s: parse data record param failed
+0x157ad8	[%s] %s: data_count of condition_record_data is out of range!(%u)
+0x157b1b	[%s] %s: compare_count of condition_record_data is out of range!(%u)
+0x157bd7	[%s] %s: attr_cnt of anim_record_data is out of range!(%u)
+0x157e79	[%s] %s: goto wechat_pay
+0x157e93	[%s] %s: wechat state abnormity
+0x1584db	[%s] %s: Too much record in widget [%lx], cannot handle it.
+0x158631	[%s] %s: Malloc for record_list[i].uid_anims failed
+0x159cc4	file_record_cb
+0x15a022	decode_image_record
+0x15a20a	realloc_record_animation_data
+0x15a228	realloc_record_condition_data
+0x15a269	realloc_record_widget_data
+0x15a2aa	realloc_record_slot_data
+0x15a363	get_record_addr_list
+0x15a5b0	get_record_addr_list
+0x15a943	<./tlsdk/src/jptt_audio.c L%d [I] set ptt mute : %d
+0x15a978	./tlsdk/src/jptt_audio.c L%d [I] audio set test mode: %d
+0x15ab51	./tlsdk/src/jptt_media_channel.c L%d [D] set audio functions interface (%d).
+0x15ab9f	./tlsdk/src/oem_codec.c L%d [D] start recorder when %d, jobs: %x, tone: %d, tts: %d
+0x15abf4	./tlsdk/src/jptt_audio.c L%d [I] start play wave file %d at %d %d
+0x15b07e	./tlsdk/src/jptt_audio.c L%d [I] %u paused, new: %u (%d) speaking at %u. when %d
+0x15b0d0	./tlsdk/src/jptt_audio.c L%d [I] speaking stopped, %u (%d) on tag = %u stopped.
+0x15b121	./tlsdk/src/jptt_audio.c L%d [I] rm_receiving_ch r0: %u r1: %u sid: %u
+0x15c062	./tlsdk/src/jptt_audio.c L%d [D] on_receive_amr ERROR: r0: %u r1: %u, cid: %u
+0x15c0b1	./tlsdk/src/jptt_audio.c L%d [E] recv amr run outof pcm_free buffer.
+0x15c0ff	./tlsdk/src/jptt_audio.c L%d [D] on evrc ts = %u, frames = %d, len = %d, %s
+0x15c14c	./tlsdk/src/jptt_audio.c L%d [E] recv evrc run outof pcm_free buffer.
+0x15c193	./tlsdk/src/jptt_audio.c L%d [D] on vbr ts = %u, frames = %d, len = %d
+0x15c1db	./tlsdk/src/jptt_audio.c L%d [E] recv vbr run outof pcm_free buffer.
+0x15c221	./tlsdk/src/jptt_audio.c L%d [D] do rec data last %d frame
+0x15c25d	./tlsdk/src/jptt_audio.c L%d [E] out of pcm free queue
+0x15c3a5	./tlsdk/src/jptt_audio.c L%d [I] on someone: %u (%d) speaking at %u
+0x15c3ea	./tlsdk/src/jptt_audio.c L%d [D] md get nick ret: %d, get: %s
+0x15c429	./tlsdk/src/jptt_audio.c L%d [I] add_receiving_ch r0: %u r1: %u sid: %u
+0x15c472	./tlsdk/src/jptt_audio.c L%d [I] result of add_receiving_ch(%u): %d
+0x15c4b7	./tlsdk/src/jptt_audio.c L%d [I] set smooth buffer to %dms. set frames = %d
+0x15c504	./tlsdk/src/jptt_audio.c L%d [E] receiving ch add %u failed. [%u, %u]
+0x15ccc6	./tlsdk/src/oem_codec.c L%d [D] stop recorder when %d, jobs: %x, tone: %d
+0x15cd11	./tlsdk/src/jptt_audio.c L%d [E] yy tts exited (%d), re-start!
+0x15cd51	./tlsdk/src/jptt_audio.c L%d [I] tts sch timeout with yytts_ok=%d, yytts_playing=%d
+0x15d95c	./tlsdk/src/jptt_cmd_process.c L%d [E] start dialog ok, but no empty record left, %d
+0x15dbfe	./tlsdk/src/jptt_audio.c L%d [I] set codec = %d, duplx = %d
+0x15dd53	./tlsdk/src/jptt_audio.c L%d [I] jaud_init receiving_ch r0: %u r1: %u
+0x15dd9a	./tlsdk/src/jptt_audio.c L%d [E] create TTS schedule timer failed.
+0x15dfb5	./tlsdk/src/jptt_audio.c L%d [I] jaud deinit
+0x15e349	[%s] %s: hw_open_recorder start
+0x15e36a	[%s] %s: poc recorder: open failed.
+0x15e38f	[%s] %s: poc recorder: set callback failed.
+0x15e3d3	[%s] %s: poc recorder: prepare failed.
+0x15e3fb	[%s] %s: poc recorder: start failed.
+0x15e421	[%s] %s: recorder ok %p %p
+0x15e4a3	[%s] %s: ########## read recorder foucus 
+0x15e510	./tlsdk/src/oem_codec.c L%d [D] record loop exited. r_jobs: %x
+0x15e81c	hw_route_recorder
+0x15e892	hw_read_recorder
+0x15e8a3	hw_open_recorder
+0x15ea43	[110][audio_transport]: %s transport freed:0x%p
+0x15ea74	[147][audio_transport]: %s transport freed:0x%p
+0x15eb4c	[176][audio_control]: %s, ch_id:%d, event:%s
+0x15eb7a	[180][audio_control]: fail, ch_id:%d
+0x15eba0	[194][audio_control]: %s: ### EVENT %d NOT HANDLED ###
+0x15f13e	[47][a2dp_audio]: %s, %d
+0x15f22a	[62][a2dp_audio]: %s: %d
+0x15f2e9	[75][a2dp_audio]: %s
+0x15f3c6	[88][a2dp_audio]: %s
+0x15f5d9	[311][a2dp_control]: %s: ## AUDIO PATH DETACHED ##
+0x15f64e	[91][audio_control]: %s, unknown profile id: %d
+0x15f72c	[98][audio_control]: %s: audio-ctrl-cmd : %s
+0x15f7ec	[116][audio_control]: %s: UNSUPPORTED CMD (%d)
+0x15f81c	[169][audio_transport]: %s, status = %d
+0x15f845	[178][audio_transport]: client pipe init error %s
+0x15f878	[184][audio_transport]: accept error %s
+0x15f8a1	[214][audio_transport]: %s status:%d
+0x15f8c7	[235][audio_transport]: %s nread:%d
+0x15f8ec	[254][audio_transport]: %s malloc failed
+0x15f916	[286][audio_transport]: server pipe init error %s
+0x15f949	[293][audio_transport]: unlink error: %s
+0x15f973	[303][audio_transport]: bind error: %s
+0x15f99b	[309][audio_transport]: listen error: %s
+0x15f9c5	[316][audio_transport]: %s path{%d}[%s] success
+0x1608a0	[775][ag_stm]: Get voice call volume failed
+0x1608cd	[780][ag_stm]: Start to listen voice call volume failed
+0x160b11	[636][a2dp_stm]: A2DP Audio is not ready, Ignore start cmd
+0x160e8d	AG_CONNECT_AUDIO
+0x160e9e	AG_DISCONNECT_AUDIO
+0x160edd	AG_VOICE_RECOGNITION_START
+0x160ef8	AG_VOICE_RECOGNITION_STOP
+0x160fb8	AG_AUDIO_TIMEOUT
+0x161041	AG_STACK_EVENT_AUDIO_REQ
+0x161082	AG_STACK_EVENT_AUDIO_STATE_CHANGED
+0x16143f	[905][ag_stm]: Reply audio request fail:%s
+0x16146b	[923][ag_stm]: Ignored audio connection state:%d
+0x16149d	[968][ag_stm]: defer DISCONNECT_AUDIO message
+0x1614fc	[975][ag_stm]: already in audio connecting state
+0x16152e	[994][ag_stm]: Ignored audio connection state:%d
+0x1615d6	[1116][ag_stm]: Ignored audio connection state:%d
+0x16163e	[1209][ag_stm]: Ignored audio connection state:%d
+0x161958	AudioDisconnecting
+0x16196b	AudioOn
+0x161973	AudioConnecting
+0x161a24	AUDIO_CTRL_CMD_START
+0x161a39	AUDIO_CTRL_CMD_STOP
+0x161a4d	AUDIO_CTRL_CMD_CONFIG_DONE
+0x161d37	<a2dp_source_service_notify_audio_source_config_changed
+0x161d6f	a2dp_source_service_notify_audio_state_changed
+0x161dd2	ag_service_notify_audio_state_changed
+0x161ed5	a2dp_audio_prepare_suspend
+0x161f9b	a2dp_audio_on_stopped
+0x161fc5	a2dp_report_audio_config_state
+0x16200e	audio_recv_ctrl_data
+0x1620b6	a2dp_source_stop_audio_req
+0x16216d	a2dp_audio_on_started
+0x162190	a2dp_report_audio_state
+0x1621be	a2dp_source_suspend_audio_req
+0x1621dc	audio_ctrl_cb
+0x1622a7	a2dp_audio_on_connection_changed
+0x162451	audio_transport_open
+0x1624f3	a2dp_audio_data_alloc
+0x162509	audio_transport_init
+0x162589	a2dp_audio_data_received
+0x1625c7	a2dp_source_start_audio_req
+0x162c7a	[209][audio_control]: fail to open audio transport
+0x162cae	[374][hfp_hf]: %s: failed to start audio control channel
+0x162f96	[617][hf_stm]: %s: this might be a video chat from WeChat
+0x162fd1	[621][hf_stm]: Terminate audio failed for :%s
+0x16392b	[68][BT]: Unknow audio state: %d
+0x163a8b	[1278][hf_stm]: Terminate audio failed for :%s
+0x164037	[1120][hf_stm]: Get voice call volume failed
+0x164065	[1125][hf_stm]: Start to listen voice call volume failed
+0x1646bc	[896][hf_stm]: Set media voice call volume failed
+0x164815	[1335][hf_stm]: Could not stop voice recognition
+0x164904	[1410][hf_stm]: Terminate audio failed for :%s
+0x164934	[1423][hf_stm]: Terminate audio failed for :%s
+0x1649aa	[1156][hf_stm]: Connect audio failed for :%s
+0x1649d8	[1162][hf_stm]: Disconnect audio failed for :%s
+0x164a24	[1167][hf_stm]: Could not start voice recognition
+0x164a57	[1173][hf_stm]: Could not stop voice recognition
+0x164f67	[261][adapter-svc]: load whitelist device successfully:
+0x164fa0	[266][adapter-svc]: LE WHITELIST[%d] [%s], addr_type: %u
+0x164fda	[271][adapter-svc]: ble whitelist device cnt: %u
+0x1653ce	WhiteList
+0x1662eb	HF_CONNECT_AUDIO
+0x1662fc	HF_DISCONNECT_AUDIO
+0x166310	HF_VOICE_RECOGNITION_START
+0x16632b	HF_VOICE_RECOGNITION_STOP
+0x1664b7	HF_STACK_EVENT_AUDIO_REQ
+0x1664f8	HF_STACK_EVENT_AUDIO_STATE_CHANGED
+0x166c48	bt_sal_hfp_hf_connect_audio
+0x166f79	adapter_on_whitelist_update
+0x166fe0	bt_sal_hfp_hf_start_voice_recognition
+0x1671a1	hf_service_notify_audio_state_changed
+0x1671f5	adapter_update_whitelist
+0x1673b0	process_le_whitelist_update_evt
+0x16824c	[68][audio_control]: %s, event:%s
+0x16875f	[bttool] a2dp_src_audio_state_cb, addr:%s, state:%d
+0x168794	[bttool] a2dp_src_audio_source_config_cb, addr:%s
+0x168bbe	[bttool] Device [%s] removed from whitelist
+0x1699b1	[bttool] ag_audio_state_callback, addr:%s, state:%d
+0x169ada	[bttool] hf_audio_state_callback, addr:%s, state:%d
+0x16a6dd	 -f or --filter, connection filter policy, (0:addr,1:whitelist)
+0x16aa5a	[bttool] Device [%s] with type %d added to whitelist
+0x16aa90	[bttool] Device [%s] added to whitelist
+0x16c68c	AUDIO_CTRL_EVT_STARTED
+0x16c6a3	AUDIO_CTRL_EVT_START_FAIL
+0x16c6bd	AUDIO_CTRL_EVT_STOPPED
+0x16c6d4	AUDIO_CTRL_EVT_UPDATE_CONFIG
+0x16cf9a	disconnectaudio
+0x16cfe9	Start voice recognition              params: <address>
+0x16d027	Stop voice recognition               params: <address>
+0x16d129	Accept voice call                    params: <address> <flag>
+0x16d266	Reject  voice call                   params: <address>
+0x16d37a	hangup an active/dialing/alerting voice call if any exist, otherwise then releases all held calls.
+0x16d810	"start voice recognition          , params: <address>"
+0x16d847	"stop voice recognition           , params: <address>"
+0x16e401	audio-gateway cmd, input 'ag' show usage
+0x16f091	"get a2dp connection or audio state , params: <address>"
+0x16f3a5	bt_sal_hfp_ag_disconnect_audio
+0x16f3c4	bt_sal_hfp_hf_disconnect_audio
+0x16f3e3	bt_sal_hfp_ag_connect_audio
+0x16f4ea	bt_sal_hfp_hf_stop_voice_recognition
+0x16f521	audio_ctrl_event_with_data
+0x17006c	./tlsdk/src/jptt_media_channel.c L%d [I] jmedia set audio test mode: %d
+0x1702cc	./tlsdk/src/jptt_audio.c L%d [D] play dt %s, %d
+0x170ca5	wechat_notify_record_state
+0x170cde	[%s] %s: ios wechat iocn name is amend
+0x170d06	[%s] %s: android wechat iocn name is amend
+0x1718d4	wechat_handle_based_phone
+0x171a62	wechat_write_file
+0x172a88	recorder_data
+0x172ab7	%04d%02d%02ddate.recorder
+0x172ad1	filename%s_%02d%02d.recorder
+0x172d80	[%s] %s: pre:%s,names:%s,audio_info+:%p
+0x172e39	S:/system/image/sport_record/dashed_line.bin
+0x172e66	S:/system/image/sport_record/dashed_line_red.bin
+0x172e97	S:/system/image/sport_record/dashed_line_green.bin
+0x172eca	S:/system/image/sport_record/dashed_line_blue2.bin
+0x172efd	S:/system/image/sport_record/dashed_line_orange.bin
+0x173032	S:/system/image/sports/realtime/recording_icon.bin
+0x17377c	/system/misc/sport/audio/
+0x1737a3	[%s] %s: audio_next_level:%d.
+0x1737c2	[%s] %s: Audio_playing:%d,high_reminding:(%d,%d).
+0x1737f5	[%s] %s: Audio:%d,now:%d,next:%d, new type:%d,level:%d,data:%p, rtn.
+0x1738c6	[%s] %s: come form algo sport remind type: %u,manual:%d,audio_mute:%d.
+0x173a08	[%s] %s: reminder:%d,type:%d,vib:%d,level:%d,times:%d,dnd:%d,gps_en:%d,audio_enable:%d,bell_path:%s,bell_stream:%s,bell_focus:%s
+0x1741db	decide_is_wechat
+0x174321	get_recorder_name_from_file
+0x17450e	audio_control
+0x17451c	sport_bell_audio_play
+0x174572	num_audio_make_uri
+0x17472d	audio_names_list_parse_language
+0x174775	change_group_sport_item_record_position
+0x174877	audio_names_list_parse
+0x174987	sport_multi_audio_play
+0x175bf4	[%s] %s: device.audio.has_data:%d device.has_audio_info:%d device.audio.state:%d
+0x17601e	/data/app/recorder
+0x17a053	ERROR - This is a bug in the library
+0x17a71b	X509 - Certificate verification failed, e.g. CRL, CA or signature check failed
+0x17a76a	X509 - Signature algorithms do not match. (see \c ::mbedtls_x509_crt sig_oid)
+0x17a7b8	X509 - Signature algorithm (oid) is unsupported
+0x17a84a	X509 - The signature tag or value invalid
+0x17abfa	SSL - Record header looks valid but is not expected
+0x17b3b5	SSL - An invalid SSL record was received
+0x17b584	RSA - Key failed to pass the validity check of the library
+0x17b70a	PKCS7 - Error parsing the signature
+0x17b9a2	PK - The buffer contains a valid signature followed by more data
+0x17becd	ECP - The buffer contains a valid signature followed by more data
+0x17bf92	ECP - The signature is not valid
+0x17d41a	[366][audio_transport]: write req alloc failed
+0x17d44a	[386][audio_transport]: write error: %s
+0x17d983	[414][audio_transport]: read req alloc failed
+0x17d9b2	[427][audio_transport]: read start error :%s
+0x17d9e0	[455][audio_transport]: read stop error :%s
+0x17e288	flags%d.recorder
+0x17e299	flag%d.recorder
+0x17e478	[551][ag_stm]: Set media voice call volume failed
+0x17ef1f	bt_sal_hfp_ag_stop_voice_recognition
+0x17ef44	bt_sal_hfp_ag_start_voice_recognition
+0x17f66f	./tlsdk/src/oem_codec.c L%d [I] detach recorder thread return: %d
+0x180579	S:/system/image/voice/aivs/listener/
+0x180995	./tlsdk/src/jptt_audio.c L%d [I] tts play %d: %s, when playing=%d
+0x180a85	./tlsdk/src/jptt_audio.c L%d [D] tone last end, has tone: %d
+0x180b37	./tlsdk/src/jptt_audio.c L%d [D] xxxx   before save_text_for_2_speech 
+0x180b7f	./tlsdk/src/jptt_audio.c L%d [D] xxxx   before aud_txt_2_spch 
+0x180bbf	./tlsdk/src/jptt_audio.c L%d [D] yytts TTS_BLOCK %d-%s
+0x180bf7	./tlsdk/src/jptt_audio.c L%d [D] yytts not inited, save %d-%s
+0x180c36	./tlsdk/src/jptt_audio.c L%d [D] txt 2 speech stop curr
+0x180c6f	./tlsdk/src/jptt_audio.c L%d [I] play last %d, idx=%d
+0x180ca6	./tlsdk/src/jptt_audio.c L%d [D] hr check record of %d ret %d, %u %u
+0x181190	((int)((func_val) >> 32)) == (JS_TAG_MODULE)
+0x18120a	src/ajs_modules.cpp:321
+0x181979	resource_manager_process_filerecord
+0x181b63	poc_record_list_get
+0x181ba6	poc_record_list_add
+0x181e92	poc_record_media_play
+0x181fb5	clear_wechat_contact_msgs
+0x18209b	adapter_le_remove_whitelist
+0x182179	adapter_le_add_whitelist_with_type
+0x184360	[%s] %s: there is no record.
+0x1843dd	[%s] %s: get records index failed %d
+0x1847b8	No record found for font: %p(%d), it was not created by font manager
+0x1853f8	S:/system/image/sport_record/record_null.bin
+0x185425	empty_record.sport
+0x1868da	write_recorder_flag_file
+0x186a62	save_a_record
+0x186a96	put_a_record_duration
+0x186b9a	read_sport_record_index_head
+0x186bc9	exit_a_record
+0x186d3e	sport_record_list_data_get
+0x186f3b	audio_files_play
+0x18923d	nuttx_audio_i2s_master_open
+0x1892ed	audio_flinger
+0x18934c	nuttx_audio_i2s_slave_open
+0x189367	nuttx_audio_i2s_master_open
+0x189383	nuttx_audio_i2s_open
+0x189398	nuttx_audio_i2s_slave_open
+0x189c0a	nv_record_init: module register failed! result = %d.
+0x189d66	Nv record dev version %d
+0x18a577	start_audio_device
+0x18a58a	setup_audio_device
+0x18a59d	open_audio_device
+0x18a5d9	close_audio_device
+0x18a5ec	stop_audio_device
+0x18a5fe	stop_audio_device
+0x18a61f	start_audio_device
+0x18a642	setup_audio_device
+0x18a665	open_audio_device
+0x18a6b3	close_audio_device
+0x193396	BT_REG_OP:ble audio config
+0x1933b1	bt_drv_reg_op_ble_audio_config_init
+0x193c78	%s: Invalid capture stream chan cfg: mic_map=0x%X adc_map=0x%X num=%u
+0x193d76	[%s] capture sample_rate=%d
+0x193de1	%s: capture sample rate %u is for resample only
+0x193f1f	%s: Invalid capture sample rate: %d
+0x195e1e	VOICE_COMPRESS
+0x199874	[D] SERVICE: mi record write succ.
+0x199898	[D] SERVICE: mi record delete succ.
+0x199d18	BT TX VOICE
+0x199d24	[E] BT TX VOICE: %s conn[%d] not found
+0x199d4c	[E] BT TX VOICE: miwear session not ready!
+0x199d78	voice_send
+0x19cdd0	[D] MASS DL: ## record mass data total length is %d
+0x1a5660	RV_OK==(ret = profile_get_factor(js_root))
+0x1a56a0	RV_OK==(ret = profile_get_certficate(js_root))
+0x1a5ffc	[ALIPAY][%s] %s %s[%d]:"js_read_buffer Parse error!"
+0x1a6eac	[ALIPAY][%s] %s %s[%d]:"js_res_data Parse error!"
+0x1a7414	[ALIPAY][%s] %s %s[%d]:"js_res_data Parse error!"
+0x1a7490	[ALIPAY][%s] %s %s[%d]:"js_fragLen is invalid"
+0x1a7b10	(ret = field_data_handle("encryptedFactors", js_encryptedFactors->valuestring, strlen(js_encryptedFactors->valuestring)))
+0x1a7b8c	(ret = field_data_handle("serverTime", js_serverTime->valuestring, strlen(js_serverTime->valuestring)))
+0x1a7bf4	(ret = field_data_handle("tid", js_tid->valuestring, strlen(js_tid->valuestring)))
+0x1a7c48	(ret = field_data_handle("logonId", js_logonId->valuestring, strlen(js_logonId->valuestring)))
+0x1a7ca8	(ret = field_data_handle("nickName", js_nickName->valuestring, strlen(js_nickName->valuestring)))
+0x1a7d0c	(ret = field_data_handle("userId", js_userId->valuestring, strlen(js_userId->valuestring)))
+0x1a905c	[ALIPAY][%s] %s %s[%d]:"signature len : %d "
+0x1a957c	verify_device_key_signature
+0x1a99b0	/data1/wechat-rtos-service/adam-rpc/comm/adam_crypto_utils.cpp
+0x1a9ca0	mbedtls_ecdsa_write_signature err:%d
+0x1a9cc8	signature len:%ld
+0x1a9dfc	mbedtls_ecdsa_read_signature:-0x%04x
+0x1a9fe3	</data1/wechat-rtos-service/adam-rpc/comm/adam_packer_utils.cpp
+0x1aa1b8	/data1/wechat-rtos-service/adam-rpc/comm/common_utils.cpp
+0x1aa290	/data1/wechat-rtos-service/adam-rpc/comm/looper.cpp
+0x1aa400	/data1/wechat-rtos-service/adam-rpc/comm/lz4_util.cpp
+0x1aa480	/data1/wechat-rtos-service/adam-rpc/comm/netcore_bridge_config.cpp
+0x1aa598	/data1/wechat-rtos-service/adam-rpc/comm/netcore_bridge_looper.cpp
+0x1aa668	/data1/wechat-rtos-service/adam-rpc/adam-client/src/adam_client_session.cpp
+0x1ab054	/data1/wechat-rtos-service/adam-rpc/adam-client/src/adam_client_zidl.cpp
+0x1ab2f0	/data1/wechat-rtos-service/adam-rpc/adam-client/src/adam_ecdh_client.cpp
+0x1ab52c	signature_plain_json
+0x1ab544	signature_plain_json or hmac_signature not exit
+0x1ab574	hmac_signature
+0x1ab584	get hmac_signature failed!
+0x1ab72c	ecdsa_signature
+0x1ab73c	signature_plain_json or ecdsa_signature not exit
+0x1ab95c	/data1/wechat-rtos-service/watch/watch-service/src/adam_channel_adapter.cpp
+0x1abac8	/data1/wechat-rtos-service/watch/watch-service/src/watch_api_zidl.cpp
+0x1abbb8	is_wechat
+0x1abbc4	is_wechat_user
+0x1abe90	WatchWechat
+0x1abea4	wechat service is running!
+0x1abef8	/wechat_service
+0x1abf18	wechat_service dir not exit yet try to create:%s
+0x1ac07c	wechat
+0x1ac564	/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp
+0x1ac5dc	stopRecord
+0x1ac5e8	Not in kAudioRecording state taskid:%d, %d
+0x1ac614	~WatchAudioManager
+0x1ac628	Is recording and it is 60s timeout need auto stop
+0x1ac674	sendvoicemsg wechat sdk error:%d
+0x1ac698	WatchAudioManager
+0x1ac6ac	startRecord
+0x1ac6b8	not in record process now:%d
+0x1ac6d8	send voice
+0x1ac6e4	trans voice
+0x1ac6f0	cancel send voice
+0x1ac704	wrong notify silk data we are in kAudioRecordIdle state get:%d
+0x1ac744	silk begin state
+0x1ac76c	voice_id
+0x1ac778	SendVoiceMessage
+0x1ac78c	silk state:%d, data size:%d
+0x1ac7a8	not in stopping state recv silkend:%d
+0x1ac7dc	voicemsgsent
+0x1ac7ec	notifyRecordState
+0x1ac800	lost record focus event callback to js:%d
+0x1ac82c	recv lost recordfocus but we are not in recording process!
+0x1ac874	start play audio path:%s, type:%d, play_taskid:%d, map size:%d, taskid:%d
+0x1ac8c0	stop play audio play_taskid:%d, taskid:%d
+0x1ac91c	/data1/wechat-rtos-service/watch/watch-service/src/watch_file_manager.cpp
+0x1ace9c	/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp
+0x1ad1d0	/data1/wechat-rtos-service/watch/watch-service/src/watch_notify_center.cpp
+0x1ad47c	UnbindWechat
+0x1ad4ec	unbind wechat ret:%d
+0x1ad568	do not have wechat user key!!
+0x1ad7f0	start to get file_id:%s, task_id:%d
+0x1ad99c	NotifyUnbindWechat
+0x1adbac	/data1/wechat-rtos-service/watch/watch-service/wxpay_module/wx_pay_manager.cpp
+0x1adf54	/data1/wechat-rtos-service/watch/watch-service/jsbridge_comm/adam_js_native_bridge.cpp
+0x1adfb4	m_js_event_callback_ is null
+0x1adfec	js_regist_task_callback
+0x1ae004	js_regist_event_callback
+0x1ae020	js_unregist_event_callback
+0x1ae03c	js_unregist_task_callback
+0x1ae114	start record taskid:%d
+0x1ae12c	Receive recordNoop
+0x1ae140	stop record taskid:%d
+0x1ae158	startPlayAudio
+0x1ae168	stopPlayAudio
+0x1ae21c	decodeSilkFile
+0x1ae2d4	unbindWechat
+0x1ae410	isWechatUser
+0x1ae420	js_invoke_function

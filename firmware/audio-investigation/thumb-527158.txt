@@ -1,0 +1,249 @@
+0c5a7158 raw+527158: push     {r7, lr}
+0c5a715a raw+52715a: movw     r3, #0x21f
+0c5a715e raw+52715e: movs     r0, #1
+0c5a7160 raw+527160: ldr      r2, [pc, #8] ; literal raw+0x52716c = 0x3c1125e2 '__audio_finalizer'
+0c5a7162 raw+527162: ldr      r1, [pc, #0xc] ; literal raw+0x527170 = 0x3c1125f4 '[AIOTJS] [%s:%d] [audio] __audio_finalizer\n'
+0c5a7164 raw+527164: add      r7, sp, #0
+0c5a7166 raw+527166: bl       #0xc5cd10c
+0c5a716a raw+52716a: pop      {r7, pc}
+0c5a716c raw+52716c: movs     r5, #0xe2
+0c5a716e raw+52716e: subs     r4, #0x11
+0c5a7170 raw+527170: movs     r5, #0xf4
+0c5a7172 raw+527172: subs     r4, #0x11
+0c5a7174 raw+527174: push     {r7, lr}
+0c5a7176 raw+527176: sub      sp, #0x10
+0c5a7178 raw+527178: movs     r3, #0x8c
+0c5a717a raw+52717a: strd     r1, r2, [sp, #4]
+0c5a717e raw+52717e: add      r7, sp, #0x10
+0c5a7180 raw+527180: str      r0, [sp]
+0c5a7182 raw+527182: ldr      r2, [pc, #0xc] ; literal raw+0x527190 = 0x3c112620 'advertising_start_cb'
+0c5a7184 raw+527184: movs     r0, #1
+0c5a7186 raw+527186: ldr      r1, [pc, #0xc] ; literal raw+0x527194 = 0x3c112635 '[AIOTJS] [%s:%d] system.bluetooth.ble: adv: %p, adv_id: %d, status: %d\n'
+0c5a7188 raw+527188: bl       #0xc5cd10c
+0c5a718c raw+52718c: mov      sp, r7
+0c5a718e raw+52718e: pop      {r7, pc}
+0c5a7190 raw+527190: movs     r6, #0x20
+0c5a7192 raw+527192: subs     r4, #0x11
+0c5a7194 raw+527194: movs     r6, #0x35
+0c5a7196 raw+527196: subs     r4, #0x11
+0c5a7198 raw+527198: push     {r7, lr}
+0c5a719a raw+52719a: sub      sp, #8
+0c5a719c raw+52719c: movs     r3, #0x91
+0c5a719e raw+52719e: strd     r0, r1, [sp]
+0c5a71a2 raw+5271a2: add      r7, sp, #8
+0c5a71a4 raw+5271a4: movs     r0, #1
+0c5a71a6 raw+5271a6: ldr      r2, [pc, #0xc] ; literal raw+0x5271b4 = 0x3c11267d 'advertising_stop_cb'
+0c5a71a8 raw+5271a8: ldr      r1, [pc, #0xc] ; literal raw+0x5271b8 = 0x3c112691 '[AIOTJS] [%s:%d] system.bluetooth.ble: adv: %p, adv_id: %d\n'
+0c5a71aa raw+5271aa: bl       #0xc5cd10c
+0c5a71ae raw+5271ae: mov      sp, r7
+0c5a71b0 raw+5271b0: pop      {r7, pc}
+0c5a71b2 raw+5271b2: nop      
+0c5a71b4 raw+5271b4: movs     r6, #0x7d
+0c5a71b6 raw+5271b6: subs     r4, #0x11
+0c5a71b8 raw+5271b8: movs     r6, #0x91
+0c5a71ba raw+5271ba: subs     r4, #0x11
+0c5a71bc raw+5271bc: push     {r7, lr}
+0c5a71be raw+5271be: movs     r3, #0x33
+0c5a71c0 raw+5271c0: movs     r0, #1
+0c5a71c2 raw+5271c2: ldr      r2, [pc, #0xc] ; literal raw+0x5271d0 = 0x3c1126cd '__miwear_finalizer'
+0c5a71c4 raw+5271c4: ldr      r1, [pc, #0xc] ; literal raw+0x5271d4 = 0x3c1126e0 '[AIOTJS] [%s:%d] [interconnect] finalizer\n'
+0c5a71c6 raw+5271c6: add      r7, sp, #0
+0c5a71c8 raw+5271c8: bl       #0xc5cd10c
+0c5a71cc raw+5271cc: pop      {r7, pc}
+0c5a71ce raw+5271ce: nop      
+0c5a71d0 raw+5271d0: movs     r6, #0xcd
+0c5a71d2 raw+5271d2: subs     r4, #0x11
+0c5a71d4 raw+5271d4: movs     r6, #0xe0
+0c5a71d6 raw+5271d6: subs     r4, #0x11
+0c5a71d8 raw+5271d8: push     {r7, lr}
+0c5a71da raw+5271da: mov.w    r3, #0x1d6
+0c5a71de raw+5271de: movs     r0, #1
+0c5a71e0 raw+5271e0: ldr      r2, [pc, #0xc] ; literal raw+0x5271f0 = 0x3c11270b '___settings_init'
+0c5a71e2 raw+5271e2: ldr      r1, [pc, #0x10] ; literal raw+0x5271f4 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a71e4 raw+5271e4: add      r7, sp, #0
+0c5a71e6 raw+5271e6: bl       #0xc5cd10c
+0c5a71ea raw+5271ea: movs     r0, #0
+0c5a71ec raw+5271ec: movs     r1, #3
+0c5a71ee raw+5271ee: pop      {r7, pc}
+0c5a71f0 raw+5271f0: movs     r7, #0xb
+0c5a71f2 raw+5271f2: subs     r4, #0x11
+0c5a71f4 raw+5271f4: movs     r7, #0x1c
+0c5a71f6 raw+5271f6: subs     r4, #0x11
+0c5a71f8 raw+5271f8: push     {r7, lr}
+0c5a71fa raw+5271fa: mov.w    r3, #0x1dc
+0c5a71fe raw+5271fe: movs     r0, #1
+0c5a7200 raw+527200: ldr      r2, [pc, #0xc] ; literal raw+0x527210 = 0x3c112754 '___settings_uninit'
+0c5a7202 raw+527202: ldr      r1, [pc, #0x10] ; literal raw+0x527214 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a7204 raw+527204: add      r7, sp, #0
+0c5a7206 raw+527206: bl       #0xc5cd10c
+0c5a720a raw+52720a: movs     r0, #0
+0c5a720c raw+52720c: movs     r1, #3
+0c5a720e raw+52720e: pop      {r7, pc}
+0c5a7210 raw+527210: movs     r7, #0x54
+0c5a7212 raw+527212: subs     r4, #0x11
+0c5a7214 raw+527214: movs     r7, #0x1c
+0c5a7216 raw+527216: subs     r4, #0x11
+0c5a7218 raw+527218: push     {r7, lr}
+0c5a721a raw+52721a: mov.w    r3, #0x1e2
+0c5a721e raw+52721e: movs     r0, #1
+0c5a7220 raw+527220: ldr      r2, [pc, #0xc] ; literal raw+0x527230 = 0x3c112767 '___settings_get_prop'
+0c5a7222 raw+527222: ldr      r1, [pc, #0x10] ; literal raw+0x527234 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a7224 raw+527224: add      r7, sp, #0
+0c5a7226 raw+527226: bl       #0xc5cd10c
+0c5a722a raw+52722a: movs     r0, #0
+0c5a722c raw+52722c: movs     r1, #3
+0c5a722e raw+52722e: pop      {r7, pc}
+0c5a7230 raw+527230: movs     r7, #0x67
+0c5a7232 raw+527232: subs     r4, #0x11
+0c5a7234 raw+527234: movs     r7, #0x1c
+0c5a7236 raw+527236: subs     r4, #0x11
+0c5a7238 raw+527238: push     {r7, lr}
+0c5a723a raw+52723a: movw     r3, #0x1e9
+0c5a723e raw+52723e: movs     r0, #1
+0c5a7240 raw+527240: ldr      r2, [pc, #0xc] ; literal raw+0x527250 = 0x3c11277c '___settings_set_prop'
+0c5a7242 raw+527242: ldr      r1, [pc, #0x10] ; literal raw+0x527254 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a7244 raw+527244: add      r7, sp, #0
+0c5a7246 raw+527246: bl       #0xc5cd10c
+0c5a724a raw+52724a: movs     r0, #0
+0c5a724c raw+52724c: movs     r1, #3
+0c5a724e raw+52724e: pop      {r7, pc}
+0c5a7250 raw+527250: movs     r7, #0x7c
+0c5a7252 raw+527252: subs     r4, #0x11
+0c5a7254 raw+527254: movs     r7, #0x1c
+0c5a7256 raw+527256: subs     r4, #0x11
+0c5a7258 raw+527258: push     {r7, lr}
+0c5a725a raw+52725a: movw     r3, #0x1ef
+0c5a725e raw+52725e: movs     r0, #1
+0c5a7260 raw+527260: ldr      r2, [pc, #0xc] ; literal raw+0x527270 = 0x3c112791 '___settings_subscribe_prop'
+0c5a7262 raw+527262: ldr      r1, [pc, #0x10] ; literal raw+0x527274 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a7264 raw+527264: add      r7, sp, #0
+0c5a7266 raw+527266: bl       #0xc5cd10c
+0c5a726a raw+52726a: movs     r0, #0
+0c5a726c raw+52726c: movs     r1, #3
+0c5a726e raw+52726e: pop      {r7, pc}
+0c5a7270 raw+527270: movs     r7, #0x91
+0c5a7272 raw+527272: subs     r4, #0x11
+0c5a7274 raw+527274: movs     r7, #0x1c
+0c5a7276 raw+527276: subs     r4, #0x11
+0c5a7278 raw+527278: push     {r7, lr}
+0c5a727a raw+52727a: movw     r3, #0x1f5
+0c5a727e raw+52727e: movs     r0, #1
+0c5a7280 raw+527280: ldr      r2, [pc, #0xc] ; literal raw+0x527290 = 0x3c1127ac '___settings_unsubscribe_prop'
+0c5a7282 raw+527282: ldr      r1, [pc, #0x10] ; literal raw+0x527294 = 0x3c11271c '[AIOTJS] [%s:%d] CONFIG_APP_CAR_CONTROL is not defined\n'
+0c5a7284 raw+527284: add      r7, sp, #0
+0c5a7286 raw+527286: bl       #0xc5cd10c
+0c5a728a raw+52728a: movs     r0, #0
+0c5a728c raw+52728c: movs     r1, #3
+0c5a728e raw+52728e: pop      {r7, pc}
+0c5a7290 raw+527290: movs     r7, #0xac
+0c5a7292 raw+527292: subs     r4, #0x11
+0c5a7294 raw+527294: movs     r7, #0x1c
+0c5a7296 raw+527296: subs     r4, #0x11
+0c5a7298 raw+527298: push     {r4, r5, r6, r7, lr}
+0c5a729a raw+52729a: sub      sp, #0x1c
+0c5a729c raw+52729c: mov      r5, r0
+0c5a729e raw+52729e: add      r7, sp, #0x10
+0c5a72a0 raw+5272a0: ldr      r0, [r0]
+0c5a72a2 raw+5272a2: mov      r4, r2
+0c5a72a4 raw+5272a4: mov      r6, r3
+0c5a72a6 raw+5272a6: bl       #0xc621b66
+0c5a72aa raw+5272aa: cbz      r0, #0xc5a72f4
+0c5a72ac raw+5272ac: cmn.w    r6, #0xc
+0c5a72b0 raw+5272b0: it       hi
+0c5a72b2 raw+5272b2: ldrhi    r3, [r4]
+0c5a72b4 raw+5272b4: mov.w    r2, #1
+0c5a72b8 raw+5272b8: itt      hi
+0c5a72ba raw+5272ba: addhi    r3, #1
+0c5a72bc raw+5272bc: strhi    r3, [r4]
+0c5a72be raw+5272be: ldr      r1, [pc, #0x3c] ; literal raw+0x5272fc = 0x0c5a76bd
+0c5a72c0 raw+5272c0: mov      r3, r7
+0c5a72c2 raw+5272c2: ldr      r0, [r5]
+0c5a72c4 raw+5272c4: strd     r4, r6, [r7]
+0c5a72c8 raw+5272c8: bl       #0xc3162c0
+0c5a72cc raw+5272cc: cbz      r0, #0xc5a72f4
+0c5a72ce raw+5272ce: ldr      r3, [pc, #0x30] ; literal raw+0x527300 = 0x3c1127e3 '(jse_enqueue_job(th->ctx, __audio_event, 1, (jse_value_t*)&func)) == (0)'
+0c5a72d0 raw+5272d0: movs     r0, #3
+0c5a72d2 raw+5272d2: str      r3, [sp, #0xc]
+0c5a72d4 raw+5272d4: ldr      r3, [pc, #0x2c] ; literal raw+0x527304 = 0x3c02dbec ':'
+0c5a72d6 raw+5272d6: ldr      r2, [pc, #0x30] ; literal raw+0x527308 = 0x3c1127c9 '__audio_media_enqueue_job'
+0c5a72d8 raw+5272d8: str      r3, [sp, #8]
+0c5a72da raw+5272da: ldr      r3, [pc, #0x30] ; literal raw+0x52730c = 0x3c11282c 'void AIOTJS::__audio_media_enqueue_job(AIOTJS::Audio*, jse_value_t)'
+0c5a72dc raw+5272dc: ldr      r1, [pc, #0x30] ; literal raw+0x527310 = 0x3c0abdcb "[AIOTJS] [%s:%d] %s:%s%s Assertion `%s' failed.\n"
+0c5a72de raw+5272de: str      r3, [sp, #4]
+0c5a72e0 raw+5272e0: ldr      r3, [pc, #0x30] ; literal raw+0x527314 = 0x3c112870 'jse_audio.cpp:237'
+0c5a72e2 raw+5272e2: str      r3, [sp]
+0c5a72e4 raw+5272e4: movs     r3, #0xed
+0c5a72e6 raw+5272e6: bl       #0xc5cd10c
+0c5a72ea raw+5272ea: movs     r2, #0
+0c5a72ec raw+5272ec: movs     r1, #0xed
+0c5a72ee raw+5272ee: ldr      r0, [pc, #0x28] ; literal raw+0x527318 = 0x3c112882 'jse_audio.cpp'
+0c5a72f0 raw+5272f0: bl       #0xc7045c8
+0c5a72f4 raw+5272f4: adds     r7, #0xc
+0c5a72f6 raw+5272f6: mov      sp, r7
+0c5a72f8 raw+5272f8: pop      {r4, r5, r6, r7, pc}
+0c5a72fa raw+5272fa: nop      
+0c5a72fc raw+5272fc: strb     r5, [r7, #0x1a]
+0c5a72fe raw+5272fe: lsrs     r2, r3, #0x11
+0c5a7300 raw+527300: movs     r7, #0xe3
+0c5a7302 raw+527302: subs     r4, #0x11
+0c5a7304 raw+527304: blt      #0xc5a72e0
+0c5a7306 raw+527306: subs     r4, #2
+0c5a7308 raw+527308: movs     r7, #0xc9
+0c5a730a raw+52730a: subs     r4, #0x11
+0c5a730c raw+52730c: cmp      r0, #0x2c
+0c5a730e raw+52730e: subs     r4, #0x11
+0c5a7310 raw+527310: pop      {r0, r1, r3, r6, r7, pc}
+0c5a7312 raw+527312: subs     r4, #0xa
+0c5a7314 raw+527314: cmp      r0, #0x70
+0c5a7316 raw+527316: subs     r4, #0x11
+0c5a7318 raw+527318: cmp      r0, #0x82
+0c5a731a raw+52731a: subs     r4, #0x11
+0c5a731c raw+52731c: push     {r7, lr}
+0c5a731e raw+52731e: ldr      r0, [r0]
+0c5a7320 raw+527320: add      r7, sp, #0
+0c5a7322 raw+527322: cbz      r0, #0xc5a734e
+0c5a7324 raw+527324: cbz      r1, #0xc5a733e
+0c5a7326 raw+527326: sub.w    r3, r1, #0x67
+0c5a732a raw+52732a: cmp      r3, #6
+0c5a732c raw+52732c: bhi      #0xc5a734e
+0c5a732e raw+52732e: subs     r1, #0x68
+0c5a7330 raw+527330: cmp      r1, #5
+0c5a7332 raw+527332: bhi      #0xc5a7350
+0c5a7334 raw+527334: tbb      [pc, r1] ; literal raw+0x527338 = 0x1e1b1811
+0c5a7338 raw+527338: adds     r1, r2, r0
+0c5a733a raw+52733a: subs     r3, r3, #0
+0c5a733c raw+52733c: movs     r4, #0x21
+0c5a733e raw+52733e: ldrb     r3, [r0, #4]
+0c5a7340 raw+527340: cmp      r3, #2
+0c5a7342 raw+527342: beq      #0xc5a734e
+0c5a7344 raw+527344: cmp      r2, #0
+0c5a7346 raw+527346: ite      lt
+0c5a7348 raw+527348: movlt    r3, #2
+0c5a734a raw+52734a: movge    r3, #1
+0c5a734c raw+52734c: strb     r3, [r0, #4]
+0c5a734e raw+52734e: pop      {r7, pc}
+0c5a7350 raw+527350: add.w    r3, r0, #0x640
+0c5a7354 raw+527354: ldrd     r2, r3, [r3]
+0c5a7358 raw+527358: b        #0xc5a7362
+0c5a735a raw+52735a: add.w    r3, r0, #0x650
+0c5a735e raw+52735e: ldrd     r2, r3, [r3, #-0x8]
+0c5a7362 raw+527362: bl       #0xc5a7298
+0c5a7366 raw+527366: b        #0xc5a734e
+0c5a7368 raw+527368: add.w    r3, r0, #0x650
+0c5a736c raw+52736c: b        #0xc5a7354
+0c5a736e raw+52736e: add.w    r3, r0, #0x630
+0c5a7372 raw+527372: b        #0xc5a7354
+0c5a7374 raw+527374: add.w    r3, r0, #0x640
+0c5a7378 raw+527378: b        #0xc5a735e
+0c5a737a raw+52737a: add.w    r3, r0, #0x660
+0c5a737e raw+52737e: b        #0xc5a735e
+0c5a7380 raw+527380: add.w    r3, r0, #0x660
+0c5a7384 raw+527384: b        #0xc5a7354
+0c5a7386 raw+527386: movs     r0, r0
+0c5a7388 raw+527388: push.w   {r4, r5, r6, r7, r8, sb, sl, lr}
+0c5a738c raw+52738c: mov      r6, r0
+0c5a738e raw+52738e: sub      sp, #0x30
+0c5a7390 raw+527390: add      r7, sp, #0x10
+0c5a7392 raw+527392: mov      r4, r2
+0c5a7394 raw+527394: movs     r1, #0
+0c5a7396 raw+527396: movs     r2, #0x20

@@ -1,0 +1,325 @@
+<template>
+  <div class="page">
+    <div class="heading">
+      <text class="title">{{ setup ? '语音设置' : 'Orbit AI' }}</text>
+      <text class="nav" onclick="toggleSetup">{{ setup ? '返回' : '设置' }}</text>
+    </div>
+    <div class="connection" onclick="retry">
+      <div class="connection-dot" style="background-color: {{ networkColor }};"></div>
+      <text class="network" style="color: {{ networkColor }};">{{ networkLabel }}</text>
+      <text class="model">DeepSeek</text>
+    </div>
+    <div class="home" if="{{ !setup }}">
+      <div class="status-area">
+        <text class="status-title">{{ statusTitle }}</text>
+        <text class="status-detail" if="{{ detailVisible }}">{{ phase }}</text>
+      </div>
+      <div class="empty" if="{{ !lines.length }}">
+        <div class="voice-mark">
+          <div class="wave short" style="background-color: {{ heroColor }};"></div>
+          <div class="wave medium" style="background-color: {{ heroColor }};"></div>
+          <div class="wave tall" style="background-color: {{ heroColor }};"></div>
+          <div class="wave medium" style="background-color: {{ heroColor }};"></div>
+          <div class="wave short" style="background-color: {{ heroColor }};"></div>
+        </div>
+        <text class="empty-title">{{ heroTitle }}</text>
+        <text class="empty-hint">{{ heroHint }}</text>
+      </div>
+      <list class="history" id="history" if="{{ lines.length }}">
+        <list-item for="{{ lines }}" type="line" class="line" style="height: {{ $item.height }}px;">
+          <div class="message-card" style="height: {{ $item.cardHeight }}px; margin-top: {{ $item.gap }}px; background-color: {{ $item.background }}; border-radius: {{ $item.radius }};">
+            <div class="card-edge" if="{{ $item.rounded }}" style="top: {{ $item.edgeTop }}px; background-color: {{ $item.background }};"></div>
+            <text class="message" style="color: {{ $item.color }}; font-size: {{ $item.fontSize }}px;">{{ $item.text }}</text>
+          </div>
+        </list-item>
+      </list>
+      <div class="actions">
+        <div class="primary" style="background-color: {{ actionColor }};" onclick="primaryAction">
+          <div class="mini-mark">
+            <div class="mini-wave mini-short" style="background-color: {{ actionInk }};"></div>
+            <div class="mini-wave mini-tall" style="background-color: {{ actionInk }};"></div>
+            <div class="mini-wave mini-short" style="background-color: {{ actionInk }};"></div>
+          </div>
+          <text class="primary-label" style="color: {{ actionInk }};">{{ actionTitle }}</text>
+        </div>
+        <text class="secondary cancel" if="{{ showCancel }}" onclick="cancel">取消</text>
+      </div>
+    </div>
+    <list class="settings" if="{{ setup }}">
+      <list-item type="guide" class="guide-item">
+        <div class="guide-card">
+          <text class="section-label">开始前</text>
+          <text class="guide-text">手机微信登录，手表保持连接</text>
+          <text class="guide-text">手表微信返回表盘后打开此应用</text>
+        </div>
+      </list-item>
+      <list-item type="conversation" class="conversation-item">
+        <div class="field-card">
+          <div class="field-heading">
+            <text class="section-label">微信会话</text>
+            <text class="selection">{{ selection }}</text>
+          </div>
+          <input class="conversation" type="text" placeholder="输入实际会话标识" value="{{ conversation }}" onchange="changeConversation" />
+          <div class="settings-actions">
+            <text class="setting-button" onclick="prepare">读取会话</text>
+            <text class="setting-button alternate" onclick="nextConversation">切换会话</text>
+          </div>
+        </div>
+      </list-item>
+      <list-item type="label" class="detail-heading">
+        <text class="section-label">语音识别状态</text>
+      </list-item>
+      <list-item for="{{ recorderLines }}" type="detail" class="detail-row">
+        <text class="detail">{{ $item }}</text>
+      </list-item>
+      <list-item type="label" class="detail-heading">
+        <text class="section-label">设备连接 · 点击顶部重试</text>
+      </list-item>
+      <list-item for="{{ networkLines }}" type="detail" class="detail-row">
+        <text class="detail">{{ $item }}</text>
+      </list-item>
+      <list-item type="version" class="version-item">
+        <text class="version">v1.0.3 · 微信识别 → DeepSeek</text>
+      </list-item>
+    </list>
+  </div>
+</template>
+<script>
+import fetch from '@system.fetch'
+import connection from '../../common/connection'
+import { createRecorder } from '../../common/recorder'
+import { createChannel } from '../../common/channel'
+import { createVoiceChat } from '../../common/voice-chat'
+
+// Vela list text does not wrap reliably. Budget by glyph width, keeping
+// Unicode code points intact and allowing more Latin letters than CJK glyphs.
+function wrapText(text, columns) {
+  const rows = []
+  let row = '', width = 0
+  Array.from(String(text || '').replace(/\s+/g, ' ').trim()).forEach(char => {
+    const size = char.codePointAt(0) >= 0x1100 || /[MWmw@%&#]/.test(char) ? 2 :
+      /[A-Z]/.test(char) ? 1.6 : 1.2
+    if (width + size > columns && row) {
+      rows.push(row)
+      row = ''
+      width = 0
+    }
+    row += char
+    width += size
+  })
+  if (row) rows.push(row)
+  return rows
+}
+
+export default {
+  private: {
+    setup: false, network: '正在连接电脑…', phase: '正在准备语音识别…',
+    recorderStatus: '', conversation: '', selection: '0/0', transcript: '',
+    recorderState: 'unloaded', waiting: false, hasAnswer: false,
+    networkLabel: '正在连接设备', networkColor: '#d9b97b',
+    statusTitle: '正在准备', detailVisible: true,
+    heroTitle: '抬腕，问一句', heroHint: '问答 · 搜索 · 打印', heroColor: '#9ef2d1',
+    actionTitle: '设置语音', actionColor: '#9ef2d1', actionInk: '#102c23',
+    showCancel: false, canResend: false,
+    recorderLines: ['正在准备语音识别'], networkLines: ['正在连接设备…'],
+    lines: []
+  },
+  onInit() {
+    this.alive = true
+    this.visible = false
+    this.chat = createVoiceChat({
+      createRecorder: (load, hooks, clock) => createRecorder(load, Object.assign({}, hooks, {
+        state: (state, status) => {
+          if (!this.alive) return
+          this.recorderState = state
+          hooks.state(state, status)
+        }
+      }), clock),
+      createChannel, fetchApi: fetch, connection,
+      loadLibrary: () => {
+        const app = require('@system.app')
+        if (!app || typeof app.loadLibrary !== 'function') throw new Error('system.app.loadLibrary 不可用')
+        return app.loadLibrary('WECHAT_APP')
+      },
+      hooks: {
+        change: view => {
+          if (!this.alive) return
+          this.network = view.network
+          this.phase = view.phase
+          this.recorderStatus = view.recorderStatus
+          this.conversation = view.conversation
+          this.selection = view.selection
+          this.transcript = view.transcript
+          this.recorderLines = wrapText(view.recorderStatus, 30)
+          this.networkLines = wrapText(view.network.replace(/电脑/g, '设备'), 30)
+          this.updatePresentation()
+        },
+        message: (prefix, text) => this.addMessage(prefix, text),
+        clear: () => { this.lines = []; this.hasAnswer = false; this.updatePresentation() }
+      }
+    })
+  },
+  onShow() { this.visible = true; this.chat.show(); this.scrollHistory() },
+  onHide() {
+    this.visible = false
+    clearTimeout(this.scrollTimer)
+    this.chat.hide()
+  },
+  onDestroy() {
+    this.alive = false
+    clearTimeout(this.scrollTimer)
+    this.chat.dispose()
+  },
+  updatePresentation() {
+    const state = this.recorderState
+    const recording = state === 'attempting'
+    const processing = state === 'processing'
+    const stopping = state === 'stopping'
+    const uncertain = state === 'uncertain'
+    const preparing = state === 'querying'
+    const attention = /失败|错误|异常|超时|未确认|无回调|无有效|超过|较久|重启|拒绝|没有可用|未识别|未返回|未录音|未验证|请先/.test(this.phase)
+    this.waiting = /正在上传|等待 AI|正在接收回答|正在上传或回答|等待回传/.test(this.phase)
+    const busy = recording || processing || stopping || uncertain || preparing || this.waiting
+    const ready = state === 'ready' && !!this.conversation
+    this.showCancel = recording || processing || stopping
+    this.canResend = !!this.transcript && !busy
+    this.detailVisible = !this.lines.length || attention
+    this.networkLabel = this.network === '已连接电脑' ? '设备已连接' :
+      this.network === '发送中…' ? '正在发送问题' :
+      this.network.indexOf('正在连接') >= 0 ? '正在连接设备' : '连接异常 · 点此重试'
+    this.networkColor = this.network === '已连接电脑' ? '#9ef2d1' : '#d9b97b'
+
+    this.actionTitle = recording ? '说完了' : processing ? '正在识别…' :
+      stopping ? '正在取消…' : uncertain ? '确认取消' :
+      this.waiting ? '等待回答…' : preparing ? '准备中…' :
+      ready ? (this.lines.length ? '继续提问' : '开始说话') : '设置语音'
+    this.actionColor = recording || uncertain ? '#f5aa96' : busy ? '#1b2a33' : '#9ef2d1'
+    this.actionInk = recording || uncertain ? '#351b15' : busy ? '#9aaeb9' : '#102c23'
+    this.statusTitle = recording ? '请说出你的问题' : processing ? '正在识别你的话' :
+      stopping ? '正在结束录音' : uncertain ? '请确认录音已取消' :
+      this.waiting ? '正在等待 DeepSeek' : preparing ? '正在准备语音' :
+      attention ? '需要处理一下' : !ready ? '先连接语音服务' :
+      this.hasAnswer ? '回答已送达' : this.lines.length ? '已识别你的问题' : '有什么想问的？'
+    this.heroTitle = recording ? '说话即可，无需长按' : processing ? '正在整理你的话' :
+      stopping || uncertain ? '确认后就能继续' : preparing ? '稍等，正在准备' :
+      attention || !ready ? '在设置中检查语音' : '抬腕，问一句'
+    this.heroHint = recording ? '8 秒后自动结束' : processing ? '识别完成后自动提问' :
+      stopping || uncertain ? '请保持页面打开' : preparing ? '读取可用微信会话' :
+      attention || !ready ? '手机微信登录 · 手表连接' : '问答 · 搜索 · 打印'
+    this.heroColor = recording || uncertain ? '#f5aa96' : '#9ef2d1'
+  },
+  toggleSetup() { this.setup = !this.setup; if (!this.setup) this.scrollHistory() },
+  retry() { this.chat.retry() },
+  prepare() { this.chat.prepare() },
+  nextConversation() { this.chat.nextConversation() },
+  changeConversation(event) { this.chat.changeConversation(event.value) },
+  primaryAction() {
+    if (this.recorderState === 'attempting') { this.chat.finish(); return }
+    if (this.recorderState === 'uncertain') { this.chat.cancel(); return }
+    if (this.waiting || ['processing', 'stopping', 'querying'].indexOf(this.recorderState) >= 0) return
+    if (this.recorderState !== 'ready' || !this.conversation) { this.setup = true; return }
+    this.chat.start()
+  },
+  cancel() { this.chat.cancel() },
+  resend() { if (this.canResend) this.chat.resend() },
+  addMessage(prefix, text) {
+    if (!this.alive) return
+    const mine = prefix === '我: '
+    const ai = prefix === 'AI: '
+    if (ai) this.hasAnswer = true
+    const background = mine ? '#19352e' : '#15232d'
+    const rows = [{
+      text: mine ? '你说' : ai ? 'DeepSeek' : '电脑消息',
+      heading: true, height: 30, cardHeight: 24, gap: 6,
+      background, radius: '9px', rounded: true, edgeTop: 10,
+      color: mine ? '#9ef2d1' : '#91bedd', fontSize: 10
+    }]
+    const content = wrapText(text, 24)
+    content.forEach((row, index) => {
+      const last = index === content.length - 1
+      rows.push({
+        text: row, heading: false, height: last ? 28 : 22,
+        cardHeight: last ? 28 : 22, gap: 0, background,
+        radius: last ? '9px' : '0px', rounded: last, edgeTop: 0,
+        color: '#edf4f6', fontSize: 14
+      })
+    })
+    let history = this.lines.concat(rows)
+    // Trim whole messages so a remaining answer keeps its speaker label.
+    while (history.length > 200) {
+      const next = history.findIndex((row, index) => index > 0 && row.heading)
+      if (next < 0) { history = history.slice(0, 200); break }
+      history = history.slice(next)
+    }
+    this.lines = history
+    this.updatePresentation()
+    this.scrollHistory()
+  },
+  scrollHistory() {
+    clearTimeout(this.scrollTimer)
+    if (!this.lines.length) return
+    this.scrollTimer = setTimeout(() => {
+      if (!this.alive || !this.visible || this.setup) return
+      const list = this.$element('history')
+      if (list) list.scrollTo({ index: this.lines.length - 1 })
+    }, 100)
+  }
+}
+</script>
+<style>
+.page { width: 100%; height: 100%; padding: 12px 12px 10px; flex-direction: column; background-color: #080f14; }
+.heading { width: 100%; height: 28px; flex-direction: row; align-items: center; justify-content: space-between; }
+.title { color: #f2f6f8; font-size: 19px; font-weight: bold; }
+.nav { width: 42px; height: 28px; color: #c6d6df; font-size: 11px; text-align: center; background-color: #19262f; border-radius: 14px; }
+.connection { width: 100%; height: 20px; margin-top: 2px; flex-direction: row; align-items: center; }
+.connection-dot { width: 5px; height: 5px; margin-right: 5px; border-radius: 3px; }
+.network { flex: 1; font-size: 10px; lines: 1; }
+.model { color: #748d9d; font-size: 9px; }
+.home { width: 100%; flex: 1; margin-top: 5px; flex-direction: column; }
+.status-area { width: 100%; flex-direction: column; }
+.status-title { width: 100%; height: 20px; color: #edf4f6; font-size: 13px; font-weight: bold; lines: 1; }
+.status-detail { width: 100%; height: 28px; color: #9bafbc; font-size: 10px; lines: 2; }
+.empty { width: 100%; flex: 1; flex-direction: column; align-items: center; justify-content: center; }
+.voice-mark { width: 60px; height: 30px; flex-direction: row; align-items: center; justify-content: center; }
+.wave { width: 4px; margin: 0px 3px; border-radius: 3px; }
+.short { height: 8px; }
+.medium { height: 18px; }
+.tall { height: 26px; }
+.empty-title { width: 100%; height: 19px; color: #edf4f6; font-size: 12px; text-align: center; }
+.empty-hint { width: 100%; height: 15px; color: #8098a8; font-size: 9px; text-align: center; }
+.history { width: 100%; flex: 1; }
+.line { width: 100%; }
+/* Keep the background layer unpadded so Vela's 100% corner fill covers both edges.
+   Text padding belongs on the text layer, not the card's containing block. */
+.message-card { width: 100%; position: relative; flex-direction: column; justify-content: center; }
+.card-edge { width: 100%; height: 14px; position: absolute; left: 0px; }
+.message { width: 100%; padding: 0px 10px; lines: 1; }
+.actions { width: 100%; height: 38px; margin-top: 6px; flex-direction: row; align-items: center; }
+.primary { flex: 1; height: 38px; border-radius: 19px; flex-direction: row; align-items: center; justify-content: center; }
+.mini-mark { width: 20px; height: 18px; margin-right: 6px; flex-direction: row; align-items: center; justify-content: center; }
+.mini-wave { width: 2px; margin: 0px 2px; border-radius: 2px; }
+.mini-short { height: 7px; }
+.mini-tall { height: 14px; }
+.primary-label { font-size: 14px; font-weight: bold; }
+.secondary { width: 48px; height: 38px; margin-left: 6px; border-radius: 19px; color: #b2c8d7; font-size: 11px; text-align: center; background-color: #19262f; }
+.cancel { color: #efac9c; }
+.settings { width: 100%; flex: 1; margin-top: 7px; }
+.guide-item { width: 100%; height: 64px; }
+.guide-card { width: 100%; height: 58px; padding: 5px 8px; border-radius: 9px; background-color: #15232d; flex-direction: column; }
+.section-label { height: 18px; color: #8ea9b9; font-size: 10px; }
+.guide-text { height: 15px; color: #d4e1e9; font-size: 10px; lines: 1; }
+.conversation-item { width: 100%; height: 104px; }
+.field-card { width: 100%; height: 98px; padding: 6px 8px; border-radius: 9px; background-color: #15232d; flex-direction: column; }
+.field-heading { width: 100%; height: 18px; flex-direction: row; align-items: center; justify-content: space-between; }
+.selection { color: #9ef2d1; font-size: 10px; }
+.conversation { width: 100%; height: 30px; margin-top: 3px; padding: 0px 7px; border-radius: 6px; font-size: 11px; color: #edf4f6; background-color: #223641; }
+.settings-actions { width: 100%; height: 32px; margin-top: 3px; flex-direction: row; align-items: center; justify-content: space-between; }
+.setting-button { width: 82px; height: 28px; border-radius: 7px; color: #102c23; font-size: 11px; font-weight: bold; text-align: center; background-color: #9ef2d1; }
+.alternate { color: #c6d6df; background-color: #253946; }
+.detail-heading { width: 100%; height: 24px; padding: 4px 2px 0px; }
+.detail-row { width: 100%; height: 20px; padding: 0px 2px; }
+.detail { color: #c6d6df; font-size: 11px; lines: 1; }
+.version-item { width: 100%; height: 26px; }
+.version { color: #7891a1; font-size: 9px; }
+</style>
+

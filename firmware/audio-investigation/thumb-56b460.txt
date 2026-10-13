@@ -1,0 +1,17 @@
+0c5eb460 raw+56b460: ldrsh.w  r8, [sb, #0x9c3]
+0c5eb464 raw+56b464: cmp      r3, #3
+0c5eb466 raw+56b466: bne      #0xc5eb518
+0c5eb468 raw+56b468: ldr      r1, [pc, #0x15c] ; literal raw+0x56b5c8 = 0x3c16c6cb 'config'
+0c5eb46a raw+56b46a: add.w    r0, r7, #0x90
+0c5eb46e raw+56b46e: bl       #0xc5c87d4
+0c5eb472 raw+56b472: add.w    sl, r7, #0xc8
+0c5eb476 raw+56b476: mov      r1, r0
+0c5eb478 raw+56b478: mov      r0, sl
+0c5eb47a raw+56b47a: bl       #0xc5e5258
+0c5eb47e raw+56b47e: ldr      r1, [pc, #0x14c] ; literal raw+0x56b5cc = 0x3c0130c6 'background'
+0c5eb480 raw+56b480: ldr.w    r0, [sl]
+0c5eb484 raw+56b484: bl       #0xc5c8870
+0c5eb488 raw+56b488: mov      r8, r0
+0c5eb48a raw+56b48a: cbnz     r0, #0xc5eb4f6
+0c5eb48c raw+56b48c: movs     r3, #0
+0c5eb48e raw+56b48e: movs     r2, #0

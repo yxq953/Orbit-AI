@@ -1,0 +1,86 @@
+0c52d2e4 raw+4ad2e4: push     {r4, r5, r7, lr}
+0c52d2e6 raw+4ad2e6: mov      r3, r2
+0c52d2e8 raw+4ad2e8: ldr      r2, [pc, #0x20] ; literal raw+0x4ad30c = 0x3c278b4c
+0c52d2ea raw+4ad2ea: add      r7, sp, #0
+0c52d2ec raw+4ad2ec: ldr      r4, [r2]
+0c52d2ee raw+4ad2ee: cbnz     r4, #0xc52d2fe
+0c52d2f0 raw+4ad2f0: movs     r0, #3
+0c52d2f2 raw+4ad2f2: ldr      r3, [pc, #0x1c] ; literal raw+0x4ad310 = 0x3c0e15e9 'wechat_notify_silk_data'
+0c52d2f4 raw+4ad2f4: ldr      r2, [pc, #0x1c] ; literal raw+0x4ad314 = 0x3c0e2ab0 'wechat'
+0c52d2f6 raw+4ad2f6: ldr      r1, [pc, #0x20] ; literal raw+0x4ad318 = 0x3c0e15ce '[%s] %s: service is null!\n'
+0c52d2f8 raw+4ad2f8: bl       #0xc27e19c
+0c52d2fc raw+4ad2fc: pop      {r4, r5, r7, pc}
+0c52d2fe raw+4ad2fe: ldr      r2, [r4]
+0c52d300 raw+4ad300: ldr      r5, [r2, #0x20]
+0c52d302 raw+4ad302: mov      r2, r1
+0c52d304 raw+4ad304: mov      r1, r0
+0c52d306 raw+4ad306: mov      r0, r4
+0c52d308 raw+4ad308: blx      r5
+0c52d30a raw+4ad30a: b        #0xc52d2fc
+0c52d30c raw+4ad30c: ldrh     r4, [r1, #0x1a]
+0c52d30e raw+4ad30e: subs     r4, #0x27
+0c52d310 raw+4ad310: asrs     r1, r5, #0x17
+0c52d312 raw+4ad312: subs     r4, #0xe
+0c52d314 raw+4ad314: cmp      r2, #0xb0
+0c52d316 raw+4ad316: subs     r4, #0xe
+0c52d318 raw+4ad318: asrs     r6, r1, #0x17
+0c52d31a raw+4ad31a: subs     r4, #0xe
+0c52d31c raw+4ad31c: push     {r7, lr}
+0c52d31e raw+4ad31e: movs     r0, #4
+0c52d320 raw+4ad320: ldr      r3, [pc, #0x14] ; literal raw+0x4ad338 = 0x3c0e1601 'sync_system_time_cb'
+0c52d322 raw+4ad322: ldr      r2, [pc, #0x18] ; literal raw+0x4ad33c = 0x3c0e2ab0 'wechat'
+0c52d324 raw+4ad324: ldr      r1, [pc, #0x18] ; literal raw+0x4ad340 = 0x3c04b2f7 '[%s] %s: \n'
+0c52d326 raw+4ad326: add      r7, sp, #0
+0c52d328 raw+4ad328: bl       #0xc27e19c
+0c52d32c raw+4ad32c: ldr      r3, [pc, #0x14] ; literal raw+0x4ad344 = 0x3c278b4c
+0c52d32e raw+4ad32e: ldr      r0, [r3]
+0c52d330 raw+4ad330: ldr      r3, [r0]
+0c52d332 raw+4ad332: ldr      r3, [r3, #0x48]
+0c52d334 raw+4ad334: blx      r3
+0c52d336 raw+4ad336: pop      {r7, pc}
+0c52d338 raw+4ad338: asrs     r1, r0, #0x18
+0c52d33a raw+4ad33a: subs     r4, #0xe
+0c52d33c raw+4ad33c: cmp      r2, #0xb0
+0c52d33e raw+4ad33e: subs     r4, #0xe
+0c52d340 raw+4ad340: uxtb     r7, r6
+0c52d342 raw+4ad342: subs     r4, #4
+0c52d344 raw+4ad344: ldrh     r4, [r1, #0x1a]
+0c52d346 raw+4ad346: subs     r4, #0x27
+0c52d348 raw+4ad348: push     {r7, lr}
+0c52d34a raw+4ad34a: sub      sp, #0x30
+0c52d34c raw+4ad34c: ldr      r3, [pc, #0x24] ; literal raw+0x4ad374 = 0x3c0e56fb 'finish_wechat'
+0c52d34e raw+4ad34e: add      r7, sp, #0
+0c52d350 raw+4ad350: movs     r0, #4
+0c52d352 raw+4ad352: ldr      r2, [pc, #0x24] ; literal raw+0x4ad378 = 0x3c0e2ab0 'wechat'
+0c52d354 raw+4ad354: ldr      r1, [pc, #0x24] ; literal raw+0x4ad37c = 0x3c0e1615 '[%s] %s: close wechat app.\n'
+0c52d356 raw+4ad356: bl       #0xc27e19c
+0c52d35a raw+4ad35a: movs     r2, #0x2c
+0c52d35c raw+4ad35c: movs     r1, #0
+0c52d35e raw+4ad35e: adds     r0, r7, #4
+0c52d360 raw+4ad360: bl       #0xc70421c
+0c52d364 raw+4ad364: ldr      r3, [pc, #0x18] ; literal raw+0x4ad380 = 0x3c091424 'com.tencent.wechatrtos'
+0c52d366 raw+4ad366: adds     r0, r7, #4
+0c52d368 raw+4ad368: str      r3, [r7, #0x14]
+0c52d36a raw+4ad36a: bl       #0xc62eaf8
+0c52d36e raw+4ad36e: adds     r7, #0x30
+0c52d370 raw+4ad370: mov      sp, r7
+0c52d372 raw+4ad372: pop      {r7, pc}
+0c52d374 raw+4ad374: ldrsb    r3, [r7, r3]
+0c52d376 raw+4ad376: subs     r4, #0xe
+0c52d378 raw+4ad378: cmp      r2, #0xb0
+0c52d37a raw+4ad37a: subs     r4, #0xe
+0c52d37c raw+4ad37c: asrs     r5, r2, #0x18
+0c52d37e raw+4ad37e: subs     r4, #0xe
+0c52d380 raw+4ad380: asrs     r4, r4, #0x10
+0c52d382 raw+4ad382: subs     r4, #9
+0c52d384 raw+4ad384: push     {r7, lr}
+0c52d386 raw+4ad386: add      r7, sp, #0
+0c52d388 raw+4ad388: bl       #0xc52d348
+0c52d38c raw+4ad38c: pop      {r7, pc}
+0c52d38e raw+4ad38e: movs     r0, r0
+0c52d390 raw+4ad390: push     {r4, r7, lr}
+0c52d392 raw+4ad392: sub      sp, #0xc
+0c52d394 raw+4ad394: ldr      r2, [pc, #0x2c] ; literal raw+0x4ad3c4 = 0x3c0acc65 'NULL'
+0c52d396 raw+4ad396: ldr      r3, [r0, #4]
+0c52d398 raw+4ad398: mov      r4, r0
+0c52d39a raw+4ad39a: cmp      r3, #0

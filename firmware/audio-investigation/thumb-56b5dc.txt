@@ -1,0 +1,124 @@
+0c5eb5dc raw+56b5dc: mov      r0, sl
+0c5eb5de raw+56b5de: bl       #0xc5c57c0
+0c5eb5e2 raw+56b5e2: movs     r2, #4
+0c5eb5e4 raw+56b5e4: vmov     s16, r0
+0c5eb5e8 raw+56b5e8: add.w    r3, r7, #0xc8
+0c5eb5ec raw+56b5ec: ldr      r1, [r3], #4
+0c5eb5f0 raw+56b5f0: vmov     r0, s16
+0c5eb5f4 raw+56b5f4: str      r2, [r7, #0xc]
+0c5eb5f6 raw+56b5f6: str      r3, [r7, #0x10]
+0c5eb5f8 raw+56b5f8: bl       #0xc704304
+0c5eb5fc raw+56b5fc: cmp      r0, #0
+0c5eb5fe raw+56b5fe: beq.w    #0xc5eb48c
+0c5eb602 raw+56b602: ldr      r2, [r7, #0xc]
+0c5eb604 raw+56b604: ldr      r3, [r7, #0x10]
+0c5eb606 raw+56b606: subs     r2, #1
+0c5eb608 raw+56b608: bne      #0xc5eb5ec
+0c5eb60a raw+56b60a: b        #0xc5eb57c
+0c5eb60c raw+56b60c: mov      r0, r5
+0c5eb60e raw+56b60e: bl       #0xc7044c0
+0c5eb612 raw+56b612: ldr.w    sl, [r5, #0x104]
+0c5eb616 raw+56b616: cmp      r0, #0
+0c5eb618 raw+56b618: beq.w    #0xc5ec8bc
+0c5eb61c raw+56b61c: cmp.w    sl, #2
+0c5eb620 raw+56b620: bhi.w    #0xc5ec8c4
+0c5eb624 raw+56b624: ldr.w    sl, [r4, #0x54]
+0c5eb628 raw+56b628: ldr      r2, [r4, #0x58]
+0c5eb62a raw+56b62a: mov      r3, sl
+0c5eb62c raw+56b62c: cmp      sl, r2
+0c5eb62e raw+56b62e: bne      #0xc5eb634
+0c5eb630 raw+56b630: movs     r3, #0
+0c5eb632 raw+56b632: b        #0xc5eb64a
+0c5eb634 raw+56b634: ldr      r0, [r3]
+0c5eb636 raw+56b636: mov      r1, r5
+0c5eb638 raw+56b638: str      r3, [r7, #0x14]
+0c5eb63a raw+56b63a: bl       #0xc704304
+0c5eb63e raw+56b63e: add.w    sl, sl, #4
+0c5eb642 raw+56b642: ldr      r3, [r7, #0x14]
+0c5eb644 raw+56b644: cmp      r0, #0
+0c5eb646 raw+56b646: bne      #0xc5eb628
+0c5eb648 raw+56b648: ldr      r3, [r3]
+0c5eb64a raw+56b64a: subs     r3, #0
+0c5eb64c raw+56b64c: it       ne
+0c5eb64e raw+56b64e: movne    r3, #1
+0c5eb650 raw+56b650: movs     r0, #1
+0c5eb652 raw+56b652: strd     r5, r3, [sp]
+0c5eb656 raw+56b656: ldr      r2, [pc, #0x2c0] ; literal raw+0x56b918 = 0x3c12912a 'executeInstall'
+0c5eb658 raw+56b658: movw     r3, #0x321
+0c5eb65c raw+56b65c: ldr      r1, [pc, #0x2bc] ; literal raw+0x56b91c = 0x3c1294a3 '[AIOTJS] [%s:%d] package: %s isUpdate: %d\n'
+0c5eb65e raw+56b65e: bl       #0xc5cd10c
+0c5eb662 raw+56b662: add.w    r3, r4, #0x28
+0c5eb666 raw+56b666: vmov     s16, r3
+0c5eb66a raw+56b66a: strd     r5, r8, [r7, #0x2f0]
+0c5eb66e raw+56b66e: add.w    r8, r8, #4
+0c5eb672 raw+56b672: ldrex    r3, [r8]
+0c5eb676 raw+56b676: adds     r3, #1
+0c5eb678 raw+56b678: strex    r2, r3, [r8]
+0c5eb67c raw+56b67c: cmp      r2, #0
+0c5eb67e raw+56b67e: bne      #0xc5eb672
+0c5eb680 raw+56b680: ldr.w    r3, [r7, #0x2f0]
+0c5eb684 raw+56b684: ldr      r2, [r4, #0x28]
+0c5eb686 raw+56b686: str      r3, [r4, #0x28]
+0c5eb688 raw+56b688: ldr.w    r3, [r7, #0x2f4]
+0c5eb68c raw+56b68c: str.w    r2, [r7, #0x2f0]
+0c5eb690 raw+56b690: ldr      r2, [r4, #0x2c]
+0c5eb692 raw+56b692: add.w    r0, r7, #0x2f0
+0c5eb696 raw+56b696: str      r3, [r4, #0x2c]
+0c5eb698 raw+56b698: str.w    r2, [r7, #0x2f4]
+0c5eb69c raw+56b69c: bl       #0xc6e8efa
+0c5eb6a0 raw+56b6a0: ldr      r1, [r4, #0x28]
+0c5eb6a2 raw+56b6a2: mov      r0, r6
+0c5eb6a4 raw+56b6a4: adds     r1, #0x80
+0c5eb6a6 raw+56b6a6: bl       #0xc34d764
+0c5eb6aa raw+56b6aa: ldr      r5, [pc, #0x26c] ; literal raw+0x56b918 = 0x3c12912a 'executeInstall'
+0c5eb6ac raw+56b6ac: str      r0, [r4, #0x20]
+0c5eb6ae raw+56b6ae: cmp      r0, #0
+0c5eb6b0 raw+56b6b0: beq      #0xc5eb722
+0c5eb6b2 raw+56b6b2: str      r0, [sp, #4]
+0c5eb6b4 raw+56b6b4: ldr      r3, [r4, #0x28]
+0c5eb6b6 raw+56b6b6: mov      r2, r5
+0c5eb6b8 raw+56b6b8: adds     r3, #0x80
+0c5eb6ba raw+56b6ba: ldr      r1, [pc, #0x264] ; literal raw+0x56b920 = 0x3c129543 '[AIOTJS] [%s:%d] prepare unzip icon file: %s failed: %d\n'
+0c5eb6bc raw+56b6bc: movs     r0, #3
+0c5eb6be raw+56b6be: str      r3, [sp]
+0c5eb6c0 raw+56b6c0: mov.w    r3, #0x328
+0c5eb6c4 raw+56b6c4: bl       #0xc5cd10c
+0c5eb6c8 raw+56b6c8: mov      r0, fp
+0c5eb6ca raw+56b6ca: bl       #0xc7044c0
+0c5eb6ce raw+56b6ce: mov      r1, fp
+0c5eb6d0 raw+56b6d0: mov      r2, r0
+0c5eb6d2 raw+56b6d2: add.w    r0, r7, #0x2f0
+0c5eb6d6 raw+56b6d6: bl       #0xc29753c
+0c5eb6da raw+56b6da: vmov     r2, s16
+0c5eb6de raw+56b6de: ldr      r3, [r4, #0x20]
+0c5eb6e0 raw+56b6e0: mov      r0, r4
+0c5eb6e2 raw+56b6e2: add.w    r1, r7, #0x2f0
+0c5eb6e6 raw+56b6e6: bl       #0xc5e8390
+0c5eb6ea raw+56b6ea: add.w    r0, r7, #0x2f0
+0c5eb6ee raw+56b6ee: bl       #0xc292458
+0c5eb6f2 raw+56b6f2: ldr      r3, [r4, #0x28]
+0c5eb6f4 raw+56b6f4: ldr      r2, [r4, #0x2c]
+0c5eb6f6 raw+56b6f6: str.w    r3, [r7, #0x2f0]
+0c5eb6fa raw+56b6fa: movs     r3, #0
+0c5eb6fc raw+56b6fc: str.w    r2, [r7, #0x2f4]
+0c5eb700 raw+56b700: str      r3, [r4, #0x28]
+0c5eb702 raw+56b702: str      r3, [r4, #0x2c]
+0c5eb704 raw+56b704: add.w    r0, r7, #0x2f0
+0c5eb708 raw+56b708: bl       #0xc6e8efa
+0c5eb70c raw+56b70c: b        #0xc5eb320
+0c5eb70e raw+56b70e: ldr      r2, [pc, #0x208] ; literal raw+0x56b918 = 0x3c12912a 'executeInstall'
+0c5eb710 raw+56b710: movw     r3, #0x313
+0c5eb714 raw+56b714: movs     r0, #3
+0c5eb716 raw+56b716: ldr      r1, [pc, #0x20c] ; literal raw+0x56b924 = 0x3c129518 '[AIOTJS] [%s:%d] %s: readAppInfo failed !\n'
+0c5eb718 raw+56b718: str      r2, [sp]
+0c5eb71a raw+56b71a: bl       #0xc5cd10c
+0c5eb71e raw+56b71e: b.w      #0xc5ec8d8
+0c5eb722 raw+56b722: add.w    r8, r4, #0x30
+0c5eb726 raw+56b726: mov      r1, sb
+0c5eb728 raw+56b728: mov      r0, r8
+0c5eb72a raw+56b72a: bl       #0xc297762
+0c5eb72e raw+56b72e: ldr      r1, [pc, #0x1f8] ; literal raw+0x56b928 = 0x3c057b40 '/'
+0c5eb730 raw+56b730: mov      r0, r8
+0c5eb732 raw+56b732: bl       #0xc297742
+0c5eb736 raw+56b736: ldr      r1, [r4, #0x28]
+0c5eb738 raw+56b738: adds     r1, #0x80

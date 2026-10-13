@@ -1,0 +1,63 @@
+0c534ec8 raw+4b4ec8: sub      sp, #0x10
+0c534eca raw+4b4eca: add      r7, sp, #0
+0c534ecc raw+4b4ecc: str      r0, [r7, #4]
+0c534ece raw+4b4ece: adds     r1, r7, #4
+0c534ed0 raw+4b4ed0: movs     r0, #4
+0c534ed2 raw+4b4ed2: strd     r3, r3, [r7, #8]
+0c534ed6 raw+4b4ed6: bl       #0xc534a68
+0c534eda raw+4b4eda: adds     r7, #0x10
+0c534edc raw+4b4edc: mov      sp, r7
+0c534ede raw+4b4ede: pop      {r7, pc}
+0c534ee0 raw+4b4ee0: push     {r4, r5, r7, lr}
+0c534ee2 raw+4b4ee2: sub.w    sp, sp, #0x4a0
+0c534ee6 raw+4b4ee6: ldr      r2, [pc, #0x7c] ; literal raw+0x4b4f64 = 0x3c0e48c7 'OnStartRecordEvent'
+0c534ee8 raw+4b4ee8: ldr      r1, [pc, #0x7c] ; literal raw+0x4b4f68 = 0x3c0e48da '[wechat cb debug] %s: start record event\n'
+0c534eea raw+4b4eea: movs     r0, #6
+0c534eec raw+4b4eec: add      r7, sp, #0
+0c534eee raw+4b4eee: bl       #0xc27e19c
+0c534ef2 raw+4b4ef2: movs     r0, #1
+0c534ef4 raw+4b4ef4: bl       #0xc534ec4
+0c534ef8 raw+4b4ef8: mov.w    r2, #0x4a0
+0c534efc raw+4b4efc: movs     r1, #0
+0c534efe raw+4b4efe: mov      r0, r7
+0c534f00 raw+4b4f00: bl       #0xc70421c
+0c534f04 raw+4b4f04: movs     r3, #0x26
+0c534f06 raw+4b4f06: strb     r3, [r7, #8]
+0c534f08 raw+4b4f08: ldr      r3, [pc, #0x60] ; literal raw+0x4b4f6c = 0x0c52f0ed
+0c534f0a raw+4b4f0a: movs     r2, #0x40
+0c534f0c raw+4b4f0c: str.w    r3, [r7, #0xd8]
+0c534f10 raw+4b4f10: ldr      r3, [pc, #0x5c] ; literal raw+0x4b4f70 = 0x3c07ef43 'Capture'
+0c534f12 raw+4b4f12: movs     r1, #0
+0c534f14 raw+4b4f14: str      r3, [r7, #0xc]
+0c534f16 raw+4b4f16: ldr      r3, [pc, #0x5c] ; literal raw+0x4b4f74 = 0x3c07ef3c 'Record'
+0c534f18 raw+4b4f18: add.w    r0, r7, #0x15
+0c534f1c raw+4b4f1c: str      r3, [r7, #0x10]
+0c534f1e raw+4b4f1e: bl       #0xc70421c
+0c534f22 raw+4b4f22: ldr      r2, [pc, #0x54] ; literal raw+0x4b4f78 = 0x3c0e4904 'format=silk:sample_rate=16000:ch_layout=mono:b=23900'
+0c534f24 raw+4b4f24: ldr      r1, [pc, #0x54] ; literal raw+0x4b4f7c = 0x3c044800 '%s'
+0c534f26 raw+4b4f26: add.w    r0, r7, #0x55
+0c534f2a raw+4b4f2a: bl       #0xc27c358
+0c534f2e raw+4b4f2e: ldr      r3, [pc, #0x50] ; literal raw+0x4b4f80 = 0x3c23fc28
+0c534f30 raw+4b4f30: mov.w    r1, #0x4a0
+0c534f34 raw+4b4f34: ldr      r0, [r3]
+0c534f36 raw+4b4f36: bl       #0xc284220
+0c534f3a raw+4b4f3a: mov      r4, r0
+0c534f3c raw+4b4f3c: cbnz     r0, #0xc534f46
+0c534f3e raw+4b4f3e: bl       #0xc2781c8
+0c534f42 raw+4b4f42: movs     r3, #0xc
+0c534f44 raw+4b4f44: str      r3, [r0]
+0c534f46 raw+4b4f46: ldr      r5, [pc, #0x3c] ; literal raw+0x4b4f84 = 0x3c2787c8
+0c534f48 raw+4b4f48: mov      r1, r7
+0c534f4a raw+4b4f4a: mov.w    r2, #0x4a0
+0c534f4e raw+4b4f4e: mov      r0, r4
+0c534f50 raw+4b4f50: str      r4, [r5]
+0c534f52 raw+4b4f52: bl       #0xc41b538
+0c534f56 raw+4b4f56: mov      r0, r5
+0c534f58 raw+4b4f58: bl       #0xc34ab88
+0c534f5c raw+4b4f5c: add.w    r7, r7, #0x4a0
+0c534f60 raw+4b4f60: mov      sp, r7
+0c534f62 raw+4b4f62: pop      {r4, r5, r7, pc}
+0c534f64 raw+4b4f64: ldr      r0, [pc, #0x31c] ; literal raw+0x4b5284 = 0xfc56f67c
+0c534f66 raw+4b4f66: subs     r4, #0xe
+0c534f68 raw+4b4f68: ldr      r0, [pc, #0x368] ; literal raw+0x4b52d4 = 0xd00260b8
+0c534f6a raw+4b4f6a: subs     r4, #0xe

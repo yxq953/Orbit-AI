@@ -1,0 +1,1603 @@
+[
+  {
+    "file": "com.baidu.BaiduMap.release.3.7.rpk",
+    "sha256": "6b9085131c92d6b8edd569e67d8414d2412fb12791324a02cad28f64163d3842",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/zh-CN.json",
+      "manifest-watch.json",
+      "manifest.json",
+      "app.js",
+      "pages/",
+      "pages/index/",
+      "pages/index/index.js",
+      "pages/index/index.style.bin",
+      "pages/index/index.template.bin",
+      "common/",
+      "common/icon.png",
+      "common/img/",
+      "common/img/agreebtn.png",
+      "common/img/back_icon.png",
+      "common/img/bikeicon/",
+      "common/img/bikeicon/cn_dest.png",
+      "common/img/bikeicon/cn_electrocar_dest.png",
+      "common/img/bikeicon/cn_electrocar_start.png",
+      "common/img/bikeicon/cn_faraway_route.png",
+      "common/img/bikeicon/cn_ferry.png",
+      "common/img/bikeicon/cn_front.png",
+      "common/img/bikeicon/cn_goto_left_road.png",
+      "common/img/bikeicon/cn_goto_left_road_uturn.png",
+      "common/img/bikeicon/cn_goto_right_road.png",
+      "common/img/bikeicon/cn_goto_right_road_uturn.png",
+      "common/img/bikeicon/cn_gps_weak.png",
+      "common/img/bikeicon/cn_ladder.png",
+      "common/img/bikeicon/cn_left.png",
+      "common/img/bikeicon/cn_left_back.png",
+      "common/img/bikeicon/cn_left_front.png",
+      "common/img/bikeicon/cn_left_front_straight.png",
+      "common/img/bikeicon/cn_left_passroad_front.png",
+      "common/img/bikeicon/cn_left_passroad_uturn.png",
+      "common/img/bikeicon/cn_left_three_middle.png",
+      "common/img/bikeicon/cn_left_three_right_side.png",
+      "common/img/bikeicon/cn_left_two_left_side.png",
+      "common/img/bikeicon/cn_left_two_right_side.png",
+      "common/img/bikeicon/cn_leftdiagonal_passroad_left_back.png",
+      "common/img/bikeicon/cn_leftdiagonal_passroad_left_front.png",
+      "common/img/bikeicon/cn_overlinebridge.png",
+      "common/img/bikeicon/cn_park.png",
+      "common/img/bikeicon/cn_passroad_left.png",
+      "common/img/bikeicon/cn_passroad_right.png",
+      "common/img/bikeicon/cn_right.png",
+      "common/img/bikeicon/cn_right_back.png",
+      "common/img/bikeicon/cn_right_front.png",
+      "common/img/bikeicon/cn_right_front_straight.png",
+      "common/img/bikeicon/cn_right_passroad_front.png",
+      "common/img/bikeicon/cn_right_passroad_uturn.png",
+      "common/img/bikeicon/cn_right_three_left_side.png",
+      "common/img/bikeicon/cn_right_three_middle.png",
+      "common/img/bikeicon/cn_right_three_right_side.png",
+      "common/img/bikeicon/cn_right_two_left_side.png",
+      "common/img/bikeicon/cn_rightdiagonal_passroad_left_front.png",
+      "common/img/bikeicon/cn_rightdiagonal_passroad_right_back.png",
+      "common/img/bikeicon/cn_rightdiagonal_passroad_right_front.png",
+      "common/img/bikeicon/cn_ring.png",
+      "common/img/bikeicon/cn_square.png",
+      "common/img/bikeicon/cn_start.png",
+      "common/img/bikeicon/cn_three_left_side.png",
+      "common/img/bikeicon/cn_three_middle.png",
+      "common/img/bikeicon/cn_three_right_side.png",
+      "common/img/bikeicon/cn_turn_left_diagonal_passroad_front_blue.png",
+      "common/img/bikeicon/cn_two_left_side.png",
+      "common/img/bikeicon/cn_two_right_side.png",
+      "common/img/bikeicon/cn_undergroundpassage.png",
+      "common/img/bikeicon/cn_waypoint.png",
+      "common/img/bikeicon/navend.png",
+      "common/img/bluetooth.png",
+      "common/img/bluetooth_connect.png",
+      "common/img/bluetooth_disconnect.png",
+      "common/img/checkboxbtn.png",
+      "common/img/checkboxbtn_nocheck.png",
+      "common/img/disagreebtn.png",
+      "common/img/maplogo.png",
+      "common/img/permission_icon.png",
+      "common/img/privacy.png",
+      "common/img/problems.png",
+      "common/img/qrcode.png",
+      "common/img/ride.png",
+      "common/img/set_up.png",
+      "common/img/setting_icon.png",
+      "common/img/setting_word.png",
+      "common/img/use_qrcode.png",
+      "common/img/walk.png",
+      "common/img/walkicon/",
+      "common/img/walkicon/navend.png",
+      "common/img/walkicon/wn_dest_white.png",
+      "common/img/walkicon/wn_door_white.png",
+      "common/img/walkicon/wn_elevator_white.png",
+      "common/img/walkicon/wn_escalator_white.png",
+      "common/img/walkicon/wn_faraway_route_white.png",
+      "common/img/walkicon/wn_gps_white.png",
+      "common/img/walkicon/wn_indoor_bianjie_white.png",
+      "common/img/walkicon/wn_ladder_white.png",
+      "common/img/walkicon/wn_left_three_left_side_white.png",
+      "common/img/walkicon/wn_left_three_middle_white.png",
+      "common/img/walkicon/wn_left_three_right_side_white.png",
+      "common/img/walkicon/wn_left_two_left_side_white.png",
+      "common/img/walkicon/wn_left_two_right_side_white.png",
+      "common/img/walkicon/wn_out_overline_bridge_white.png",
+      "common/img/walkicon/wn_out_underground_passege_white.png",
+      "common/img/walkicon/wn_overline_bridge_white.png",
+      "common/img/walkicon/wn_park_white.png",
+      "common/img/walkicon/wn_pass_overline_bridge_white.png",
+      "common/img/walkicon/wn_pass_underground_passege_white.png",
+      "common/img/walkicon/wn_right_three_left_side_white.png",
+      "common/img/walkicon/wn_right_three_middle_white.png",
+      "common/img/walkicon/wn_right_three_right_side_white.png",
+      "common/img/walkicon/wn_right_two_left_side_white.png",
+      "common/img/walkicon/wn_right_two_right_side_white.png",
+      "common/img/walkicon/wn_ring_white.png",
+      "common/img/walkicon/wn_securitycheck_white.png",
+      "common/img/walkicon/wn_ship_white.png",
+      "common/img/walkicon/wn_square_white.png",
+      "common/img/walkicon/wn_stair_white.png",
+      "common/img/walkicon/wn_start_white.png",
+      "common/img/walkicon/wn_three_left_side_white.png",
+      "common/img/walkicon/wn_three_middle_white.png",
+      "common/img/walkicon/wn_three_right_side_white.png",
+      "common/img/walkicon/wn_turn_front_white.png",
+      "common/img/walkicon/wn_turn_goto_leftroad_front_white.png",
+      "common/img/walkicon/wn_turn_goto_leftroad_uturn_white.png",
+      "common/img/walkicon/wn_turn_goto_rightroad_front_white.png",
+      "common/img/walkicon/wn_turn_goto_rightroad_uturn_white.png",
+      "common/img/walkicon/wn_turn_left_back_white.png",
+      "common/img/walkicon/wn_turn_left_diagonal_passroad_left_back_white.png",
+      "common/img/walkicon/wn_turn_left_diagonal_passroad_left_front_white.png",
+      "common/img/walkicon/wn_turn_left_diagonal_passroad_right_front_white.png",
+      "common/img/walkicon/wn_turn_left_front_straight_white.png",
+      "common/img/walkicon/wn_turn_left_front_white.png",
+      "common/img/walkicon/wn_turn_left_passroad_front_white.png",
+      "common/img/walkicon/wn_turn_left_passroad_uturn_white.png",
+      "common/img/walkicon/wn_turn_left_white.png",
+      "common/img/walkicon/wn_turn_passroad_left_white.png",
+      "common/img/walkicon/wn_turn_passroad_right_white.png",
+      "common/img/walkicon/wn_turn_right_back_white.png",
+      "common/img/walkicon/wn_turn_right_diagonal_passroad_left_front_white.png",
+      "common/img/walkicon/wn_turn_right_diagonal_passroad_right_back_white.png",
+      "common/img/walkicon/wn_turn_right_diagonal_passroad_right_front_white.png",
+      "common/img/walkicon/wn_turn_right_front_straight_white.png",
+      "common/img/walkicon/wn_turn_right_passroad_front_white.png",
+      "common/img/walkicon/wn_turn_right_passroad_uturn_white.png",
+      "common/img/walkicon/wn_turn_right_white.png",
+      "common/img/walkicon/wn_two_left_side_white.png",
+      "common/img/walkicon/wn_two_right_side_white.png",
+      "common/img/walkicon/wn_underground_passage_white.png",
+      "common/img/walkicon/wn_waypoint_white.png",
+      "pages/bluetooth/",
+      "pages/bluetooth/bluetooth.js",
+      "pages/bluetooth/bluetooth.style.bin",
+      "pages/bluetooth/bluetooth.template.bin",
+      "pages/help/",
+      "pages/help/help.js",
+      "pages/help/help.style.bin",
+      "pages/help/help.template.bin",
+      "pages/nav/",
+      "pages/nav/nav.js",
+      "pages/nav/nav.style.bin",
+      "pages/nav/nav.template.bin",
+      "pages/privacy/",
+      "pages/privacy/privacy.js",
+      "pages/privacy/privacy.style.bin",
+      "pages/privacy/privacy.template.bin",
+      "pages/qrcodepage/",
+      "pages/qrcodepage/qrcodepage.js",
+      "pages/qrcodepage/qrcodepage.style.bin",
+      "pages/qrcodepage/qrcodepage.template.bin",
+      "pages/remind/",
+      "pages/remind/remind.js",
+      "pages/remind/remind.style.bin",
+      "pages/remind/remind.template.bin",
+      "resources/",
+      "resources/base/",
+      "resources/base/media/",
+      "resources/base/media/icon-120.png",
+      "resources/base/media/icon-80.png",
+      "resources/base/media/icon.png",
+      "resources/base/media/icon_192.png",
+      "resources/base/media/icon_small.png",
+      "resources/base/media/logo_144.png",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.baidu.BaiduMap",
+          "name": "百度地图",
+          "versionName": "3.7",
+          "versionCode": 25,
+          "minPlatformVersion": 1000,
+          "icon": "/resources/base/media/logo_144.png",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.fetch"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.app"
+            },
+            {
+              "name": "system.file"
+            },
+            {
+              "name": "system.audio"
+            },
+            {
+              "name": "system.request"
+            },
+            {
+              "name": "system.device"
+            },
+            {
+              "name": "system.interconnect"
+            },
+            {
+              "name": "system.brightness"
+            },
+            {
+              "name": "system.vibrator"
+            }
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 480,
+            "debug": false
+          },
+          "display": {
+            "backgroundColor": "#000"
+          },
+          "router": {
+            "entry": "pages/index",
+            "pages": {
+              "pages/index": {
+                "component": "index"
+              },
+              "pages/remind": {
+                "component": "remind"
+              },
+              "pages/qrcodepage": {
+                "component": "qrcodepage"
+              },
+              "pages/bluetooth": {
+                "component": "bluetooth"
+              },
+              "pages/nav": {
+                "component": "nav"
+              },
+              "pages/help": {
+                "component": "help"
+              },
+              "pages/privacy": {
+                "component": "privacy"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.0.18",
+            "timeStamp": "2025-07-29T09:33:55.279Z",
+            "node": "v16.16.0",
+            "platform": "darwin",
+            "arch": "x64",
+            "component": true,
+            "protobuf": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.bcz.watch.release.1.0.11.rpk",
+    "sha256": "3c9e72e381ca8d10196ea4fa155f48cf315f82dd4b9eee58c5482cf05c7ba526",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/en.json",
+      "i18n/zh-CN.json",
+      "manifest-watch.json",
+      "manifest.json",
+      "pages/",
+      "pages/splash/",
+      "pages/splash/splash.jsc",
+      "common/",
+      "common/bg_permission.png",
+      "common/font.scss",
+      "common/ic_complete.png",
+      "common/ic_edit.png",
+      "common/ic_listen_pause.png",
+      "common/ic_listen_play.png",
+      "common/ic_loading.png",
+      "common/ic_login_qrcode.png",
+      "common/ic_mainpage_setting.png",
+      "common/ic_review_hearing.png",
+      "common/ic_review_selftest.png",
+      "common/ic_switch_left.png",
+      "common/ic_switch_right.png",
+      "common/logo.png",
+      "common/qrcode_privacy_agreement.png",
+      "common/qrcode_user_agreement.png",
+      "common/style.scss",
+      "app.jsc",
+      "font/",
+      "font/DoulosSIL.ttf",
+      "pages/audio_settings/",
+      "pages/audio_settings/audio_settings.jsc",
+      "pages/finish/",
+      "pages/finish/finish.jsc",
+      "pages/home/",
+      "pages/home/home.jsc",
+      "pages/listening_shorthand/",
+      "pages/listening_shorthand/audio/",
+      "pages/listening_shorthand/audio/audio.jsc",
+      "pages/listening_shorthand/audio/detail/",
+      "pages/listening_shorthand/audio/detail/audio_detail.jsc",
+      "pages/listening_shorthand/main/",
+      "pages/listening_shorthand/main/main.jsc",
+      "pages/login/",
+      "pages/login/agreement/",
+      "pages/login/agreement/agreement.jsc",
+      "pages/login/login.jsc",
+      "pages/login/qrcode/",
+      "pages/login/qrcode/qrcode.jsc",
+      "pages/permission/",
+      "pages/permission/permission.jsc",
+      "pages/select_page/",
+      "pages/select_page/select_book/",
+      "pages/select_page/select_book/select_book.jsc",
+      "pages/select_page/select_grade/",
+      "pages/select_page/select_grade/select_grade.jsc",
+      "pages/select_page/select_period/",
+      "pages/select_page/select_period/select_period.jsc",
+      "pages/self_learning/",
+      "pages/self_learning/audio/",
+      "pages/self_learning/audio/audio.jsc",
+      "pages/settings/",
+      "pages/settings/logout/",
+      "pages/settings/logout/logout.jsc",
+      "pages/settings/settings.jsc",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.bcz.watch",
+          "name": "百词斩",
+          "versionName": "1.0.11",
+          "versionCode": 12,
+          "minPlatformVersion": 1000,
+          "icon": "/common/logo.png",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.audio"
+            },
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.file"
+            },
+            {
+              "name": "system.prompt"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.device"
+            },
+            {
+              "name": "system.brightness"
+            },
+            {
+              "name": "system.fetch"
+            },
+            {
+              "name": "system.storage"
+            }
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 360,
+            "debug": false
+          },
+          "router": {
+            "entry": "pages/splash",
+            "pages": {
+              "pages/splash": {
+                "component": "splash"
+              },
+              "pages/permission": {
+                "component": "permission"
+              },
+              "pages/login": {
+                "component": "login"
+              },
+              "pages/login/qrcode": {
+                "component": "qrcode"
+              },
+              "pages/login/agreement": {
+                "component": "agreement"
+              },
+              "pages/select_page/select_period": {
+                "component": "select_period"
+              },
+              "pages/select_page/select_book": {
+                "component": "select_book"
+              },
+              "pages/select_page/select_grade": {
+                "component": "select_grade"
+              },
+              "pages/home": {
+                "component": "home"
+              },
+              "pages/listening_shorthand/main": {
+                "component": "main"
+              },
+              "pages/listening_shorthand/audio": {
+                "component": "audio",
+                "launchMode": "singleTask"
+              },
+              "pages/listening_shorthand/audio/detail": {
+                "component": "audio_detail"
+              },
+              "pages/self_learning/audio": {
+                "component": "audio",
+                "launchMode": "singleTask"
+              },
+              "pages/finish": {
+                "component": "finish"
+              },
+              "pages/audio_settings": {
+                "component": "audio_settings"
+              },
+              "pages/settings": {
+                "component": "settings"
+              },
+              "pages/settings/logout": {
+                "component": "logout"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.4",
+            "timeStamp": "2025-08-05T10:42:35.653Z",
+            "node": "v18.18.0",
+            "platform": "win32",
+            "arch": "x64",
+            "component": false
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.netease.vela.release.1.0.49.rpk",
+    "sha256": "d23219d929d48245a7205d54630ebe71f1263c15279db1b20c4a944ae6c6c2d7",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaultsA.json",
+      "i18n/en.json",
+      "i18n/zh-CN.json",
+      "manifest-watch.json",
+      "manifest.json",
+      "app.js",
+      "pages/",
+      "pages/logo/",
+      "pages/logo/index.js",
+      "pages/logo/index.style.bin",
+      "pages/logo/index.template.bin",
+      "assets/",
+      "assets/icon/",
+      "assets/icon/add-circle-gray.png",
+      "assets/icon/back-circle.png",
+      "assets/icon/back.png",
+      "assets/icon/cancel.png",
+      "assets/icon/delete-gray.png",
+      "assets/icon/empty.png",
+      "assets/icon/heart-active.png",
+      "assets/icon/heart-line.png",
+      "assets/icon/loading.png",
+      "assets/icon/locale.png",
+      "assets/icon/minus.png",
+      "assets/icon/next.png",
+      "assets/icon/offline.png",
+      "assets/icon/ok.png",
+      "assets/icon/pause.png",
+      "assets/icon/play-list.png",
+      "assets/icon/play.png",
+      "assets/icon/playing-list.png",
+      "assets/icon/playing.png",
+      "assets/icon/plus.png",
+      "assets/icon/prev.png",
+      "assets/icon/radio.png",
+      "assets/icon/recommend.png",
+      "assets/icon/refresh.png",
+      "assets/icon/right.png",
+      "assets/icon/star.png",
+      "assets/icon/user.png",
+      "assets/icon/volume.png",
+      "assets/icon/warning.png",
+      "assets/img/",
+      "assets/img/player-bg.png",
+      "assets/img/qrcode.png",
+      "assets/logo.png",
+      "pages/login/",
+      "pages/login/index.js",
+      "pages/login/index.style.bin",
+      "pages/login/index.template.bin",
+      "pages/play-list/",
+      "pages/play-list/index.js",
+      "pages/play-list/index.style.bin",
+      "pages/play-list/index.template.bin",
+      "pages/player/",
+      "pages/player/index.js",
+      "pages/player/index.style.bin",
+      "pages/player/index.template.bin",
+      "pages/privacy/",
+      "pages/privacy/index.js",
+      "pages/privacy/index.style.bin",
+      "pages/privacy/index.template.bin",
+      "pages/privacyCode/",
+      "pages/privacyCode/index.js",
+      "pages/privacyCode/index.style.bin",
+      "pages/privacyCode/index.template.bin",
+      "pages/song-list/",
+      "pages/song-list/index.js",
+      "pages/song-list/index.style.bin",
+      "pages/song-list/index.template.bin",
+      "pages/user/",
+      "pages/user/index.js",
+      "pages/user/index.style.bin",
+      "pages/user/index.template.bin",
+      "pages/volume/",
+      "pages/volume/index.js",
+      "pages/volume/index.style.bin",
+      "pages/volume/index.template.bin",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.netease.vela",
+          "name": "网易云音乐",
+          "versionName": "1.0.49",
+          "versionCode": 49,
+          "minPlatformVersion": 1000,
+          "icon": "/assets/logo.png",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.fetch"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.device"
+            },
+            {
+              "name": "system.audio"
+            },
+            {
+              "name": "system.request"
+            },
+            {
+              "name": "system.file"
+            },
+            {
+              "name": "system.network"
+            },
+            {
+              "name": "system.prompt"
+            },
+            {
+              "name": "system.cipher"
+            },
+            {
+              "name": "system.app"
+            }
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 480,
+            "background": {
+              "features": [
+                "system.audio",
+                "system.request"
+              ]
+            },
+            "debug": false
+          },
+          "display": {
+            "backgroundColor": "#000000",
+            "textColor": "#ffffff"
+          },
+          "router": {
+            "entry": "pages/logo",
+            "pages": {
+              "pages/logo": {
+                "component": "index"
+              },
+              "pages/login": {
+                "component": "index"
+              },
+              "pages/user": {
+                "component": "index"
+              },
+              "pages/player": {
+                "component": "index"
+              },
+              "pages/volume": {
+                "component": "index"
+              },
+              "pages/song-list": {
+                "component": "index"
+              },
+              "pages/play-list": {
+                "component": "index"
+              },
+              "pages/privacy": {
+                "component": "index"
+              },
+              "pages/privacyCode": {
+                "component": "index"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.5-beta.1",
+            "timeStamp": "2025-11-07T06:35:28.157Z",
+            "node": "v22.19.0",
+            "platform": "win32",
+            "arch": "x64",
+            "component": true,
+            "protobuf": true
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.tencent.wechatrtos.release.1.1.0.rpk",
+    "sha256": "12c87bacc4b669b15341e96b15724f12bc247684c1f6e06074a33cb93f3fb552",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/en-US.json",
+      "i18n/zh-CN.json",
+      "i18n/zh-HK.json",
+      "i18n/zh-TW.json",
+      "manifest.json",
+      "app.js",
+      "pages/",
+      "pages/entry/",
+      "pages/entry/index.js",
+      "assets/",
+      "assets/emoji/",
+      "assets/emoji/F000.png",
+      "assets/emoji/F001.png",
+      "assets/emoji/F002.png",
+      "assets/emoji/F003.png",
+      "assets/emoji/F005.png",
+      "assets/emoji/F007.png",
+      "assets/emoji/F008.png",
+      "assets/emoji/F00A.png",
+      "assets/emoji/F00B.png",
+      "assets/emoji/F00D.png",
+      "assets/emoji/F00E.png",
+      "assets/emoji/F00F.png",
+      "assets/emoji/F010.png",
+      "assets/emoji/F011.png",
+      "assets/emoji/F012.png",
+      "assets/emoji/F016.png",
+      "assets/emoji/F017.png",
+      "assets/emoji/F018.png",
+      "assets/emoji/F019.png",
+      "assets/emoji/F01A.png",
+      "assets/emoji/F01B.png",
+      "assets/emoji/F01C.png",
+      "assets/emoji/F01D.png",
+      "assets/emoji/F01E.png",
+      "assets/emoji/F01F.png",
+      "assets/emoji/F020.png",
+      "assets/emoji/F021.png",
+      "assets/emoji/F022.png",
+      "assets/emoji/F023.png",
+      "assets/emoji/F024.png",
+      "assets/emoji/F025.png",
+      "assets/emoji/F026.png",
+      "assets/emoji/F027.png",
+      "assets/emoji/F028.png",
+      "assets/emoji/F029.png",
+      "assets/emoji/F02A.png",
+      "assets/emoji/F02B.png",
+      "assets/emoji/F02C.png",
+      "assets/emoji/F02D.png",
+      "assets/emoji/F02E.png",
+      "assets/emoji/F02F.png",
+      "assets/emoji/F030.png",
+      "assets/emoji/F031.png",
+      "assets/emoji/F032.png",
+      "assets/emoji/F033.png",
+      "assets/emoji/F034.png",
+      "assets/emoji/F035.png",
+      "assets/emoji/F036.png",
+      "assets/emoji/F037.png",
+      "assets/emoji/F038.png",
+      "assets/emoji/F039.png",
+      "assets/emoji/F03A.png",
+      "assets/emoji/F03B.png",
+      "assets/emoji/F03C.png",
+      "assets/emoji/F03D.png",
+      "assets/emoji/F03E.png",
+      "assets/emoji/F03F.png",
+      "assets/emoji/F040.png",
+      "assets/emoji/F041.png",
+      "assets/emoji/F042.png",
+      "assets/emoji/F043.png",
+      "assets/emoji/F044.png",
+      "assets/emoji/F045.png",
+      "assets/emoji/F046.png",
+      "assets/emoji/F047.png",
+      "assets/emoji/F048.png",
+      "assets/emoji/F049.png",
+      "assets/emoji/F04A.png",
+      "assets/emoji/F04B.png",
+      "assets/emoji/F04C.png",
+      "assets/emoji/F04D.png",
+      "assets/emoji/F04E.png",
+      "assets/emoji/F04F.png",
+      "assets/emoji/F050.png",
+      "assets/emoji/F051.png",
+      "assets/emoji/F052.png",
+      "assets/emoji/F053.png",
+      "assets/emoji/F054.png",
+      "assets/emoji/F055.png",
+      "assets/emoji/F056.png",
+      "assets/emoji/F057.png",
+      "assets/emoji/F058.png",
+      "assets/emoji/F059.png",
+      "assets/emoji/F05A.png",
+      "assets/emoji/F05B.png",
+      "assets/emoji/F05C.png",
+      "assets/emoji/F05D.png",
+      "assets/emoji/F05E.png",
+      "assets/emoji/F05F.png",
+      "assets/emoji/F060.png",
+      "assets/emoji/F061.png",
+      "assets/emoji/F062.png",
+      "assets/emoji/F064.png",
+      "assets/emoji/F065.png",
+      "assets/emoji/F067.png",
+      "assets/emoji/F068.png",
+      "assets/emoji/F069.png",
+      "assets/emoji/F06A.png",
+      "assets/emoji/F06B.png",
+      "assets/emoji/F06C.png",
+      "assets/emoji/F06D.png",
+      "assets/emoji/F06E.png",
+      "assets/emoji/F06F.png",
+      "assets/emoji/F073.png",
+      "assets/emoji/F074.png",
+      "assets/emoji/F075.png",
+      "assets/emoji/F076.png",
+      "assets/emoji/F077.png",
+      "assets/emoji/F078.png",
+      "assets/emoji/F079.png",
+      "assets/image/",
+      "assets/image/anim_voice_friends_1.png",
+      "assets/image/anim_voice_friends_2.png",
+      "assets/image/anim_voice_friends_3.png",
+      "assets/image/anim_voice_me_1.png",
+      "assets/image/anim_voice_me_2.png",
+      "assets/image/anim_voice_me_3.png",
+      "assets/image/bg_login_refresh.png",
+      "assets/image/btn_voice_pressed.png",
+      "assets/image/btn_voice_unpressed.png",
+      "assets/image/bubble_point_friend.png",
+      "assets/image/bubble_point_me.png",
+      "assets/image/ic_arrow_down.png",
+      "assets/image/ic_arrow_down_single.png",
+      "assets/image/ic_arrow_right.png",
+      "assets/image/ic_arrow_up.png",
+      "assets/image/ic_bind_fail.png",
+      "assets/image/ic_bind_success.png",
+      "assets/image/ic_binding.png",
+      "assets/image/ic_blue_warning.png",
+      "assets/image/ic_cancel_pressed.png",
+      "assets/image/ic_cancel_unpressed.png",
+      "assets/image/ic_clean_success.png",
+      "assets/image/ic_default_avatar.png",
+      "assets/image/ic_emoji_unpressed.png",
+      "assets/image/ic_error.png",
+      "assets/image/ic_error_gray.png",
+      "assets/image/ic_error_large.png",
+      "assets/image/ic_loading_gray.png",
+      "assets/image/ic_loading_small.png",
+      "assets/image/ic_loading_white.png",
+      "assets/image/ic_main_arrow.png",
+      "assets/image/ic_main_pay.png",
+      "assets/image/ic_main_setting.png",
+      "assets/image/ic_main_undisturb.png",
+      "assets/image/ic_msg_voice_receive.png",
+      "assets/image/ic_msg_voice_send.png",
+      "assets/image/ic_pay.png",
+      "assets/image/ic_pay_security.png",
+      "assets/image/ic_record_cancel_pressed_x.png",
+      "assets/image/ic_record_cancel_unpressed_x.png",
+      "assets/image/ic_red_dot_more_3dots.png",
+      "assets/image/ic_setting.png",
+      "assets/image/ic_voice_pressed.png",
+      "assets/image/ic_voice_recording_bg.png",
+      "assets/image/ic_voice_unpressed.png",
+      "assets/image/ic_warn.png",
+      "assets/image/ic_word_wen.png",
+      "assets/image/line.png",
+      "assets/image/line_end.png",
+      "assets/image/logo.png",
+      "assets/image/main_bottom_cover.png",
+      "assets/image/message_name_mask_left.png",
+      "assets/image/message_name_mask_right.png",
+      "assets/image/switch_off.png",
+      "assets/image/switch_on.png",
+      "assets/image/wxpay_logo.png",
+      "pages/login/",
+      "pages/login/index.js",
+      "pages/main/",
+      "pages/main/channel/",
+      "pages/main/channel/index.js",
+      "pages/main/index.js",
+      "pages/main/index.js.LICENSE.txt",
+      "pages/message/",
+      "pages/message/index.js",
+      "pages/message/index.js.LICENSE.txt",
+      "pages/pay/",
+      "pages/pay/index.js",
+      "pages/setting/",
+      "pages/setting/index.js",
+      "pages/setting/index.js.LICENSE.txt",
+      "pages/voip/",
+      "pages/voip/index.js",
+      "pages/voip/index.js.LICENSE.txt",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.tencent.wechatrtos",
+          "name": "${appName}",
+          "versionName": "1.1.0",
+          "versionCode": 2,
+          "icon": "/assets/image/logo.png",
+          "features": [
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.prompt"
+            },
+            {
+              "name": "system.brightness"
+            },
+            {
+              "name": "system.app"
+            },
+            {
+              "name": "system.device"
+            },
+            {
+              "name": "system.configuration"
+            },
+            {
+              "name": "system.storage"
+            }
+          ],
+          "deviceTypeList": [
+            "watch"
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 390,
+            "debug": false
+          },
+          "router": {
+            "entry": "pages/entry",
+            "pages": {
+              "pages/entry": {
+                "component": "index"
+              },
+              "pages/message": {
+                "component": "index",
+                "followHand": "disable"
+              },
+              "pages/login": {
+                "component": "index"
+              },
+              "pages/main": {
+                "component": "index",
+                "followHand": "disable"
+              },
+              "pages/setting": {
+                "component": "index",
+                "followHand": "disable"
+              },
+              "pages/main/channel": {
+                "component": "index"
+              },
+              "pages/pay": {
+                "component": "index",
+                "followHand": "disable"
+              },
+              "pages/voip": {
+                "component": "index",
+                "followHand": "disable"
+              }
+            }
+          },
+          "display": {
+            "backgroundColor": "#000000"
+          },
+          "minPlatformVersion": 1070,
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.4",
+            "timeStamp": "2026-07-27T07:59:55.154Z",
+            "node": "v22.23.1",
+            "platform": "darwin",
+            "arch": "arm64",
+            "component": false
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.vela.calculator.release.1.0.1.rpk",
+    "sha256": "e41addb9ce5a5fd2fbd05e228ca0b89f51e9f233d6a75af61b612bc6f27b6d3e",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/zh-CN.json",
+      "manifest.json",
+      "app.js",
+      "pages/",
+      "pages/logo/",
+      "pages/logo/index.js",
+      "pages/index/",
+      "pages/index/index.js",
+      "pages/privacy/",
+      "pages/privacy/index.js",
+      "res/",
+      "res/textures/",
+      "res/textures/del.png",
+      "res/textures/multiply-active.png",
+      "res/textures/multiply.png",
+      "resources/",
+      "resources/base/",
+      "resources/base/media/",
+      "resources/base/media/icon.png",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.vela.calculator",
+          "name": "计算器",
+          "versionName": "1.0.1",
+          "versionCode": 2,
+          "minPlatformVersion": 1000,
+          "icon": "/resources/base/media/icon.png",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.app"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.device"
+            }
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 466,
+            "debug": false
+          },
+          "display": {
+            "backgroundColor": "#000000",
+            "textColor": "#ffffff"
+          },
+          "router": {
+            "entry": "pages/logo",
+            "pages": {
+              "pages/index": {
+                "component": "index"
+              },
+              "pages/privacy": {
+                "component": "index"
+              },
+              "pages/logo": {
+                "component": "index"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.2",
+            "timeStamp": "2024-08-16T09:14:44.035Z",
+            "node": "v20.16.0",
+            "platform": "linux",
+            "arch": "x64",
+            "component": false
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.xiaomi.smarthome.watch.1.0.3.rpk",
+    "sha256": "fe0e8456f0468001d7be18336c28b2efdbe1cae56c7df6ecdc0f4ef3b1f20fd2",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/en.json",
+      "i18n/zh-CN.json",
+      "i18n/zh-HK.json",
+      "i18n/zh-TW.json",
+      "manifest-watch.json",
+      "manifest.json",
+      "Device/",
+      "Device/index.jsc",
+      "DeviceConfig/",
+      "DeviceConfig/index.jsc",
+      "Input/",
+      "Input/index.jsc",
+      "Main/",
+      "Main/index.jsc",
+      "Pincode/",
+      "Pincode/index.jsc",
+      "app.jsc",
+      "assets/",
+      "assets/images/",
+      "assets/images/loading/",
+      "assets/images/loading/loding_0.png",
+      "assets/images/loading/loding_1.png",
+      "assets/images/loading/loding_10.png",
+      "assets/images/loading/loding_11.png",
+      "assets/images/loading/loding_12.png",
+      "assets/images/loading/loding_13.png",
+      "assets/images/loading/loding_14.png",
+      "assets/images/loading/loding_15.png",
+      "assets/images/loading/loding_16.png",
+      "assets/images/loading/loding_17.png",
+      "assets/images/loading/loding_18.png",
+      "assets/images/loading/loding_19.png",
+      "assets/images/loading/loding_2.png",
+      "assets/images/loading/loding_20.png",
+      "assets/images/loading/loding_21.png",
+      "assets/images/loading/loding_22.png",
+      "assets/images/loading/loding_23.png",
+      "assets/images/loading/loding_24.png",
+      "assets/images/loading/loding_25.png",
+      "assets/images/loading/loding_26.png",
+      "assets/images/loading/loding_27.png",
+      "assets/images/loading/loding_28.png",
+      "assets/images/loading/loding_29.png",
+      "assets/images/loading/loding_3.png",
+      "assets/images/loading/loding_30.png",
+      "assets/images/loading/loding_31.png",
+      "assets/images/loading/loding_32.png",
+      "assets/images/loading/loding_33.png",
+      "assets/images/loading/loding_34.png",
+      "assets/images/loading/loding_35.png",
+      "assets/images/loading/loding_36.png",
+      "assets/images/loading/loding_37.png",
+      "assets/images/loading/loding_38.png",
+      "assets/images/loading/loding_39.png",
+      "assets/images/loading/loding_4.png",
+      "assets/images/loading/loding_40.png",
+      "assets/images/loading/loding_41.png",
+      "assets/images/loading/loding_42.png",
+      "assets/images/loading/loding_43.png",
+      "assets/images/loading/loding_44.png",
+      "assets/images/loading/loding_45.png",
+      "assets/images/loading/loding_46.png",
+      "assets/images/loading/loding_47.png",
+      "assets/images/loading/loding_48.png",
+      "assets/images/loading/loding_49.png",
+      "assets/images/loading/loding_5.png",
+      "assets/images/loading/loding_50.png",
+      "assets/images/loading/loding_6.png",
+      "assets/images/loading/loding_7.png",
+      "assets/images/loading/loding_8.png",
+      "assets/images/loading/loding_9.png",
+      "assets/images/loading.png",
+      "assets/images/logo.png",
+      "assets/images/mijia/",
+      "assets/images/mijia/air_fryer_pause.png",
+      "assets/images/mijia/back.png",
+      "assets/images/mijia/circle_icon_lock.png",
+      "assets/images/mijia/circle_icon_off.png",
+      "assets/images/mijia/circle_icon_on.png",
+      "assets/images/mijia/click.png",
+      "assets/images/mijia/curtain_close_disable.png",
+      "assets/images/mijia/curtain_close_on.png",
+      "assets/images/mijia/curtain_open_disable.png",
+      "assets/images/mijia/curtain_open_on.png",
+      "assets/images/mijia/device_lock.png",
+      "assets/images/mijia/dishwasher_shut_down.png",
+      "assets/images/mijia/down_disable.png",
+      "assets/images/mijia/down_on.png",
+      "assets/images/mijia/hand_click.png",
+      "assets/images/mijia/hand_double_click.png",
+      "assets/images/mijia/hand_press.png",
+      "assets/images/mijia/icon_add_disable.png",
+      "assets/images/mijia/icon_add_on.png",
+      "assets/images/mijia/icon_alarm.png",
+      "assets/images/mijia/icon_bluetooth.png",
+      "assets/images/mijia/icon_bluetooth_disconnect.png",
+      "assets/images/mijia/icon_charge_disable.png",
+      "assets/images/mijia/icon_charge_on.png",
+      "assets/images/mijia/icon_cool_down.png",
+      "assets/images/mijia/icon_danger.png",
+      "assets/images/mijia/icon_door_closed.png",
+      "assets/images/mijia/icon_door_open.png",
+      "assets/images/mijia/icon_down_disable.png",
+      "assets/images/mijia/icon_down_on.png",
+      "assets/images/mijia/icon_fault.png",
+      "assets/images/mijia/icon_finish.png",
+      "assets/images/mijia/icon_hot_water_circulation_disable.png",
+      "assets/images/mijia/icon_hot_water_circulation_off.png",
+      "assets/images/mijia/icon_hot_water_circulation_on.png",
+      "assets/images/mijia/icon_keep_fresh.png",
+      "assets/images/mijia/icon_keep_warm.png",
+      "assets/images/mijia/icon_light_disable.png",
+      "assets/images/mijia/icon_light_off.png",
+      "assets/images/mijia/icon_light_on.png",
+      "assets/images/mijia/icon_need_remove_dirt.png",
+      "assets/images/mijia/icon_nobody.png",
+      "assets/images/mijia/icon_people_standing.png",
+      "assets/images/mijia/icon_people_walking.png",
+      "assets/images/mijia/icon_reduce_disable.png",
+      "assets/images/mijia/icon_reduce_on.png",
+      "assets/images/mijia/icon_rising_disable.png",
+      "assets/images/mijia/icon_rising_on.png",
+      "assets/images/mijia/icon_safe.png",
+      "assets/images/mijia/icon_start_disable.png",
+      "assets/images/mijia/icon_start_on.png",
+      "assets/images/mijia/icon_stop_disable.png",
+      "assets/images/mijia/icon_stop_on.png",
+      "assets/images/mijia/icon_sweep_disable.png",
+      "assets/images/mijia/icon_sweep_on.png",
+      "assets/images/mijia/icon_termination_disable.png",
+      "assets/images/mijia/icon_termination_on.png",
+      "assets/images/mijia/icon_upgrade.png",
+      "assets/images/mijia/list-dot.png",
+      "assets/images/mijia/list-line.png",
+      "assets/images/mijia/mode_air_supply_disable.png",
+      "assets/images/mijia/mode_air_supply_on.png",
+      "assets/images/mijia/mode_auto_disable.png",
+      "assets/images/mijia/mode_auto_on.png",
+      "assets/images/mijia/mode_circulating_wind_disable.png",
+      "assets/images/mijia/mode_circulating_wind_on.png",
+      "assets/images/mijia/mode_cold_wind_disable.png",
+      "assets/images/mijia/mode_cold_wind_on.png",
+      "assets/images/mijia/mode_constant_humidity_disable.png",
+      "assets/images/mijia/mode_constant_humidity_on.png",
+      "assets/images/mijia/mode_cool_disable.png",
+      "assets/images/mijia/mode_cool_on.png",
+      "assets/images/mijia/mode_deep_cool_disable.png",
+      "assets/images/mijia/mode_deep_cool_on.png",
+      "assets/images/mijia/mode_direct_blowing_wind_disable.png",
+      "assets/images/mijia/mode_direct_blowing_wind_on.png",
+      "assets/images/mijia/mode_dry_disable.png",
+      "assets/images/mijia/mode_dry_on.png",
+      "assets/images/mijia/mode_fan_disable.png",
+      "assets/images/mijia/mode_fan_on.png",
+      "assets/images/mijia/mode_favorite_disable.png",
+      "assets/images/mijia/mode_favorite_on.png",
+      "assets/images/mijia/mode_floor_heating_disable.png",
+      "assets/images/mijia/mode_floor_heating_on.png",
+      "assets/images/mijia/mode_fresh_disable.png",
+      "assets/images/mijia/mode_fresh_on.png",
+      "assets/images/mijia/mode_heat_disable.png",
+      "assets/images/mijia/mode_heat_on.png",
+      "assets/images/mijia/mode_holiday_disable.png",
+      "assets/images/mijia/mode_holiday_on.png",
+      "assets/images/mijia/mode_interval_disable.png",
+      "assets/images/mijia/mode_interval_on.png",
+      "assets/images/mijia/mode_light_disable.png",
+      "assets/images/mijia/mode_light_on.png",
+      "assets/images/mijia/mode_manual_disable.png",
+      "assets/images/mijia/mode_manual_on.png",
+      "assets/images/mijia/mode_natural_wind_disable.png",
+      "assets/images/mijia/mode_natural_wind_on.png",
+      "assets/images/mijia/mode_pet_disable.png",
+      "assets/images/mijia/mode_pet_on.png",
+      "assets/images/mijia/mode_purify_disable.png",
+      "assets/images/mijia/mode_purify_on.png",
+      "assets/images/mijia/mode_quick_cooling_disable.png",
+      "assets/images/mijia/mode_quick_cooling_on.png",
+      "assets/images/mijia/mode_quick_freezing_disable.png",
+      "assets/images/mijia/mode_quick_freezing_on.png",
+      "assets/images/mijia/mode_silent_disable.png",
+      "assets/images/mijia/mode_silent_on.png",
+      "assets/images/mijia/mode_sleep_disable.png",
+      "assets/images/mijia/mode_sleep_on.png",
+      "assets/images/mijia/mode_smart_disable.png",
+      "assets/images/mijia/mode_smart_on.png",
+      "assets/images/mijia/mode_strong_disable.png",
+      "assets/images/mijia/mode_strong_on.png",
+      "assets/images/mijia/slider_icon_high_lock.png",
+      "assets/images/mijia/slider_icon_high_on.png",
+      "assets/images/mijia/slider_icon_low_lock.png",
+      "assets/images/mijia/slider_icon_low_on.png",
+      "assets/images/mijia/slider_icon_mid_lock.png",
+      "assets/images/mijia/slider_icon_mid_on.png",
+      "assets/images/mijia/slider_icon_off.png",
+      "assets/images/mijia/steam_oven_dormant.png",
+      "assets/images/mijia/time_appointment.png",
+      "assets/images/mijia/tiny_switch_disable.png",
+      "assets/images/mijia/tiny_switch_off.png",
+      "assets/images/mijia/tiny_switch_on.png",
+      "assets/images/mijia/up_disable.png",
+      "assets/images/mijia/up_on.png",
+      "assets/images/pincode/",
+      "assets/images/pincode/backspace.png",
+      "assets/images/pincode/dot.png",
+      "assets/images/version_error.png",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.xiaomi.smarthome.watch",
+          "name": "smarthome",
+          "versionName": "1.0.3",
+          "versionCode": 4,
+          "minPlatformVersion": 1000,
+          "icon": "",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.prompt"
+            },
+            {
+              "name": "system.internal.messagecenter"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.device"
+            }
+          ],
+          "permissions": [
+            {
+              "name": "hapjs.permission.DEVICE_INFO"
+            }
+          ],
+          "config": {
+            "logLevel": "log",
+            "designWidth": 432,
+            "debug": false
+          },
+          "router": {
+            "entry": "Device",
+            "pages": {
+              "Device": {
+                "component": "index"
+              },
+              "DeviceConfig": {
+                "component": "index"
+              },
+              "Pincode": {
+                "component": "index"
+              },
+              "Input": {
+                "component": "index"
+              },
+              "Main": {
+                "component": "index"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.4",
+            "timeStamp": "2025-03-17T11:18:41.110Z",
+            "node": "v16.14.0",
+            "platform": "linux",
+            "arch": "x64",
+            "component": true
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "file": "com.ximalaya.wearsmart.release.7.4.0.rpk",
+    "sha256": "645e386b69e4d23e553928782b2f8028be60846baa20aa7e7bb4b70c3744235a",
+    "members": [
+      "META-INF/",
+      "META-INF/CERT",
+      "i18n/",
+      "i18n/defaults.json",
+      "i18n/en.json",
+      "i18n/zh-CN.json",
+      "manifest-watch.json",
+      "manifest.json",
+      "app.js",
+      "pages/",
+      "pages/logo/",
+      "pages/logo/index.js",
+      "assets/",
+      "assets/images/",
+      "assets/images/all_bg_popup.png",
+      "assets/images/all_ic_refresh.png",
+      "assets/images/authority/",
+      "assets/images/authority/list_tap_boutique.png",
+      "assets/images/authority/list_tap_vip.png",
+      "assets/images/btn/",
+      "assets/images/btn/all_btn_left_nor.png",
+      "assets/images/btn/all_btn_right_pre.png",
+      "assets/images/btn/ic_vol_big@2x.png",
+      "assets/images/btn/ic_vol_small@2x.png",
+      "assets/images/btn/search_bg_bottom.png",
+      "assets/images/btn/search_img.png",
+      "assets/images/empty/",
+      "assets/images/empty/empty_page_img_notcontent.png",
+      "assets/images/empty/empty_page_img_notsubscription.png",
+      "assets/images/empty/empty_page_img_notwifi.png",
+      "assets/images/home/",
+      "assets/images/home/album_ic_0.png",
+      "assets/images/home/album_ic_1.png",
+      "assets/images/home/album_ic_2.png",
+      "assets/images/home/album_ic_3.png",
+      "assets/images/home/album_ic_4.png",
+      "assets/images/home/album_ic_5.png",
+      "assets/images/home/album_ic_6.png",
+      "assets/images/home/album_ic_7.png",
+      "assets/images/home_img.png",
+      "assets/images/ic_close.png",
+      "assets/images/list_ic_back.png",
+      "assets/images/loading.png",
+      "assets/images/loading_ic_big.png",
+      "assets/images/login/",
+      "assets/images/login/cd_ting.png",
+      "assets/images/login/cd_ting_select.png",
+      "assets/images/login/ting.png",
+      "assets/images/login/ting_select.png",
+      "assets/images/login/wx.png",
+      "assets/images/login/wx_select.png",
+      "assets/images/logo.png",
+      "assets/images/music/",
+      "assets/images/music/all_bg_bottom_small.png",
+      "assets/images/music/list_tap_audition@2x.png",
+      "assets/images/music/list_tap_boutique@2x.png",
+      "assets/images/music/list_tap_vip@2x.png",
+      "assets/images/music/player_bg_nor@2x.png",
+      "assets/images/music/player_ic_headset@2x.png",
+      "assets/images/music/player_ic_list@2x.png",
+      "assets/images/music/player_ic_next@2x.png",
+      "assets/images/music/player_ic_pause.png",
+      "assets/images/music/player_ic_play@2x.png",
+      "assets/images/music/player_ic_volume@2x.png",
+      "assets/images/music/search_bg_bottom@2x.png",
+      "assets/images/my_bg.png",
+      "assets/images/my_bg_rect.png",
+      "assets/images/rect_home_img.png",
+      "assets/images/user/",
+      "assets/images/user/my_ic_buy.png",
+      "assets/images/user/my_ic_history.png",
+      "assets/images/user/my_ic_not_login.png",
+      "assets/images/user/my_ic_search.png",
+      "assets/images/user/my_ic_set.png",
+      "assets/images/user/my_ic_subscription.png",
+      "assets/images/user/my_ic_vip.png",
+      "pages/album/",
+      "pages/album/index.js",
+      "pages/anthology/",
+      "pages/anthology/index.js",
+      "pages/audio/",
+      "pages/audio/index.js",
+      "pages/confirmLogin/",
+      "pages/confirmLogin/index.js",
+      "pages/exit/",
+      "pages/exit/index.js",
+      "pages/headphones/",
+      "pages/headphones/index.js",
+      "pages/history/",
+      "pages/history/index.js",
+      "pages/home/",
+      "pages/home/index.js",
+      "pages/login/",
+      "pages/login/index.js",
+      "pages/network/",
+      "pages/network/index.js",
+      "pages/privacy/",
+      "pages/privacy/index.js",
+      "pages/privacyCode/",
+      "pages/privacyCode/index.js",
+      "pages/screen/",
+      "pages/screen/index.js",
+      "pages/screenCode/",
+      "pages/screenCode/index.js",
+      "pages/setting/",
+      "pages/setting/index.js",
+      "pages/user/",
+      "pages/user/index.js",
+      "pages/volume/",
+      "pages/volume/index.js",
+      "META-INF/build.txt"
+    ],
+    "manifests": [
+      {
+        "member": "manifest.json",
+        "content": {
+          "package": "com.ximalaya.wearsmart",
+          "name": "喜马拉雅",
+          "versionName": "7.4.0",
+          "versionCode": 74,
+          "minPlatformVersion": 1100,
+          "icon": "/assets/images/logo.png",
+          "simulationVersion": "default",
+          "deviceTypeList": [
+            "watch"
+          ],
+          "features": [
+            {
+              "name": "system.router"
+            },
+            {
+              "name": "system.audio"
+            },
+            {
+              "name": "system.prompt"
+            },
+            {
+              "name": "system.device"
+            },
+            {
+              "name": "system.storage"
+            },
+            {
+              "name": "system.fetch"
+            },
+            {
+              "name": "system.file"
+            },
+            {
+              "name": "system.network"
+            }
+          ],
+          "display": {
+            "backgroundColor": "#000"
+          },
+          "config": {
+            "logLevel": "log",
+            "designWidth": 466,
+            "background": {
+              "features": [
+                "system.audio",
+                "system.request"
+              ]
+            },
+            "debug": false
+          },
+          "router": {
+            "entry": "pages/logo",
+            "pages": {
+              "pages/home": {
+                "component": "index",
+                "launchMode": "singleTask"
+              },
+              "pages/logo": {
+                "component": "index"
+              },
+              "pages/confirmLogin": {
+                "component": "index"
+              },
+              "pages/screen": {
+                "component": "index"
+              },
+              "pages/screenCode": {
+                "component": "index"
+              },
+              "pages/privacy": {
+                "component": "index"
+              },
+              "pages/privacyCode": {
+                "component": "index"
+              },
+              "pages/login": {
+                "component": "index"
+              },
+              "pages/user": {
+                "component": "index"
+              },
+              "pages/exit": {
+                "component": "index"
+              },
+              "pages/network": {
+                "component": "index",
+                "launchMode": "singleTask"
+              },
+              "pages/history": {
+                "component": "index"
+              },
+              "pages/volume": {
+                "component": "index"
+              },
+              "pages/audio": {
+                "component": "index",
+                "launchMode": "singleTask"
+              },
+              "pages/anthology": {
+                "component": "index",
+                "launchMode": "singleTask"
+              },
+              "pages/album": {
+                "component": "index"
+              },
+              "pages/headphones": {
+                "component": "index"
+              },
+              "pages/setting": {
+                "component": "index"
+              }
+            }
+          },
+          "packageInfo": {
+            "originType": "cmd",
+            "toolkit": "1.1.4",
+            "timeStamp": "2025-06-13T12:35:26.232Z",
+            "node": "v22.16.0",
+            "platform": "darwin",
+            "arch": "arm64",
+            "component": false
+          },
+          "minAPILevel": 1
+        }
+      }
+    ]
+  }
+]

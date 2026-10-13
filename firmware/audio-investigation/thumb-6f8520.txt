@@ -1,0 +1,66 @@
+0c778520 raw+6f8520: orrs     r6, sb, #0xb000
+0c778524 raw+6f8524: bl       #0xc7044c0
+0c778528 raw+6f8528: cmp      r0, #0xa
+0c77852a raw+6f852a: mov      r5, r0
+0c77852c raw+6f852c: bhi      #0xc778562
+0c77852e raw+6f852e: lsls     r3, r0, #1
+0c778530 raw+6f8530: strb     r3, [r7]
+0c778532 raw+6f8532: add.w    sb, r7, #1
+0c778536 raw+6f8536: cbnz     r0, #0xc77857c
+0c778538 raw+6f8538: mov.w    sl, #0
+0c77853c raw+6f853c: mov      r0, r6
+0c77853e raw+6f853e: strb.w   sl, [sb, r5]
+0c778542 raw+6f8542: bl       #0xc2d61b0
+0c778546 raw+6f8546: ldr      r0, [r4, #0x74]
+0c778548 raw+6f8548: mov      r2, sl
+0c77854a raw+6f854a: ldr      r3, [r0]
+0c77854c raw+6f854c: mov      r1, r8
+0c77854e raw+6f854e: ldr      r4, [r3, #0x18]
+0c778550 raw+6f8550: mov      r3, r7
+0c778552 raw+6f8552: blx      r4
+0c778554 raw+6f8554: ldrb     r3, [r7]
+0c778556 raw+6f8556: lsls     r2, r3, #0x1f
+0c778558 raw+6f8558: bmi      #0xc7785ae
+0c77855a raw+6f855a: adds     r7, #0x30
+0c77855c raw+6f855c: mov      sp, r7
+0c77855e raw+6f855e: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c778562 raw+6f8562: add.w    sb, r0, #0x10
+0c778566 raw+6f8566: bic      sb, sb, #0xf
+0c77856a raw+6f856a: mov      r0, sb
+0c77856c raw+6f856c: bl       #0xc710d50
+0c778570 raw+6f8570: orr      r3, sb, #1
+0c778574 raw+6f8574: mov      sb, r0
+0c778576 raw+6f8576: strd     r3, r5, [r7]
+0c77857a raw+6f857a: str      r0, [r7, #8]
+0c77857c raw+6f857c: mov      r2, r5
+0c77857e raw+6f857e: mov      r1, r6
+0c778580 raw+6f8580: mov      r0, sb
+0c778582 raw+6f8582: bl       #0xc704110
+0c778586 raw+6f8586: b        #0xc778538
+0c778588 raw+6f8588: ldr      r0, [r0, #0x74]
+0c77858a raw+6f858a: mov.w    r2, #-1
+0c77858e raw+6f858e: ldr      r3, [r0]
+0c778590 raw+6f8590: ldr      r4, [r3, #0x18]
+0c778592 raw+6f8592: add.w    r3, r7, #0xc
+0c778596 raw+6f8596: strh     r5, [r7, #0xc]
+0c778598 raw+6f8598: blx      r4
+0c77859a raw+6f859a: ldrb     r3, [r7, #0xc]
+0c77859c raw+6f859c: lsls     r3, r3, #0x1f
+0c77859e raw+6f859e: bpl      #0xc77855a
+0c7785a0 raw+6f85a0: ldr      r1, [r7, #0xc]
+0c7785a2 raw+6f85a2: ldr      r0, [r7, #0x14]
+0c7785a4 raw+6f85a4: bic      r1, r1, #1
+0c7785a8 raw+6f85a8: bl       #0xc70ff4c
+0c7785ac raw+6f85ac: b        #0xc77855a
+0c7785ae raw+6f85ae: ldr      r1, [r7]
+0c7785b0 raw+6f85b0: ldr      r0, [r7, #8]
+0c7785b2 raw+6f85b2: bic      r1, r1, #1
+0c7785b6 raw+6f85b6: bl       #0xc70ff4c
+0c7785ba raw+6f85ba: adds     r7, #0x30
+0c7785bc raw+6f85bc: mov      sp, r7
+0c7785be raw+6f85be: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c7785c2 raw+6f85c2: nop      
+0c7785c4 raw+6f85c4: bhi      #0xc778540
+0c7785c6 raw+6f85c6: subs     r4, #0x19
+0c7785c8 raw+6f85c8: bvc      #0xc7784cc
+0c7785ca raw+6f85ca: subs     r4, #0x19

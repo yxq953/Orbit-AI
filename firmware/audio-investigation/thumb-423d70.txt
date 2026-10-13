@@ -1,0 +1,88 @@
+0c4a3d70 raw+423d70: push     {r4, r5, r6, r7, lr}
+0c4a3d72 raw+423d72: sub      sp, #0x6c
+0c4a3d74 raw+423d74: add      r7, sp, #8
+0c4a3d76 raw+423d76: cbnz     r0, #0xc4a3d8a
+0c4a3d78 raw+423d78: ldr      r3, [pc, #0x258] ; literal raw+0x423fd4 = 0x3c0aff84 'eventbus_cb'
+0c4a3d7a raw+423d7a: ldr      r2, [pc, #0x25c] ; literal raw+0x423fd8 = 0x3c0adbbd 'recorder'
+0c4a3d7c raw+423d7c: ldr      r1, [pc, #0x25c] ; literal raw+0x423fdc = 0x3c06c299 '[%s] %s: e == NULL\n'
+0c4a3d7e raw+423d7e: movs     r0, #3
+0c4a3d80 raw+423d80: bl       #0xc27e19c
+0c4a3d84 raw+423d84: adds     r7, #0x64
+0c4a3d86 raw+423d86: mov      sp, r7
+0c4a3d88 raw+423d88: pop      {r4, r5, r6, r7, pc}
+0c4a3d8a raw+423d8a: ldrb     r3, [r0, #8]
+0c4a3d8c raw+423d8c: subs     r3, #7
+0c4a3d8e raw+423d8e: cmp      r3, #3
+0c4a3d90 raw+423d90: bhi      #0xc4a3d84
+0c4a3d92 raw+423d92: tbh      [pc, r3, lsl #1] ; literal raw+0x423d94 = 0x0004f013
+0c4a3d96 raw+423d96: movs     r4, r0
+0c4a3d98 raw+423d98: lsls     r4, r4, #1
+0c4a3d9a raw+423d9a: lsls     r1, r4, #2
+0c4a3d9c raw+423d9c: lsls     r7, r4, #5
+0c4a3d9e raw+423d9e: movs     r2, #0
+0c4a3da0 raw+423da0: ldr      r3, [pc, #0x23c] ; literal raw+0x423fe0 = 0x3c268194
+0c4a3da2 raw+423da2: ldr      r4, [pc, #0x240] ; literal raw+0x423fe4 = 0x3c26814c
+0c4a3da4 raw+423da4: strb     r2, [r3]
+0c4a3da6 raw+423da6: ldr      r3, [r4]
+0c4a3da8 raw+423da8: cbnz     r3, #0xc4a3db2
+0c4a3daa raw+423daa: ldr      r3, [pc, #0x23c] ; literal raw+0x423fe8 = 0x3c0afed8 'recorder_opt_start'
+0c4a3dac raw+423dac: ldr      r2, [pc, #0x228] ; literal raw+0x423fd8 = 0x3c0adbbd 'recorder'
+0c4a3dae raw+423dae: ldr      r1, [pc, #0x23c] ; literal raw+0x423fec = 0x3c0acf41 '[%s] %s: precorder is null.\n'
+0c4a3db0 raw+423db0: b        #0xc4a3d7e
+0c4a3db2 raw+423db2: movs     r0, #6
+0c4a3db4 raw+423db4: ldr      r3, [pc, #0x230] ; literal raw+0x423fe8 = 0x3c0afed8 'recorder_opt_start'
+0c4a3db6 raw+423db6: ldr      r2, [pc, #0x220] ; literal raw+0x423fd8 = 0x3c0adbbd 'recorder'
+0c4a3db8 raw+423db8: ldr      r1, [pc, #0x234] ; literal raw+0x423ff0 = 0x3c0ae4e9 '[%s] %s: begin;\n'
+0c4a3dba raw+423dba: bl       #0xc27e19c
+0c4a3dbe raw+423dbe: ldr      r2, [pc, #0x234] ; literal raw+0x423ff4 = 0x3c268190
+0c4a3dc0 raw+423dc0: movs     r1, #1
+0c4a3dc2 raw+423dc2: ldr      r3, [r2]
+0c4a3dc4 raw+423dc4: orr      r3, r3, #1
+0c4a3dc8 raw+423dc8: str      r3, [r2]
+0c4a3dca raw+423dca: ldr      r3, [r4]
+0c4a3dcc raw+423dcc: ldr      r0, [r3, #0xc]
+0c4a3dce raw+423dce: bl       #0xc3b3f00
+0c4a3dd2 raw+423dd2: ldr      r3, [r4]
+0c4a3dd4 raw+423dd4: movs     r1, #1
+0c4a3dd6 raw+423dd6: ldr      r0, [r3, #0x18]
+0c4a3dd8 raw+423dd8: bl       #0xc3b3f00
+0c4a3ddc raw+423ddc: ldr      r3, [r4]
+0c4a3dde raw+423dde: movs     r1, #1
+0c4a3de0 raw+423de0: ldr      r0, [r3, #0x1c]
+0c4a3de2 raw+423de2: bl       #0xc3b3f00
+0c4a3de6 raw+423de6: ldr      r3, [r4]
+0c4a3de8 raw+423de8: movs     r1, #1
+0c4a3dea raw+423dea: ldr      r0, [r3, #8]
+0c4a3dec raw+423dec: bl       #0xc3b3df4
+0c4a3df0 raw+423df0: ldr      r3, [r4]
+0c4a3df2 raw+423df2: ldr      r0, [r3, #8]
+0c4a3df4 raw+423df4: bl       #0xc3db024
+0c4a3df8 raw+423df8: ldr      r3, [r4]
+0c4a3dfa raw+423dfa: movs     r1, #1
+0c4a3dfc raw+423dfc: ldr      r0, [r3, #0x10]
+0c4a3dfe raw+423dfe: bl       #0xc3b3df4
+0c4a3e02 raw+423e02: ldr      r3, [r4]
+0c4a3e04 raw+423e04: ldr      r0, [r3, #0x10]
+0c4a3e06 raw+423e06: bl       #0xc3db024
+0c4a3e0a raw+423e0a: ldr      r3, [r4]
+0c4a3e0c raw+423e0c: movs     r1, #1
+0c4a3e0e raw+423e0e: ldr      r0, [r3, #0x14]
+0c4a3e10 raw+423e10: bl       #0xc3b3df4
+0c4a3e14 raw+423e14: ldr      r3, [r4]
+0c4a3e16 raw+423e16: ldr      r0, [r3, #0x14]
+0c4a3e18 raw+423e18: bl       #0xc3db024
+0c4a3e1c raw+423e1c: ldr      r3, [pc, #0x1d8] ; literal raw+0x423ff8 = 0x3c267f50
+0c4a3e1e raw+423e1e: ldr      r0, [r3]
+0c4a3e20 raw+423e20: cbz      r0, #0xc4a3e34
+0c4a3e22 raw+423e22: movs     r2, #0xc8
+0c4a3e24 raw+423e24: movs     r3, #0
+0c4a3e26 raw+423e26: ldr      r1, [pc, #0x1d4] ; literal raw+0x423ffc = 0x0c49eded
+0c4a3e28 raw+423e28: strd     r2, r3, [sp]
+0c4a3e2c raw+423e2c: movs     r2, #0x64
+0c4a3e2e raw+423e2e: movs     r3, #0
+0c4a3e30 raw+423e30: bl       #0xc350dae
+0c4a3e34 raw+423e34: movs     r2, #0
+0c4a3e36 raw+423e36: movs     r1, #1
+0c4a3e38 raw+423e38: ldr      r3, [r4]
+0c4a3e3a raw+423e3a: ldr      r4, [pc, #0x1c4] ; literal raw+0x424000 = 0x3c267f60
+0c4a3e3c raw+423e3c: str.w    r2, [r3, #0x98]

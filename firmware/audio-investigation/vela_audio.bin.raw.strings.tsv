@@ -1,0 +1,313 @@
+0x1cb700	audio/lib_buffer.c
+0x1cd1e4	nxrecorder
+0x1cd9fc	nxrecorder.c
+0x1cda28	recordthread
+0x1cda8c	No suitable Audio Device found
+0x1cdaac	Audio device busy
+0x1cdad4	Unknown audio format
+0x1cdb04	Error recording file: %d
+0x1cdb20	NxRecorder commands
+0x1cdb58	/dev/audio/%s
+0x1cdb80	Device %s is not an audio device
+0x1cdba4	NxRecorder version 1.00
+0x1cdbf8	recordraw
+0x1cdc24	nxrecorder> 
+0x1cdc3c	Specify a preferred audio device
+0x1cdc88	Record a pcm raw file
+0x1cdca0	Record a media file
+0x1cdcb4	Pause record
+0x1cdcc4	Resume record
+0x1cdcd4	Stop record
+0x1cdce0	Exit NxRecorder
+0x1cdda4	/dev/audio
+0x1d8398	**Crash Version audio:[%s] ap:[%s]
+0x1d9990	audio> 
+0x1ecb6c	opus/silk/CNG.c
+0x1ecbc0	opus/silk/LPC_analysis_filter.c
+0x1ecc38	opus/silk/NLSF2A.c
+0x1ecc8c	opus/silk/NLSF_VQ.c
+0x1ecccc	opus/silk/NLSF_VQ_weights_laroia.c
+0x1ecd2c	opus/silk/NLSF_encode.c
+0x1ecd7c	opus/silk/NSQ.c
+0x1ecddc	assertion failed: lag > 0 || signalType != TYPE_VOICED
+0x1ece14	opus/silk/NSQ_del_dec.c
+0x1ece5c	opus/silk/PLC.c
+0x1ecebd	yffopus/silk/VAD.c
+0x1ecf0c	assertion failed: psEncC->frame_length == 8 * silk_RSHIFT( psEncC->frame_length, 3 )
+0x1ecf74	opus/silk/check_control_input.c
+0x1ed184	opus/silk/control_codec.c
+0x1ed36c	opus/silk/dec_API.c
+0x1ed3e8	opus/silk/decode_core.c
+0x1ed400	opus/silk/decode_frame.c
+0x1ed4dc	opus/silk/decode_indices.c
+0x1ed538	opus/silk/decode_pitch.c
+0x1ed588	opus/silk/decode_pulses.c
+0x1ed5d0	opus/silk/decoder_set_fs.c
+0x1ed69c	opus/silk/enc_API.c
+0x1ed890	opus/silk/encode_indices.c
+0x1ed960	opus/silk/encode_pulses.c
+0x1ed97c	opus/silk/fixed/apply_sine_window_FIX.c
+0x1eda68	opus/silk/fixed/burg_modified_FIX.c
+0x1edac8	opus/silk/fixed/encode_frame_FIX.c
+0x1edb48	opus/silk/fixed/find_LPC_FIX.c
+0x1edc10	opus/silk/fixed/find_pitch_lags_FIX.c
+0x1edc78	opus/silk/fixed/find_pred_coefs_FIX.c
+0x1edd18	opus/silk/fixed/pitch_analysis_core_FIX.c
+0x1edd84	assertion failed: complexity >= SILK_PE_MIN_COMPLEX
+0x1eddb8	assertion failed: complexity <= SILK_PE_MAX_COMPLEX
+0x1edfe0	opus/silk/fixed/residual_energy_FIX.c
+0x1ee050	opus/silk/fixed/schur64_FIX.c
+0x1ee070	assertion failed: order >= 0 && order <= SILK_MAX_ORDER_LPC
+0x1ee0ac	opus/silk/fixed/schur_FIX.c
+0x1ee0c8	opus/silk/fixed/warped_autocorrelation_FIX.c
+0x1ee120	opus/silk/interpolate.c
+0x1ee26c	opus/silk/process_NLSFs.c
+0x1ee350	opus/silk/resampler.c
+0x1ee3e0	opus/silk/resampler_private_down_FIR.c
+0x1f55e0	mbedtls/library/ssl_client.c
+0x1f5e68	mbedtls/library/ssl_msg.c
+0x1f5e84	record counter limit reached: renegotiate
+0x1f5edc	datagram of length %u too small to hold DTLS record header of length %u
+0x1f5f24	datagram of length %u too small to hold DTLS record header including CID, length %u
+0x1f5f78	unknown record type %u
+0x1f5fc0	input record header
+0x1f5fd4	input record: msgtype = %u, version = [0x%x], msglen = %zu
+0x1f6010	Datagram of length %u too small to contain record of advertised length %u.
+0x1f605c	record from another epoch: expected %u, received %lu
+0x1f6094	Consider record for buffering
+0x1f60b4	replayed record
+0x1f6120	bad record structure provided to encrypt_buf
+0x1f6170	Record content %zu too large, maximum %zu
+0x1f619c	Buffer provided for encrypted record not large enough
+0x1f62a0	No PRNG provided to encrypt_record routine
+0x1f63c0	bad record structure provided to decrypt_buf
+0x1f6618	=> write record
+0x1f6638	output record: msgtype = %u, version = [%u:%u], msglen = %zu
+0x1f6678	output record sent to network
+0x1f6730	<= write record
+0x1f675c	Record too large: size %zu, maximum %zu
+0x1f68c0	mbedtls_ssl_write_record
+0x1f6d20	next record in same datagram, offset: %zu
+0x1f6e74	=> read record
+0x1f6e84	remaining content in record
+0x1f6ff0	=> ssl_load_buffered_record
+0x1f700c	Buffered record not from current epoch.
+0x1f7034	Found buffered record from current epoch - load
+0x1f7064	<= ssl_load_buffered_record
+0x1f7098	Buffering of future epoch record of size %zu would exceed the compile-time limit %zu (already %zu bytes buffered) -- ignore
+0x1f7118	Buffer record from epoch %u
+0x1f7134	Buffered record
+0x1f71e4	check cookie: record too short
+0x1f7350	discarding unexpected record (header)
+0x1f7378	discarding invalid record (header)
+0x1f739c	more than one record within datagram
+0x1f73c4	input record from network
+0x1f7408	record type after decrypt (before %d): %d
+0x1f7450	unknown record type
+0x1f7504	too many records with bad MAC
+0x1f7524	discarding invalid record (mac)
+0x1f7544	ssl_get_next_record
+0x1f778c	Enough space available after freeing future epoch record
+0x1f79d0	<= read record
+0x1f79fc	mbedtls_ssl_read_record
+0x1f7c28	mbedtls_ssl_get_max_out_record_payload
+0x1f7d18	mbedtls/library/ssl_tls.c
+0x1f7fbc	MTU too low for record expansion
+0x1f8280	no signature algorithm in common
+0x1f82a4	Signature algorithms extension length misaligned
+0x1f82d8	received signature algorithm: 0x%x %s
+0x1f8300	valid signature algorithm: %s
+0x1f88e0	adding signature_algorithms extension
+0x1f8908	No signature algorithms defined.
+0x1f892c	got signature scheme [%x] %s
+0x1f894c	sent signature scheme [%x] %s
+0x1f8a74	signature_algorithms
+0x1f8ba4	signature_algorithms_cert
+0x1f8c30	record_size_limit
+0x1f8e60	mbedtls/library/ssl_tls12_client.c
+0x1f8f04	Supported Signature Algorithm found: %02x %02x
+0x1f9b58	signature
+0x1f9ea8	mbedtls/library/ssl_tls12_server.c
+0x1fa090	ciphersuite mismatch: no suitable hash algorithm for signature algorithm %u
+0x1fa144	record header
+0x1fa1d8	replayed record, discarding
+0x1fa1f4	record contents
+0x1fa420	found signature_algorithms extension
+0x1fa6d0	client hello v3, signature_algorithm ext: %u
+0x1fa700	no hash algorithm for signature algorithm %u - should not happen
+0x1fabf0	my signature
+0x1fb0bc	opus/silk/sort.c
+0x1fb11c	opus/silk/stereo_encode_pred.c
+0x1fed3c	assertion failed: st->silk_mode.internalSampleRate == 16000
+0x1ff238	%sDigital Signature
+0x202948	audio.c
+0x202f08	AUDIO
+0x202f1c	src/rpmsg_audio.c
+0x202f50	%s %d: audio_msg %s
+0x202f80	%s: AUDIOIOC_SETPARAMTER use aec, and open speech
+0x203004	%s: AUDIOIOC_SETPARAMTER none, ans close speech
+0x2030f0	rpmsg_audio_initialize
+0x2033b8	FFmpegCommand = pcm0c,set_parameter,set_scenario=mic_fadeout;
+0x203414	FFmpegCommand = pcm0c,set_parameter,set_scenario=none;
+0x20344c	domain: CaptureSelDomain
+0x203466	conf: sco-capture
+0x203507	FFmpegCommand = SelCap,map,1;
+0x203526	conf: capture
+0x203555	FFmpegCommand = SelCap,map,0;
+0x203e31	AudioMode        Is       phone
+0x203e53	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=hfp_aec;SelMic,map,-1 0;
+0x203f52	AudioMode        Is       phone
+0x203f74	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;
+0x203ff3	AudioMode        IsNot    phone
+0x20405b	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=netTalk_aec;SelMic,map,0 -1;
+0x2040f5	AudioMode        IsNot    phone
+0x20415d	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;
+0x2041a1	conf: capture
+0x2041d0	FFmpegCommand = pcm0c,unmute,;pcm0c,set_parameter,set_scenario=none;SelMic,map,0 -1;
+0x204239	FFmpegCommand = pcm0c,mute,;pcm0c,set_parameter,set_scenario=none;SelMic,map,-1 -1;
+0x2042bb	AudioMode Is phone
+0x204340	AudioMode Is phone
+0x2043c9	AudioMode Is phone
+0x204452	AudioMode Is phone
+0x2044db	AudioMode Is phone
+0x204564	AudioMode Is phone
+0x2045ed	AudioMode Is phone
+0x204676	AudioMode Is phone
+0x2046ff	AudioMode Is phone
+0x204788	AudioMode Is phone
+0x204812	AudioMode Is phone
+0x20489d	AudioMode Is phone
+0x204932	AudioMode Is phone
+0x2049c6	AudioMode Is phone
+0x204a5c	AudioMode Is phone
+0x204aee	AudioMode Is phone
+0x204b8d	AudioMode Is normal
+0x204bf8	AudioMode Is normal
+0x204c67	AudioMode Is normal
+0x204cd6	AudioMode Is normal
+0x204d45	AudioMode Is normal
+0x204db4	AudioMode Is normal
+0x204e23	AudioMode Is normal
+0x204e92	AudioMode Is normal
+0x204f01	AudioMode Is normal
+0x204f6f	AudioMode Is normal
+0x204fde	AudioMode Is normal
+0x205f58	[speaker]adevsink@pcm2p=format=nuttx:sample_rate=48000:ch_layout=mono:devname=/dev/audio/pcm2p,
+0x205fb8	adevsrc@SCOrx=format=nuttx:devname=/dev/audio/pcm1c,afade=d=0.5[pcm1c],
+0x206074	adevsrc@pcm0c=format=nuttx:devname=/dev/audio/pcm0c[pcm0c],
+0x2060b0	[pcm0c]astreamselect@SelMic=inputs=1:map=0 -1[mic0][mic1],
+0x2060eb	[mic0][scorx1]astreamselect@SelCap=inputs=2:map=0[cap],
+0x206123	[cap]amoviesink_async@Capture,
+0x206194	[pcm1p]adevsink@SCOtx=format=nuttx:ch_layout=mono:devname=/dev/audio/pcm1p
+0x2063e3	Stream,          SCO, Ring, Alarm, Communication, Enforced, Notify, Record, TTS, Health, Sport, Info, Music, Metronome
+0x206700	Record,          1:6, 1:6,  1:6,   1:6,           1:6,      1:6,    0:1,    0:1, 0:1,    0:1,   0:1,  0:1,   0:1
+0x206a6f	ExclusiveCriterion AudioMode        : normal phone
+0x206c74	ExclusiveCriterion Music Record            : amovie_async@InMusic
+0x206e0f	ExclusiveCriterion Capture cap             : amoviesink_async
+0x206f92	NumericalCriterion persist.media.MediaVolume RecordVolume TTSVolume MusicVolume IntercomVolume : [0,10] = 4
+0x20972b	audio_flinger
+0x209838	%s %d: capture_open:%d playback_open:%d samplerate:%d stream:%d
+0x2098fc	nuttx_audio_i2s_master_open
+0x209918	nuttx_audio_i2s_slave_open
+0x209967	get_audio_mask
+0x209976	nuttx_audio_codec_open
+0x209a0d	nuttx_audio_i2s_master_open
+0x209a38	nuttx_audio_i2s_open
+0x209a4d	nuttx_audio_i2s_slave_open
+0x209a68	nuttx_audio_btpcm_open
+0x20a0c5	%s: Dma data size is not aligned: data_size=%u AUDIO_BUFFER_COUNT=%u align=%u
+0x20a113	desc_xfer_size * AUDIO_BUFFER_COUNT == cfg->data_size && (desc_xfer_size % align) == 0
+0x20a9e2	%s %d: config dma CONFIG_AUDIO_DMA_DEVICE
+0x20aa38	setup_audio_dma
+0x20aa77	config_audio_dma
+0x20aab2	start_audio_dma
+0x20aad2	setup_audio_dma
+0x20ab21	config_audio_dma
+0x20ab85	start_audio_dma
+0x20bc3c	ffmpeg/libavcodec/audio_frame_queue.c
+0x20bda4	Codec (%s) not on whitelist '%s'
+0x20c840	dvaudio
+0x20c868	vmdaudio
+0x20c8d0	smackaudio
+0x20c8ec	dsicinaudio
+0x20c940	wmavoice
+0x20c99c	binkaudio_rdft
+0x20c9ac	binkaudio_dct
+0x20ca00	bmv_audio
+0x20ca40	paf_audio
+0x20cb38	mpegh_3d_audio
+0x20cb60	silk
+0x20cb68	fastaudio
+0x20cbb4	rawaudio
+0x28f550	Audio object type %s%d
+0x290ed0	ffmpeg/libavcodec/mpegaudiodec_common.c
+0x2b9e18	ffmpeg/libavcodec/mpegaudiodec_template.c
+0x2b9f44	Error while decoding MPEG audio frame.
+0x2c2fb0	audio_service_type
+0x2c2fc4	audio service type
+0x2c31a4	set audio sampling rate (in Hz)
+0x2c31c4	set number of audio channels
+0x2c3700	Main Audio Service
+0x2c3778	Voice Over
+0x2c37a4	sample format audio decoders should prefer
+0x2c38e4	codec_whitelist
+0x2c50e0	Invalid packet signature in Id header
+0x2c516c	Invalid packet signature in Setup header
+0x2c5470	Audio mode
+0x2c562c	nuttx capture device
+0x2c56d8	[%s][%s] capture overflow!
+0x2c5824	/dev/audio/pcm1p
+0x2c5f88	no fade; keep audio as-is
+0x2c8008	ffmpeg/libavfilter/audio.c
+0x2c85a8	/data/user/audio/%.16s-%.8s-%s-%d-%d.pcm
+0x2c85d4	/data/user/audio/%.16s-%.8s-%s-%dx%d.yuv
+0x2c9c98	pool->type == AVMEDIA_TYPE_AUDIO
+0x2ca01c	audio_codec
+0x2ca990	audio/aac,audio/aacp,audio/x-aac
+0x2cadf0	protocol_whitelist
+0x2cae04	!(e=av_dict_get(*options, "protocol_whitelist", ((void*)0), 0)) || (uc->protocol_whitelist && !strcmp(uc->protocol_whitelist, e->value))
+0x2caf4c	Protocol '%s' not on whitelist '%s'!
+0x2caf98	Setting default whitelist '%s'
+0x2cafb8	No default whitelist set
+0x2cb07c	!whitelist || !(e=av_dict_get(*options, "protocol_whitelist", ((void*)0), 0)) || !strcmp(whitelist, e->value)
+0x2cb960	Format not on whitelist '%s'
+0x2cf05c	Empty SAND audio box
+0x2cf764	SA3D audio box too small
+0x2d17b8	skip %d audio samples from curr_cts: %lld
+0x2d1b00	Unsupported DTS audio channel layout
+0x2d1bd4	audio channels %d
+0x2d3fd0	audio/ogg
+0x2d3ff8	Ogg (audio/video/Speex/Opus) muxer
+0x2d43c5	audio
+0x2d4d0c	audio_preload
+0x2d4d1c	microseconds by which audio packets should be interleaved earlier
+0x2d51d4	format_whitelist
+0x2d6728	%s files have exactly one audio stream
+0x2d678c	audio/amrnb
+0x2d8330	#!SILK_V3
+0x2d833c	audio/silk
+0x2d8954	Read of key file failed. Is it actually there, are the access permissions correct?
+0x2d997c	Writing 16 bit peak for 8 bit audio does not make sense
+0x2d99b8	audio/x-wav
+0x2d9b7c	Number of audio samples used to generate each peak frame.
+0x2dcddc	Generic error in an external library
+0x2ded64	ffmpeg/libswresample/audioconvert.c
+0x2e0234	set minimum difference between timestamps and audio data (in seconds) below which no timestamp compensation of either kind is applied
+0x2e02cc	set minimum difference between timestamps and audio data (in seconds) to trigger padding/trimming the data.
+0x2e0414	simplified 1 parameter audio timestamp matching, 0(disabled), 1(filling and trimming), >1(maximum stretch/squeeze in samples per second)
+0x2e1ffc	adding %d audio samples of silence
+0x2e2020	discarding %d audio samples
+0x2e2070	compensating audio timestamp drift:%f compensation:%d in:%d
+0x2e20f0	AudioMode
+0x2e2384	media_recorder_start_picture error
+0x2e2610	media_recorder_open error
+0x2e262c	recorder ID %ld
+0x2e2920	Create recorder channel return ID (copen [SOURCE/FILTER])
+0x2e2998	Destroy player/recorder/session channel (close ID [pending_stop(1/0)])
+0x2e2b04	Reset player/recorder channel (reset ID)
+0x2e2b30	Set player/recorder prepare (prepare ID url/buffer/direct url [options])
+0x2e2b7c	Set player/recorder/session start (start ID [SCENARIO])
+0x2e2bb4	Set player/recorder/session stop (stop ID)
+0x2e2be0	Set player/recorder/session pause (pause ID)
+0x2e38b4	[media][%s:%d] audio focus stack is full
+0x2e3db0	recorder

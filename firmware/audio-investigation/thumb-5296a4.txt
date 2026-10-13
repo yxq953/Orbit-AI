@@ -1,0 +1,126 @@
+0c5a96a4 raw+5296a4: push.w   {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+0c5a96a8 raw+5296a8: sub      sp, #0x24
+0c5a96aa raw+5296aa: mov      r1, r3
+0c5a96ac raw+5296ac: ldr      r3, [pc, #0x128] ; literal raw+0x5297d8 = 0x3c27ea20
+0c5a96ae raw+5296ae: add      r7, sp, #0x10
+0c5a96b0 raw+5296b0: mov      r4, r0
+0c5a96b2 raw+5296b2: mov      r0, r2
+0c5a96b4 raw+5296b4: ldr      r2, [r3]
+0c5a96b6 raw+5296b6: bl       #0xc31c310
+0c5a96ba raw+5296ba: ldr      r6, [r7, #0x3c]
+0c5a96bc raw+5296bc: mov      r5, r0
+0c5a96be raw+5296be: cbnz     r0, #0xc5a96e6
+0c5a96c0 raw+5296c0: ldr      r3, [pc, #0x118] ; literal raw+0x5297dc = 0x3c113b35 '(wechat) != (0)'
+0c5a96c2 raw+5296c2: movs     r0, #3
+0c5a96c4 raw+5296c4: str      r3, [sp, #0xc]
+0c5a96c6 raw+5296c6: ldr      r3, [pc, #0x118] ; literal raw+0x5297e0 = 0x3c02dbec ':'
+0c5a96c8 raw+5296c8: ldr      r2, [pc, #0x118] ; literal raw+0x5297e4 = 0x3c113c4c 'wechat_js_invoke_function'
+0c5a96ca raw+5296ca: str      r3, [sp, #8]
+0c5a96cc raw+5296cc: ldr      r3, [pc, #0x118] ; literal raw+0x5297e8 = 0x3c113c66 'jse_value_t AIOTJS::wechat_js_invoke_function(jse_context_ref, jse_value_t, int, jse_value_ref)'
+0c5a96ce raw+5296ce: ldr      r1, [pc, #0x11c] ; literal raw+0x5297ec = 0x3c0abdcb "[AIOTJS] [%s:%d] %s:%s%s Assertion `%s' failed.\n"
+0c5a96d0 raw+5296d0: str      r3, [sp, #4]
+0c5a96d2 raw+5296d2: ldr      r3, [pc, #0x11c] ; literal raw+0x5297f0 = 0x3c113cc6 'jse_wechat.cpp:81'
+0c5a96d4 raw+5296d4: str      r3, [sp]
+0c5a96d6 raw+5296d6: movs     r3, #0x51
+0c5a96d8 raw+5296d8: bl       #0xc5cd10c
+0c5a96dc raw+5296dc: mov      r2, r5
+0c5a96de raw+5296de: movs     r1, #0x51
+0c5a96e0 raw+5296e0: ldr      r0, [pc, #0x110] ; literal raw+0x5297f4 = 0x3c113ba9 'jse_wechat.cpp'
+0c5a96e2 raw+5296e2: bl       #0xc7045c8
+0c5a96e6 raw+5296e6: ldr      r3, [r7, #0x38]
+0c5a96e8 raw+5296e8: cmp      r3, #1
+0c5a96ea raw+5296ea: bne      #0xc5a96f4
+0c5a96ec raw+5296ec: ldrd     r2, r3, [r6]
+0c5a96f0 raw+5296f0: adds     r1, r3, #1
+0c5a96f2 raw+5296f2: beq      #0xc5a96fe
+0c5a96f4 raw+5296f4: ldr      r1, [pc, #0x100] ; literal raw+0x5297f8 = 0x3c113cd8 'invalid parameter, not an object'
+0c5a96f6 raw+5296f6: mov      r0, r4
+0c5a96f8 raw+5296f8: bl       #0xc3161e8
+0c5a96fc raw+5296fc: b        #0xc5a97ae
+0c5a96fe raw+5296fe: ldr      r1, [pc, #0xfc] ; literal raw+0x5297fc = 0x3c113cf9 'task_id'
+0c5a9700 raw+529700: mov      r0, r4
+0c5a9702 raw+529702: str      r1, [sp]
+0c5a9704 raw+529704: strd     r2, r3, [r7]
+0c5a9708 raw+529708: bl       #0xc319f00
+0c5a970c raw+52970c: ldrd     r2, r3, [r7]
+0c5a9710 raw+529710: mov      r6, r1
+0c5a9712 raw+529712: ldr      r1, [pc, #0xec] ; literal raw+0x529800 = 0x3c113d01 'func_name'
+0c5a9714 raw+529714: mov      r8, r0
+0c5a9716 raw+529716: str      r1, [sp]
+0c5a9718 raw+529718: mov      r0, r4
+0c5a971a raw+52971a: bl       #0xc319f00
+0c5a971e raw+52971e: ldrd     r2, r3, [r7]
+0c5a9722 raw+529722: mov      fp, r1
+0c5a9724 raw+529724: ldr      r1, [pc, #0xdc] ; literal raw+0x529804 = 0x3c113d0b 'request_body'
+0c5a9726 raw+529726: mov      sl, r0
+0c5a9728 raw+529728: str      r1, [sp]
+0c5a972a raw+52972a: mov      r0, r4
+0c5a972c raw+52972c: bl       #0xc319f00
+0c5a9730 raw+529730: mov      sb, r0
+0c5a9732 raw+529732: mov      r5, r1
+0c5a9734 raw+529734: mov      r0, r8
+0c5a9736 raw+529736: mov      r1, r6
+0c5a9738 raw+529738: bl       #0xc621b4e
+0c5a973c raw+52973c: cbz      r0, #0xc5a97b6
+0c5a973e raw+52973e: cmn.w    fp, #7
+0c5a9742 raw+529742: bne      #0xc5a97b6
+0c5a9744 raw+529744: adds     r3, r5, #7
+0c5a9746 raw+529746: bne      #0xc5a97b6
+0c5a9748 raw+529748: add.w    r1, r7, #8
+0c5a974c raw+52974c: mov      r2, r8
+0c5a974e raw+52974e: mov      r3, r6
+0c5a9750 raw+529750: mov      r0, r4
+0c5a9752 raw+529752: bl       #0xc31d69c
+0c5a9756 raw+529756: mov      r2, sl
+0c5a9758 raw+529758: mov      r3, r5
+0c5a975a raw+52975a: mov      r0, r4
+0c5a975c raw+52975c: bl       #0xc621adc
+0c5a9760 raw+529760: mov      r2, sb
+0c5a9762 raw+529762: mov      r3, r5
+0c5a9764 raw+529764: mov      fp, r0
+0c5a9766 raw+529766: mov      r0, r4
+0c5a9768 raw+529768: bl       #0xc621adc
+0c5a976c raw+52976c: vldr     d0, [r7, #8]
+0c5a9770 raw+529770: mov      r1, r0
+0c5a9772 raw+529772: str      r0, [r7, #4]
+0c5a9774 raw+529774: mov      r0, fp
+0c5a9776 raw+529776: bl       #0xc78e51c
+0c5a977a raw+52977a: mov      r1, fp
+0c5a977c raw+52977c: mov      r0, r4
+0c5a977e raw+52977e: bl       #0xc3151e0
+0c5a9782 raw+529782: ldr      r3, [r7, #4]
+0c5a9784 raw+529784: mov      r0, r4
+0c5a9786 raw+529786: mov      r1, r3
+0c5a9788 raw+529788: bl       #0xc3151e0
+0c5a978c raw+52978c: mov      r2, r8
+0c5a978e raw+52978e: mov      r3, r6
+0c5a9790 raw+529790: mov      r0, r4
+0c5a9792 raw+529792: bl       #0xc621aac
+0c5a9796 raw+529796: mov      r2, sl
+0c5a9798 raw+529798: mov      r3, r5
+0c5a979a raw+52979a: mov      r0, r4
+0c5a979c raw+52979c: bl       #0xc621aac
+0c5a97a0 raw+5297a0: mov      r0, r4
+0c5a97a2 raw+5297a2: mov      r2, sb
+0c5a97a4 raw+5297a4: mov      r3, r5
+0c5a97a6 raw+5297a6: bl       #0xc621aac
+0c5a97aa raw+5297aa: movs     r0, #1
+0c5a97ac raw+5297ac: mov      r1, r0
+0c5a97ae raw+5297ae: adds     r7, #0x14
+0c5a97b0 raw+5297b0: mov      sp, r7
+0c5a97b2 raw+5297b2: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c5a97b6 raw+5297b6: mov      r2, r8
+0c5a97b8 raw+5297b8: mov      r3, r6
+0c5a97ba raw+5297ba: mov      r0, r4
+0c5a97bc raw+5297bc: bl       #0xc621aac
+0c5a97c0 raw+5297c0: mov      r2, sl
+0c5a97c2 raw+5297c2: mov      r3, fp
+0c5a97c4 raw+5297c4: mov      r0, r4
+0c5a97c6 raw+5297c6: bl       #0xc621aac
+0c5a97ca raw+5297ca: mov      r2, sb
+0c5a97cc raw+5297cc: mov      r3, r5
+0c5a97ce raw+5297ce: mov      r0, r4
+0c5a97d0 raw+5297d0: bl       #0xc621aac
+0c5a97d4 raw+5297d4: ldr      r1, [pc, #0x30] ; literal raw+0x529808 = 0x3c113d18 'invalid parameter, parameter type error'
+0c5a97d6 raw+5297d6: b        #0xc5a96f6
+0c5a97d8 raw+5297d8: bic.w    ip, r0, r7, asr #12

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>腕上语音 AI · DeepSeek</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef3f8;color:#172b42;font:16px system-ui,"Microsoft YaHei",sans-serif}
+main{max-width:900px;margin:4vh auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;gap:20px}h1{font-size:30px;margin:0}header p,.help{color:#62758a;font-size:14px;line-height:1.8}.badge{background:#dae5ef;border-radius:24px;padding:10px 16px;font-size:14px;white-space:nowrap}.online{background:#d4f4e7;color:#176246}
+.card{background:white;border-radius:20px;box-shadow:0 8px 40px #17334d0c;padding:22px;margin-top:20px}#messages{height:45vh;min-height:250px;overflow:auto;display:flex;flex-direction:column;gap:12px}.bubble{max-width:85%;padding:12px 16px;border-radius:14px;background:#edf3fa;align-self:flex-start;white-space:pre-wrap;overflow-wrap:anywhere}.pc{background:#daf4ed;align-self:flex-end}.user{background:#e8e5ff;align-self:flex-end}.meta{display:block;font-size:12px;color:#677c90;margin-bottom:5px}.empty{color:#798c9f;margin:auto;text-align:center}
+form{display:flex;gap:12px;margin-top:14px}textarea{resize:vertical;flex:1;min-height:85px;border:1px solid #cbd9e6;border-radius:12px;padding:12px;font:inherit}button{border:0;background:#187568;color:white;border-radius:12px;padding:12px 22px;font:inherit;cursor:pointer}button:disabled{opacity:.5;cursor:wait}select{font:inherit;padding:8px;border:1px solid #cbd9e6;border-radius:8px}#ai-status,#info{font-size:14px;color:#62758a;min-height:20px}.toolbar{display:flex;align-items:center;gap:12px;margin-top:18px}.quick{margin-top:10px;display:flex;gap:8px}.quick button{background:#edf3fa;color:#33506d;padding:8px 14px;font-size:14px}@media(max-width:600px){main{padding:14px}header{align-items:flex-start;flex-direction:column}form{flex-direction:column}}
+</style>
+<main>
+<header><div><h1>腕上语音 AI</h1><p>手表语音识别 → DeepSeek → 手表文字回答</p></div><span class="badge" id="status">等待手表连接</span></header>
+<section class="card">
+<p id="ai-status" aria-live="polite">正在连接模型服务…</p>
+<div id="messages" role="log" aria-live="polite"><p class="empty">在手表打开“腕上语音AI”并录音提问，<br>识别文字会自动上传，AI 回答会回传手表。</p></div>
+<div class="toolbar"><label for="mode">发送方式</label><select id="mode"><option value="ai">询问 DeepSeek</option><option value="manual">直接发送到手表</option></select></div>
+<form id="form"><textarea id="text" aria-label="提问或发送的文字" placeholder="向 DeepSeek 提问，回答会自动回传手表（最多1000字）"></textarea><button id="send">提问并回传</button></form>
+<div class="quick"><button type="button" data-text="用一句话介绍你自己">介绍自己</button><button type="button" data-text="给我一句简短的鼓励">一句鼓励</button></div>
+<p id="info" aria-live="polite">手表识别成功后会自动提交问题，无需电脑手动转发。</p>
+</section>
+<p class="help">手机和电脑需在同一 Wi-Fi，手机微信保持登录，小米运动健康与手表蓝牙保持连接，手表保持应用页面打开。<br>每次提问独立回答；长回答会缩短并分段发送。聊天和队列保存在内存中，服务重启后清空。</p>
+</main>
+<script>
+const token = '__PAIR_TOKEN__';
+let session = '', cursor = 0, pending = null, busy = false, scheduled;
+const client = crypto.randomUUID(), rendered = new Set(), delivery = new Map();
+const $ = id => document.getElementById(id);
+function modeChanged() {
+  const ai = $('mode').value === 'ai';
+  $('send').textContent = ai ? '提问并回传' : '发送到手表';
+  $('text').placeholder = ai ? '向 DeepSeek 提问，回答会自动回传手表（最多1000字）' : '直接发送文字到手表，最多120字';
+}
+function unlock() { pending = null; $('send').disabled = false; $('mode').disabled = false; }
+function showMessage(message) {
+  if (rendered.has(message.id)) return;
+  rendered.add(message.id); $('messages').querySelector('.empty')?.remove();
+  const bubble = document.createElement('div'); bubble.className = 'bubble ' + message.source;
+  const meta = document.createElement('span'); meta.className = 'meta';
+  const name = message.origin === 'ai' ? 'DeepSeek' : ({ watch: '手表提问', pc: '电脑发送', user: '网页提问' }[message.source] || '消息');
+  meta.textContent = name + ' · ' + new Date(message.time).toLocaleTimeString();
+  bubble.append(meta, document.createTextNode(message.text));
+  if (message.source === 'pc') {
+    const state = document.createElement('span'); state.className = 'meta'; state.textContent = '等待手表接收';
+    bubble.append(state); delivery.set(message.id, state);
+  }
+  $('messages').append(bubble);
+  while ($('messages').children.length > 200) $('messages').firstChild.remove();
+  $('messages').scrollTop = $('messages').scrollHeight;
+}
+async function sync() {
+  if (busy) return;
+  clearTimeout(scheduled); busy = true;
+  const outgoing = pending;
+  try {
+    const response = await fetch('/api/sync', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+      body: JSON.stringify({ source: 'pc', session, after: cursor, outgoing }), signal: AbortSignal.timeout(8000)
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      if (outgoing && [400,403,409,413,503].includes(response.status)) unlock();
+      throw new Error(data.error || '连接失败');
+    }
+    if (session !== data.session) {
+      if (session) { $('messages').replaceChildren(); $('info').textContent = '服务已重启，聊天记录已清空。'; }
+      session = data.session; cursor = 0; rendered.clear(); delivery.clear();
+    }
+    data.messages.forEach(showMessage); cursor = data.cursor;
+    const online = data.watchLastSeen > 0 && Date.now() - data.watchLastSeen < 12000;
+    $('status').textContent = online ? '手表已连接' : '等待手表连接'; $('status').className = 'badge' + (online ? ' online' : '');
+    for (const [id, element] of delivery) if (id <= data.watchCursor) { element.textContent = '已送达手表'; delivery.delete(id); }
+    const jobs = data.ai?.jobs || [], generating = jobs.filter(job => job.state === 'generating').length, queued = jobs.filter(job => job.state === 'queued').length;
+    const last = jobs.at(-1);
+    $('ai-status').textContent = !data.ai?.enabled ? '模型服务未配置' : generating || queued ? 'DeepSeek 正在回答 · 排队 ' + queued + ' 条' : last?.state === 'failed' ? '生成失败：' + last.error : 'DeepSeek 已就绪' + (last ? ' · 回答已进入手表消息队列' : '');
+    if (outgoing && data.ack === outgoing.id) {
+      if (pending?.id === outgoing.id) unlock();
+      if ($('text').value === outgoing.text) $('text').value = '';
+      $('info').textContent = outgoing.ai ? '问题已接受，回答生成后自动回传手表。' : '消息已接受，等待手表接收。';
+    }
+  } catch (error) {
+    $('status').textContent = '电脑服务连接失败'; $('status').className = 'badge';
+    $('info').textContent = pending ? '消息保留中，正在自动重试。' : error.message;
+  } finally {
+    busy = false; scheduled = setTimeout(sync, pending && !outgoing ? 0 : 1200);
+  }
+}
+function send(text) {
+  if (pending) return;
+  const ai = $('mode').value === 'ai', limit = ai ? 1000 : 120;
+  if (!text.trim() || Array.from(text).length > limit) { $('info').textContent = '请输入1–' + limit + '个字符。'; return; }
+  pending = { id: client + '-' + Date.now(), text, ai };
+  $('send').disabled = true; $('mode').disabled = true; $('info').textContent = '发送中…'; sync();
+}
+$('mode').addEventListener('change', modeChanged);
+$('form').addEventListener('submit', event => { event.preventDefault(); send($('text').value); });
+document.querySelectorAll('[data-text]').forEach(button => button.addEventListener('click', () => send(button.dataset.text)));
+sync();
+</script>
+</html>
+

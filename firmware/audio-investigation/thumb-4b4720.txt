@@ -1,0 +1,66 @@
+0c534720 raw+4b4720: ldr      r3, [pc, #0xc0] ; literal raw+0x4b47e4 = 0x3c0e5537 'wechat_proxy_async_init'
+0c534722 raw+4b4722: str      r0, [sp]
+0c534724 raw+4b4724: ldr      r2, [pc, #0x5c] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534726 raw+4b4726: movs     r0, #3
+0c534728 raw+4b4728: ldr      r1, [pc, #0xc4] ; literal raw+0x4b47f0 = 0x3c0e4381 '[%s] %s: mq open failed, errno is %s!\n'
+0c53472a raw+4b472a: bl       #0xc27e19c
+0c53472e raw+4b472e: movs     r3, #1
+0c534730 raw+4b4730: strb     r3, [r6]
+0c534732 raw+4b4732: b        #0xc53451a
+0c534734 raw+4b4734: mov      r2, r4
+0c534736 raw+4b4736: mov      r0, r5
+0c534738 raw+4b4738: ldr      r1, [pc, #0xb8] ; literal raw+0x4b47f4 = 0x3c279298
+0c53473a raw+4b473a: bl       #0xc34b8e4
+0c53473e raw+4b473e: cmp      r0, #0
+0c534740 raw+4b4740: bge      #0xc534756
+0c534742 raw+4b4742: ldr      r3, [pc, #0xa0] ; literal raw+0x4b47e4 = 0x3c0e5537 'wechat_proxy_async_init'
+0c534744 raw+4b4744: ldr      r2, [pc, #0x3c] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534746 raw+4b4746: ldr      r1, [pc, #0xb0] ; literal raw+0x4b47f8 = 0x3c0e43a8 '[%s] %s: poll init err!\n'
+0c534748 raw+4b4748: movs     r0, #3
+0c53474a raw+4b474a: bl       #0xc27e19c
+0c53474e raw+4b474e: mov      r0, r4
+0c534750 raw+4b4750: bl       #0xc348cca
+0c534754 raw+4b4754: b        #0xc53472e
+0c534756 raw+4b4756: movs     r1, #1
+0c534758 raw+4b4758: ldr      r2, [pc, #0xa0] ; literal raw+0x4b47fc = 0x0c5349ad
+0c53475a raw+4b475a: ldr      r0, [pc, #0x98] ; literal raw+0x4b47f4 = 0x3c279298
+0c53475c raw+4b475c: bl       #0xc34b558
+0c534760 raw+4b4760: cmp      r0, #0
+0c534762 raw+4b4762: bge      #0xc53476c
+0c534764 raw+4b4764: ldr      r3, [pc, #0x7c] ; literal raw+0x4b47e4 = 0x3c0e5537 'wechat_proxy_async_init'
+0c534766 raw+4b4766: ldr      r2, [pc, #0x1c] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534768 raw+4b4768: ldr      r1, [pc, #0x94] ; literal raw+0x4b4800 = 0x3c0e43c1 '[%s] %s: poll start err!\n'
+0c53476a raw+4b476a: b        #0xc534748
+0c53476c raw+4b476c: mov      r0, r8
+0c53476e raw+4b476e: bl       #0xc62e1b8
+0c534772 raw+4b4772: ldr      r3, [pc, #0x90] ; literal raw+0x4b4804 = 0x3c278c24
+0c534774 raw+4b4774: ldr      r2, [pc, #0xc] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534776 raw+4b4776: str      r0, [r3]
+0c534778 raw+4b4778: ldr      r1, [pc, #0x8c] ; literal raw+0x4b4808 = 0x3c0e43db '[%s] %s: wechat proxy async init done.\n'
+0c53477a raw+4b477a: movs     r0, #4
+0c53477c raw+4b477c: ldr      r3, [pc, #0x64] ; literal raw+0x4b47e4 = 0x3c0e5537 'wechat_proxy_async_init'
+0c53477e raw+4b477e: b        #0xc5346ee
+0c534780 raw+4b4780: rsbs     r5, r5, #0
+0c534782 raw+4b4782: subs     r4, #0xe
+0c534784 raw+4b4784: cmp      r2, #0xb0
+0c534786 raw+4b4786: subs     r4, #0xe
+0c534788 raw+4b4788: rsbs     r6, r7, #0
+0c53478a raw+4b478a: subs     r4, #0xe
+0c53478c raw+4b478c: cmp      r5, #0xb7
+0c53478e raw+4b478e: subs     r4, #0xe
+0c534790 raw+4b4790: cmp      r5, r6
+0c534792 raw+4b4792: subs     r4, #0xe
+0c534794 raw+4b4794: cmn      r0, r5
+0c534796 raw+4b4796: subs     r4, #0xe
+0c534798 raw+4b4798: orrs     r3, r1
+0c53479a raw+4b479a: subs     r4, #0xe
+0c53479c raw+4b479c: str      r2, [sp, #0x250]
+0c53479e raw+4b479e: subs     r4, #0x27
+0c5347a0 raw+4b47a0: strb     r6, [r1, r4]
+0c5347a2 raw+4b47a2: subs     r4, #0xe
+0c5347a4 raw+4b47a4: orrs     r3, r6
+0c5347a6 raw+4b47a6: subs     r4, #0xe
+0c5347a8 raw+4b47a8: ldrh     r0, [r0, #0x20]
+0c5347aa raw+4b47aa: subs     r4, #0x27
+0c5347ac raw+4b47ac: str      r3, [r3, r0]
+0c5347ae raw+4b47ae: subs     r4, #7

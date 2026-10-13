@@ -1,0 +1,107 @@
+0c534440 raw+4b4440: bl       #0xc6c1648
+0c534444 raw+4b4444: movs     r2, #0
+0c534446 raw+4b4446: movs     r5, #0
+0c534448 raw+4b4448: mov      r1, r2
+0c53444a raw+4b444a: mov      r0, r4
+0c53444c raw+4b444c: bl       #0xc6c15b8
+0c534450 raw+4b4450: movs     r1, #2
+0c534452 raw+4b4452: mov      r0, r4
+0c534454 raw+4b4454: bl       #0xc3b3f00
+0c534458 raw+4b4458: strd     r5, r5, [r4, #0x48]
+0c53445c raw+4b445c: strh     r5, [r4, #0x34]
+0c53445e raw+4b445e: strb.w   r5, [r4, #0x45]
+0c534462 raw+4b4462: bl       #0xc3e72d6
+0c534466 raw+4b4466: ubfx     r3, r0, #8, #8
+0c53446a raw+4b446a: strb.w   r0, [r4, #0x50]
+0c53446e raw+4b446e: ubfx     r0, r0, #0x10, #8
+0c534472 raw+4b4472: strb.w   r3, [r4, #0x51]
+0c534476 raw+4b4476: strb.w   r0, [r4, #0x52]
+0c53447a raw+4b447a: bl       #0xc3e72d6
+0c53447e raw+4b447e: ubfx     r3, r0, #8, #8
+0c534482 raw+4b4482: strb.w   r3, [r4, #0x54]
+0c534486 raw+4b4486: movw     r3, #0xffff
+0c53448a raw+4b448a: strb.w   r0, [r4, #0x53]
+0c53448e raw+4b448e: ubfx     r0, r0, #0x10, #8
+0c534492 raw+4b4492: strb.w   r0, [r4, #0x55]
+0c534496 raw+4b4496: strh.w   r3, [r4, #0x56]
+0c53449a raw+4b449a: str      r5, [r4, #0x58]
+0c53449c raw+4b449c: pop      {r4, r5, r7, pc}
+0c53449e raw+4b449e: movs     r0, r0
+0c5344a0 raw+4b44a0: push.w   {r4, r5, r6, r7, r8, sb, sl, lr}
+0c5344a4 raw+4b44a4: sub      sp, #0x80
+0c5344a6 raw+4b44a6: ldr.w    sb, [pc, #0x364] ; literal raw+0x4b480c = 0x3c278b4c
+0c5344aa raw+4b44aa: mov      r5, r0
+0c5344ac raw+4b44ac: ldr.w    r1, [sb]
+0c5344b0 raw+4b44b0: add      r7, sp, #0x18
+0c5344b2 raw+4b44b2: cbz      r1, #0xc5344c2
+0c5344b4 raw+4b44b4: ldr      r3, [pc, #0x2c8] ; literal raw+0x4b4780 = 0x3c0e426d 'app_wechat_start'
+0c5344b6 raw+4b44b6: ldr      r2, [pc, #0x2cc] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c5344b8 raw+4b44b8: ldr      r1, [pc, #0x2cc] ; literal raw+0x4b4788 = 0x3c0e427e '[%s] %s: wechat service has already been initialized!\n'
+0c5344ba raw+4b44ba: movs     r0, #3
+0c5344bc raw+4b44bc: bl       #0xc27e19c
+0c5344c0 raw+4b44c0: b        #0xc5344e2
+0c5344c2 raw+4b44c2: ldr      r4, [pc, #0x2c8] ; literal raw+0x4b478c = 0x3c0e2db7 '/data/files/com.tencent.wechatrtos/'
+0c5344c4 raw+4b44c4: mov      r0, r4
+0c5344c6 raw+4b44c6: bl       #0xc285614
+0c5344ca raw+4b44ca: cbz      r0, #0xc5344f2
+0c5344cc raw+4b44cc: mov      r0, r4
+0c5344ce raw+4b44ce: bl       #0xc632ac8
+0c5344d2 raw+4b44d2: ldr      r3, [pc, #0x2ac] ; literal raw+0x4b4780 = 0x3c0e426d 'app_wechat_start'
+0c5344d4 raw+4b44d4: ldr      r2, [pc, #0x2ac] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c5344d6 raw+4b44d6: str      r4, [sp]
+0c5344d8 raw+4b44d8: cbnz     r0, #0xc5344ea
+0c5344da raw+4b44da: movs     r0, #3
+0c5344dc raw+4b44dc: ldr      r1, [pc, #0x2b0] ; literal raw+0x4b4790 = 0x3c0e42b5 '[%s] %s: failed to creat path for wechat file %s.\n'
+0c5344de raw+4b44de: bl       #0xc27e19c
+0c5344e2 raw+4b44e2: adds     r7, #0x68
+0c5344e4 raw+4b44e4: mov      sp, r7
+0c5344e6 raw+4b44e6: pop.w    {r4, r5, r6, r7, r8, sb, sl, pc}
+0c5344ea raw+4b44ea: movs     r0, #4
+0c5344ec raw+4b44ec: ldr      r1, [pc, #0x2a4] ; literal raw+0x4b4794 = 0x3c0e42e8 '[%s] %s: wechat cache %s created!\n'
+0c5344ee raw+4b44ee: bl       #0xc27e19c
+0c5344f2 raw+4b44f2: bl       #0xc77a2f0
+0c5344f6 raw+4b44f6: str.w    r0, [sb]
+0c5344fa raw+4b44fa: cbnz     r0, #0xc534504
+0c5344fc raw+4b44fc: ldr      r3, [pc, #0x280] ; literal raw+0x4b4780 = 0x3c0e426d 'app_wechat_start'
+0c5344fe raw+4b44fe: ldr      r2, [pc, #0x284] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534500 raw+4b4500: ldr      r1, [pc, #0x294] ; literal raw+0x4b4798 = 0x3c0e430b '[%s] %s: create wechat service failed!\n'
+0c534502 raw+4b4502: b        #0xc5344ba
+0c534504 raw+4b4504: ldr      r6, [pc, #0x294] ; literal raw+0x4b479c = 0x3c279294
+0c534506 raw+4b4506: ldrb     r4, [r6]
+0c534508 raw+4b4508: cmp      r4, #0
+0c53450a raw+4b450a: beq.w    #0xc5346da
+0c53450e raw+4b450e: movs     r0, #3
+0c534510 raw+4b4510: ldr      r3, [pc, #0x28c] ; literal raw+0x4b47a0 = 0x3c0e550e 'wechat_proxy_init'
+0c534512 raw+4b4512: ldr      r2, [pc, #0x270] ; literal raw+0x4b4784 = 0x3c0e2ab0 'wechat'
+0c534514 raw+4b4514: ldr      r1, [pc, #0x28c] ; literal raw+0x4b47a4 = 0x3c0e4333 '[%s] %s: proxy has already been initialized!\n'
+0c534516 raw+4b4516: bl       #0xc27e19c
+0c53451a raw+4b451a: ldr      r6, [pc, #0x28c] ; literal raw+0x4b47a8 = 0x3c278c00
+0c53451c raw+4b451c: ldr      r4, [r6]
+0c53451e raw+4b451e: cbz      r4, #0xc534546
+0c534520 raw+4b4520: add.w    r0, r4, #0x38
+0c534524 raw+4b4524: bl       #0xc292458
+0c534528 raw+4b4528: add.w    r0, r4, #0x24
+0c53452c raw+4b452c: bl       #0xc292458
+0c534530 raw+4b4530: add.w    r0, r4, #0x18
+0c534534 raw+4b4534: bl       #0xc292458
+0c534538 raw+4b4538: add.w    r0, r4, #0xc
+0c53453c raw+4b453c: bl       #0xc292458
+0c534540 raw+4b4540: mov      r0, r4
+0c534542 raw+4b4542: bl       #0xc70ff48
+0c534546 raw+4b4546: movs     r5, #0
+0c534548 raw+4b4548: movs     r2, #0x3c
+0c53454a raw+4b454a: mov      r1, r5
+0c53454c raw+4b454c: add.w    r0, r7, #0x2c
+0c534550 raw+4b4550: str      r5, [r7, #0x28]
+0c534552 raw+4b4552: bl       #0xc70421c
+0c534556 raw+4b4556: mov      r1, r5
+0c534558 raw+4b4558: movs     r2, #0x1c
+0c53455a raw+4b455a: add.w    r0, r7, #0xc
+0c53455e raw+4b455e: str      r5, [r7, #8]
+0c534560 raw+4b4560: bl       #0xc70421c
+0c534564 raw+4b4564: adds     r3, r7, #5
+0c534566 raw+4b4566: str      r3, [sp, #0xc]
+0c534568 raw+4b4568: adds     r3, r7, #4
+0c53456a raw+4b456a: str      r3, [sp, #8]
+0c53456c raw+4b456c: adds     r3, r7, #3
+0c53456e raw+4b456e: str      r3, [sp, #4]

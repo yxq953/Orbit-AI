@@ -1,0 +1,190 @@
+0c78bea4 raw+70bea4: push.w   {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+0c78bea8 raw+70bea8: sub      sp, #0x194
+0c78beaa raw+70beaa: mov      r5, r0
+0c78beac raw+70beac: ldr      r0, [r0, #0x14]
+0c78beae raw+70beae: add      r7, sp, #0x18
+0c78beb0 raw+70beb0: ldr      r3, [r0]
+0c78beb2 raw+70beb2: vmov     r8, sb, d0
+0c78beb6 raw+70beb6: ldr      r3, [r3, #8]
+0c78beb8 raw+70beb8: mov      sl, r1
+0c78beba raw+70beba: mov      r4, r2
+0c78bebc raw+70bebc: blx      r3
+0c78bebe raw+70bebe: str      r0, [r7, #0xc]
+0c78bec0 raw+70bec0: cmp.w    sl, #0
+0c78bec4 raw+70bec4: beq.w    #0xc78c0fc
+0c78bec8 raw+70bec8: cmp      r4, #0
+0c78beca raw+70beca: beq.w    #0xc78c0fc
+0c78bece raw+70bece: mov      fp, r0
+0c78bed0 raw+70bed0: mov      r0, sl
+0c78bed2 raw+70bed2: bl       #0xc7044c0
+0c78bed6 raw+70bed6: cmp      r0, #0xa
+0c78bed8 raw+70bed8: mov      r6, r0
+0c78beda raw+70beda: bhi.w    #0xc78c0cc
+0c78bede raw+70bede: lsls     r3, r0, #1
+0c78bee0 raw+70bee0: strb.w   r3, [r7, #0x118]
+0c78bee4 raw+70bee4: addw     r3, r7, #0x119
+0c78bee8 raw+70bee8: cmp      r0, #0
+0c78beea raw+70beea: bne.w    #0xc78c0e8
+0c78beee raw+70beee: mov      r1, sb
+0c78bef0 raw+70bef0: mov      r0, r8
+0c78bef2 raw+70bef2: str      r3, [r7, #4]
+0c78bef4 raw+70bef4: mov.w    r8, #0
+0c78bef8 raw+70bef8: bl       #0xc706788
+0c78befc raw+70befc: ldr      r3, [r7, #4]
+0c78befe raw+70befe: strb.w   r8, [r3, r6]
+0c78bf02 raw+70bf02: mov      r6, r0
+0c78bf04 raw+70bf04: mov      r0, r4
+0c78bf06 raw+70bf06: bl       #0xc7044c0
+0c78bf0a raw+70bf0a: ldr      r3, [pc, #0x2f8] ; literal raw+0x70c204 = 0x3c19fd50 'js call:%s, jsid:%d, naid:%d, len:%d'
+0c78bf0c raw+70bf0c: str      r0, [sp, #0x10]
+0c78bf0e raw+70bf0e: str      r3, [sp]
+0c78bf10 raw+70bf10: movs     r0, #1
+0c78bf12 raw+70bf12: movs     r3, #0x5e
+0c78bf14 raw+70bf14: ldr      r2, [pc, #0x2f0] ; literal raw+0x70c208 = 0x3c19fc0c '/data1/wechat-rtos-service/watch/watch-service/jsbridge_comm/adam_js_native_bridge.cpp'
+0c78bf16 raw+70bf16: ldr      r1, [pc, #0x2f4] ; literal raw+0x70c20c = 0x3c19fc64 'jsbg'
+0c78bf18 raw+70bf18: str.w    fp, [sp, #0xc]
+0c78bf1c raw+70bf1c: str.w    sl, [sp, #4]
+0c78bf20 raw+70bf20: str      r6, [sp, #8]
+0c78bf22 raw+70bf22: bl       #0xc764250
+0c78bf26 raw+70bf26: cmp      r6, #0
+0c78bf28 raw+70bf28: bne.w    #0xc78c224
+0c78bf2c raw+70bf2c: ldrb.w   r3, [r7, #0x118]
+0c78bf30 raw+70bf30: lsls     r0, r3, #0x1f
+0c78bf32 raw+70bf32: bpl.w    #0xc78c116
+0c78bf36 raw+70bf36: ldr.w    r3, [r7, #0x11c]
+0c78bf3a raw+70bf3a: cmp      r3, #7
+0c78bf3c raw+70bf3c: beq.w    #0xc78c266
+0c78bf40 raw+70bf40: add.w    r8, r7, #0x118
+0c78bf44 raw+70bf44: cmp      r3, #0xd
+0c78bf46 raw+70bf46: beq.w    #0xc78c294
+0c78bf4a raw+70bf4a: cmp      r3, #0x10
+0c78bf4c raw+70bf4c: beq.w    #0xc78c2c2
+0c78bf50 raw+70bf50: cmp      r3, #0xb
+0c78bf52 raw+70bf52: beq.w    #0xc78c30e
+0c78bf56 raw+70bf56: cmp      r3, #0xa
+0c78bf58 raw+70bf58: beq.w    #0xc78c408
+0c78bf5c raw+70bf5c: cmp      r3, #0xe
+0c78bf5e raw+70bf5e: beq.w    #0xc78c46c
+0c78bf62 raw+70bf62: cmp      r3, #0xd
+0c78bf64 raw+70bf64: beq.w    #0xc78c498
+0c78bf68 raw+70bf68: cmp      r3, #0x11
+0c78bf6a raw+70bf6a: beq.w    #0xc78c4d4
+0c78bf6e raw+70bf6e: cmp      r3, #0xf
+0c78bf70 raw+70bf70: beq.w    #0xc78c506
+0c78bf74 raw+70bf74: cmp      r3, #0x14
+0c78bf76 raw+70bf76: beq.w    #0xc78c538
+0c78bf7a raw+70bf7a: cmp      r3, #0x13
+0c78bf7c raw+70bf7c: beq.w    #0xc78c6b0
+0c78bf80 raw+70bf80: cmp      r3, #0xd
+0c78bf82 raw+70bf82: beq.w    #0xc78c700
+0c78bf86 raw+70bf86: cmp      r3, #0xe
+0c78bf88 raw+70bf88: beq.w    #0xc78c88e
+0c78bf8c raw+70bf8c: cmp      r3, #0x10
+0c78bf8e raw+70bf8e: beq.w    #0xc78c944
+0c78bf92 raw+70bf92: cmp      r3, #0x17
+0c78bf94 raw+70bf94: beq.w    #0xc78cbe0
+0c78bf98 raw+70bf98: cmp      r3, #0x11
+0c78bf9a raw+70bf9a: beq.w    #0xc78cf7a
+0c78bf9e raw+70bf9e: cmp      r3, #0xd
+0c78bfa0 raw+70bfa0: beq.w    #0xc78cfc4
+0c78bfa4 raw+70bfa4: cmp      r3, #0xc
+0c78bfa6 raw+70bfa6: beq.w    #0xc78d042
+0c78bfaa raw+70bfaa: cmp      r3, #0xb
+0c78bfac raw+70bfac: beq.w    #0xc78d0d4
+0c78bfb0 raw+70bfb0: cmp      r3, #0x12
+0c78bfb2 raw+70bfb2: beq.w    #0xc78d138
+0c78bfb6 raw+70bfb6: cmp      r3, #0x11
+0c78bfb8 raw+70bfb8: beq.w    #0xc78d166
+0c78bfbc raw+70bfbc: cmp      r3, #0x10
+0c78bfbe raw+70bfbe: beq.w    #0xc78d28c
+0c78bfc2 raw+70bfc2: cmp      r3, #0xf
+0c78bfc4 raw+70bfc4: beq.w    #0xc78d4dc
+0c78bfc8 raw+70bfc8: cmp      r3, #0xb
+0c78bfca raw+70bfca: beq.w    #0xc78d726
+0c78bfce raw+70bfce: cmp      r3, #0x11
+0c78bfd0 raw+70bfd0: beq.w    #0xc78d890
+0c78bfd4 raw+70bfd4: cmp      r3, #0x10
+0c78bfd6 raw+70bfd6: beq.w    #0xc78db24
+0c78bfda raw+70bfda: cmp      r3, #0xa
+0c78bfdc raw+70bfdc: beq.w    #0xc78dec4
+0c78bfe0 raw+70bfe0: cmp      r3, #0xc
+0c78bfe2 raw+70bfe2: beq.w    #0xc78e000
+0c78bfe6 raw+70bfe6: add.w    sl, r7, #0x13c
+0c78bfea raw+70bfea: mov      r0, sl
+0c78bfec raw+70bfec: bl       #0xc764a54
+0c78bff0 raw+70bff0: mov      r0, r4
+0c78bff2 raw+70bff2: bl       #0xc7044c0
+0c78bff6 raw+70bff6: mov      r1, r4
+0c78bff8 raw+70bff8: ldr      r4, [pc, #0x214] ; literal raw+0x70c210 = 0x3c2d1750
+0c78bffa raw+70bffa: mov      r2, r0
+0c78bffc raw+70bffc: mov      r0, sl
+0c78bffe raw+70bffe: bl       #0xc764b68
+0c78c002 raw+70c002: ldr      r0, [r4]
+0c78c004 raw+70c004: cmp      r0, #0
+0c78c006 raw+70c006: beq.w    #0xc78e35a
+0c78c00a raw+70c00a: bl       #0xc76ab24
+0c78c00e raw+70c00e: mov      r3, r0
+0c78c010 raw+70c010: mov      r1, r8
+0c78c012 raw+70c012: add.w    fp, r7, #0x150
+0c78c016 raw+70c016: add.w    r0, r7, #0x124
+0c78c01a raw+70c01a: ldr      r6, [r5, #0x14]
+0c78c01c raw+70c01c: ldr.w    r8, [r7, #0xc]
+0c78c020 raw+70c020: mov      r5, r3
+0c78c022 raw+70c022: bl       #0xc2974d2
+0c78c026 raw+70c026: mov      r1, sl
+0c78c028 raw+70c028: mov      r0, fp
+0c78c02a raw+70c02a: bl       #0xc764ad4
+0c78c02e raw+70c02e: add.w    sb, r7, #0x164
+0c78c032 raw+70c032: add.w    r1, r7, #0x124
+0c78c036 raw+70c036: add.w    r0, r7, #0x130
+0c78c03a raw+70c03a: bl       #0xc2974d2
+0c78c03e raw+70c03e: mov      r1, fp
+0c78c040 raw+70c040: mov      r0, sb
+0c78c042 raw+70c042: bl       #0xc764ad4
+0c78c046 raw+70c046: movs     r0, #0x44
+0c78c048 raw+70c048: bl       #0xc710d50
+0c78c04c raw+70c04c: mov      r4, r0
+0c78c04e raw+70c04e: cbz      r0, #0xc78c09a
+0c78c050 raw+70c050: bl       #0xc764a3c
+0c78c054 raw+70c054: movs     r0, #0x10
+0c78c056 raw+70c056: movs     r3, #1
+0c78c058 raw+70c058: strd     r0, r3, [r7, #0x110]
+0c78c05c raw+70c05c: movs     r3, #0
+0c78c05e raw+70c05e: str      r3, [r4, #8]
+0c78c060 raw+70c060: ldr      r3, [pc, #0x1b0] ; literal raw+0x70c214 = 0x3c1a0270
+0c78c062 raw+70c062: add.w    r2, r7, #0x110
+0c78c066 raw+70c066: str      r3, [r4]
+0c78c068 raw+70c068: ldr      r3, [pc, #0x1ac] ; literal raw+0x70c218 = 0x0c789ff1
+0c78c06a raw+70c06a: ldm.w    r2, {r0, r1}
+0c78c06e raw+70c06e: str      r3, [r4, #0x10]
+0c78c070 raw+70c070: add.w    r3, r4, #0x14
+0c78c074 raw+70c074: str      r6, [r4, #0xc]
+0c78c076 raw+70c076: stm.w    r3, {r0, r1}
+0c78c07a raw+70c07a: add.w    r1, r7, #0x130
+0c78c07e raw+70c07e: str.w    r8, [r4, #0x1c]
+0c78c082 raw+70c082: add.w    r0, r4, #0x20
+0c78c086 raw+70c086: bl       #0xc2974d2
+0c78c08a raw+70c08a: mov      r1, sb
+0c78c08c raw+70c08c: add.w    r0, r4, #0x2c
+0c78c090 raw+70c090: bl       #0xc764ad4
+0c78c094 raw+70c094: movs     r3, #3
+0c78c096 raw+70c096: strb.w   r3, [r4, #0x40]
+0c78c09a raw+70c09a: mov      r0, sb
+0c78c09c raw+70c09c: bl       #0xc764b40
+0c78c0a0 raw+70c0a0: ldrb.w   r3, [r7, #0x130]
+0c78c0a4 raw+70c0a4: lsls     r1, r3, #0x1f
+0c78c0a6 raw+70c0a6: bmi.w    #0xc78e0e4
+0c78c0aa raw+70c0aa: mov      r1, r4
+0c78c0ac raw+70c0ac: mov      r0, r5
+0c78c0ae raw+70c0ae: str      r6, [r4, #4]
+0c78c0b0 raw+70c0b0: bl       #0xc766240
+0c78c0b4 raw+70c0b4: mov      r0, fp
+0c78c0b6 raw+70c0b6: bl       #0xc764b40
+0c78c0ba raw+70c0ba: ldrb.w   r3, [r7, #0x124]
+0c78c0be raw+70c0be: lsls     r2, r3, #0x1f
+0c78c0c0 raw+70c0c0: bmi.w    #0xc78e0d0
+0c78c0c4 raw+70c0c4: mov      r0, sl
+0c78c0c6 raw+70c0c6: bl       #0xc764b40
+0c78c0ca raw+70c0ca: b        #0xc78c2ea
+0c78c0cc raw+70c0cc: add.w    fp, r0, #0x10
+0c78c0d0 raw+70c0d0: bic      fp, fp, #0xf

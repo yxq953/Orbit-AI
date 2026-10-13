@@ -1,0 +1,344 @@
+0c784650 raw+704650: lsrs     r0, r3, #8
+0c784652 raw+704652: str      r5, [sp, #4]
+0c784654 raw+704654: bl       #0xc783f2c
+0c784658 raw+704658: add.w    r5, r4, #0xc
+0c78465c raw+70465c: mov      r0, sb
+0c78465e raw+70465e: bl       #0xc2d5dd4
+0c784662 raw+704662: ldr.w    r0, [r8, #0x14]
+0c784666 raw+704666: ldr      r3, [r0]
+0c784668 raw+704668: ldr      r3, [r3, #8]
+0c78466a raw+70466a: blx      r3
+0c78466c raw+70466c: mov      r1, r0
+0c78466e raw+70466e: mov.w    ip, #5
+0c784672 raw+704672: ldr.w    r0, [r8, #0x14]
+0c784676 raw+704676: str      r1, [r4, #4]
+0c784678 raw+704678: mov      r2, r5
+0c78467a raw+70467a: ldr      r5, [r0]
+0c78467c raw+70467c: str.w    ip, [sp]
+0c784680 raw+704680: ldr      r5, [r5, #0xc]
+0c784682 raw+704682: mov      r3, sl
+0c784684 raw+704684: blx      r5
+0c784686 raw+704686: ldr.w    r5, [r8, #0xc]
+0c78468a raw+70468a: ldr      r1, [r7, #0x14]
+0c78468c raw+70468c: cmp      r5, #0
+0c78468e raw+70468e: beq.w    #0xc7849e4
+0c784692 raw+704692: ldr      r3, [r5, #0x10]
+0c784694 raw+704694: cmp      r1, r3
+0c784696 raw+704696: bhs      #0xc7846a6
+0c784698 raw+704698: ldr      r3, [r5]
+0c78469a raw+70469a: mov      r6, r5
+0c78469c raw+70469c: cbz      r3, #0xc7846b2
+0c78469e raw+70469e: mov      r5, r3
+0c7846a0 raw+7046a0: ldr      r3, [r5, #0x10]
+0c7846a2 raw+7046a2: cmp      r1, r3
+0c7846a4 raw+7046a4: blo      #0xc784698
+0c7846a6 raw+7046a6: bls.w    #0xc78480a
+0c7846aa raw+7046aa: ldr      r3, [r5, #4]
+0c7846ac raw+7046ac: adds     r6, r5, #4
+0c7846ae raw+7046ae: cmp      r3, #0
+0c7846b0 raw+7046b0: bne      #0xc78469e
+0c7846b2 raw+7046b2: movs     r0, #0x18
+0c7846b4 raw+7046b4: str      r1, [r7, #0x10]
+0c7846b6 raw+7046b6: bl       #0xc710d50
+0c7846ba raw+7046ba: adds.w   r3, r0, #0x10
+0c7846be raw+7046be: beq      #0xc7846c6
+0c7846c0 raw+7046c0: ldr      r1, [r7, #0x10]
+0c7846c2 raw+7046c2: str      r1, [r0, #0x10]
+0c7846c4 raw+7046c4: str      r4, [r3, #4]
+0c7846c6 raw+7046c6: movs     r3, #0
+0c7846c8 raw+7046c8: str      r5, [r0, #8]
+0c7846ca raw+7046ca: strd     r3, r3, [r0]
+0c7846ce raw+7046ce: str      r0, [r6]
+0c7846d0 raw+7046d0: ldr.w    r3, [r8, #8]
+0c7846d4 raw+7046d4: ldr      r3, [r3]
+0c7846d6 raw+7046d6: cbz      r3, #0xc7846de
+0c7846d8 raw+7046d8: str.w    r3, [r8, #8]
+0c7846dc raw+7046dc: ldr      r0, [r6]
+0c7846de raw+7046de: mov      r1, r0
+0c7846e0 raw+7046e0: ldr.w    r0, [r8, #0xc]
+0c7846e4 raw+7046e4: bl       #0xc396f58
+0c7846e8 raw+7046e8: ldr.w    r3, [r8, #0x10]
+0c7846ec raw+7046ec: ldr      r1, [r7, #0x14]
+0c7846ee raw+7046ee: adds     r3, #1
+0c7846f0 raw+7046f0: str.w    r3, [r8, #0x10]
+0c7846f4 raw+7046f4: b        #0xc784812
+0c7846f6 raw+7046f6: bls.w    #0xc78483e
+0c7846fa raw+7046fa: ldr      r2, [r2, #4]
+0c7846fc raw+7046fc: b        #0xc7844fe
+0c7846fe raw+7046fe: mov      r2, r4
+0c784700 raw+704700: ldr      r4, [r4, #8]
+0c784702 raw+704702: ldr      r3, [r4]
+0c784704 raw+704704: cmp      r2, r3
+0c784706 raw+704706: beq      #0xc78460c
+0c784708 raw+704708: mov      r2, r4
+0c78470a raw+70470a: ldr      r4, [r4, #8]
+0c78470c raw+70470c: ldr      r3, [r4]
+0c78470e raw+70470e: cmp      r2, r3
+0c784710 raw+704710: bne      #0xc7846fe
+0c784712 raw+704712: b        #0xc78460c
+0c784714 raw+704714: add.w    fp, r3, #0xd
+0c784718 raw+704718: cbnz     r1, #0xc784740
+0c78471a raw+70471a: add.w    lr, r7, #0x21
+0c78471e raw+70471e: cbz      r0, #0xc784762
+0c784720 raw+704720: adds     r3, #0xc
+0c784722 raw+704722: add.w    r2, lr, #-1
+0c784726 raw+704726: b        #0xc784732
+0c784728 raw+704728: subs     r1, r0, r3
+0c78472a raw+70472a: subs     r1, #1
+0c78472c raw+70472c: cmn.w    fp, r1
+0c784730 raw+704730: beq      #0xc784762
+0c784732 raw+704732: ldrb     ip, [r3, #1]!
+0c784736 raw+704736: ldrb     r1, [r2, #1]!
+0c78473a raw+70473a: cmp      ip, r1
+0c78473c raw+70473c: beq      #0xc784728
+0c78473e raw+70473e: b        #0xc7845fe
+0c784740 raw+704740: ldr.w    lr, [r7, #0x28]
+0c784744 raw+704744: b        #0xc78471e
+0c784746 raw+704746: nop      
+0c784748 raw+704748: stcl     p12, c3, [ip], #0x64
+0c78474c raw+70474c: ldcl     p12, c3, [r8], #0x64
+0c784750 raw+704750: stc      p12, c3, [r4, #-0x64]
+0c784754 raw+704754: ldc      p12, c3, [ip, #-0x64]!
+0c784758 raw+704758: ldr.w    lr, [r7, #0x28]
+0c78475c raw+70475c: cmp      r0, #0
+0c78475e raw+70475e: bne.w    #0xc7845da
+0c784762 raw+704762: ldr      r3, [pc, #0x2a8] ; literal raw+0x704a0c = 0x3c19ed28 'req func running:%s'
+0c784764 raw+704764: movs     r0, #4
+0c784766 raw+704766: str      r3, [sp]
+0c784768 raw+704768: ldr      r2, [pc, #0x2a4] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c78476a raw+70476a: movs     r3, #0x56
+0c78476c raw+70476c: ldr      r1, [pc, #0x2a4] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c78476e raw+70476e: str.w    lr, [sp, #4]
+0c784772 raw+704772: bl       #0xc764250
+0c784776 raw+704776: cmp      r6, r4
+0c784778 raw+704778: beq.w    #0xc784610
+0c78477c raw+70477c: mov      r2, r5
+0c78477e raw+70477e: mov      r1, sl
+0c784780 raw+704780: add.w    r3, r7, #0x1c
+0c784784 raw+704784: add.w    r0, r7, #0x2c
+0c784788 raw+704788: str      r5, [r7, #0x1c]
+0c78478a raw+70478a: bl       #0xc784108
+0c78478e raw+70478e: ldr      r3, [r7, #0x2c]
+0c784790 raw+704790: ldr      r2, [pc, #0x284] ; literal raw+0x704a18 = 0x3c19ec98 'longpolling cancel jsid:%d, natid:%d, subtask:%d'
+0c784792 raw+704792: ldr      r4, [r3, #0x14]
+0c784794 raw+704794: ldr      r1, [pc, #0x27c] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c784796 raw+704796: ldr      r3, [r4, #4]
+0c784798 raw+704798: movs     r0, #1
+0c78479a raw+70479a: str      r3, [sp, #0xc]
+0c78479c raw+70479c: ldr      r3, [r5]
+0c78479e raw+70479e: str      r2, [sp]
+0c7847a0 raw+7047a0: str      r3, [sp, #8]
+0c7847a2 raw+7047a2: ldr      r3, [r7, #0xc]
+0c7847a4 raw+7047a4: ldr      r2, [pc, #0x268] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c7847a6 raw+7047a6: str      r3, [sp, #4]
+0c7847a8 raw+7047a8: movs     r3, #0x5c
+0c7847aa raw+7047aa: bl       #0xc764250
+0c7847ae raw+7047ae: add.w    r0, r4, #0x18
+0c7847b2 raw+7047b2: bl       #0xc764b40
+0c7847b6 raw+7047b6: ldrb     r3, [r4, #0xc]
+0c7847b8 raw+7047b8: lsls     r1, r3, #0x1f
+0c7847ba raw+7047ba: bmi.w    #0xc784960
+0c7847be raw+7047be: mov      r0, r4
+0c7847c0 raw+7047c0: movs     r1, #0x4c
+0c7847c2 raw+7047c2: movs     r4, #0
+0c7847c4 raw+7047c4: bl       #0xc70ff4c
+0c7847c8 raw+7047c8: mov.w    lr, #1
+0c7847cc raw+7047cc: ldr.w    r0, [r8, #4]
+0c7847d0 raw+7047d0: strh     r4, [r7, #0x2c]
+0c7847d2 raw+7047d2: ldr.w    ip, [r0]
+0c7847d6 raw+7047d6: ldr      r1, [r5]
+0c7847d8 raw+7047d8: strd     r4, lr, [sp]
+0c7847dc raw+7047dc: mvn      r2, #0x64
+0c7847e0 raw+7047e0: add.w    r3, r7, #0x2d
+0c7847e4 raw+7047e4: ldr.w    r4, [ip, #8]
+0c7847e8 raw+7047e8: blx      r4
+0c7847ea raw+7047ea: mov      r1, r5
+0c7847ec raw+7047ec: mov      r0, sl
+0c7847ee raw+7047ee: bl       #0xc784280
+0c7847f2 raw+7047f2: ldrb.w   r3, [r7, #0x2c]
+0c7847f6 raw+7047f6: lsls     r2, r3, #0x1f
+0c7847f8 raw+7047f8: bpl.w    #0xc784610
+0c7847fc raw+7047fc: ldr      r1, [r7, #0x2c]
+0c7847fe raw+7047fe: ldr      r0, [r7, #0x34]
+0c784800 raw+704800: bic      r1, r1, #1
+0c784804 raw+704804: bl       #0xc70ff4c
+0c784808 raw+704808: b        #0xc784610
+0c78480a raw+70480a: ldr      r3, [r6]
+0c78480c raw+70480c: cmp      r3, #0
+0c78480e raw+70480e: beq.w    #0xc7846b2
+0c784812 raw+704812: ldr      r0, [r4, #4]
+0c784814 raw+704814: ldr      r5, [r7, #0xc]
+0c784816 raw+704816: ldr      r4, [pc, #0x204] ; literal raw+0x704a1c = 0x3c19ed4c 'add longpolling jsid:%d, natid:%d, subtask:%d'
+0c784818 raw+704818: strd     r1, r0, [sp, #8]
+0c78481c raw+70481c: movs     r3, #0x72
+0c78481e raw+70481e: movs     r0, #1
+0c784820 raw+704820: strd     r4, r5, [sp]
+0c784824 raw+704824: ldr      r2, [pc, #0x1e8] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c784826 raw+704826: ldr      r1, [pc, #0x1ec] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c784828 raw+704828: bl       #0xc764250
+0c78482c raw+70482c: ldrb.w   r3, [r7, #0x20]
+0c784830 raw+704830: lsls     r3, r3, #0x1f
+0c784832 raw+704832: bmi.w    #0xc78496e
+0c784836 raw+704836: adds     r7, #0x3c
+0c784838 raw+704838: mov      sp, r7
+0c78483a raw+70483a: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c78483e raw+70483e: ldr      r2, [pc, #0x1e0] ; literal raw+0x704a20 = 0x3c19ed7c 'task already exit:%d'
+0c784840 raw+704840: movs     r3, #0x3c
+0c784842 raw+704842: strd     r2, r1, [sp]
+0c784846 raw+704846: movs     r0, #4
+0c784848 raw+704848: ldr      r2, [pc, #0x1c4] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c78484a raw+70484a: ldr      r1, [pc, #0x1c8] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c78484c raw+70484c: add.w    r6, r8, #8
+0c784850 raw+704850: bl       #0xc764250
+0c784854 raw+704854: add.w    r3, r7, #0x20
+0c784858 raw+704858: add.w    r2, r7, #0x14
+0c78485c raw+70485c: mov      r1, r6
+0c78485e raw+70485e: add.w    r0, r7, #0x2c
+0c784862 raw+704862: str      r2, [r7, #0x20]
+0c784864 raw+704864: bl       #0xc784108
+0c784868 raw+704868: ldr      r3, [r7, #0x2c]
+0c78486a raw+70486a: ldr      r4, [r3, #0x14]
+0c78486c raw+70486c: cbz      r4, #0xc784886
+0c78486e raw+70486e: add.w    r0, r4, #0x18
+0c784872 raw+704872: bl       #0xc764b40
+0c784876 raw+704876: ldrb     r3, [r4, #0xc]
+0c784878 raw+704878: lsls     r3, r3, #0x1f
+0c78487a raw+70487a: bmi.w    #0xc7849e8
+0c78487e raw+70487e: mov      r0, r4
+0c784880 raw+704880: movs     r1, #0x4c
+0c784882 raw+704882: bl       #0xc70ff4c
+0c784886 raw+704886: add.w    r1, r7, #0x14
+0c78488a raw+70488a: mov      r0, r6
+0c78488c raw+70488c: bl       #0xc784280
+0c784890 raw+704890: mov      r0, r5
+0c784892 raw+704892: bl       #0xc764d28
+0c784896 raw+704896: bl       #0xc2d5e6e
+0c78489a raw+70489a: mov      sb, r0
+0c78489c raw+70489c: cmp      r0, #0
+0c78489e raw+70489e: bne.w    #0xc784520
+0c7848a2 raw+7048a2: movs     r5, #1
+0c7848a4 raw+7048a4: ldr      r0, [r7, #0x14]
+0c7848a6 raw+7048a6: ldr      r1, [pc, #0x17c] ; literal raw+0x704a24 = 0x3c19ec64 'req not json task:%d'
+0c7848a8 raw+7048a8: movs     r3, #0x42
+0c7848aa raw+7048aa: strd     r1, r0, [sp]
+0c7848ae raw+7048ae: ldr      r2, [pc, #0x160] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c7848b0 raw+7048b0: movs     r0, #4
+0c7848b2 raw+7048b2: ldr      r1, [pc, #0x160] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c7848b4 raw+7048b4: bl       #0xc764250
+0c7848b8 raw+7048b8: ldr.w    r0, [r8, #4]
+0c7848bc raw+7048bc: strh.w   sb, [r7, #0x2c]
+0c7848c0 raw+7048c0: ldr      r4, [r0]
+0c7848c2 raw+7048c2: str.w    sb, [sp]
+0c7848c6 raw+7048c6: str      r5, [sp, #4]
+0c7848c8 raw+7048c8: ldr      r4, [r4, #8]
+0c7848ca raw+7048ca: add.w    r3, r7, #0x2d
+0c7848ce raw+7048ce: mvn      r2, #0x63
+0c7848d2 raw+7048d2: ldr      r1, [r7, #0x14]
+0c7848d4 raw+7048d4: blx      r4
+0c7848d6 raw+7048d6: ldrb.w   r3, [r7, #0x2c]
+0c7848da raw+7048da: lsls     r4, r3, #0x1f
+0c7848dc raw+7048dc: bpl      #0xc784836
+0c7848de raw+7048de: ldr      r1, [r7, #0x2c]
+0c7848e0 raw+7048e0: ldr      r0, [r7, #0x34]
+0c7848e2 raw+7048e2: bic      r1, r1, #1
+0c7848e6 raw+7048e6: bl       #0xc70ff4c
+0c7848ea raw+7048ea: adds     r7, #0x3c
+0c7848ec raw+7048ec: mov      sp, r7
+0c7848ee raw+7048ee: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c7848f2 raw+7048f2: movs     r4, #0
+0c7848f4 raw+7048f4: movs     r6, #1
+0c7848f6 raw+7048f6: ldr      r0, [r7, #0x14]
+0c7848f8 raw+7048f8: ldr      r1, [pc, #0x12c] ; literal raw+0x704a28 = 0x3c19ed10 'js para err taskid:%d'
+0c7848fa raw+7048fa: movs     r3, #0x4b
+0c7848fc raw+7048fc: strd     r1, r0, [sp]
+0c784900 raw+704900: ldr      r2, [pc, #0x10c] ; literal raw+0x704a10 = 0x3c19eb54 '/data1/wechat-rtos-service/watch/watch-service/src/watch_longpolling_manager.cpp'
+0c784902 raw+704902: ldr      r1, [pc, #0x110] ; literal raw+0x704a14 = 0x3c19eba8 'lpolling'
+0c784904 raw+704904: movs     r0, #4
+0c784906 raw+704906: bl       #0xc764250
+0c78490a raw+70490a: mov      r0, sb
+0c78490c raw+70490c: bl       #0xc2d5dd4
+0c784910 raw+704910: ldr.w    r0, [r8, #4]
+0c784914 raw+704914: strh     r4, [r7, #0x2c]
+0c784916 raw+704916: ldr      r5, [r0]
+0c784918 raw+704918: strd     r4, r6, [sp]
+0c78491c raw+70491c: add.w    r3, r7, #0x2d
+0c784920 raw+704920: mvn      r2, #0x63
+0c784924 raw+704924: ldr      r1, [r7, #0x14]
+0c784926 raw+704926: ldr      r4, [r5, #8]
+0c784928 raw+704928: blx      r4
+0c78492a raw+70492a: ldrb.w   r3, [r7, #0x2c]
+0c78492e raw+70492e: lsls     r0, r3, #0x1f
+0c784930 raw+704930: bmi      #0xc7848de
+0c784932 raw+704932: adds     r7, #0x3c
+0c784934 raw+704934: mov      sp, r7
+0c784936 raw+704936: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c78493a raw+70493a: add.w    sl, r0, #0x10
+0c78493e raw+70493e: bic      sl, sl, #0xf
+0c784942 raw+704942: mov      r0, sl
+0c784944 raw+704944: bl       #0xc710d50
+0c784948 raw+704948: mov      r5, r0
+0c78494a raw+70494a: orr      r3, sl, #1
+0c78494e raw+70494e: strd     r3, r4, [r7, #0x20]
+0c784952 raw+704952: str      r0, [r7, #0x28]
+0c784954 raw+704954: mov      r1, r6
+0c784956 raw+704956: mov      r2, r4
+0c784958 raw+704958: mov      r0, r5
+0c78495a raw+70495a: bl       #0xc704110
+0c78495e raw+70495e: b        #0xc784572
+0c784960 raw+704960: ldr      r1, [r4, #0xc]
+0c784962 raw+704962: ldr      r0, [r4, #0x14]
+0c784964 raw+704964: bic      r1, r1, #1
+0c784968 raw+704968: bl       #0xc70ff4c
+0c78496c raw+70496c: b        #0xc7847be
+0c78496e raw+70496e: ldr      r1, [r7, #0x20]
+0c784970 raw+704970: ldr      r0, [r7, #0x28]
+0c784972 raw+704972: bic      r1, r1, #1
+0c784976 raw+704976: bl       #0xc70ff4c
+0c78497a raw+70497a: adds     r7, #0x3c
+0c78497c raw+70497c: mov      sp, r7
+0c78497e raw+70497e: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c784982 raw+704982: bl       #0xc710d50
+0c784986 raw+704986: mov      r4, r0
+0c784988 raw+704988: cmp      r0, #0
+0c78498a raw+70498a: beq      #0xc7849f6
+0c78498c raw+70498c: ldr      r3, [r7, #8]
+0c78498e raw+70498e: add.w    sl, r0, #0x18
+0c784992 raw+704992: ldr      r1, [r3, #0x10]
+0c784994 raw+704994: ldr      r3, [r7, #4]
+0c784996 raw+704996: str      r1, [r7, #8]
+0c784998 raw+704998: ldr.w    fp, [r3, #0x10]
+0c78499c raw+70499c: ldr      r3, [r7, #0x10]
+0c78499e raw+70499e: strd     r3, r3, [r0, #0xc]
+0c7849a2 raw+7049a2: str      r3, [r0, #0x14]
+0c7849a4 raw+7049a4: mov      r0, sl
+0c7849a6 raw+7049a6: bl       #0xc764a54
+0c7849aa raw+7049aa: ldrd     r1, r2, [r7, #8]
+0c7849ae raw+7049ae: ldr      r3, [r7, #0x10]
+0c7849b0 raw+7049b0: str      r5, [r4, #8]
+0c7849b2 raw+7049b2: add.w    r5, r4, #0xc
+0c7849b6 raw+7049b6: str      r2, [r4]
+0c7849b8 raw+7049b8: str      r3, [r4, #4]
+0c7849ba raw+7049ba: mov      r0, r5
+0c7849bc raw+7049bc: bl       #0xc297742
+0c7849c0 raw+7049c0: mov      r0, fp
+0c7849c2 raw+7049c2: bl       #0xc7044c0
+0c7849c6 raw+7049c6: mov      r1, fp
+0c7849c8 raw+7049c8: mov      r2, r0
+0c7849ca raw+7049ca: mov      r0, sl
+0c7849cc raw+7049cc: bl       #0xc764b68
+0c7849d0 raw+7049d0: movs     r2, #0x20
+0c7849d2 raw+7049d2: ldr      r1, [r7, #0x10]
+0c7849d4 raw+7049d4: add.w    r0, r4, #0x2c
+0c7849d8 raw+7049d8: bl       #0xc70421c
+0c7849dc raw+7049dc: b        #0xc78465c
+0c7849de raw+7049de: movw     r5, #0x5dc
+0c7849e2 raw+7049e2: b        #0xc784628
+0c7849e4 raw+7049e4: mov      r5, r6
+0c7849e6 raw+7049e6: b        #0xc7846b2
+0c7849e8 raw+7049e8: ldr      r1, [r4, #0xc]
+0c7849ea raw+7049ea: ldr      r0, [r4, #0x14]
+0c7849ec raw+7049ec: bic      r1, r1, #1
+0c7849f0 raw+7049f0: bl       #0xc70ff4c
+0c7849f4 raw+7049f4: b        #0xc78487e
+0c7849f6 raw+7049f6: mov      r0, sb
+0c7849f8 raw+7049f8: bl       #0xc2d5dd4

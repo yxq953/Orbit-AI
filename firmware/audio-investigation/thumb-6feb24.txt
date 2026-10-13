@@ -1,0 +1,85 @@
+0c77eb24 raw+6feb24: ldr      r4, [pc, #0xd0] ; literal raw+0x6febf8 = 0x3c19e3bc 'wrong notify silk data we are in kAudioRecordIdle state get:%d'
+0c77eb26 raw+6feb26: movw     r3, #0x125
+0c77eb2a raw+6feb2a: movs     r0, #4
+0c77eb2c raw+6feb2c: strd     r4, r5, [sp]
+0c77eb30 raw+6feb30: ldr      r2, [pc, #0xc8] ; literal raw+0x6febfc = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77eb32 raw+6feb32: ldr      r1, [pc, #0xcc] ; literal raw+0x6fec00 = 0x3c19b6a8 'adam'
+0c77eb34 raw+6feb34: bl       #0xc764250
+0c77eb38 raw+6feb38: adds     r7, #0x4c
+0c77eb3a raw+6feb3a: mov      sp, r7
+0c77eb3c raw+6feb3c: vpop     {d8}
+0c77eb40 raw+6feb40: pop.w    {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+0c77eb44 raw+6feb44: ldr      r2, [pc, #0xbc] ; literal raw+0x6fec04 = 0x3c19e460 'not in stopping state recv silkend:%d'
+0c77eb46 raw+6feb46: movs     r0, #4
+0c77eb48 raw+6feb48: strd     r2, r3, [sp]
+0c77eb4c raw+6feb4c: ldr      r1, [pc, #0xb0] ; literal raw+0x6fec00 = 0x3c19b6a8 'adam'
+0c77eb4e raw+6feb4e: movw     r3, #0x147
+0c77eb52 raw+6feb52: ldr      r2, [pc, #0xa8] ; literal raw+0x6febfc = 0x3c19e21c '/data1/wechat-rtos-service/watch/watch-service/src/watch_audio_manager.cpp'
+0c77eb54 raw+6feb54: bl       #0xc764250
+0c77eb58 raw+6feb58: ldrb     r3, [r4, #0x15]
+0c77eb5a raw+6feb5a: cmp      r3, #1
+0c77eb5c raw+6feb5c: bne.w    #0xc77e87a
+0c77eb60 raw+6feb60: b        #0xc77ebd0
+0c77eb62 raw+6feb62: ldr      r1, [r7, #0x20]
+0c77eb64 raw+6feb64: ldr      r0, [r7, #0x28]
+0c77eb66 raw+6feb66: bic      r1, r1, #1
+0c77eb6a raw+6feb6a: bl       #0xc70ff4c
+0c77eb6e raw+6feb6e: b        #0xc77ea9e
+0c77eb70 raw+6feb70: ldr      r1, [r7, #0x14]
+0c77eb72 raw+6feb72: ldr      r0, [r7, #0x1c]
+0c77eb74 raw+6feb74: bic      r1, r1, #1
+0c77eb78 raw+6feb78: bl       #0xc70ff4c
+0c77eb7c raw+6feb7c: b        #0xc77e986
+0c77eb7e raw+6feb7e: ldr      r5, [r4, #8]
+0c77eb80 raw+6feb80: movs     r0, #0x10
+0c77eb82 raw+6feb82: ldr      r3, [r5]
+0c77eb84 raw+6feb84: ldr      r6, [r3, #0xc]
+0c77eb86 raw+6feb86: bl       #0xc710d50
+0c77eb8a raw+6feb8a: movs     r2, #0xc
+0c77eb8c raw+6feb8c: movs     r3, #0x11
+0c77eb8e raw+6feb8e: ldr      r1, [pc, #0x78] ; literal raw+0x6fec08 = 0x3c19e494 'voicemsgsent'
+0c77eb90 raw+6feb90: mov      r4, r0
+0c77eb92 raw+6feb92: str      r3, [r7, #8]
+0c77eb94 raw+6feb94: str      r2, [r7, #0xc]
+0c77eb96 raw+6feb96: str      r0, [r7, #0x10]
+0c77eb98 raw+6feb98: bl       #0xc704110
+0c77eb9c raw+6feb9c: movs     r3, #0
+0c77eb9e raw+6feb9e: add.w    r2, r7, #0x14
+0c77eba2 raw+6feba2: strb     r3, [r4, #0xc]
+0c77eba4 raw+6feba4: strh     r3, [r7, #0x14]
+0c77eba6 raw+6feba6: mov      r0, r5
+0c77eba8 raw+6feba8: add.w    r1, r7, #8
+0c77ebac raw+6febac: blx      r6
+0c77ebae raw+6febae: ldrb     r3, [r7, #0x14]
+0c77ebb0 raw+6febb0: lsls     r2, r3, #0x1f
+0c77ebb2 raw+6febb2: bmi      #0xc77ebd6
+0c77ebb4 raw+6febb4: ldrb     r3, [r7, #8]
+0c77ebb6 raw+6febb6: lsls     r3, r3, #0x1f
+0c77ebb8 raw+6febb8: bpl.w    #0xc77e98e
+0c77ebbc raw+6febbc: ldr      r1, [r7, #8]
+0c77ebbe raw+6febbe: ldr      r0, [r7, #0x10]
+0c77ebc0 raw+6febc0: bic      r1, r1, #1
+0c77ebc4 raw+6febc4: bl       #0xc70ff4c
+0c77ebc8 raw+6febc8: b        #0xc77e98e
+0c77ebca raw+6febca: vldr     d0, [pc, #0x1c] ; literal raw+0x6febe8 = 0x00000000
+0c77ebce raw+6febce: b        #0xc77e884
+0c77ebd0 raw+6febd0: vldr     d0, [pc, #0x1c] ; literal raw+0x6febf0 = 0x00000000
+0c77ebd4 raw+6febd4: b        #0xc77e884
+0c77ebd6 raw+6febd6: ldr      r1, [r7, #0x14]
+0c77ebd8 raw+6febd8: ldr      r0, [r7, #0x1c]
+0c77ebda raw+6febda: bic      r1, r1, #1
+0c77ebde raw+6febde: bl       #0xc70ff4c
+0c77ebe2 raw+6febe2: b        #0xc77ebb4
+0c77ebe4 raw+6febe4: nop.w    
+0c77ebe8 raw+6febe8: movs     r0, r0
+0c77ebea raw+6febea: movs     r0, r0
+0c77ebec raw+6febec: movs     r0, r0
+0c77ebee raw+6febee: ands     r0, r2
+0c77ebf0 raw+6febf0: movs     r0, r0
+0c77ebf2 raw+6febf2: movs     r0, r0
+0c77ebf4 raw+6febf4: movs     r0, r0
+0c77ebf6 raw+6febf6: ands     r0, r0
+0c77ebf8 raw+6febf8: b        #0xc77f374
+0c77ebfa raw+6febfa: subs     r4, #0x19
+0c77ebfc raw+6febfc: b        #0xc77f038
+0c77ebfe raw+6febfe: subs     r4, #0x19
