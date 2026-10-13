@@ -1,243 +1,199 @@
-# Xiaomi Wearable Development Guide
+# Orbit AI
 
-Tools and documentation for developing third-party apps on Xiaomi smartwatches and smart bands using the Vela JS Quick App framework.
+**面向 Redmi Watch 5 的腕上 AI 助手：语音提问、DeepSeek 回答、AnySearch 联网搜索与文本打印。**
 
-## Orbit AI Concept
+Orbit AI 基于小米 Vela JS 快应用框架开发。你可以在手表上说出问题，由手机与电脑协同完成语音识别、模型调用和工具执行，再将回答送回手表。电脑端提供本地网页，可查看消息与任务状态，也可直接向 DeepSeek 提问。
 
-![Orbit AI dashboard overview concept](docs/images/dashboard-overview.png)
+## 概念图
 
-## Supported Devices
+![Orbit AI 手表与电脑控制台概念图](docs/images/dashboard-overview.png)
 
-| Device | Screen | Resolution | DP Width |
-|--------|--------|-----------|----------|
-| Xiaomi Watch S1 Pro | Round 1.47" | 480x480 | 240 |
-| Xiaomi Watch S3/S4/S4 Sport/H1 | Round 1.43" | 466x466 | 233 |
-| Xiaomi Watch S5 | Round 1.485" | 480x480 | 240 |
-| Xiaomi Smart Band 8 Pro | Capsule 1.74" | 336x480 | 168 |
-| Xiaomi Smart Band 9 | Capsule 1.62" | 192x490 | 96 |
-| Xiaomi Smart Band 9 Pro | Capsule 1.74" | 336x480 | 168 |
-| Xiaomi Smart Band 10 | Capsule 1.725" | 212x520 | 106 |
-| REDMI Watch 5 | Rectangle 2.07" | 432x514 | 216 |
+*概念图用于展示产品布局与交互思路，实际界面以当前版本为准。*
 
-See the [multi-screen adaptation guide](https://iot.mi.com/vela/quickapp/en/guide/multi-screens/) for designing apps across devices.
+## 主要功能
 
-## What's in this repo
+- **语音提问**：使用手表麦克风录音，借助微信原生服务转为文字，自动提交问题并接收回答。
+- **腕上阅读**：采用深色与薄荷绿配色，回答按行显示，支持滚动查看长文本。
+- **联网搜索**：通过 AnySearch 完成通用搜索、垂直搜索、批量查询和网页正文提取，再由模型生成简短摘要。
+- **文本打印**：根据明确的打印请求调用电脑上的打印工具，回传任务与队列验证结果。
+- **电脑控制台**：查看识别文字、模型任务和回答送达状态；支持“询问 DeepSeek”与“直接发送到手表”两种模式。
 
-- **`scripts/`** - CLI tools for building, deploying, and testing apps (no IDE required)
-- **`examples/songbird/`** - A working example app (Hebrew lullaby songbook for Mi Band 8 Pro)
-- **`docs/`** - Detailed documentation on the framework and deployment process
+当前手表应用版本为 **v1.0.3**，包名为 `com.example.redmi.voicedeepseek`。
 
-## Quick Start
+## 工作流程
 
-### Prerequisites
-
-- [AIoT IDE](https://iot.mi.com/vela/quickapp/en/) - VS Code fork for Vela development (includes emulator)
-- [Node.js](https://nodejs.org/) >= 14
-- [ADB](https://developer.android.com/tools/adb) (Android Debug Bridge)
-- Android SDK with `javac` and `d8` (for real device deployment only)
-
-### Build and deploy to emulator
-
-```bash
-# 1. Start the Vela emulator from AIoT IDE
-
-# 2. Install script dependencies
-cd scripts && npm install && cd ..
-
-# 3. Build and deploy the example app
-./scripts/emu-deploy.sh --project examples/songbird
-
-# 4. Take a screenshot
-node scripts/emulator-grpc.js screenshot /tmp/screen.png
+```text
+手表录音 → 微信原生服务转文字 → 手机转发 → 电脑服务
+                                              ↓
+                                         DeepSeek
+                                         ↙      ↘
+                                  AnySearch    文本打印
+                                              ↓
+电脑消息队列 → 手表轮询 → 分行显示回答或工具执行结果
 ```
 
-### Deploy to real band
+项目向电脑服务和 DeepSeek 提交的是识别文字，不导出或上传原始音频文件。语音识别仍依赖手机微信登录、手表微信服务及手机连接；所选微信会话用于满足录音协议，应用不会通过 `stopRecord('send')` 发送微信聊天消息。
 
-```bash
-# Phone must be connected via ADB (USB or wireless)
-# Mi Fitness app must be installed and paired with band
+## 仓库结构
 
-./scripts/deploy.sh --project examples/songbird
+```text
+examples/watch-voice-deepseek-tool-newlook/
+├── src/                 # 手表界面、录音与通信逻辑
+├── desktop/             # 电脑服务、本地网页、模型与工具接口
+├── tool/                # 打印脚本与 AnySearch 资源
+├── tools/               # 构建工具与图标生成脚本
+└── tests/               # 手表端逻辑测试
 
-# Follow the prompt to tap the RPK file in the file picker
+docs/                    # 部署文档与概念图
+scripts/                 # 部署及模拟器辅助脚本
+firmware/                # 固件资料与分析记录
 ```
 
-## How Vela JS Quick Apps Work
+## 环境准备
 
-The band runs **Xiaomi Vela OS** (based on NuttX RTOS). Apps are built with the **Vela JS Quick App** framework - a Vue.js-like MVVM framework.
+| 用途 | 要求 |
+| --- | --- |
+| 电脑服务 | Node.js 20.3 或更高版本；服务本身仅使用 Node.js 内置模块 |
+| 手表应用构建 | 项目 `package.json` 中声明的开发依赖，包括 aiot-toolkit 与 @aiot-toolkit/jsc |
+| 模型问答 | 可用的 DeepSeek API Key |
+| 语音识别 | Redmi Watch 5、已登录微信的手机、可用的手表微信服务，以及与手表连接的小米运动健康 |
+| 网络通信 | 手机和电脑处于同一局域网，电脑防火墙允许服务端口连接 |
+| 文本打印（可选） | Windows、已安装 pywin32 的 Python，以及已配置的打印机 |
+| 联网搜索（可选） | 可用的 AnySearch Skill 目录与网络连接 |
 
-### Project structure
+构建脚本优先使用本项目的 `node_modules`，缺少时尝试复用 `examples/hello-world/node_modules` 中已有的构建依赖。仓库不包含这些依赖，也不包含 `hello-world` 参考项目；首次使用时需按本项目的 `package.json` 准备构建环境。构建脚本不会自动安装 NPM 包。
 
-```
-my-app/
-├── src/
-│   ├── manifest.json       # App config (package name, routes, designWidth)
-│   ├── app.ux              # App lifecycle
-│   ├── pages/
-│   │   └── index/index.ux  # Page (template + script + style)
-│   └── common/             # Shared assets and modules
-├── package.json
-└── dist/                   # Built .rpk files
-```
+## 快速开始
 
-### The .ux file format
+以下命令使用 PowerShell，第一步从仓库根目录执行。后续命令均在 Orbit AI 项目目录中执行。
 
-Each page is a `.ux` file with three sections:
+### 1. 配置模型密钥和连接地址
 
-```html
-<template>
-  <div class="page">
-    <text class="title">{{ message }}</text>
-    <text onclick="handleClick">Tap me</text>
-  </div>
-</template>
+```powershell
+cd examples/watch-voice-deepseek-tool-newlook
 
-<script>
-export default {
-  private: {
-    message: "Hello Band!"
-  },
-  handleClick() {
-    this.message = "Clicked!"
-  }
-}
-</script>
+# 在当前终端设置自己的 DeepSeek API Key。
+$env:DEEPSEEK_API_KEY = '<你的 DeepSeek API Key>'
 
-<style>
-.page {
-  flex-direction: column;
-  background-color: #000000;
-}
-.title {
-  font-size: 20px;
-  color: #ffffff;
-}
-</style>
+# 自动选择电脑局域网 IPv4，默认端口为 8767。
+npm.cmd run configure
 ```
 
-### Key concepts
+也可以明确指定手机能够访问的电脑地址：
 
-- **`designWidth`**: Set in `manifest.json`. This controls CSS-to-pixel mapping. Use the DP width from the device table above (e.g., `192` for Mi Band 8 Pro, `466` for Watch S3). The framework scales your CSS units to the actual screen resolution.
-- **Flexbox layout**: All containers use flexbox. Default direction is `column`.
-- **`<list>` for scrolling**: The `<list>` + `<list-item>` component is the most reliable way to display scrollable content. Each `<list-item>` needs an explicit `height`.
-- **`<text>` is required**: All text must be inside a `<text>` element. Text placed directly in `<div>` won't render.
-
-### Building
-
-```bash
-cd my-app && npm run build
+```powershell
+npm.cmd run configure -- --host 192.168.1.100 --port 8767
 ```
 
-Output: `dist/<package-name>.debug.<version>.rpk`
+服务端优先读取 `DEEPSEEK_API_KEY`。未设置时，读取 `DEEPSEEK_KEY_FILE` 指定的文件，默认文件为仓库根目录的 `deepseekapi.txt`。默认模型为 `deepseek-flash`，可通过 `DEEPSEEK_MODEL` 调整为账户支持的模型。问题文字会发送至 DeepSeek API，费用按服务商规则计算。
 
-Bump `versionName` and `versionCode` in `manifest.json` before each deploy to the real device.
+连接地址与随机配对令牌分别写入 `.runtime/connection.json` 和 `src/common/connection.js`，这些文件及密钥文件均不上传到仓库。重复配置会保留已有配对令牌；修改地址或端口后，需要重新构建并安装手表应用。
 
-## Deploying to the Emulator
+### 2. 验证、构建并启动服务
 
-The emulator runs NuttX with ADB support. Apps are deployed via:
+准备好构建依赖后执行：
 
-1. **Push** the `.rpk` to `/data/quickapp/app/<package>.rpk`
-2. **Extract** with `adb shell unzip -o <rpk> -d <app-dir>`
-3. **Start** with `adb shell "vapp app/<package> &"` (auto-kills previous instance)
-
-```bash
-./scripts/emu-deploy.sh --project <your-app-dir>
+```powershell
+npm.cmd test
+npm.cmd run build
+npm.cmd start
 ```
 
-The `vapp` binary is the Quick App JS runtime on the emulator. Starting a new instance kills any previous one for the same package.
+- 电脑控制台：[http://127.0.0.1:8767/](http://127.0.0.1:8767/)。
+- 手机连通性检查：在手机浏览器访问 `http://电脑IPv4:8767/health`。
+- 构建产物：`dist/com.example.redmi.voicedeepseek.debug.1.0.3.rpk`。
 
-### Emulator gRPC control
+若使用自定义端口，请相应调整访问地址。电脑网页仅允许本机访问；手机和手表通过携带配对令牌的同步接口通信。
 
-The emulator exposes a gRPC server (default port 8554) for programmatic control:
+### 3. 安装手表应用
 
-```bash
-node scripts/emulator-grpc.js screenshot /tmp/screen.png
-node scripts/emulator-grpc.js click 168 240        # Mouse click (triggers onclick)
-node scripts/emulator-grpc.js tap 168 240          # Touch event
-node scripts/emulator-grpc.js swipe 10 240 300 240 # Swipe gesture
+将构建产物上传至手机的 `Download/RedmiWatch/`，并命名为 `com.example.redmi.voicedeepseek.rpk`。打开小米运动健康的第三方应用安装页面，填写包名 `com.example.redmi.voicedeepseek`，再手动选择 RPK 并上传到手表。
+
+具体 ADB 操作与交接步骤见项目的 [AGENTS.md](examples/watch-voice-deepseek-tool-newlook/AGENTS.md)。共享部署脚本会自动打开文件选择器，若需要在填好包名后交由用户操作，请遵循该文档逐步执行。更多背景可参考 [真机部署说明](docs/deployment-real-device.md)。
+
+## 使用方法
+
+1. 保持手机微信登录，并确认手表微信能够读取会话；返回表盘后打开 Orbit AI，保持微信服务运行。
+2. 应用会自动读取会话。若读取失败，在“设置”中点击“读取会话”，选择“换会话”或输入实际会话标识；昵称不能替代会话标识。
+3. 点击“开始说话”或“继续提问”。录音将在 8 秒后自动停止，也可点击“说完了”提前结束。
+4. 识别成功后，完整文字会自动上传。手表先显示提问，再显示 DeepSeek 的回答；电脑控制台同步显示任务状态。
+5. 保持应用在前台接收回答。网络失败时会使用同一消息 ID 重试，也可点击顶部连接状态立即重试；上一条问题未完成时不能再次提交录音。
+6. “取消”用于结束当前录音或识别，已提交的问题仍会继续处理。等待回答超过 75 秒后可以重新提问，原任务可能仍在电脑队列中。
+
+同一次进入应用期间，连续提问、网络重试、断线恢复和设备服务重启均保留当前界面历史；切换应用内设置页面也不会清空。首次进入或退出后再次进入时会清空旧对话，仍在处理的当前问题会继续接收结果。
+
+**界面历史仅用于阅读。当前每个问题独立提交给模型，不携带上一轮对话上下文，也不提供语音播放。**
+
+## 联网搜索
+
+发送完整请求即可由模型选择搜索工具，例如：
+
+- “联网搜索 Node.js 22 官方发布说明，用一句话总结并注明来源。”
+- “搜索苹果股票的最新行情。”
+- “读取 https://example.com 的内容，简短总结。”
+- “搜索这个问题，并帮我打印一段简短摘要。”
+
+服务提供 `anysearch_search`、`anysearch_batch_search`、`anysearch_get_sub_domains` 和 `anysearch_extract` 四个工具。垂直搜索先查询子领域与参数，再执行检索。通用搜索默认返回 3 条结果，最多 5 条；批量搜索最多包含 5 个查询。网页提取支持 HTML、文本、JSON 和 Markdown，不支持 PDF、Office 文档或图片等二进制文件。
+
+默认使用当前用户目录下的 `.codex/skills/anysearch-skill`。也可使用仓库内随附的 Skill，在项目目录中设置：
+
+```powershell
+$env:ANYSEARCH_SKILL_DIR = (Resolve-Path './tool/anysearch-skill').Path
+npm.cmd start
 ```
 
-**Important**: Use `click` (sendMouse), not `tap` (sendTouch) for clicking UI elements. The Vela framework responds to mouse events but not always touch events in the emulator.
+API Key 可通过 `ANYSEARCH_API_KEY` 或 Skill 目录下的 `.env` 配置；CLI 优先读取 `.env`，其次读取环境变量，未配置时使用匿名访问，额度较低。搜索词与待提取 URL 会发送至 AnySearch API。
 
-### Coordinate system
+搜索结果由模型整理为适合手表阅读的短回答。每个问题最多执行 4 轮工具调用，单次工具输出最多 16,000 个字符；搜索失败会交由模型说明，不自动切换其他搜索服务。
 
-The emulator renders at the device's native resolution, but `designWidth` means CSS pixels != screen pixels. For gRPC commands, multiply CSS coordinates by `screen_width / designWidth`. For example, Mi Band 8 Pro: `336 / 192 = 1.75x`.
+## 文本打印
 
-## Deploying to Real Device
+打印功能在电脑端执行，已有连接配置时，启用或调整打印设置只需重启电脑服务，无需重新构建 RPK。
 
-There is no official way to sideload apps on the international Mi Band 8 Pro. This repo provides a workaround using a hidden debug page in the Mi Fitness app.
+例如，“帮我打印：明天下午三点开会”可触发正文打印；“打印机怎么连接？”属于普通问答，“不要打印，只告诉我……”不应触发打印。未给出打印内容时，助手会询问；下一条消息需包含完整打印请求。电脑网页的“直接发送到手表”模式不会调用模型或打印工具。
 
-### How it works
+当前支持 **1–500 个字符、排版后最多 30 行、每次一份** 的文本打印，使用 16 pt 微软雅黑。工具暂不提供文件、多份、字号或双面设置。默认打印机为 `NPI689498 (HP LaserJet MFP M233dw)`，可在启动前修改：
 
-1. A small `.dex` file runs via `app_process` on the phone
-2. It loads Mi Fitness's APK classes via `PathClassLoader`
-3. It launches the hidden `ThirdAppDebugFragment` via `ActivityManager`
-4. ADB `input` commands automate the debug page UI (enter package name, tap install)
-5. The Samsung file picker opens - you tap the RPK file to install
+```powershell
+# 可选：指定已安装 pywin32 的 Python；路径不附带命令行参数。
+$env:PRINT_PYTHON = 'C:\Python310\python.exe'
+$env:PRINT_PRINTER = '你的 Windows 打印机名称'
 
-```bash
-./scripts/deploy.sh --project <your-app-dir>
-# The script handles steps 1-4 automatically
-# You just tap the RPK file in step 5
+# 演练模式：验证工具调用与排版，不实际出纸。
+$env:PRINT_DRY_RUN = '1'
+npm.cmd start
 ```
 
-### Requirements
+恢复实际打印时，执行 `Remove-Item Env:PRINT_DRY_RUN -ErrorAction SilentlyContinue` 并重启服务。
 
-- Phone connected via ADB (USB or wireless debugging)
-- Mi Fitness app (`com.xiaomi.wearable`) installed and paired with the band
-- Android SDK (`ANDROID_HOME` must be set or at `~/Library/Android/sdk`)
+工具会原样回传打印机、页数、任务号与队列验证结果，不将“仍在队列”或“未看到对应任务”表述为打印成功。打印不会自动重试；若任务状态不明确，请先检查队列。同一服务进程内相同来源与消息 ID 会去重，重新提交请求或重启服务后可能再次打印。
 
-See [docs/deployment-real-device.md](docs/deployment-real-device.md) for the full technical deep-dive.
+## 当前限制
 
-## Known Limitations
+| 项目 | 行为与限制 |
+| --- | --- |
+| 识别文字 | 最多 2,000 个 Unicode 字符；超长时提示重新录音，不截断提交 |
+| 回答显示 | 最多保留 420 个 Unicode 字符，分段回传并按行显示 |
+| 超时 | 识别 30 秒；单次模型调用 45 秒；含工具调用的整次任务 65 秒；AnySearch 进程 20 秒；打印进程 25 秒，其中队列验证最多等待 10 秒 |
+| 任务队列 | 电脑串行处理，最多 8 条待处理任务；模型失败或队列已满会以文字回传 |
+| 后台行为 | 离开前台会取消录音或识别并暂停轮询，返回前台后继续接收已提交问题的回答 |
+| 数据保存 | 聊天与任务保存在内存；电脑服务重启会清空服务端队列与历史 |
+| 去重范围 | 限于当前电脑服务进程；重启后不能保证不重复调用模型或工具 |
+| 设备适配 | 当前针对 Redmi Watch 5 开发，其他设备的显示与原生服务兼容性需单独验证 |
 
-### Text rendering
+## 开发与验证
 
-- **LTR only**: The band renders all text left-to-right. For RTL languages (Hebrew, Arabic), you must pre-reverse the text. See the Songbird example for a `rev()` helper.
-- **`<list-item>` is single-line**: Text inside `<list-item>` does not wrap to multiple lines regardless of the `lines` CSS property. Long text must be pre-split into separate list items.
-- **Hebrew requires bold**: Hebrew glyphs only render at certain font sizes with `font-weight: bold`. 20px+ bold works reliably.
+在项目目录中执行：
 
-### Emulator
+```powershell
+npm.cmd test
+npm.cmd run build
+```
 
-- **Missing fonts**: The emulator lacks Hebrew, Arabic, and many CJK glyphs. Hebrew shows as squares. Always test non-Latin text on the real device.
-- **`<scroll>` component**: `scroll-y="true"` and a fixed `height` are required. Even then, finger scrolling may not work in the emulator. The `scrollTo()` and `scrollBy()` methods work programmatically.
-- **Back navigation**: The `router.back()` call works, but triggering it via gRPC click on a back button is unreliable. Swipe-right gesture also doesn't work in the emulator.
+自动化测试覆盖录音状态机、HTTP 同步、重试去重、Unicode 长文本、分段回复、后台暂停、取消与超长识别处理，以及模型错误、打印参数校验、队列结果保留、AnySearch 参数校验、多轮工具调用和搜索后打印等场景。
 
-### `<list>` component
+测试使用模拟模型、搜索服务和打印进程，不消耗真实 API 额度，也不实际出纸。真实手表的麦克风、微信服务、手机转发和屏幕显示仍需单独验收；打印演练模式验证通过也不代表实体出纸成功。
 
-- `scrollTo({index, behavior})` scrolls to a specific item
-- `scrollBy({top, behavior})` scrolls by pixel offset
-- These methods work on both emulator and real device
-- Finger scrolling works on the real device but not always in the emulator
+## 许可证
 
-### General
-
-- **No app store**: There is no official way to distribute third-party apps. Sideloading via the debug page is the only option.
-- **Version bumping**: The band may cache old versions. Bump `versionCode` in `manifest.json` before each deploy. If the band still shows the old version, uninstall first.
-
-## Development Workflow
-
-1. **Edit** `.ux` files in AIoT IDE or any editor
-2. **Build + deploy to emulator**: `./scripts/emu-deploy.sh --project <dir>`
-3. **Screenshot**: `node scripts/emulator-grpc.js screenshot /tmp/screen.png`
-4. **Iterate** on layout and logic using the emulator (fast cycle)
-5. **Deploy to band**: `./scripts/deploy.sh --project <dir>` (for final testing, font rendering, touch behavior)
-
-## Scripts Reference
-
-| Script | Purpose |
-|--------|---------|
-| `scripts/deploy.sh` | Build + deploy to real band via phone |
-| `scripts/emu-deploy.sh` | Build + deploy to emulator |
-| `scripts/emulator-grpc.js` | Emulator control (screenshot, click, swipe) |
-
-All scripts support `--help` for full usage. Configuration via CLI arguments or environment variables - no hardcoded device serials or paths.
-
-## Resources
-
-- [Vela Quick App Docs](https://iot.mi.com/vela/quickapp/en/) - Official framework documentation
-- [AIoT IDE Download](https://iot.mi.com/vela/quickapp/en/guide/start/use-ide.html) - Development IDE
-
-## License
-
-MIT
+仓库采用 [MIT License](LICENSE)。随附的工具与第三方资料如有独立许可证，以各自目录中的声明为准。
