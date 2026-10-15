@@ -10,7 +10,7 @@ main{max-width:900px;margin:4vh auto;padding:24px}header{display:flex;justify-co
 form{display:flex;gap:12px;margin-top:14px}textarea{resize:vertical;flex:1;min-height:85px;border:1px solid #cbd9e6;border-radius:12px;padding:12px;font:inherit}button{border:0;background:#187568;color:white;border-radius:12px;padding:12px 22px;font:inherit;cursor:pointer}button:disabled{opacity:.5;cursor:wait}select{font:inherit;padding:8px;border:1px solid #cbd9e6;border-radius:8px}#ai-status,#info{font-size:14px;color:#62758a;min-height:20px}.toolbar{display:flex;align-items:center;gap:12px;margin-top:18px}.quick{margin-top:10px;display:flex;gap:8px}.quick button{background:#edf3fa;color:#33506d;padding:8px 14px;font-size:14px}@media(max-width:600px){main{padding:14px}header{align-items:flex-start;flex-direction:column}form{flex-direction:column}}
 </style>
 <main>
-<header><div><h1>腕上语音 AI</h1><p>手表语音识别 → DeepSeek → 手表文字回答</p></div><span class="badge" id="status">等待手表连接</span></header>
+<header><div><h1>腕上语音 AI</h1><p>手表语音识别 → 服务端 DeepSeek → 手表文字回答</p></div><span class="badge" id="status">等待手表连接</span></header>
 <section class="card">
 <p id="ai-status" aria-live="polite">正在连接模型服务…</p>
 <div id="messages" role="log" aria-live="polite"><p class="empty">在手表打开“腕上语音AI”并录音提问，<br>识别文字会自动上传，AI 回答会回传手表。</p></div>
@@ -19,7 +19,7 @@ form{display:flex;gap:12px;margin-top:14px}textarea{resize:vertical;flex:1;min-h
 <div class="quick"><button type="button" data-text="用一句话介绍你自己">介绍自己</button><button type="button" data-text="给我一句简短的鼓励">一句鼓励</button></div>
 <p id="info" aria-live="polite">手表识别成功后会自动提交问题，无需电脑手动转发。</p>
 </section>
-<p class="help">手机和电脑需在同一 Wi-Fi，手机微信保持登录，小米运动健康与手表蓝牙保持连接，手表保持应用页面打开。<br>每次提问独立回答；长回答会缩短并分段发送。聊天和队列保存在内存中，服务重启后清空。</p>
+<p class="help">手机需能访问服务地址，微信保持登录，小米运动健康与手表蓝牙保持连接，手表保持应用页面打开。<br>新版手表应用支持连续追问，退出后重新进入会清空对话上下文；网页提问独立回答。长回答会缩短并分段发送。聊天和队列保存在内存中，服务重启后清空。</p>
 </main>
 <script>
 const token = '__PAIR_TOKEN__';

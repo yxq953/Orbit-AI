@@ -6,8 +6,11 @@ const { randomBytes, timingSafeEqual } = require('node:crypto');
 const { ModelError } = require('./deepseek.cjs');
 
 const project = path.resolve(__dirname, '..');
-const runtimeFile = path.join(project, '.runtime', 'connection.json');
+const runtimeFile = process.env.ORBIT_CONFIG_FILE || path.join(project, '.runtime', 'connection.json');
 const MAX_TEXT = 120;
+const MAX_CONTEXT_MESSAGES = 12;
+const MAX_CONTEXT_CHARS = 8000;
+const MAX_CONTEXTS = 100;
 
 function reply(res, code, data) {
   res.writeHead(code, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
@@ -23,6 +26,8 @@ function createServer(token, options = {}) {
   let watchCursor = 0;
   const jobs = [];
   const queue = [];
+  const contexts = new Map();
+  const jobContexts = new WeakMap();
   let generating = false;
   let closed = false;
   const controller = new AbortController();
@@ -31,6 +36,37 @@ function createServer(token, options = {}) {
     messages.push(message);
     if (messages.length > 200) messages.shift();
     return message;
+  }
+  function selectContext(key, epoch) {
+    let current = contexts.get(key);
+    if (!current || epoch > current.epoch) {
+      if (current) current.history = [];
+      current = { epoch, history: [] };
+    } else if (epoch < current.epoch) return null;
+    contexts.delete(key);
+    contexts.set(key, current);
+    if (contexts.size > MAX_CONTEXTS) {
+      const oldest = contexts.keys().next().value;
+      contexts.get(oldest).history = [];
+      contexts.delete(oldest);
+    }
+    return current;
+  }
+  function currentContext(job) {
+    const entry = jobContexts.get(job);
+    return entry && contexts.get(entry.key) === entry.state ? entry.state : null;
+  }
+  function remember(job, answer) {
+    const current = currentContext(job);
+    if (!current) return; // Reset/evicted conversations cannot be repopulated by late answers.
+    let history = current.history.concat([
+      { role: 'user', content: job.prompt },
+      { role: 'assistant', content: Array.from(answer).slice(0, 2000).join('') }
+    ]).slice(-MAX_CONTEXT_MESSAGES);
+    while (history.length > 2 && history.reduce((sum, message) => sum + Array.from(message.content).length, 0) > MAX_CONTEXT_CHARS) {
+      history = history.slice(2);
+    }
+    current.history = history;
   }
   function sendAnswer(job, text) {
     const chars = Array.from(text);
@@ -53,10 +89,15 @@ function createServer(token, options = {}) {
       const job = queue.shift();
       job.state = 'generating';
       try {
-        const answer = await options.generate(job.prompt, controller.signal);
+        const context = currentContext(job);
+        const answer = await options.generate(job.prompt, controller.signal, {
+          requestId: job.printRequestId,
+          history: context ? context.history.map(message => ({ ...message })) : []
+        });
         if (closed) break;
         if (typeof answer !== 'string' || !answer.trim()) throw new Error('empty');
         sendAnswer(job, answer.trim());
+        remember(job, answer.trim());
         job.state = 'succeeded';
       } catch (error) {
         if (closed) break;
@@ -65,12 +106,14 @@ function createServer(token, options = {}) {
         sendAnswer(job, job.error);
         job.state = 'failed';
       }
+      jobContexts.delete(job);
       job.finished = Date.now();
     }
     generating = false;
   }
-  function enqueue(message) {
-    const job = { id: message.id, requestId: message.requestId, prompt: message.text, state: 'queued', replyIds: [] };
+  function enqueue(message, contextId, context) {
+    const job = { id: message.id, requestId: message.requestId, printRequestId: message.source + ':' + message.requestId,
+      prompt: message.text, state: 'queued', replyIds: [] };
     jobs.push(job);
     if (jobs.length > 100) jobs.shift();
     if (queue.length >= 8) {
@@ -78,6 +121,7 @@ function createServer(token, options = {}) {
       job.error = '请求队列已满，请稍后重新提问';
       sendAnswer(job, job.error);
     } else {
+      if (context) jobContexts.set(job, { key: contextId, state: context });
       queue.push(job);
       setImmediate(pump);
     }
@@ -107,26 +151,43 @@ function createServer(token, options = {}) {
         chunks.push(chunk);
       }
       const body = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-      if (!['watch', 'pc'].includes(body.source) || !Number.isSafeInteger(body.after) || body.after < 0 || typeof body.session !== 'string') {
+      const hasConversation = body.conversationId !== undefined || body.conversationEpoch !== undefined;
+      if (!['watch', 'pc'].includes(body.source) || !Number.isSafeInteger(body.after) || body.after < 0 || typeof body.session !== 'string' ||
+          (hasConversation && (typeof body.conversationId !== 'string' || !/^[\w-]{1,100}$/.test(body.conversationId) ||
+            !Number.isSafeInteger(body.conversationEpoch) || body.conversationEpoch < 1))) {
         return reply(res, 400, { error: '无效的同步参数' });
       }
+      const contextId = hasConversation ? body.source + ':' + body.conversationId : null;
       let ack = null;
+      let ask = false, key;
       if (body.outgoing != null) {
         const { id, text } = body.outgoing;
-        const ask = body.source === 'pc' && body.outgoing.ai === true;
-        if (ask && !local) return reply(res, 403, { error: '网页提问仅允许在电脑本机操作' });
+        ask = body.source === 'pc' && body.outgoing.ai === true;
+        if (ask && !local) return reply(res, 403, { error: '网页提问仅允许通过服务本机或 SSH 隧道操作' });
         if ((ask || body.source === 'watch') && !options.generate) return reply(res, 503, { error: '模型服务未配置' });
         const limit = body.source === 'watch' ? 2000 : ask ? 1000 : MAX_TEXT;
         if (typeof id !== 'string' || !/^[\w-]{1,100}$/.test(id) || typeof text !== 'string' || !text.trim() || Array.from(text).length > limit) {
           return reply(res, 400, { error: `消息需为 1–${limit} 个字符` });
         }
-        const key = body.source + ':' + id;
+        if (body.outgoing.conversationEpoch !== undefined && (!hasConversation ||
+            !Number.isSafeInteger(body.outgoing.conversationEpoch) || body.outgoing.conversationEpoch < 1 ||
+            body.outgoing.conversationEpoch > body.conversationEpoch)) {
+          return reply(res, 400, { error: '无效的消息会话' });
+        }
+        key = body.source + ':' + id;
         if (seen.has(key) && (seen.get(key).text !== text || !!seen.get(key).ask !== ask)) return reply(res, 409, { error: '消息 ID 重复' });
+      }
+      // Validate first; an invalid request must never clear a valid context.
+      const context = contextId ? selectContext(contextId, body.conversationEpoch) : null;
+      if (body.outgoing != null) {
+        const { id, text } = body.outgoing;
         if (!seen.has(key)) {
           const message = append(ask ? 'user' : body.source, text, { requestId: id });
           seen.set(key, { text, ask });
           if (seen.size > 1000) seen.delete(seen.keys().next().value);
-          if (options.generate && (ask || body.source === 'watch')) enqueue(message);
+          const outgoingEpoch = body.outgoing.conversationEpoch ?? body.conversationEpoch;
+          if (options.generate && (ask || body.source === 'watch')) enqueue(message, contextId,
+            outgoingEpoch === body.conversationEpoch ? context : null);
         }
         ack = id;
       }
@@ -159,12 +220,12 @@ function lanAddress() {
       .map(entry => ({ name, address: entry.address })));
   const physical = list.filter(entry => !/vmware|vethernet|virtual|wsl|clash|vpn|tun/i.test(entry.name));
   const selected = physical.find(entry => /wlan|wi-fi|wifi|无线/i.test(entry.name)) || physical[0];
-  if (!selected) throw new Error('未找到局域网地址。请指定 --host 手机可访问的电脑IPv4地址');
+  if (!selected) throw new Error('未找到局域网地址。请指定 --host 手机可访问的服务 IPv4 地址');
   return selected.address;
 }
 
 function configure(host, port) {
-  if (!/^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.split('.').some(part => Number(part) > 255)) throw new Error('host 必须是电脑 IPv4 地址');
+  if (!/^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.split('.').some(part => Number(part) > 255)) throw new Error('host 必须是服务 IPv4 地址');
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('端口无效');
   let previous;
   if (fs.existsSync(runtimeFile)) previous = JSON.parse(fs.readFileSync(runtimeFile, 'utf8'));
@@ -172,7 +233,7 @@ function configure(host, port) {
   fs.mkdirSync(path.dirname(runtimeFile), { recursive: true });
   fs.writeFileSync(runtimeFile, JSON.stringify(config, null, 2) + '\n');
   fs.writeFileSync(path.join(project, 'src/common/connection.js'),
-    '// Generated by desktop/server.cjs --configure. Rebuild RPK after changing the address.\nexport default ' +
+    '// Generated by cloud/server.cjs --configure. Rebuild RPK after changing the address.\nexport default ' +
     JSON.stringify({ url: `http://${host}:${port}`, token: config.token }) + '\n');
   console.log(`手表连接地址：http://${host}:${port}`);
   return config;
@@ -187,16 +248,22 @@ if (require.main === module) {
     if (args.includes('--configure')) {
       configure(option('--host') || lanAddress(), port);
     } else {
-      if (!fs.existsSync(runtimeFile)) throw new Error('请先运行 node desktop/server.cjs --configure，然后编译 RPK');
+      if (!fs.existsSync(runtimeFile)) throw new Error('缺少云端连接配置（ORBIT_CONFIG_FILE）');
       const config = JSON.parse(fs.readFileSync(runtimeFile, 'utf8'));
-      const provider = require('./deepseek.cjs').createDeepSeek();
+      const bridge = process.env.PRINT_ENABLED === '1'
+        ? require('./print-bridge.cjs').startBridge() : null;
+      const provider = require('./deepseek.cjs').createDeepSeek({ printer: bridge?.printer });
       const server = createServer(config.token, provider);
+      server.on('close', () => bridge?.close());
+      for (const name of ['SIGINT', 'SIGTERM']) process.once(name, () => {
+        server.close(); server.closeAllConnections(); bridge?.close();
+      });
       server.on('error', error => { console.error(error.message); process.exitCode = 1; });
       server.listen(config.port, '0.0.0.0', () => {
-        console.log(`电脑聊天窗口：http://127.0.0.1:${config.port}`);
+        console.log(`服务控制台（仅本机或 SSH 隧道）：http://127.0.0.1:${config.port}`);
         console.log(`DeepSeek 模型：${provider.model}；手表提问自动回传，网页也可提问。`);
         console.log(`手机连通性测试：http://${config.host}:${config.port}/health`);
-        console.log('保持手机和电脑同一 Wi-Fi、微信和小米运动健康运行，打开手表的“腕上语音AI”。');
+        console.log('保持手机可访问服务地址、微信和小米运动健康运行，打开手表的 Orbit AI。');
       });
     }
   } catch (error) { console.error(error.message); process.exitCode = 1; }

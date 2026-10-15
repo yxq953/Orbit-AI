@@ -44,3 +44,39 @@ test('server-session change drains history and preserves pending uploads without
   channel.stop()
   assert.equal(jobs.size, 0)
 })
+
+test('conversation epoch changes only on app entry while pending uploads keep their original epoch', async () => {
+  const source = await fs.readFile(path.join(__dirname, '../src/common/channel.js'), 'utf8')
+  const { createChannel } = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))
+  const requests = [], sent = []
+  const clock = { setTimeout() { return 1 }, clearTimeout() {} }
+  const channel = createChannel({ fetch: options => requests.push(options) }, { url: 'http://test', token: 'test' }, {
+    status() {}, receive() {}, sent(text, id) { sent.push(id) }
+  }, clock)
+  const payload = index => JSON.parse(requests[index].data)
+  const success = (index, ack = null) => requests[index].success({ code: 200,
+    data: JSON.stringify({ session: 'server', cursor: 0, messages: [], ack }) })
+  channel.start()
+  assert.equal(payload(0).conversationEpoch, 1)
+  requests[0].fail({}, 'lost-response')
+  channel.retry()
+  assert.equal(payload(1).conversationEpoch, 1)
+  success(1)
+  channel.send('旧问题')
+  const pending = payload(2).outgoing
+  assert.equal(pending.conversationEpoch, 1)
+  channel.stop(); channel.start()
+  assert.equal(payload(3).conversationEpoch, 2)
+  assert.equal(payload(3).conversationId, payload(0).conversationId)
+  assert.deepEqual(payload(3).outgoing, pending)
+  success(2, pending.id) // Late response from the previous app entry is ignored.
+  assert.deepEqual(sent, [])
+  success(3, pending.id)
+  assert.deepEqual(sent, [pending.id])
+  channel.start(); channel.retry()
+  assert.equal(payload(4).conversationEpoch, 2)
+  success(4)
+  channel.send('新问题')
+  assert.equal(payload(5).outgoing.conversationEpoch, 2)
+  channel.stop()
+})

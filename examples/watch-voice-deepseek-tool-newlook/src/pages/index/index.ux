@@ -79,7 +79,7 @@
         <text class="detail">{{ $item }}</text>
       </list-item>
       <list-item type="version" class="version-item">
-        <text class="version">v1.0.3 · 微信识别 → DeepSeek</text>
+        <text class="version">v1.0.5 · 微信识别 → DeepSeek</text>
       </list-item>
     </list>
   </div>
@@ -113,15 +113,15 @@ function wrapText(text, columns) {
 
 export default {
   private: {
-    setup: false, network: '正在连接电脑…', phase: '正在准备语音识别…',
+    setup: false, network: '正在连接服务器…', phase: '正在准备语音识别…',
     recorderStatus: '', conversation: '', selection: '0/0', transcript: '',
     recorderState: 'unloaded', waiting: false, hasAnswer: false,
-    networkLabel: '正在连接设备', networkColor: '#d9b97b',
+    networkLabel: '正在连接服务器', networkColor: '#d9b97b',
     statusTitle: '正在准备', detailVisible: true,
-    heroTitle: '抬腕，问一句', heroHint: '问答 · 搜索 · 打印', heroColor: '#9ef2d1',
+    heroTitle: '抬腕，问一句', heroHint: '语音问答 · 联网搜索', heroColor: '#9ef2d1',
     actionTitle: '设置语音', actionColor: '#9ef2d1', actionInk: '#102c23',
     showCancel: false, canResend: false,
-    recorderLines: ['正在准备语音识别'], networkLines: ['正在连接设备…'],
+    recorderLines: ['正在准备语音识别'], networkLines: ['正在连接服务器…'],
     lines: []
   },
   onInit() {
@@ -151,7 +151,7 @@ export default {
           this.selection = view.selection
           this.transcript = view.transcript
           this.recorderLines = wrapText(view.recorderStatus, 30)
-          this.networkLines = wrapText(view.network.replace(/电脑/g, '设备'), 30)
+          this.networkLines = wrapText(view.network, 30)
           this.updatePresentation()
         },
         message: (prefix, text) => this.addMessage(prefix, text),
@@ -184,10 +184,10 @@ export default {
     this.showCancel = recording || processing || stopping
     this.canResend = !!this.transcript && !busy
     this.detailVisible = !this.lines.length || attention
-    this.networkLabel = this.network === '已连接电脑' ? '设备已连接' :
+    this.networkLabel = this.network === '已连接服务器' ? '服务器已连接' :
       this.network === '发送中…' ? '正在发送问题' :
-      this.network.indexOf('正在连接') >= 0 ? '正在连接设备' : '连接异常 · 点此重试'
-    this.networkColor = this.network === '已连接电脑' ? '#9ef2d1' : '#d9b97b'
+      this.network.indexOf('正在连接') >= 0 ? '正在连接服务器' : '连接异常 · 点此重试'
+    this.networkColor = this.network === '已连接服务器' ? '#9ef2d1' : '#d9b97b'
 
     this.actionTitle = recording ? '说完了' : processing ? '正在识别…' :
       stopping ? '正在取消…' : uncertain ? '确认取消' :
@@ -205,7 +205,7 @@ export default {
       attention || !ready ? '在设置中检查语音' : '抬腕，问一句'
     this.heroHint = recording ? '8 秒后自动结束' : processing ? '识别完成后自动提问' :
       stopping || uncertain ? '请保持页面打开' : preparing ? '读取可用微信会话' :
-      attention || !ready ? '手机微信登录 · 手表连接' : '问答 · 搜索 · 打印'
+      attention || !ready ? '手机微信登录 · 手表连接' : '语音问答 · 联网搜索'
     this.heroColor = recording || uncertain ? '#f5aa96' : '#9ef2d1'
   },
   toggleSetup() { this.setup = !this.setup; if (!this.setup) this.scrollHistory() },
@@ -229,7 +229,7 @@ export default {
     if (ai) this.hasAnswer = true
     const background = mine ? '#19352e' : '#15232d'
     const rows = [{
-      text: mine ? '你说' : ai ? 'DeepSeek' : '电脑消息',
+      text: mine ? '你说' : ai ? 'DeepSeek' : '服务消息',
       heading: true, height: 30, cardHeight: 24, gap: 6,
       background, radius: '9px', rounded: true, edgeTop: 10,
       color: mine ? '#9ef2d1' : '#91bedd', fontSize: 10

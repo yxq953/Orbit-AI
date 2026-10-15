@@ -65,9 +65,13 @@ test('watch transport: lost reply retries same ID, hides safely, rejects stale c
     requests[index].success({ code: 200, data: JSON.stringify({ session: 'session', messages, ack, cursor }) });
   }
   channel.start(); success(0);
+  const firstPayload = JSON.parse(requests[0].data);
+  assert.match(firstPayload.conversationId, /^[\w-]{1,100}$/);
+  assert.equal(firstPayload.conversationEpoch, 1);
   assert.equal(channel.send('abc'), true);
   assert.equal(channel.send('def'), false);
   const id = JSON.parse(requests[1].data).outgoing.id;
+  assert.equal(JSON.parse(requests[1].data).conversationEpoch, 1);
   run(15000);
   success(1, [{ id: 1, source: 'pc', text: 'late' }], id, 1);
   assert.deepEqual(sent, []);
@@ -84,6 +88,7 @@ test('watch transport: lost reply retries same ID, hides safely, rejects stale c
   success(3, [{ id: 3, source: 'pc', text: 'hidden' }], null, 3);
   assert.deepEqual(received, ['你好']); assert.equal(jobs.size, 0);
   channel.start();
+  assert.equal(JSON.parse(requests[4].data).conversationEpoch, 2);
   success(4, [{ id: 2, source: 'pc', text: '你好' }, { id: 3, source: 'pc', text: 'next' }], null, 3);
   assert.deepEqual(received, ['你好', 'next']);
   channel.stop();

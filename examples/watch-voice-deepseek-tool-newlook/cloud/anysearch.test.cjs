@@ -80,7 +80,7 @@ async function fixture(t, fetch, search, printer) {
   t.after(() => fs.rm(dir, { recursive: true, force: true }));
   const keyFile = path.join(dir, 'key.txt');
   await fs.writeFile(keyFile, 'sk-FAKE_TEST_ONLY_0123456789');
-  return createDeepSeek({ keyFile, fetch, search, printer });
+  return createDeepSeek({ keyFile, fetch, search, printer: printer || { print: async () => { throw new Error('Unexpected print'); } } });
 }
 function call(id, name, args) {
   return { id, type: 'function', function: { name, arguments: JSON.stringify(args) } };

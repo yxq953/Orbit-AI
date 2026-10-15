@@ -4,10 +4,11 @@
   "private": true,
   "description": "Native watch transcription to DeepSeek with text replies on the watch",
   "scripts": {
-    "configure": "node desktop/server.cjs --configure",
-    "start": "node desktop/server.cjs",
+    "configure": "node cloud/server.cjs --configure",
+    "start": "node desktop/print-agent.cjs",
+    "start:cloud": "node cloud/server.cjs",
     "build": "node tools/build.cjs",
-    "test": "node --test tests/*.test.cjs desktop/*.test.cjs"
+    "test": "node --test tests/*.test.cjs desktop/*.test.cjs cloud/*.test.cjs"
   },
   "devDependencies": {
     "@aiot-toolkit/jsc": "^1.0.3",

@@ -1,5 +1,4 @@
 const path = require('node:path');
-const os = require('node:os');
 const { execFile } = require('node:child_process');
 const { promisify } = require('node:util');
 
@@ -34,7 +33,7 @@ function object(value, allowed) {
 }
 
 function createAnySearch(options = {}) {
-  const skillDir = options.skillDir || process.env.ANYSEARCH_SKILL_DIR || path.join(os.homedir(), '.codex', 'skills', 'anysearch-skill');
+  const skillDir = options.skillDir || process.env.ANYSEARCH_SKILL_DIR || '/opt/orbit-ai/anysearch-skill';
   const script = path.join(skillDir, 'scripts', 'anysearch_cli.js');
   const run = options.run || promisify(execFile);
   // Each user request discovers its own capabilities; no history leaks between requests.

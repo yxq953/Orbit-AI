@@ -4,7 +4,7 @@ const fs = require('node:fs/promises')
 const path = require('node:path')
 const { createRecorder } = require('../src/common/recorder')
 const { createVoiceChat } = require('../src/common/voice-chat')
-const { createServer } = require('../desktop/server.cjs')
+const { createServer } = require('../cloud/server.cjs')
 
 async function fixture(t, generate = async () => '这是模型回复', loseAck = false, history = []) {
   const source = await fs.readFile(path.join(__dirname, '../src/common/channel.js'), 'utf8')

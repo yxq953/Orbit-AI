@@ -4,8 +4,8 @@ const fs = require('node:fs/promises');
 const os = require('node:os');
 const path = require('node:path');
 const { createPrinter, PrinterError } = require('./printer.cjs');
-const { createDeepSeek } = require('./deepseek.cjs');
-const { createServer } = require('./server.cjs');
+const { createDeepSeek } = require('../cloud/deepseek.cjs');
+const { createServer } = require('../cloud/server.cjs');
 
 const output = '打印机 : Test HP\n规模   : 1 页 x 1 份 = 1 张（单面）\n任务号 : [123]\n结果   : 任务已离开队列，打印机状态 就绪\n';
 

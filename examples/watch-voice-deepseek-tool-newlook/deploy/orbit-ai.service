@@ -1,0 +1,28 @@
+[Unit]
+Description=Orbit AI watch gateway
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=orbit-ai
+Group=orbit-ai
+WorkingDirectory=/opt/orbit-ai/current
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/orbit-ai/server.env
+ExecStart=/usr/local/bin/node cloud/server.cjs
+StateDirectory=orbit-ai
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

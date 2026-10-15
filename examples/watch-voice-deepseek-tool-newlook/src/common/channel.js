@@ -11,6 +11,9 @@ export function createChannel(fetchApi, config, hooks, timers) {
   let pending = null
   let sequence = 0
   let catchingUp = false
+  // Only app entry advances the context epoch. A lost ACK or delayed request
+  // cannot repeat a reset or move the server back to a previous conversation.
+  let conversationEpoch = 0
   const client = Date.now().toString(36) + Math.random().toString(36).slice(2)
 
   function schedule() {
@@ -66,7 +69,7 @@ export function createChannel(fetchApi, config, hooks, timers) {
             pending = null
             hooks.sent(outgoing.text, outgoing.id)
           }
-          hooks.status('已连接电脑')
+          hooks.status('已连接服务器')
           succeeded = true
         } catch (e) { hooks.status(e.message || '响应错误') }
       }
@@ -79,7 +82,10 @@ export function createChannel(fetchApi, config, hooks, timers) {
         url: config.url + '/api/sync',
         method: 'POST',
         header: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + config.token },
-        data: JSON.stringify({ source: 'watch', session, after: cursor, outgoing }),
+        data: JSON.stringify({
+          source: 'watch', session, after: cursor, outgoing,
+          conversationId: client, conversationEpoch
+        }),
         responseType: 'text',
         success: response => finish(null, response),
         fail: (data, code) => finish('网络错误 ' + code)
@@ -87,7 +93,14 @@ export function createChannel(fetchApi, config, hooks, timers) {
     } catch (e) { finish('网络接口不可用') }
   }
   return {
-    start() { if (!active) { catchingUp = true; active = true; sync() } },
+    start() {
+      if (!active) {
+        catchingUp = true
+        conversationEpoch++
+        active = true
+        sync()
+      }
+    },
     stop() {
       active = false
       request++
@@ -98,7 +111,9 @@ export function createChannel(fetchApi, config, hooks, timers) {
     retry() { if (active) sync() },
     send(text) {
       if (pending || typeof text !== 'string' || !text.trim() || Array.from(text).length > 2000) return false
-      pending = { id: client + '-' + (++sequence), text }
+      // A pending upload keeps its original epoch across app re-entry. It may
+      // still finish delivery, but must not become part of the new context.
+      pending = { id: client + '-' + (++sequence), text, conversationEpoch }
       if (hooks.queued) hooks.queued(pending.id)
       hooks.status('发送中…')
       sync()

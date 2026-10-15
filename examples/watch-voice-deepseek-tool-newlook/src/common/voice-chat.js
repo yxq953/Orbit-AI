@@ -8,7 +8,7 @@ function createVoiceChat(options) {
   let receivedReplies = [], replayReplies = false
   let retiredRequests = []
   const view = {
-    phase: '点击录音开始提问', network: '正在连接电脑…',
+    phase: '点击录音开始提问', network: '正在连接服务器…',
     recorderStatus: '正在准备语音识别', transcript: '',
     conversation: '', selection: '0/0'
   }
