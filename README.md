@@ -8,7 +8,7 @@ Orbit AI 基于小米 Vela JS 快应用框架开发。你可以在手表上说�
 
 ## 概念图
 
-![Orbit AI 手表与电脑控制台概念图](../../docs/images/dashboard-overview.png)
+![Orbit AI 手表与电脑控制台概念图](https://raw.githubusercontent.com/yxq953/Orbit-AI/main/docs/images/dashboard-overview.png)
 
 *概念图用于展示产品布局与交互思路，实际界面以当前版本为准。*
 
@@ -162,7 +162,7 @@ ssh -N -L 18767:127.0.0.1:8767 root@47.100.201.122
 
 本次连续对话修改需要更新 RPK。可运行 `npm.cmd test` 和 `npm.cmd run build`，产物为 `dist/com.example.redmi.voicedeepseek.debug.1.0.5.rpk`。修改服务器地址或配对令牌才需要 `npm.cmd run configure -- --host <IPv4> --port <端口>` 并重建；不要为启用打印重新配置地址。
 
-手机上传与安装交接遵循 [AGENTS.md](AGENTS.md)：上传到 `Download/RedmiWatch/com.example.redmi.voicedeepseek.rpk`，填写包名后由用户手动选择文件并安装。
+手机上传与安装交接遵循 [AGENTS.md](https://github.com/yxq953/Orbit-AI/blob/main/examples/watch-voice-deepseek-tool-newlook/AGENTS.md)：上传到 `Download/RedmiWatch/com.example.redmi.voicedeepseek.rpk`，填写包名后由用户手动选择文件并安装。
 
 ## 使用方法
 
@@ -242,4 +242,4 @@ npm.cmd run build
 
 ## 许可证
 
-仓库采用 [MIT License](../../LICENSE)。随附的工具与第三方资料如有独立许可证，以各自目录中的声明为准。
+仓库采用 [MIT License](https://github.com/yxq953/Orbit-AI/blob/main/LICENSE)。随附的工具与第三方资料如有独立许可证，以各自目录中的声明为准。
