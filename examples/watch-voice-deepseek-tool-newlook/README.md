@@ -1,6 +1,6 @@
 # Orbit AI
 
-**面向 Redmi Watch 5 的腕上 AI 助手：语音提问、DeepSeek 回答与 AnySearch 联网搜索。**
+**面向 Redmi Watch 5 的腕上 AI 助手：语音提问、DeepSeek 回答、AnySearch 联网搜索与文本打印。**
 
 Orbit AI 基于小米 Vela JS 快应用框架开发。你可以在手表上说出问题，由手机与服务端协同完成语音识别、模型调用和工具执行，再将回答送回手表。问答与搜索由 Linux 云服务器运行；Windows 电脑仅运行打印代理。云端管理网页通过 SSH 隧道访问。
 
@@ -39,20 +39,36 @@ Orbit AI 基于小米 Vela JS 快应用框架开发。你可以在手表上说�
 ## 仓库结构
 
 ```text
-examples/watch-voice-deepseek-tool-newlook/
-├── src/                 # 手表界面、录音与通信逻辑
-├── desktop/             # 本地打印代理与 Windows 打印接口
-├── cloud/               # 云端 HTTP、DeepSeek、AnySearch 适配与打印队列
-├── shared/              # 打印参数协议与持久化工具
-├── deploy/              # Linux systemd 单元与安装脚本
-├── tool/                # Windows 打印脚本（已移除 AnySearch CLI）
-├── tools/               # 构建工具与图标生成脚本
-└── tests/               # 手表端逻辑测试
-
-docs/                    # 部署文档与概念图
-scripts/                 # 部署及模拟器辅助脚本
-firmware/                # 固件资料与分析记录
+watch-voice-deepseek-tool-newlook/
+├── src/                                  # 手表端 RPK 源码
+│   ├── pages/index/index.ux              # 手表界面与交互
+│   └── common/
+│       ├── voice-chat.js                 # 语音问答编排、历史显示与状态机
+│       ├── recorder.js                   # 微信原生录音与语音识别桥接
+│       └── channel.js                    # /api/sync、轮询、重试与上下文会话
+│
+├── cloud/                                # Linux 云端服务源码
+│   ├── server.cjs                        # HTTP 网关、鉴权、消息与模型任务队列（8767）
+│   ├── deepseek.cjs                      # DeepSeek 请求、上下文和工具调用循环
+│   ├── anysearch.cjs                     # AnySearch 工具适配器
+│   └── print-bridge.cjs                  # 云端打印队列和本地代理接口（127.0.0.1:8768）
+│
+├── desktop/                              # Windows 本地电脑组件
+│   ├── print-agent.cjs                   # npm.cmd start 启动的 SSH 打印代理
+│   └── printer.cjs                       # 打印参数校验与本地打印脚本调用
+│
+├── tool/print/scripts/print.py           # Windows 打印机调用脚本
+├── shared/                               # 打印协议、校验和持久化工具
+├── deploy/                               # Linux systemd 单元与服务器安装脚本
+├── tests/                                # 手表、云端、搜索和打印桥接测试
+├── tools/                                # RPK 构建、云端打包和图标工具
+├── package.json                          # 构建、测试和本地代理命令
+└── README.md                             # 本文档
 ```
+
+AnySearch 的 CLI 不再放在项目的 `tool/` 目录中。云端 `cloud/anysearch.cjs` 会通过
+`ANYSEARCH_SKILL_DIR` 调用服务器上的 `/opt/orbit-ai/anysearch-skill`。`.runtime/`、
+`node_modules/`、`build/` 和 `dist/` 属于本地配置、依赖或构建产物，已被 Git 忽略。
 
 ## 环境准备
 
